@@ -35,9 +35,9 @@
 
 <body class="dashboard-page">
 
-<!-------------------------------------------------------------+ 
-  <body> Helper Classes: 
----------------------------------------------------------------+ 
+<!-------------------------------------------------------------+
+  <body> Helper Classes:
+---------------------------------------------------------------+
   '.sb-l-o' - Sets Left Sidebar to "open"
   '.sb-l-m' - Sets Left Sidebar to "minified"
   '.sb-l-c' - Sets Left Sidebar to "closed"
@@ -189,20 +189,20 @@
   <!-- Start: Main -->
   <div id="main">
 
-    <!-----------------------------------------------------------------+ 
-       ".navbar" Helper Classes: 
-    -------------------------------------------------------------------+ 
-       * Positioning Classes: 
+    <!-----------------------------------------------------------------+
+       ".navbar" Helper Classes:
+    -------------------------------------------------------------------+
+       * Positioning Classes:
         '.navbar-static-top' - Static top positioned navbar
         '.navbar-static-top' - Fixed top positioned navbar
 
        * Available Skin Classes:
-         .bg-dark    .bg-primary   .bg-success   
+         .bg-dark    .bg-primary   .bg-success
          .bg-info    .bg-warning   .bg-danger
-         .bg-alert   .bg-system 
+         .bg-alert   .bg-system
     -------------------------------------------------------------------+
       Example: <header class="navbar navbar-fixed-top bg-primary">
-      Results: Fixed top navbar with blue background 
+      Results: Fixed top navbar with blue background
     ------------------------------------------------------------------->
 
     <!-- Start: Header -->
@@ -251,7 +251,7 @@
               <span class="fa fa-bell-o fs14 va-m"></span>
               <span class="badge badge-danger">9</span>
             </button>
-            <div class="dropdown-menu dropdown-persist w350 animated animated-shorter fadeIn" role="menu">  
+            <div class="dropdown-menu dropdown-persist w350 animated animated-shorter fadeIn" role="menu">
               <div class="panel mbn">
                   <div class="panel-menu">
                      <span class="panel-icon"><i class="fa fa-clock-o"></i></span>
@@ -351,7 +351,7 @@
                           <div class="timeline-date">3:05am</div>
                         </li>
                       </ol>
-       
+
                   </div>
                   <div class="panel-footer text-center p7">
                     <a href="#" class="link-unstyled"> View All </a>
@@ -366,7 +366,7 @@
               <span class="ad ad-radio-tower fs14 va-m"></span>
               <span class="badge">5</span>
             </button>
-            <div class="dropdown-menu dropdown-persist w350 animated animated-shorter fadeIn" role="menu">  
+            <div class="dropdown-menu dropdown-persist w350 animated animated-shorter fadeIn" role="menu">
               <div class="panel mbn">
                   <div class="panel-menu">
                     <div class="btn-group btn-group-justified btn-group-nav" role="tablist">
@@ -384,7 +384,7 @@
                             <h5 class="media-heading">New Registration
                               <small class="text-muted"></small>
                             </h5> Tyler Durden - 16 hours ago
-                            
+
                           </div>
                           <div class="media-right">
                             <div class="media-response"> Approve?</div>
@@ -422,7 +422,7 @@
                           <div class="media-body">
                             <h5 class="media-heading">New Comment
                               <small class="text-muted"></small>
-                            </h5> Mike - I loved your article!                            
+                            </h5> Mike - I loved your article!
                           </div>
                           <div class="media-right">
                             <div class="media-response text-right"> Moderate?</div>
@@ -480,7 +480,7 @@
                             <h5 class="media-heading">New Invoice
                               <small class="text-muted"></small>
                             </h5> <a href="#">Apple Ipod</a> - 4 hours ago
-                            
+
                           </div>
                           <div class="media-right">
                             <div class="media-response single">#518358</div>
@@ -813,16 +813,16 @@
     </header>
     <!-- End: Header -->
 
-    <!-----------------------------------------------------------------+ 
-       "#sidebar_left" Helper Classes: 
-    -------------------------------------------------------------------+ 
-       * Positioning Classes: 
-        '.affix' - Sets Sidebar Left to the fixed position 
+    <!-----------------------------------------------------------------+
+       "#sidebar_left" Helper Classes:
+    -------------------------------------------------------------------+
+       * Positioning Classes:
+        '.affix' - Sets Sidebar Left to the fixed position
 
        * Available Skin Classes:
          .sidebar-dark (default no class needed)
-         .sidebar-light  
-         .sidebar-light.light   
+         .sidebar-light
+         .sidebar-light.light
     -------------------------------------------------------------------+
        Example: <aside id="sidebar_left" class="affix sidebar-light">
        Results: Fixed Left Sidebar with light/white background
@@ -1013,15 +1013,15 @@
                   <li>
                     <a href="layout_topbar.html">
                       Default Style </a>
-                  </li> 
+                  </li>
                   <li>
                     <a href="layout_topbar-menu.html">
                       Default w/Menu </a>
-                  </li>  
+                  </li>
                   <li>
                     <a href="layout_topbar-alt.html">
                       Alternate Style </a>
-                  </li>  
+                  </li>
                 </ul>
               </li>
               <li>
@@ -1059,27 +1059,27 @@
                   <li>
                     <a href="layout_tray-left.html">
                       Tray Left Static </a>
-                  </li> 
+                  </li>
                   <li>
                     <a href="layout_tray-left-fixed.html">
                       Tray Left Fixed </a>
-                  </li> 
+                  </li>
                   <li>
                     <a href="layout_tray-right.html">
                       Tray Right Static </a>
-                  </li> 
+                  </li>
                   <li>
                     <a href="layout_tray-right-fixed.html">
                       Tray Right Fixed </a>
-                  </li> 
+                  </li>
                   <li>
                     <a href="layout_tray-both.html">
                       Left + Right Static </a>
-                  </li> 
+                  </li>
                   <li>
                     <a href="layout_tray-both-fixed.html">
                       Left + Right Fixed </a>
-                  </li> 
+                  </li>
                 </ul>
               </li>
               <li>
@@ -1712,7 +1712,7 @@
       <section id="content" class="table-layout animated fadeIn">
 
         <!-- begin: .tray-center -->
-        <div class="tray tray-center">      
+        <div class="tray tray-center">
 
           <!-- dashboard tiles -->
           <div class="row">
@@ -2866,7 +2866,7 @@
 
   <!-- JvectorMap Plugin + US Map (more maps in plugin/assets folder) -->
   <script src="vendor/plugins/jvectormap/jquery.jvectormap.min.js"></script>
-  <script src="vendor/plugins/jvectormap/assets/jquery-jvectormap-us-lcc-en.js"></script> 
+  <script src="vendor/plugins/jvectormap/assets/jquery-jvectormap-us-lcc-en.js"></script>
 
   <!-- Bootstrap Tabdrop Plugin -->
   <script src="vendor/plugins/tabdrop/bootstrap-tabdrop.js"></script>
@@ -2887,20 +2887,20 @@
 
     "use strict";
 
-    // Init Demo JS  
+    // Init Demo JS
     Demo.init();
- 
 
-    // Init Theme Core    
+
+    // Init Theme Core
     Core.init();
 
 
     // Init Widget Demo JS
     // demoHighCharts.init();
 
-    // Because we are using Admin Panels we use the OnFinish 
+    // Because we are using Admin Panels we use the OnFinish
     // callback to activate the demoWidgets. It's smoother if
-    // we let the panels be moved and organized before 
+    // we let the panels be moved and organized before
     // filling them with content from various plugins
 
     // Init plugins used on this page
@@ -2963,7 +2963,7 @@
             "hide": 200
           }
         });
-        // create a tooltip auto close timer  
+        // create a tooltip auto close timer
         $(element).on('show.bs.tooltip', function() {
           var autoClose = setTimeout(function() {
             $('.tooltip').fadeOut();
@@ -3157,7 +3157,7 @@
             selectedHover: {}
           },
         });
-        // Manual code to alter the Vector map plugin to 
+        // Manual code to alter the Vector map plugin to
         // allow for individual coloring of countries
         var states = ['US-CA', 'US-TX', 'US-MO',
           'US-NY'
