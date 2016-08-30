@@ -481,7 +481,7 @@ section h3.section-subheading {
   text-transform: none;
 }
 #features {
-  background: url('../img/features/feature1.png') no-repeat center 200px #f9f9f9;
+  background: url('../img/features/green-feature.png') no-repeat center 200px #f9f9f9;
   min-height: 750px;
   overflow: hidden;
 }

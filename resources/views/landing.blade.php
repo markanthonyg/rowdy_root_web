@@ -209,7 +209,7 @@
                 </div>
                 <div class="col-sm-12 col-md-6 text-center">
                     <h2 class="section-heading mt70">Globally access information.</h2>
-                    <h3 class="section-subheading text-muted mb30">This is basically like more advanced lorem ipsum.</h3>
+                    <h3 class="section-subheading text-muted mb30">Check on your patients from opposite ends of the globe.</h3>
                     <p class="text-muted mb50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
 	                <a href="#services" class="page-scroll btn btn-xl mr30 btn-primary pv15">Learn More</a>
 	                <a href="#contact" class="page-scroll btn btn-xl btn-danger pv15">Contact Us</a>
@@ -226,8 +226,8 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading hidden">We're great at the little things</h2>
-                    <h2 class="section-heading">We're here to help you succeed</h2>
-                    <h3 class="section-subheading text-muted mbn">Our in house team can build the features and solutions you need.</h3>
+                    <h2 class="section-heading">Go <b style="color: green;">Green</b> Go <b style="color: green;">Paperless</b></h2>
+                    <h3 class="section-subheading text-muted mbn">Our web application can replace timely paper systems and cut back your costs.</h3>
 
 
                 </div>
@@ -236,8 +236,8 @@
             <div class="row">
                 <div class="col-lg-6">
                 </div>
-              <div class="col-md-12 hidden">
-              	<!-- <img src="img/features/1.png" title="iMac Image" class="img-responsive pull-right mtn30"> -->
+              <div class="col-md-12">
+              	{{-- <img src="img/features/1.png" title="iMac Image" class="img-responsive pull-right mtn30"> --}}
               </div>
             </div>
 
