@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/theme.css" rel="stylesheet">
+    <link href="css/custom_theme.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -86,10 +87,17 @@
                         <a class="page-scroll" href="#features-flat">Features</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="page-scroll hidden" href="#portfolio">Portfolio</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#footer">Contact</a>
+                    </li>
+                    <li class="divider-vertical"></li>
+                    <li>
+                      <a class="">Sign Up</a>
+                    </li>
+                    <li>
+                      <a class="">Log In</a>
                     </li>
                 </ul>
             </div>
@@ -226,7 +234,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading hidden">We're great at the little things</h2>
-                    <h2 class="section-heading">Go <b style="color: green;">Green</b> Go <b style="color: green;">Paperless</b></h2>
+                    <h2 class="section-heading">Go <b style="color: #32CD32;">Green</b> Go <b style="color: #32CD32;">Paperless</b></h2>
                     <h3 class="section-subheading text-muted mbn">Our web application can replace timely paper systems and cut back your costs.</h3>
 
 
@@ -245,7 +253,7 @@
     </section>
 
     <!-- Portfolio Grid Section -->
-    <section id="portfolio">
+    <section id="portfolio" class="hidden">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -380,7 +388,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Get your free trial and explore the possibilities!</h2>
+                    <h2 class="section-heading">Questions or concerns? Contact our dev team!</h2>
                 </div>
             </div>
 			<form name="sentMessage" id="contactForm" class="mw800 center-block clearfix" novalidate>
@@ -393,10 +401,10 @@
                  <p class="help-block text-danger"></p>
         	  </div>
         	   <div class="form-group">
-        	  	  <button type="submit" class="btn btn-xl btn-block btn-wire">Subscribe</button>
+        	  	  <button type="submit" class="btn btn-xl btn-block btn-wire">Contact</button>
         	   </div>
 	        </form>
-	        <p> By subscribing you agree to our terms and conditions. </p>
+	        <p> Please allow 24-48 hours for a response. </p>
 
         </div>
     </section>
@@ -406,10 +414,11 @@
         <div class="container mw850">
             <div class="row">
                 <div class="col-md-6 text-left">
-                <span class="copyright text-muted">Copyright &copy; <b>AdminDesigns</b> 2015</span>
+                <span class="copyright text-muted">Copyright &copy; <b>Rowdy Root</b> 2016</span>
                 </div>
                 <div class="col-md-6 text-right">
-                    <ul class="list-inline social-buttons">
+                  <span class="copyright text-muted">UTSA Software Engineering</span>
+                    <ul class="list-inline social-buttons hidden">
                         <li><a href="#"><i class="fa fa-twitter"></i></a>
                         </li>
                         <li><a href="#"><i class="fa fa-facebook"></i></a>
