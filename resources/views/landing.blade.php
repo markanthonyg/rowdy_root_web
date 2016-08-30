@@ -124,12 +124,12 @@
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </span>
-                    <div class="service-icon"> <img src="img/icons/user-manage-lg.png" title="service icon"> </div>
+                    <div class="service-icon"> <img src="img/icons/user-manage2-lg.png" title="service icon"> </div>
                     <h4 class="service-heading">User Management</h4>
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 mb50">
-                    <div class="service-icon"> <img src="img/icons/db-lg.png" title="service icon"> </div>
+                    <div class="service-icon"> <img src="img/icons/db2-lg.png" title="service icon"> </div>
                     <span class="fa-stack fa-4x hidden">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
@@ -138,7 +138,7 @@
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 mb50">
-                    <div class="service-icon"> <img src="img/icons/patient-lg.png" title="service icon"> </div>
+                    <div class="service-icon"> <img src="img/icons/patient2-lg.png" title="service icon"> </div>
                     <span class="fa-stack fa-4x hidden">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
@@ -152,12 +152,12 @@
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </span>
-                    <div class="service-icon"> <img src="img/icons/globe-lg.png" title="service icon"> </div>
+                    <div class="service-icon"> <img src="img/icons/globe2-lg.png" title="service icon"> </div>
                     <h4 class="service-heading">World-Wide Access</h4>
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 mb50">
-                    <div class="service-icon"> <img src="img/icons/visit-lg.png" title="service icon"> </div>
+                    <div class="service-icon"> <img src="img/icons/log-lg.png" title="service icon"> </div>
                     <span class="fa-stack fa-4x hidden">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
@@ -166,7 +166,7 @@
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 mb50">
-                    <div class="service-icon"> <img src="img/icons/email-lg.png" title="service icon"> </div>
+                    <div class="service-icon"> <img src="img/icons/email2-lg.png" title="service icon"> </div>
                     <span class="fa-stack fa-4x hidden">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
@@ -184,15 +184,15 @@
 
             <div class="row">
                 <div class="col-sm-12 col-md-6 text-center">
-                    <h2 class="section-heading mt70">World Class Developers</h2>
-                    <h3 class="section-subheading text-muted mb30">This is basically like more advanced lorem ipsum.</h3>
+                    <h2 class="section-heading mt70">Record and Manage Patient Information</h2>
+                    <h3 class="section-subheading text-muted mb30">Hassle-free patient management.</h3>
                     <p class="text-muted mb50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
 	                <a href="#services" class="page-scroll btn btn-xl mr30 btn-primary pv15">Learn More</a>
 	                <a href="#contact" class="page-scroll btn btn-xl btn-danger pv15">Contact Us</a>
 
                 </div>
                 <div class="hidden-sm hidden-xs col-md-6">
-              		<img src="img/features/flat_feature1.png" title="iMac Image" class="img-responsive pull-right">
+              		<img src="img/features/manage-patient-feature.png" title="iMac Image" class="img-responsive pull-right" >
               </div>
             </div>
 
@@ -205,10 +205,10 @@
 
             <div class="row">
                 <div class="hidden-sm hidden-xs col-md-6">
-              		<img src="img/features/flat_feature2.png" title="iMac Image" class="img-responsive pull-left">
+              		<img src="img/features/global2-feature.png" title="iMac Image" class="img-responsive pull-left">
                 </div>
                 <div class="col-sm-12 col-md-6 text-center">
-                    <h2 class="section-heading mt70">Mobile First Solutions</h2>
+                    <h2 class="section-heading mt70">Globally access information.</h2>
                     <h3 class="section-subheading text-muted mb30">This is basically like more advanced lorem ipsum.</h3>
                     <p class="text-muted mb50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
 	                <a href="#services" class="page-scroll btn btn-xl mr30 btn-primary pv15">Learn More</a>
