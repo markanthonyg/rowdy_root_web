@@ -367,7 +367,7 @@ footer ul.quicklinks {
   position: relative;
   text-align: center;
   color: white;
-  height: 70vh;
+  height: 60vh;
   min-height: 550px;
 }
 #hero:before {
@@ -378,7 +378,7 @@ footer ul.quicklinks {
   right: 0;
   top: 0;
   bottom: 0;
-  background-image: url('../img/hero_low-res.jpg');
+  background-image: url('../img/hero_landing.jpg');
   background-repeat: none;
   background-attachment: scroll;
   background-position: center center;

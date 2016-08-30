@@ -58,7 +58,7 @@
                 </ul>
 
             </div>
-        </div> 
+        </div>
 
         <div class="container" style="max-width: 1050px;">
 
@@ -70,7 +70,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">AdminDesigns.</a>
+                <a class="navbar-brand page-scroll" href="#page-top">EMRS Online.</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -102,10 +102,9 @@
     <header id="hero">
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in hidden">This is a lead in statement!</div>
-                <div class="intro-heading">Our in house team creates <b>beautiful</b> designs to help your product succeed.</div>
+                <div class="intro-heading">Our website gives your the ability to <b>easily</b> and <b>effciently</b> manage your patients.</div>
                 <a href="#services" class="page-scroll btn btn-xl mr30 btn-primary">Learn More</a>
-                <a href="#contact" class="page-scroll btn btn-xl btn-wire">Contact Us</a>
+                <a href="" class="page-scroll btn btn-xl btn-wire">Sign Up</a>
             </div>
         </div>
     </header>
@@ -147,7 +146,7 @@
                     <h4 class="service-heading">Web Security</h4>
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
-          
+
                 <div class="col-xs-6 col-sm-4 mb50">
                     <span class="fa-stack fa-4x hidden">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
@@ -182,7 +181,7 @@
     <!-- Flat Features Section -->
     <section id="features-flat" class="bg-light">
         <div class="container">
-             
+
             <div class="row">
                 <div class="col-sm-12 col-md-6 text-center">
                     <h2 class="section-heading mt70">World Class Developers</h2>
@@ -196,14 +195,14 @@
               		<img src="img/features/flat_feature1.png" title="iMac Image" class="img-responsive pull-right">
               </div>
             </div>
-            
+
         </div>
     </section>
 
     <!-- Flat Features Section -->
     <section id="features-flat">
         <div class="container">
-             
+
             <div class="row">
                 <div class="hidden-sm hidden-xs col-md-6">
               		<img src="img/features/flat_feature2.png" title="iMac Image" class="img-responsive pull-left">
@@ -217,7 +216,7 @@
 
                 </div>
             </div>
-            
+
         </div>
     </section>
 
@@ -233,7 +232,7 @@
 
                 </div>
             </div>
-             
+
             <div class="row">
                 <div class="col-lg-6">
                 </div>
@@ -241,7 +240,7 @@
               	<!-- <img src="img/features/1.png" title="iMac Image" class="img-responsive pull-right mtn30"> -->
               </div>
             </div>
-            
+
         </div>
     </section>
 
@@ -384,7 +383,7 @@
                     <h2 class="section-heading">Get your free trial and explore the possibilities!</h2>
                 </div>
             </div>
-			<form name="sentMessage" id="contactForm" class="mw800 center-block clearfix" novalidate>	    
+			<form name="sentMessage" id="contactForm" class="mw800 center-block clearfix" novalidate>
         	   <div class="form-group">
         	  	 <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
                  <p class="help-block text-danger"></p>
@@ -396,7 +395,7 @@
         	   <div class="form-group">
         	  	  <button type="submit" class="btn btn-xl btn-block btn-wire">Subscribe</button>
         	   </div>
-	        </form>	
+	        </form>
 	        <p> By subscribing you agree to our terms and conditions. </p>
 
         </div>
