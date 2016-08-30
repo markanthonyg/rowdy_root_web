@@ -234,7 +234,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading hidden">We're great at the little things</h2>
-                    <h2 class="section-heading">Go <b style="color: #32CD32;">Green</b> Go <b style="color: #32CD32;">Paperless</b></h2>
+                    <h2 class="section-heading">Go <b style="color: #39B54A;">Green</b> Go <b style="color: #39B54A;">Paperless</b></h2>
                     <h3 class="section-subheading text-muted mbn">Our web application can replace timely paper systems and cut back your costs.</h3>
 
 
