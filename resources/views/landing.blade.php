@@ -4,10 +4,10 @@
 <head>
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
-    <title>AbsoluteAdmin - A Responsive Bootstrap 3 Admin Dashboard Template</title>
+    <title>EMRS Online - Doctor Portal</title>
     <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
-    <meta name="description" content="AbsoluteAdmin - A Responsive HTML5 Admin UI Framework">
-    <meta name="author" content="AbsoluteAdmin">
+    <meta name="description" content="EMRS Online - A Portal Into Patient Records">
+    <meta name="author" content="UTSA Rowdy Root Software Engineers">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap Core CSS -->
@@ -102,7 +102,7 @@
     <header id="hero">
         <div class="container">
             <div class="intro-text">
-                <div class="intro-heading">Our website gives your the ability to <b>easily</b> and <b>effciently</b> manage your patients.</div>
+                <div class="intro-heading">Our website gives you the ability to <b>easily</b> and <b>effciently</b> manage your patients.</div>
                 <a href="#services" class="page-scroll btn btn-xl mr30 btn-primary">Learn More</a>
                 <a href="" class="page-scroll btn btn-xl btn-wire">Sign Up</a>
             </div>
@@ -115,7 +115,7 @@
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <h2 class="section-heading">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Capability to ease management right at your fingertips.</h3>
                 </div>
             </div>
             <div class="row text-center">
@@ -124,26 +124,26 @@
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </span>
-                    <div class="service-icon"> <img src="img/icons/1-lg.png" title="service icon"> </div>
-                    <h4 class="service-heading">E-Commerce</h4>
+                    <div class="service-icon"> <img src="img/icons/user-manage-lg.png" title="service icon"> </div>
+                    <h4 class="service-heading">User Management</h4>
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 mb50">
-                    <div class="service-icon"> <img src="img/icons/2-lg.png" title="service icon"> </div>
+                    <div class="service-icon"> <img src="img/icons/db-lg.png" title="service icon"> </div>
                     <span class="fa-stack fa-4x hidden">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Responsive Design</h4>
+                    <h4 class="service-heading">Database Backup</h4>
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 mb50">
-                    <div class="service-icon"> <img src="img/icons/3-lg.png" title="service icon"> </div>
+                    <div class="service-icon"> <img src="img/icons/patient-lg.png" title="service icon"> </div>
                     <span class="fa-stack fa-4x hidden">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Web Security</h4>
+                    <h4 class="service-heading">Patient Recording</h4>
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
 
@@ -152,26 +152,26 @@
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </span>
-                    <div class="service-icon"> <img src="img/icons/4-lg.png" title="service icon"> </div>
-                    <h4 class="service-heading">E-Commerce</h4>
+                    <div class="service-icon"> <img src="img/icons/globe-lg.png" title="service icon"> </div>
+                    <h4 class="service-heading">World-Wide Access</h4>
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 mb50">
-                    <div class="service-icon"> <img src="img/icons/5-lg.png" title="service icon"> </div>
+                    <div class="service-icon"> <img src="img/icons/visit-lg.png" title="service icon"> </div>
                     <span class="fa-stack fa-4x hidden">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Responsive Design</h4>
+                    <h4 class="service-heading">Log Visits</h4>
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 mb50">
-                    <div class="service-icon"> <img src="img/icons/6-lg.png" title="service icon"> </div>
+                    <div class="service-icon"> <img src="img/icons/email-lg.png" title="service icon"> </div>
                     <span class="fa-stack fa-4x hidden">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Web Security</h4>
+                    <h4 class="service-heading">Contact Patients</h4>
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
             </div>
