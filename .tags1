@@ -4,3 +4,5 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+HomeController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/HomeController.php	/^class HomeController extends Controller$/;"	class	line:10
+showHome	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/HomeController.php	/^    public function showHome(){$/;"	function	line:13

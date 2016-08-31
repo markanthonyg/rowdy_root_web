@@ -14,6 +14,6 @@ class HomeController extends Controller
       // Logic will need to be added to pass $data and authenticate user
 
       // For now, just returning the View
-      return view('dashboard');
+      return view('dashboard/home');
     }
 }
