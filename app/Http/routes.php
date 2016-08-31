@@ -15,10 +15,6 @@ Route::get('/', function () {
     return view('landing');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
 Route::get('/login', function () {
     return view('pages_login');
 });
@@ -30,3 +26,6 @@ Route::get('/register', function () {
 Route::get('/terms', function () {
     return view('terms');
 });
+
+// Dashboard Routes
+Route::get('/dashboard', 'Dashboard\HomeController@showHome');
