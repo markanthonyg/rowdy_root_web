@@ -23,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // model generator service provider
+        if ($this->app->environment() == 'local') {
+          $this->app->register('Iber\Generator\ModelGeneratorProvider');
+        }
     }
 }
