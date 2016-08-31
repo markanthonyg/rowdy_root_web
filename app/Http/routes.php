@@ -27,6 +27,13 @@ Route::get('/register', function () {
     return view('pages_register');
 });
 
+// RegistrationController
+//Route::post('/register', 'RegistrationController@signUpUser');
+
+Route::post('/register', function () {
+    return view('landing');
+});
+
 Route::get('/terms', function () {
     return view('terms');
 });

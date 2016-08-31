@@ -45,6 +45,10 @@
 
       <!-- Begin: Content -->
       <section id="content" class="">
+        @if(Session::has('signup_missing_fields'))
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          {{ Session::get('signup_missing_fields') }}
+        @endif
 
         <div class="admin-form theme-info mw700" style="margin-top: 3%;" id="login1">
 
@@ -68,7 +72,7 @@
           </div>
 
           <div class="panel panel-info mt10 br-n">
-            <form method="post" action="/" id="account2">
+            {!! Form::open(['action' => 'RegistrationController@signUpUser', 'method' => 'POST', 'id' => 'signUpForm']) !!}
               <div class="panel-body p25 bg-light">
                 <div class="section-divider mt10 mb40">
                   <span>Set up your account</span>
@@ -78,7 +82,7 @@
                 <div class="section row">
                   <div class="col-md-6">
                     <label for="firstname" class="field prepend-icon">
-                      <input type="text" name="firstname" id="firstname" class="gui-input" placeholder="First name...">
+                      {!! Form::text('firstname', null, ['placeholder'=>'First name...', 'required', 'class' => 'gui-input']) !!}
                       <label for="firstname" class="field-icon">
                         <i class="fa fa-user"></i>
                       </label>
@@ -88,7 +92,7 @@
 
                   <div class="col-md-6">
                     <label for="lastname" class="field prepend-icon">
-                      <input type="text" name="lastname" id="lastname" class="gui-input" placeholder="Last name...">
+                      {!! Form::text('lastname', null, ['placeholder'=>'Last name...', 'required', 'class' => 'gui-input']) !!}
                       <label for="lastname" class="field-icon">
                         <i class="fa fa-user"></i>
                       </label>
@@ -100,7 +104,7 @@
 
                 <div class="section">
                   <label for="email" class="field prepend-icon">
-                    <input type="email" name="email" id="email" class="gui-input" placeholder="Email address">
+                    {!! Form::text('email', null,  ['placeholder'=>'Email address', 'class' => 'gui-input']) !!}
                     <label for="email" class="field-icon">
                       <i class="fa fa-envelope"></i>
                     </label>
@@ -110,7 +114,7 @@
 
                 <div class="section">
                   <label for="username" class="field prepend-icon">
-                    <input type="text" name="username" id="username" class="gui-input" placeholder="Choose your username">
+                    {!! Form::text('username', null, ['placeholder'=>'Choose your username.', 'required', 'class' => 'gui-input']) !!}
                     <label for="username" class="field-icon">
                       <i class="fa fa-user"></i>
                     </label>
@@ -121,7 +125,7 @@
 
                 <div class="section">
                   <label for="password" class="field prepend-icon">
-                    <input type="password" name="password" id="password" class="gui-input" placeholder="Create a password">
+                    {!! Form::password('password',  ['placeholder'=>'Create a password', 'required', 'class' => 'gui-input']) !!}
                     <label for="password" class="field-icon">
                       <i class="fa fa-unlock-alt"></i>
                     </label>
@@ -131,7 +135,7 @@
 
                 <div class="section">
                   <label for="confirmPassword" class="field prepend-icon">
-                    <input type="password" name="confirmPassword" id="confirmPassword" class="gui-input" placeholder="Retype your password">
+                    {!! Form::password('password',  ['placeholder'=>'Retype your password', 'required', 'class' => 'gui-input']) !!}
                     <label for="confirmPassword" class="field-icon">
                       <i class="fa fa-lock"></i>
                     </label>
@@ -156,7 +160,8 @@
               </div>
               <!-- end .form-body section -->
               <div class="panel-footer clearfix">
-                <button type="submit" class="button btn-primary pull-right">Create Account</button>
+                {!! Form::submit('Create Account', ['class' => 'button btn-primary pull-right', 'id' => 'signUpSubmitBtn']) !!}
+                {!! Form::close() !!}
               </div>
               <!-- end .form-footer section -->
             </form>
@@ -174,37 +179,6 @@
 
   <!-- BEGIN: PAGE SCRIPTS -->
 
-  <!-- jQuery -->
-  <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
-  <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
-
-  <!-- CanvasBG Plugin(creates mousehover effect) -->
-  <script src="vendor/plugins/canvasbg/canvasbg.js"></script>
-
-  <!-- Theme Javascript -->
-  <script src="assets/js/utility/utility.js"></script>
-  <script src="assets/js/demo/demo.js"></script>
-  <script src="assets/js/main.js"></script>
-
-  <!-- Page Javascript -->
-  <script type="text/javascript">
-  jQuery(document).ready(function() {
-    "use strict";
-    // Init Theme Core
-    Core.init();
-
-    // Init Demo JS
-    Demo.init();
-
-    // Init CanvasBG and pass target starting location
-    CanvasBG.init({
-      Loc: {
-        x: window.innerWidth / 2.1,
-        y: window.innerHeight / 4.2
-      },
-    });
-  });
-  </script>
 
   <!-- END: PAGE SCRIPTS -->
 
