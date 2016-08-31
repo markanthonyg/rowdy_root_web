@@ -18,3 +18,15 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+Route::get('/login', function () {
+    return view('pages_login');
+});
+
+Route::get('/register', function () {
+    return view('pages_register');
+});
+
+Route::get('/terms', function () {
+    return view('terms');
+});

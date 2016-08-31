@@ -4,10 +4,10 @@
 <head>
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
-    <title>AbsoluteAdmin - A Responsive Bootstrap 3 Admin Dashboard Template</title>
+    <title>EMRS Online - Doctor Portal</title>
     <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
-    <meta name="description" content="AbsoluteAdmin - A Responsive HTML5 Admin UI Framework">
-    <meta name="author" content="AbsoluteAdmin">
+    <meta name="description" content="EMRS Online - A Portal Into Patient Records">
+    <meta name="author" content="UTSA Rowdy Root Software Engineers">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap Core CSS -->
@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/theme.css" rel="stylesheet">
+    <link href="css/custom_theme.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -86,10 +87,17 @@
                         <a class="page-scroll" href="#features-flat">Features</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="page-scroll hidden" href="#portfolio">Portfolio</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#footer">Contact</a>
+                    </li>
+                    <li class="divider-vertical"></li>
+                    <li>
+                      <a href="register">Sign Up</a>
+                    </li>
+                    <li>
+                      <a href="/login">Log In</a>
                     </li>
                 </ul>
             </div>
@@ -102,9 +110,9 @@
     <header id="hero">
         <div class="container">
             <div class="intro-text">
-                <div class="intro-heading">Our website gives your the ability to <b>easily</b> and <b>effciently</b> manage your patients.</div>
+                <div class="intro-heading">Our website gives you the ability to <b>easily</b> and <b>effciently</b> manage your patients.</div>
                 <a href="#services" class="page-scroll btn btn-xl mr30 btn-primary">Learn More</a>
-                <a href="" class="page-scroll btn btn-xl btn-wire">Sign Up</a>
+                <a href="/register" class="page-scroll btn btn-xl btn-wire">Sign Up</a>
             </div>
         </div>
     </header>
@@ -115,7 +123,7 @@
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <h2 class="section-heading">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Capability to ease management right at your fingertips.</h3>
                 </div>
             </div>
             <div class="row text-center">
@@ -124,26 +132,26 @@
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </span>
-                    <div class="service-icon"> <img src="img/icons/1-lg.png" title="service icon"> </div>
-                    <h4 class="service-heading">E-Commerce</h4>
+                    <div class="service-icon"> <img src="img/icons/user-manage2-lg.png" title="service icon"> </div>
+                    <h4 class="service-heading">User Management</h4>
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 mb50">
-                    <div class="service-icon"> <img src="img/icons/2-lg.png" title="service icon"> </div>
+                    <div class="service-icon"> <img src="img/icons/db2-lg.png" title="service icon"> </div>
                     <span class="fa-stack fa-4x hidden">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Responsive Design</h4>
+                    <h4 class="service-heading">Database Backup</h4>
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 mb50">
-                    <div class="service-icon"> <img src="img/icons/3-lg.png" title="service icon"> </div>
+                    <div class="service-icon"> <img src="img/icons/patient2-lg.png" title="service icon"> </div>
                     <span class="fa-stack fa-4x hidden">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Web Security</h4>
+                    <h4 class="service-heading">Patient Recording</h4>
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
 
@@ -152,26 +160,26 @@
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </span>
-                    <div class="service-icon"> <img src="img/icons/4-lg.png" title="service icon"> </div>
-                    <h4 class="service-heading">E-Commerce</h4>
+                    <div class="service-icon"> <img src="img/icons/globe2-lg.png" title="service icon"> </div>
+                    <h4 class="service-heading">World-Wide Access</h4>
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 mb50">
-                    <div class="service-icon"> <img src="img/icons/5-lg.png" title="service icon"> </div>
+                    <div class="service-icon"> <img src="img/icons/log-lg.png" title="service icon"> </div>
                     <span class="fa-stack fa-4x hidden">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Responsive Design</h4>
+                    <h4 class="service-heading">Log Visits</h4>
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 mb50">
-                    <div class="service-icon"> <img src="img/icons/6-lg.png" title="service icon"> </div>
+                    <div class="service-icon"> <img src="img/icons/email2-lg.png" title="service icon"> </div>
                     <span class="fa-stack fa-4x hidden">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Web Security</h4>
+                    <h4 class="service-heading">Contact Patients</h4>
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                 </div>
             </div>
@@ -184,15 +192,15 @@
 
             <div class="row">
                 <div class="col-sm-12 col-md-6 text-center">
-                    <h2 class="section-heading mt70">World Class Developers</h2>
-                    <h3 class="section-subheading text-muted mb30">This is basically like more advanced lorem ipsum.</h3>
+                    <h2 class="section-heading mt70">Record and Manage Patient Information</h2>
+                    <h3 class="section-subheading text-muted mb30">Hassle-free patient management.</h3>
                     <p class="text-muted mb50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
 	                <a href="#services" class="page-scroll btn btn-xl mr30 btn-primary pv15">Learn More</a>
 	                <a href="#contact" class="page-scroll btn btn-xl btn-danger pv15">Contact Us</a>
 
                 </div>
                 <div class="hidden-sm hidden-xs col-md-6">
-              		<img src="img/features/flat_feature1.png" title="iMac Image" class="img-responsive pull-right">
+              		<img src="img/features/manage-patient-feature.png" title="iMac Image" class="img-responsive pull-right" >
               </div>
             </div>
 
@@ -205,11 +213,11 @@
 
             <div class="row">
                 <div class="hidden-sm hidden-xs col-md-6">
-              		<img src="img/features/flat_feature2.png" title="iMac Image" class="img-responsive pull-left">
+              		<img src="img/features/global2-feature.png" title="iMac Image" class="img-responsive pull-left">
                 </div>
                 <div class="col-sm-12 col-md-6 text-center">
-                    <h2 class="section-heading mt70">Mobile First Solutions</h2>
-                    <h3 class="section-subheading text-muted mb30">This is basically like more advanced lorem ipsum.</h3>
+                    <h2 class="section-heading mt70">Globally access information.</h2>
+                    <h3 class="section-subheading text-muted mb30">Check on your patients from opposite ends of the globe.</h3>
                     <p class="text-muted mb50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
 	                <a href="#services" class="page-scroll btn btn-xl mr30 btn-primary pv15">Learn More</a>
 	                <a href="#contact" class="page-scroll btn btn-xl btn-danger pv15">Contact Us</a>
@@ -226,8 +234,8 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading hidden">We're great at the little things</h2>
-                    <h2 class="section-heading">We're here to help you succeed</h2>
-                    <h3 class="section-subheading text-muted mbn">Our in house team can build the features and solutions you need.</h3>
+                    <h2 class="section-heading">Go <b style="color: #39B54A;">Green</b> Go <b style="color: #39B54A;">Paperless</b></h2>
+                    <h3 class="section-subheading text-muted mbn">Our web application can replace timely paper systems and cut back your costs.</h3>
 
 
                 </div>
@@ -236,8 +244,8 @@
             <div class="row">
                 <div class="col-lg-6">
                 </div>
-              <div class="col-md-12 hidden">
-              	<!-- <img src="img/features/1.png" title="iMac Image" class="img-responsive pull-right mtn30"> -->
+              <div class="col-md-12">
+              	{{-- <img src="img/features/1.png" title="iMac Image" class="img-responsive pull-right mtn30"> --}}
               </div>
             </div>
 
@@ -245,7 +253,7 @@
     </section>
 
     <!-- Portfolio Grid Section -->
-    <section id="portfolio">
+    <section id="portfolio" class="hidden">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -380,7 +388,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Get your free trial and explore the possibilities!</h2>
+                    <h2 class="section-heading">Questions or concerns? Contact our dev team!</h2>
                 </div>
             </div>
 			<form name="sentMessage" id="contactForm" class="mw800 center-block clearfix" novalidate>
@@ -393,10 +401,10 @@
                  <p class="help-block text-danger"></p>
         	  </div>
         	   <div class="form-group">
-        	  	  <button type="submit" class="btn btn-xl btn-block btn-wire">Subscribe</button>
+        	  	  <button type="submit" class="btn btn-xl btn-block btn-wire">Contact</button>
         	   </div>
 	        </form>
-	        <p> By subscribing you agree to our terms and conditions. </p>
+	        <p> Please allow 24-48 hours for a response. </p>
 
         </div>
     </section>
@@ -406,10 +414,11 @@
         <div class="container mw850">
             <div class="row">
                 <div class="col-md-6 text-left">
-                <span class="copyright text-muted">Copyright &copy; <b>AdminDesigns</b> 2015</span>
+                <span class="copyright text-muted">Copyright &copy; <b>Rowdy Root</b> 2016</span>
                 </div>
                 <div class="col-md-6 text-right">
-                    <ul class="list-inline social-buttons">
+                  <span class="copyright text-muted">UTSA Software Engineering</span>
+                    <ul class="list-inline social-buttons hidden">
                         <li><a href="#"><i class="fa fa-twitter"></i></a>
                         </li>
                         <li><a href="#"><i class="fa fa-facebook"></i></a>
