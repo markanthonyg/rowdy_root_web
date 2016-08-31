@@ -112,7 +112,7 @@
             <div class="intro-text">
                 <div class="intro-heading">Our website gives you the ability to <b>easily</b> and <b>effciently</b> manage your patients.</div>
                 <a href="#services" class="page-scroll btn btn-xl mr30 btn-primary">Learn More</a>
-                <a href="" class="page-scroll btn btn-xl btn-wire">Sign Up</a>
+                <a href="/register" class="page-scroll btn btn-xl btn-wire">Sign Up</a>
             </div>
         </div>
     </header>
