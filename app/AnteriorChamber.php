@@ -1,6 +1,6 @@
 <?php
 
-namespace App\App;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -43,5 +43,5 @@ class AnteriorChamber extends Model
 
     protected $guarded = [];
 
-        
+
 }

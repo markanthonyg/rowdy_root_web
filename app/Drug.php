@@ -1,6 +1,6 @@
 <?php
 
-namespace App\App;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -20,5 +20,5 @@ class Drug extends Model
 
     protected $guarded = [];
 
-        
+
 }

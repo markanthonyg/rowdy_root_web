@@ -1,6 +1,6 @@
 <?php
 
-namespace App\App;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -34,5 +34,5 @@ class Pupil extends Model
 
     protected $guarded = [];
 
-        
+
 }

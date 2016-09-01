@@ -1,6 +1,6 @@
 <?php
 
-namespace App\App;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -32,5 +32,5 @@ class Refraction extends Model
 
     protected $guarded = [];
 
-        
+
 }

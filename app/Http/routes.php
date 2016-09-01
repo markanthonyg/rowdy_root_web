@@ -29,3 +29,6 @@ Route::get('/terms', function () {
 
 // Dashboard Routes
 Route::get('/dashboard', 'Dashboard\HomeController@showHome');
+
+// Login Routes
+Route::post('/login', 'Auth\LoginController@login');

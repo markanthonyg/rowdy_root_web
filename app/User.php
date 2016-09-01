@@ -1,6 +1,6 @@
 <?php
 
-namespace App\App;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -22,10 +22,8 @@ class User extends Model
         'last_name',
         'gender',
         'dob',
-        'role',
-        'dateCreated',
-        'remember_token'
-    ];
+        'role'
+   ];
 
     protected $guarded = ['password', 'remember_token'];
 

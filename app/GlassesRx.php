@@ -1,6 +1,6 @@
 <?php
 
-namespace App\App;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -28,5 +28,5 @@ class GlassesRx extends Model
 
     protected $guarded = [];
 
-        
+
 }

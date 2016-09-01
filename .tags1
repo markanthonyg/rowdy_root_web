@@ -4,3 +4,12 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+User	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^class User extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $table = 'users';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $table = 'users';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $guarded = ['password', 'remember_token'];$/;"	variable	line:28
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $guarded = ['password', 'remember_token'];$/;"	variable	line:28

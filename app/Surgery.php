@@ -1,6 +1,6 @@
 <?php
 
-namespace App\App;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -21,5 +21,5 @@ class Surgery extends Model
 
     protected $guarded = [];
 
-        
+
 }

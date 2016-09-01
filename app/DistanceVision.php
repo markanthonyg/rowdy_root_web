@@ -1,6 +1,6 @@
 <?php
 
-namespace App\App;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -23,5 +23,5 @@ class DistanceVision extends Model
 
     protected $guarded = [];
 
-        
+
 }

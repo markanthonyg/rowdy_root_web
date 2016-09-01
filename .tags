@@ -18,3 +18,284 @@ runVectorMaps	/Users/battlestation/Documents/rowdy_root_web/resources/views/layo
 runJvectorMap	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        var runJvectorMap = function() {$/;"	jsfunction	line:481
 HomeController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/HomeController.php	/^class HomeController extends Controller$/;"	class	line:10
 showHome	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/HomeController.php	/^    public function showHome(){$/;"	function	line:13
+Login	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/login.js	/^var Login = function() {$/;"	function	line:8
+runLoginForms	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/login.js	/^  var runLoginForms = function() {$/;"	function	line:11
+Login.runLoginForms	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/login.js	/^  var runLoginForms = function() {$/;"	function	line:11
+Login	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/login.js	/^var Login = function() {$/;"	function	line:8
+init	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/login.js	/^    init: function() {$/;"	function	line:40
+Login	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/Login.js	/^var Login = function() {$/;"	function	line:8
+runLoginForms	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/Login.js	/^  var runLoginForms = function() {$/;"	function	line:11
+beforeSend	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/Login.js	/^        beforeSend: function(){$/;"	function	line:23
+complete	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/Login.js	/^        complete: function(){$/;"	function	line:26
+success	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/Login.js	/^        success:function(data, textStatus, jqXHR)$/;"	function	line:29
+error	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/Login.js	/^        error: function(jqXHR, textStatus, errorThrown)$/;"	function	line:34
+Login.runLoginForms	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/Login.js	/^  var runLoginForms = function() {$/;"	function	line:11
+init	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/Login.js	/^    init: function() {$/;"	function	line:60
+Login	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/Login.js	/^var Login = function() {$/;"	function	line:8
+name	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "name": "laravel\/laravel",$/;"	function	line:2
+description	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "description": "The Laravel Framework.",$/;"	function	line:3
+keywords	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "keywords": ["framework", "laravel"],$/;"	function	line:4
+license	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "license": "MIT",$/;"	function	line:5
+type	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "type": "project",$/;"	function	line:6
+require	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "require": {$/;"	function	line:7
+php	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "php": ">=5.5.9",$/;"	function	line:8
+laravel/framework	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "laravel\/framework": "5.2.*",$/;"	function	line:9
+laravelcollective/html	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "laravelcollective\/html": "~5.0"$/;"	function	line:10
+require-dev	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "require-dev": {$/;"	function	line:12
+fzaninotto/faker	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "fzaninotto\/faker": "~1.4",$/;"	function	line:13
+mockery/mockery	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "mockery\/mockery": "0.9.*",$/;"	function	line:14
+phpunit/phpunit	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "phpunit\/phpunit": "~4.0",$/;"	function	line:15
+symfony/css-selector	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "symfony\/css-selector": "2.8.*|3.0.*",$/;"	function	line:16
+symfony/dom-crawler	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "symfony\/dom-crawler": "2.8.*|3.0.*",$/;"	function	line:17
+xethron/migrations-generator	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "xethron\/migrations-generator": "dev-l5",$/;"	function	line:18
+way/generators	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "way\/generators": "dev-feature\/laravel-five-stable",$/;"	function	line:19
+ignasbernotas/laravel-model-generator	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "ignasbernotas\/laravel-model-generator": "^1"$/;"	function	line:20
+repositories	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "repositories": [$/;"	function	line:22
+type	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^            "type": "git",$/;"	function	line:24
+url	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^            "url": "https:\/\/github.com\/jamisonvalenta\/Laravel-4-Generators.git"$/;"	function	line:25
+autoload	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "autoload": {$/;"	function	line:28
+classmap	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "classmap": [$/;"	function	line:29
+psr-4	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "psr-4": {$/;"	function	line:32
+App\\	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^            "App\\\\": "app\/"$/;"	function	line:33
+autoload-dev	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "autoload-dev": {$/;"	function	line:36
+classmap	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "classmap": [$/;"	function	line:37
+scripts	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "scripts": {$/;"	function	line:41
+post-root-package-install	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-root-package-install": [$/;"	function	line:42
+post-create-project-cmd	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-create-project-cmd": [$/;"	function	line:45
+post-install-cmd	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-install-cmd": [$/;"	function	line:48
+post-update-cmd	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-update-cmd": [$/;"	function	line:52
+config	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "config": {$/;"	function	line:57
+preferred-install	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "preferred-install": "dist"$/;"	function	line:58
+Visit	/Users/battlestation/Documents/rowdy_root_web/app/Visit.php	/^class Visit extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/Visit.php	/^    protected $table = 'visits';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/Visit.php	/^    protected $table = 'visits';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Visit.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Visit.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Visit.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Visit.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Visit.php	/^    protected $guarded = [];$/;"	variable	line:24
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Visit.php	/^    protected $guarded = [];$/;"	variable	line:24
+Vital	/Users/battlestation/Documents/rowdy_root_web/app/Vital.php	/^class Vital extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/Vital.php	/^    protected $table = 'vitals';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/Vital.php	/^    protected $table = 'vitals';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Vital.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Vital.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Vital.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Vital.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Vital.php	/^    protected $guarded = [];$/;"	variable	line:36
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Vital.php	/^    protected $guarded = [];$/;"	variable	line:36
+Surgerytemplate	/Users/battlestation/Documents/rowdy_root_web/app/Surgerytemplate.php	/^class Surgerytemplate extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/Surgerytemplate.php	/^    protected $table = 'surgerytemplates';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/Surgerytemplate.php	/^    protected $table = 'surgerytemplates';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Surgerytemplate.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Surgerytemplate.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Surgerytemplate.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Surgerytemplate.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Surgerytemplate.php	/^    protected $guarded = [];$/;"	variable	line:21
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Surgerytemplate.php	/^    protected $guarded = [];$/;"	variable	line:21
+Surgery	/Users/battlestation/Documents/rowdy_root_web/app/Surgery.php	/^class Surgery extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/Surgery.php	/^    protected $table = 'surgeries';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/Surgery.php	/^    protected $table = 'surgeries';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Surgery.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Surgery.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Surgery.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Surgery.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Surgery.php	/^    protected $guarded = [];$/;"	variable	line:22
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Surgery.php	/^    protected $guarded = [];$/;"	variable	line:22
+SleSketch	/Users/battlestation/Documents/rowdy_root_web/app/SleSketch.php	/^class SleSketch extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/SleSketch.php	/^    protected $table = 'sle_sketches';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/SleSketch.php	/^    protected $table = 'sle_sketches';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/SleSketch.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/SleSketch.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/SleSketch.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/SleSketch.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/SleSketch.php	/^    protected $guarded = [];$/;"	variable	line:21
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/SleSketch.php	/^    protected $guarded = [];$/;"	variable	line:21
+Refraction	/Users/battlestation/Documents/rowdy_root_web/app/Refraction.php	/^class Refraction extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/Refraction.php	/^    protected $table = 'refractions';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/Refraction.php	/^    protected $table = 'refractions';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Refraction.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Refraction.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Refraction.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Refraction.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Refraction.php	/^    protected $guarded = [];$/;"	variable	line:33
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Refraction.php	/^    protected $guarded = [];$/;"	variable	line:33
+Pupil	/Users/battlestation/Documents/rowdy_root_web/app/Pupil.php	/^class Pupil extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/Pupil.php	/^    protected $table = 'pupils';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/Pupil.php	/^    protected $table = 'pupils';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Pupil.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Pupil.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Pupil.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Pupil.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Pupil.php	/^    protected $guarded = [];$/;"	variable	line:35
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Pupil.php	/^    protected $guarded = [];$/;"	variable	line:35
+Patient	/Users/battlestation/Documents/rowdy_root_web/app/Patient.php	/^class Patient extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/Patient.php	/^    protected $table = 'patients';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/Patient.php	/^    protected $table = 'patients';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Patient.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Patient.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Patient.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Patient.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Patient.php	/^    protected $guarded = [];$/;"	variable	line:37
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Patient.php	/^    protected $guarded = [];$/;"	variable	line:37
+Migration	/Users/battlestation/Documents/rowdy_root_web/app/Migration.php	/^class Migration extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/Migration.php	/^    protected $table = 'migrations';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/Migration.php	/^    protected $table = 'migrations';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Migration.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Migration.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Migration.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Migration.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Migration.php	/^    protected $guarded = [];$/;"	variable	line:21
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Migration.php	/^    protected $guarded = [];$/;"	variable	line:21
+Medication	/Users/battlestation/Documents/rowdy_root_web/app/Medication.php	/^class Medication extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/Medication.php	/^    protected $table = 'medications';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/Medication.php	/^    protected $table = 'medications';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Medication.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Medication.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Medication.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Medication.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Medication.php	/^    protected $guarded = [];$/;"	variable	line:23
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Medication.php	/^    protected $guarded = [];$/;"	variable	line:23
+Lense	/Users/battlestation/Documents/rowdy_root_web/app/Lense.php	/^class Lense extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/Lense.php	/^    protected $table = 'lenses';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/Lense.php	/^    protected $table = 'lenses';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Lense.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Lense.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Lense.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Lense.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Lense.php	/^    protected $guarded = [];$/;"	variable	line:38
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Lense.php	/^    protected $guarded = [];$/;"	variable	line:38
+Iop	/Users/battlestation/Documents/rowdy_root_web/app/Iop.php	/^class Iop extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/Iop.php	/^    protected $table = 'iops';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/Iop.php	/^    protected $table = 'iops';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Iop.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Iop.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Iop.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Iop.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Iop.php	/^    protected $guarded = [];$/;"	variable	line:27
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Iop.php	/^    protected $guarded = [];$/;"	variable	line:27
+HealthHistory	/Users/battlestation/Documents/rowdy_root_web/app/HealthHistory.php	/^class HealthHistory extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/HealthHistory.php	/^    protected $table = 'health_history';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/HealthHistory.php	/^    protected $table = 'health_history';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/HealthHistory.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/HealthHistory.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/HealthHistory.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/HealthHistory.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/HealthHistory.php	/^    protected $guarded = [];$/;"	variable	line:28
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/HealthHistory.php	/^    protected $guarded = [];$/;"	variable	line:28
+GonioSketch	/Users/battlestation/Documents/rowdy_root_web/app/GonioSketch.php	/^class GonioSketch extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/GonioSketch.php	/^    protected $table = 'gonio_sketches';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/GonioSketch.php	/^    protected $table = 'gonio_sketches';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/GonioSketch.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/GonioSketch.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/GonioSketch.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/GonioSketch.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/GonioSketch.php	/^    protected $guarded = [];$/;"	variable	line:21
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/GonioSketch.php	/^    protected $guarded = [];$/;"	variable	line:21
+Gonio	/Users/battlestation/Documents/rowdy_root_web/app/Gonio.php	/^class Gonio extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/Gonio.php	/^    protected $table = 'gonios';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/Gonio.php	/^    protected $table = 'gonios';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Gonio.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Gonio.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Gonio.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Gonio.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Gonio.php	/^    protected $guarded = [];$/;"	variable	line:40
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Gonio.php	/^    protected $guarded = [];$/;"	variable	line:40
+GlassesRx	/Users/battlestation/Documents/rowdy_root_web/app/GlassesRx.php	/^class GlassesRx extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/GlassesRx.php	/^    protected $table = 'glasses_rxs';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/GlassesRx.php	/^    protected $table = 'glasses_rxs';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/GlassesRx.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/GlassesRx.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/GlassesRx.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/GlassesRx.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/GlassesRx.php	/^    protected $guarded = [];$/;"	variable	line:29
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/GlassesRx.php	/^    protected $guarded = [];$/;"	variable	line:29
+FundusSketch	/Users/battlestation/Documents/rowdy_root_web/app/FundusSketch.php	/^class FundusSketch extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/FundusSketch.php	/^    protected $table = 'fundus_sketches';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/FundusSketch.php	/^    protected $table = 'fundus_sketches';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/FundusSketch.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/FundusSketch.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/FundusSketch.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/FundusSketch.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/FundusSketch.php	/^    protected $guarded = [];$/;"	variable	line:21
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/FundusSketch.php	/^    protected $guarded = [];$/;"	variable	line:21
+FundusExam	/Users/battlestation/Documents/rowdy_root_web/app/FundusExam.php	/^class FundusExam extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/FundusExam.php	/^    protected $table = 'fundus_exams';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/FundusExam.php	/^    protected $table = 'fundus_exams';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/FundusExam.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/FundusExam.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/FundusExam.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/FundusExam.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/FundusExam.php	/^    protected $guarded = [];$/;"	variable	line:36
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/FundusExam.php	/^    protected $guarded = [];$/;"	variable	line:36
+Drug	/Users/battlestation/Documents/rowdy_root_web/app/Drug.php	/^class Drug extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/Drug.php	/^    protected $table = 'drugs';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/Drug.php	/^    protected $table = 'drugs';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Drug.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Drug.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Drug.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Drug.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Drug.php	/^    protected $guarded = [];$/;"	variable	line:21
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Drug.php	/^    protected $guarded = [];$/;"	variable	line:21
+Document	/Users/battlestation/Documents/rowdy_root_web/app/Document.php	/^class Document extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/Document.php	/^    protected $table = 'documents';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/Document.php	/^    protected $table = 'documents';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Document.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Document.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Document.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Document.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Document.php	/^    protected $guarded = [];$/;"	variable	line:23
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Document.php	/^    protected $guarded = [];$/;"	variable	line:23
+DistanceVision	/Users/battlestation/Documents/rowdy_root_web/app/DistanceVision.php	/^class DistanceVision extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/DistanceVision.php	/^    protected $table = 'distance_visions';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/DistanceVision.php	/^    protected $table = 'distance_visions';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/DistanceVision.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/DistanceVision.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/DistanceVision.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/DistanceVision.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/DistanceVision.php	/^    protected $guarded = [];$/;"	variable	line:24
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/DistanceVision.php	/^    protected $guarded = [];$/;"	variable	line:24
+Comment	/Users/battlestation/Documents/rowdy_root_web/app/Comment.php	/^class Comment extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/Comment.php	/^    protected $table = 'comments';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/Comment.php	/^    protected $table = 'comments';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Comment.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Comment.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Comment.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Comment.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Comment.php	/^    protected $guarded = [];$/;"	variable	line:24
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Comment.php	/^    protected $guarded = [];$/;"	variable	line:24
+AnteriorChamber	/Users/battlestation/Documents/rowdy_root_web/app/AnteriorChamber.php	/^class AnteriorChamber extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/AnteriorChamber.php	/^    protected $table = 'anterior_chambers';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/AnteriorChamber.php	/^    protected $table = 'anterior_chambers';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/AnteriorChamber.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/AnteriorChamber.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/AnteriorChamber.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/AnteriorChamber.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/AnteriorChamber.php	/^    protected $guarded = [];$/;"	variable	line:44
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/AnteriorChamber.php	/^    protected $guarded = [];$/;"	variable	line:44
+Allergy	/Users/battlestation/Documents/rowdy_root_web/app/Allergy.php	/^class Allergy extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/Allergy.php	/^    protected $table = 'allergies';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/Allergy.php	/^    protected $table = 'allergies';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Allergy.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/Allergy.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Allergy.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/Allergy.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Allergy.php	/^    protected $guarded = [];$/;"	variable	line:23
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/Allergy.php	/^    protected $guarded = [];$/;"	variable	line:23
+aliases	/Users/battlestation/Documents/rowdy_root_web/config/app.php	/^    | This array of class aliases will be registered when this application$/;"	class	line:169
+CreateUsersTable	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_users_table.php	/^class CreateUsersTable extends Migration {$/;"	class	line:6
+up	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_users_table.php	/^	public function up()$/;"	function	line:13
+down	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_users_table.php	/^	public function down()$/;"	function	line:38
+LoginController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^class LoginController extends Controller$/;"	class	line:16
+login	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^    public function login(){$/;"	function	line:19
+remember	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^        $remember = true;$/;"	variable	line:25
+remember	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^        $remember = false;$/;"	variable	line:27
+User	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^class User extends Model$/;"	class	line:10
+table	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $table = 'users';$/;"	variable	line:12
+table	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $table = 'users';$/;"	variable	line:12
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    public $timestamps = false;$/;"	variable	line:14
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    public $timestamps = false;$/;"	variable	line:14
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $fillable = [$/;"	variable	line:16
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $fillable = [$/;"	variable	line:16
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $guarded = ['password', 'remember_token'];$/;"	variable	line:28
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $guarded = ['password', 'remember_token'];$/;"	variable	line:28
