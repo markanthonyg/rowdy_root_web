@@ -24,6 +24,8 @@ class User extends Authenticatable
         'gender',
         'dob',
         'role',
+        'cid',
+        'approved',
         'remember_token'
     ];
 
