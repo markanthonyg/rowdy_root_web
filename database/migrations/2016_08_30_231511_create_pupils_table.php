@@ -15,7 +15,7 @@ class CreatePupilsTable extends Migration {
 		Schema::create('pupils', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('vid')->default(0);
+			$table->integer('vid');
 			$table->integer('isBothPupilsNormal')->nullable()->default(0);
 			$table->text('bothShape', 65535)->nullable();
 			$table->text('bothDiameter', 65535)->nullable();

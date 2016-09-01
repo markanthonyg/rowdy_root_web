@@ -1,27 +1,25 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Comment
+ * Class Surgery
  */
-class Comment extends Model
+class Surgery extends Model
 {
-    protected $table = 'comments';
+    protected $table = 'surgeries';
 
     public $timestamps = false;
 
     protected $fillable = [
         'pid',
-        'type',
-        'typeid',
-        'comment',
-        'dateCreated'
+        'title',
+        'body'
     ];
 
     protected $guarded = [];
 
-
+        
 }

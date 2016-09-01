@@ -1,27 +1,27 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Visit
+ * Class Comment
  */
-class Visit extends Model
+class Comment extends Model
 {
-    protected $table = 'visits';
+    protected $table = 'comments';
 
     public $timestamps = false;
 
     protected $fillable = [
         'pid',
-        'chiefComplaint',
-        'assessment',
-        'plan',
+        'type',
+        'typeid',
+        'comment',
         'dateCreated'
     ];
 
     protected $guarded = [];
 
-
+        
 }

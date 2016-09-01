@@ -15,7 +15,7 @@ class CreateRefractionsTable extends Migration {
 		Schema::create('refractions', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('vid')->default(0);
+			$table->integer('vid');
 			$table->integer('isManifest')->nullable()->default(0);
 			$table->text('SC_OD_Sphere', 65535)->nullable();
 			$table->text('SC_OD_Cyl', 65535)->nullable();

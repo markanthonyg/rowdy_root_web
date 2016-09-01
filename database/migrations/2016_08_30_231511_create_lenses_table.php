@@ -15,7 +15,7 @@ class CreateLensesTable extends Migration {
 		Schema::create('lenses', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('vid')->default(0);
+			$table->integer('vid');
 			$table->text('NS_OD', 65535)->nullable();
 			$table->text('NS_OD_Notes', 65535)->nullable();
 			$table->text('NS_OS', 65535)->nullable();

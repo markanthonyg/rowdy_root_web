@@ -1,26 +1,26 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Medication
+ * Class Document
  */
-class Medication extends Model
+class Document extends Model
 {
-    protected $table = 'medications';
+    protected $table = 'documents';
 
     public $timestamps = false;
 
     protected $fillable = [
         'pid',
-        'trade',
-        'generic',
-        'directions'
+        'name',
+        'path',
+        'type'
     ];
 
     protected $guarded = [];
 
-
+        
 }

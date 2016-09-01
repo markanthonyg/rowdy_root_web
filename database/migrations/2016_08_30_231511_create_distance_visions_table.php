@@ -15,7 +15,7 @@ class CreateDistanceVisionsTable extends Migration {
 		Schema::create('distance_visions', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('vid')->default(0);
+			$table->integer('vid');
 			$table->text('DVODSC', 65535)->nullable();
 			$table->text('DVOSSC', 65535)->nullable();
 			$table->text('DVODCC', 65535)->nullable();

@@ -1,15 +1,15 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class FundusSketch
+ * Class SleSketch
  */
-class FundusSketch extends Model
+class SleSketch extends Model
 {
-    protected $table = 'fundus_sketches';
+    protected $table = 'sle_sketches';
 
     public $timestamps = false;
 
@@ -20,5 +20,5 @@ class FundusSketch extends Model
 
     protected $guarded = [];
 
-
+        
 }

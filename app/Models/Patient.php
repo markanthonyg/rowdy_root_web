@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -34,7 +34,7 @@ class Patient extends Model
         'pic_path'
     ];
 
-    protected $guarded = [];
+    protected $guarded = ['birth_day', 'birth_month', 'birth_year', 'phone_number', 'address', 'address_2'];
 
 
 }

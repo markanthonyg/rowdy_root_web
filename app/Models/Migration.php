@@ -1,24 +1,24 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class SleSketch
+ * Class Migration
  */
-class SleSketch extends Model
+class Migration extends Model
 {
-    protected $table = 'sle_sketches';
+    protected $table = 'migrations';
 
     public $timestamps = false;
 
     protected $fillable = [
-        'vid',
-        'image'
+        'migration',
+        'batch'
     ];
 
     protected $guarded = [];
 
-
+        
 }

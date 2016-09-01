@@ -1,25 +1,24 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Surgery
+ * Class Surgerytemplate
  */
-class Surgery extends Model
+class Surgerytemplate extends Model
 {
-    protected $table = 'surgeries';
+    protected $table = 'surgerytemplates';
 
     public $timestamps = false;
 
     protected $fillable = [
-        'pid',
         'title',
-        'body'
+        'description'
     ];
 
     protected $guarded = [];
 
-
+        
 }

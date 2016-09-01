@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -23,8 +23,9 @@ class User extends Authenticatable
         'last_name',
         'gender',
         'dob',
-        'role'
-   ];
+        'role',
+        'remember_token'
+    ];
 
     protected $guarded = ['password', 'remember_token'];
 

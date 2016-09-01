@@ -1,24 +1,24 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Migration
+ * Class GonioSketch
  */
-class Migration extends Model
+class GonioSketch extends Model
 {
-    protected $table = 'migrations';
+    protected $table = 'gonio_sketches';
 
     public $timestamps = false;
 
     protected $fillable = [
-        'migration',
-        'batch'
+        'vid',
+        'image'
     ];
 
     protected $guarded = [];
 
-
+        
 }

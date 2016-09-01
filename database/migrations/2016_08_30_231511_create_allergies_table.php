@@ -15,7 +15,7 @@ class CreateAllergiesTable extends Migration {
 		Schema::create('allergies', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('pid')->default(0);
+			$table->integer('pid');
 			$table->text('allergy', 65535);
 			$table->text('severity', 65535)->nullable();
 			$table->text('adverse_reaction', 65535)->nullable();

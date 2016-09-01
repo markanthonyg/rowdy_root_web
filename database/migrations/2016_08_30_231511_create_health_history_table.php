@@ -15,7 +15,7 @@ class CreateHealthHistoryTable extends Migration {
 		Schema::create('health_history', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('pid')->default(0);
+			$table->integer('pid');
 			$table->text('pc', 65535);
 			$table->text('da', 65535);
 			$table->text('bt', 65535);
