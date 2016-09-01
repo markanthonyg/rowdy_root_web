@@ -113,7 +113,7 @@
                 <span class="fa fa-gear"></span> Settings </a>
             </li>
             <li class="dropdown-footer">
-              <a href="#" class="">
+              <a href="/logout" class="">
               <span class="fa fa-power-off pr5"></span> Logout </a>
             </li>
           </ul>
@@ -155,7 +155,7 @@
               <div class="media-body">
                 <div class="media-author">Michael Richards</div>
                 <div class="media-links">
-                   <a href="">Logout</a>
+                   <a href="/logout">Logout</a>
                 </div>
               </div>
             </div>

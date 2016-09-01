@@ -7,15 +7,6 @@ eventRender	/Users/battlestation/Documents/rowdy_root_web/resources/views/layout
 update	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/master.blade.php	/^      update: function( event, ui ) {$/;"	jsfunction	line:1558
 runVectorMaps	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/master.blade.php	/^    function runVectorMaps() {$/;"	function	line:1670
 runJvectorMap	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/master.blade.php	/^      var runJvectorMap = function() {$/;"	jsfunction	line:1673
-needed	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^         .sidebar-dark (default no class needed)$/;"	class	line:132
-onStart	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        onStart: function() {$/;"	jsfunction	line:291
-onFinish	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        onFinish: function() {$/;"	jsfunction	line:294
-below	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          runVectorMaps(); \/\/ function below$/;"	function	line:301
-onSave	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        onSave: function() {$/;"	jsfunction	line:303
-eventRender	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        eventRender: function(event, element) {$/;"	jsfunction	line:332
-update	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        update: function( event, ui ) {$/;"	jsfunction	line:366
-runVectorMaps	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^      function runVectorMaps() {$/;"	function	line:478
-runJvectorMap	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        var runJvectorMap = function() {$/;"	jsfunction	line:481
 HomeController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/HomeController.php	/^class HomeController extends Controller$/;"	class	line:10
 showHome	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/HomeController.php	/^    public function showHome(){$/;"	function	line:13
 Login	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/login.js	/^var Login = function() {$/;"	function	line:8
@@ -286,16 +277,28 @@ aliases	/Users/battlestation/Documents/rowdy_root_web/config/app.php	/^    | Thi
 CreateUsersTable	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_users_table.php	/^class CreateUsersTable extends Migration {$/;"	class	line:6
 up	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_users_table.php	/^	public function up()$/;"	function	line:13
 down	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_users_table.php	/^	public function down()$/;"	function	line:38
+User	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^class User extends Authenticatable$/;"	class	line:11
+table	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $table = 'users';$/;"	variable	line:13
+table	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $table = 'users';$/;"	variable	line:13
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    public $timestamps = false;$/;"	variable	line:15
+timestamps	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    public $timestamps = false;$/;"	variable	line:15
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $fillable = [$/;"	variable	line:17
+fillable	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $fillable = [$/;"	variable	line:17
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $guarded = ['password', 'remember_token'];$/;"	variable	line:29
+guarded	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $guarded = ['password', 'remember_token'];$/;"	variable	line:29
 LoginController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^class LoginController extends Controller$/;"	class	line:16
-login	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^    public function login(){$/;"	function	line:19
-remember	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^        $remember = true;$/;"	variable	line:25
-remember	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^        $remember = false;$/;"	variable	line:27
-User	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^class User extends Model$/;"	class	line:10
-table	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $table = 'users';$/;"	variable	line:12
-table	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $table = 'users';$/;"	variable	line:12
-timestamps	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    public $timestamps = false;$/;"	variable	line:14
-timestamps	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    public $timestamps = false;$/;"	variable	line:14
-fillable	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $fillable = [$/;"	variable	line:16
-fillable	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $fillable = [$/;"	variable	line:16
-guarded	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $guarded = ['password', 'remember_token'];$/;"	variable	line:28
-guarded	/Users/battlestation/Documents/rowdy_root_web/app/User.php	/^    protected $guarded = ['password', 'remember_token'];$/;"	variable	line:28
+login	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^    public function login(){$/;"	function	line:20
+remember	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^        $remember = true;$/;"	variable	line:26
+remember	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^        $remember = false;$/;"	variable	line:28
+needed	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^         .sidebar-dark (default no class needed)$/;"	class	line:132
+onStart	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        onStart: function() {$/;"	jsfunction	line:291
+onFinish	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        onFinish: function() {$/;"	jsfunction	line:294
+below	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          runVectorMaps(); \/\/ function below$/;"	function	line:301
+onSave	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        onSave: function() {$/;"	jsfunction	line:303
+eventRender	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        eventRender: function(event, element) {$/;"	jsfunction	line:332
+update	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        update: function( event, ui ) {$/;"	jsfunction	line:366
+runVectorMaps	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^      function runVectorMaps() {$/;"	function	line:478
+runJvectorMap	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        var runJvectorMap = function() {$/;"	jsfunction	line:481
+HomeController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/HomeController.php	/^class HomeController extends Controller$/;"	class	line:12
+viewLanding	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/HomeController.php	/^    public function viewLanding(){$/;"	function	line:15
+logout	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/HomeController.php	/^    public function logout(){$/;"	function	line:24

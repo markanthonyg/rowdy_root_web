@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
-    // Login user
+  
+    //  Login user
     public function login(){
       // Make sure crsf token is valid
       $this->middleware('crsf');

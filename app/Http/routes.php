@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-});
 
 Route::get('/login', function () {
     return view('pages_login');
@@ -27,7 +24,11 @@ Route::get('/terms', function () {
     return view('terms');
 });
 
-// Dashboard Routes
+// HomeController
+Route::get('/', 'HomeController@viewLanding');
+Route::get('/logout', 'HomeController@logout');
+
+// Dashboard Home Routes
 Route::get('/dashboard', 'Dashboard\HomeController@showHome');
 
 // Login Routes
