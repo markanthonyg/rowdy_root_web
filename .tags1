@@ -4,6 +4,3 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-HomeController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/HomeController.php	/^class HomeController extends Controller$/;"	class	line:12
-viewLanding	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/HomeController.php	/^    public function viewLanding(){$/;"	function	line:15
-logout	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/HomeController.php	/^    public function logout(){$/;"	function	line:24
