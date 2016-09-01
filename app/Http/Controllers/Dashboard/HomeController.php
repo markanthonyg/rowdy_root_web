@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -13,7 +14,13 @@ class HomeController extends Controller
     public function showHome(){
       // Logic will need to be added to pass $data and authenticate user
 
-      // For now, just returning the View
-      return view('dashboard/home');
+      // Check if user is logged in, if not send back to home
+      if(!Auth::check()){
+        return Redirect::to('/');
+      }
+
+      $data['user'] = Auth::User();
+
+      return view('dashboard/home')->with($data);
     }
 }

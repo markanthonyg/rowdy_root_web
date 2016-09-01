@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
-  
+
     //  Login user
     public function login(){
       // Make sure crsf token is valid
@@ -30,7 +30,9 @@ class LoginController extends Controller
 
       // Attempt to authenticate then redirect based on success
       if(Auth::attempt(['username' => Input::get('username'), 'password' => Input::get('password')], $remember)) {
-        return view('dashboard/home');
+        $data['user'] = Auth::User();
+
+        return view('dashboard/home')->with($data);
       } else {
         Session::flash('login_error_message', 'Invalid credentials');
 
