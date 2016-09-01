@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use Log;
 use Auth;
+use App\Models\User;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
