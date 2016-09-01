@@ -46,10 +46,14 @@
       <!-- Begin: Content -->
       <section id="content" class="">
         @if(Session::has('signup_missing_fields'))
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          {{ Session::get('signup_missing_fields') }}
+        <div class="bs-component">
+              <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <i class="fa fa-remove pr10"></i>
+                <strong>test</strong>
+              </div>
+            </div>
         @endif
-
         <div class="admin-form theme-info mw700" style="margin-top: 3%;" id="login1">
 
           <div class="row mb15 table-layout">
@@ -179,7 +183,37 @@
 
   <!-- BEGIN: PAGE SCRIPTS -->
 
+  <!-- jQuery -->
+  <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+  <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
 
+  <!-- Theme Javascript -->
+  <script src="assets/js/utility/utility.js"></script>
+  <script src="assets/js/demo/demo.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Theme Core
+    Core.init();
+
+    // Init Demo JS
+    Demo.init();
+
+    // Demo Javascript- SlideIn alert on click
+    $('#alert-demo-call-1').on('click', function() {
+      $('#alert-demo-1').slideToggle('fast');
+    });
+
+    // Demo Javascript- Fades alert on click
+    $('#alert-demo-call-2').on('click', function() {
+      $('#alert-demo-2').fadeToggle();
+    });
+
+  });
+  </script>
   <!-- END: PAGE SCRIPTS -->
 
 </body>
