@@ -15,7 +15,7 @@ class CreateDocumentsTable extends Migration {
 		Schema::create('documents', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('pid')->default(0);
+			$table->integer('pid');
 			$table->text('name', 65535);
 			$table->text('path', 65535);
 			$table->text('type', 65535);

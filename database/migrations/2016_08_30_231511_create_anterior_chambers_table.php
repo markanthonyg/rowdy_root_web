@@ -15,7 +15,7 @@ class CreateAnteriorChambersTable extends Migration {
 		Schema::create('anterior_chambers', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('vid')->default(0);
+			$table->integer('vid');
 			$table->integer('isACODNormal')->nullable()->default(0);
 			$table->integer('isACOSNormal')->nullable()->default(0);
 			$table->text('ACDepthOD', 65535)->nullable();

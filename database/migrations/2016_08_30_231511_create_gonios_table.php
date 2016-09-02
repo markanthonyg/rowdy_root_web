@@ -15,7 +15,7 @@ class CreateGoniosTable extends Migration {
 		Schema::create('gonios', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('vid')->default(0);
+			$table->integer('vid');
 			$table->integer('isHxFHA')->nullable()->default(0);
 			$table->binary('FHASide', 65535)->nullable();
 			$table->integer('isODNormal')->nullable()->default(0);

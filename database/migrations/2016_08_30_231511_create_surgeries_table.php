@@ -15,7 +15,7 @@ class CreateSurgeriesTable extends Migration {
 		Schema::create('surgeries', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('pid')->default(0);
+			$table->integer('pid');
 			$table->text('title', 65535);
 			$table->text('body', 65535);
 		});

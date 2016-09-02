@@ -15,7 +15,7 @@ class CreateGlassesRxsTable extends Migration {
 		Schema::create('glasses_rxs', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('vid')->default(0);
+			$table->integer('vid');
 			$table->text('OD_Sphere', 65535)->nullable();
 			$table->text('OD_Cyl', 65535)->nullable();
 			$table->text('OD_Axis', 65535)->nullable();

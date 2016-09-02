@@ -11,13 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
 
 Route::get('/login', function () {
     return view('pages_login');
@@ -33,3 +26,13 @@ Route::post('/register', array('uses' => 'RegistrationController@signUpUser'));
 Route::get('/terms', function () {
     return view('terms');
 });
+
+// HomeController
+Route::get('/', 'HomeController@viewLanding');
+Route::get('/logout', 'HomeController@logout');
+
+// Dashboard Home Routes
+Route::get('/dashboard', 'Dashboard\HomeController@showHome');
+
+// Login Routes
+Route::post('/login', 'Auth\LoginController@login');

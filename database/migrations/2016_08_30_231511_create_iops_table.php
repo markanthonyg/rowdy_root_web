@@ -15,7 +15,7 @@ class CreateIopsTable extends Migration {
 		Schema::create('iops', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('vid')->default(0);
+			$table->integer('vid');
 			$table->text('ODValue', 65535)->nullable();
 			$table->text('ODType', 65535)->nullable();
 			$table->text('ODNotes', 65535)->nullable();

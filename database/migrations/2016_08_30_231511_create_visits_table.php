@@ -15,7 +15,7 @@ class CreateVisitsTable extends Migration {
 		Schema::create('visits', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('pid')->default(0);
+			$table->integer('pid');
 			$table->text('chiefComplaint', 65535)->nullable();
 			$table->text('assessment', 65535)->nullable();
 			$table->text('plan', 65535)->nullable();

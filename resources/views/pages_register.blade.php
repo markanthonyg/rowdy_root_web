@@ -45,15 +45,6 @@
 
       <!-- Begin: Content -->
       <section id="content" class="">
-        @if(Session::has('signup_missing_fields'))
-        <div class="bs-component">
-              <div class="alert alert-danger alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <i class="fa fa-remove pr10"></i>
-                <strong>test</strong>
-              </div>
-            </div>
-        @endif
         <div class="admin-form theme-info mw700" style="margin-top: 3%;" id="login1">
 
           <div class="row mb15 table-layout">
@@ -76,7 +67,7 @@
           </div>
 
           <div class="panel panel-info mt10 br-n">
-            {!! Form::open(['action' => 'RegistrationController@signUpUser', 'method' => 'POST', 'id' => 'signUpForm']) !!}
+            {!! Form::open(['action' => 'RegistrationController@signUpUser', 'method' => 'POST', 'id' => 'admin-form']) !!}
               <div class="panel-body p25 bg-light">
                 <div class="section-divider mt10 mb40">
                   <span>Set up your account</span>
@@ -107,15 +98,16 @@
                 <!-- end .section row section -->
 
                 <div class="section">
-                  <label for="email" class="field prepend-icon">
-                    {!! Form::text('email', null,  ['placeholder'=>'Email address', 'class' => 'gui-input']) !!}
-                    <label for="email" class="field-icon">
+                  <label for="useremail" class="field prepend-icon">
+                    {!! Form::text('useremail', null,  ['placeholder'=>'Email address', 'class' => 'gui-input', 'id' => 'useremail']) !!}
+                    <label for="useremail" class="field-icon">
                       <i class="fa fa-envelope"></i>
                     </label>
                   </label>
                 </div>
                 <!-- end section -->
 
+                <!--
                 <div class="section">
                   <label for="username" class="field prepend-icon">
                     {!! Form::text('username', null, ['placeholder'=>'Choose your username.', 'required', 'class' => 'gui-input']) !!}
@@ -123,8 +115,8 @@
                       <i class="fa fa-user"></i>
                     </label>
                   </label>
-                  <!-- end .smart-widget section -->
                 </div>
+              -->
                 <!-- end section -->
 
                 <div class="section">
@@ -138,9 +130,9 @@
                 <!-- end section -->
 
                 <div class="section">
-                  <label for="confirmPassword" class="field prepend-icon">
-                    {!! Form::password('password',  ['placeholder'=>'Retype your password', 'required', 'class' => 'gui-input']) !!}
-                    <label for="confirmPassword" class="field-icon">
+                  <label for="repeatPassword" class="field prepend-icon">
+                    {!! Form::password('repeatPassword',  ['placeholder'=>'Retype your password', 'required', 'class' => 'gui-input']) !!}
+                    <label for="repeatPassword" class="field-icon">
                       <i class="fa fa-lock"></i>
                     </label>
                   </label>
@@ -187,10 +179,15 @@
   <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
   <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
 
+  <!-- CanvasBG Plugin(creates mousehover effect) -->
+  <script src="vendor/plugins/canvasbg/canvasbg.js"></script>
+
   <!-- Theme Javascript -->
   <script src="assets/js/utility/utility.js"></script>
   <script src="assets/js/demo/demo.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <!-- Page Javascript -->
   <script type="text/javascript">
   jQuery(document).ready(function() {
 
@@ -202,19 +199,215 @@
     // Init Demo JS
     Demo.init();
 
-    // Demo Javascript- SlideIn alert on click
-    $('#alert-demo-call-1').on('click', function() {
-      $('#alert-demo-1').slideToggle('fast');
-    });
-
-    // Demo Javascript- Fades alert on click
-    $('#alert-demo-call-2').on('click', function() {
-      $('#alert-demo-2').fadeToggle();
+    // Init CanvasBG and pass target starting location
+    CanvasBG.init({
+      Loc: {
+        x: window.innerWidth / 2,
+        y: window.innerHeight / 3.3
+      },
     });
 
   });
   </script>
-  <!-- END: PAGE SCRIPTS -->
+
+  <!-- jQuery Validate Plugin-->
+  <script src="assets/admin-tools/admin-forms/js/jquery.validate.min.js"></script>
+
+  <!-- jQuery Validate Addon -->
+  <script src="assets/admin-tools/admin-forms/js/additional-methods.min.js"></script>
+
+  <script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Theme Core
+    Core.init();
+
+    // Init Demo JS
+    Demo.init();
+
+    /* @custom validation method (smartCaptcha)
+    ------------------------------------------------------------------ */
+
+    $.validator.methods.smartCaptcha = function(value, element, param) {
+      return value == param;
+    };
+
+    $("#admin-form").validate({
+
+      /* @validation states + elements
+      ------------------------------------------- */
+
+      errorClass: "state-error",
+      validClass: "state-success",
+      errorElement: "em",
+
+      /* @validation rules
+      ------------------------------------------ */
+
+      rules: {
+        firstname: {
+          required: true
+        },
+        lastname: {
+          required: true
+        },
+        useremail: {
+          required: true,
+          email: true,
+          remote: "checkEmail.php"
+        },
+        website: {
+          required: true,
+          url: true
+        },
+        language: {
+          required: true
+        },
+        upload1: {
+          required: true,
+          extension: "jpg|png|gif|jpeg|doc|docx|pdf|xls|rar|zip"
+        },
+        mobileos: {
+          required: true
+        },
+        comment: {
+          required: true,
+          minlength: 30
+        },
+        mobile_phone: {
+          require_from_group: [1, ".phone-group"]
+        },
+        home_phone: {
+          require_from_group: [1, ".phone-group"]
+        },
+        password: {
+          required: true,
+          minlength: 6,
+          maxlength: 16
+        },
+        repeatPassword: {
+          required: true,
+          minlength: 6,
+          maxlength: 16,
+          equalTo: '#password'
+        },
+        gender: {
+          required: true
+        },
+        languages: {
+          required: true
+        },
+        verification: {
+          required: true,
+          smartCaptcha: 19
+        },
+        applicant_age: {
+          required: true,
+          min: 16
+        },
+        licence_no: {
+          required: function(element) {
+            return $("#applicant_age").val() > 19;
+          }
+        },
+        child_name: {
+          required: "#parents:checked"
+        }
+
+      },
+
+      /* @validation error messages
+      ---------------------------------------------- */
+
+      messages: {
+        firstname: {
+          required: 'Enter first name'
+        },
+        lastname: {
+          required: 'Enter last name'
+        },
+        useremail: {
+          required: 'Enter email address',
+          email: 'Enter a VALID email address',
+          remote: "That email is already being used for an active account"
+        },
+        website: {
+          required: 'Enter your website URL',
+          url: 'URL should start with - http://www'
+        },
+        language: {
+          required: 'Choose a language'
+        },
+        upload1: {
+          required: 'Please browse a file',
+          extension: 'File format not supported'
+        },
+        mobileos: {
+          required: 'Please select a mobile platform'
+        },
+        comment: {
+          required: 'Oops you forgot to comment',
+          minlength: 'Enter at least 30 characters or more'
+        },
+        mobile_phone: {
+          require_from_group: 'Fill at least a mobile contact'
+        },
+        home_phone: {
+          require_from_group: 'Fill at least a home contact'
+        },
+        password: {
+          required: 'Please enter a password'
+        },
+        repeatPassword: {
+          required: 'Please repeat the above password',
+          equalTo: 'Password mismatch detected'
+        },
+        gender: {
+          required: 'Please choose specie'
+        },
+        languages: {
+          required: 'Select laguages spoken'
+        },
+        verification: {
+          required: 'Please enter verification code',
+          smartCaptcha: 'Oops - enter a correct verification code'
+        },
+        applicant_age: {
+          required: 'Enter applicant age',
+          min: 'Must be 16 years and above'
+        },
+        licence_no: {
+          required: 'Enter licence number'
+        },
+        child_name: {
+          required: 'Please enter your childs name'
+        }
+
+      },
+
+      /* @validation highlighting + error placement
+      ---------------------------------------------------- */
+
+      highlight: function(element, errorClass, validClass) {
+        $(element).closest('.field').addClass(errorClass).removeClass(validClass);
+      },
+      unhighlight: function(element, errorClass, validClass) {
+        $(element).closest('.field').removeClass(errorClass).addClass(validClass);
+      },
+      errorPlacement: function(error, element) {
+        if (element.is(":radio") || element.is(":checkbox")) {
+          element.closest('.option-group').after(error);
+        } else {
+          error.insertAfter(element.parent());
+        }
+      }
+
+    });
+  });
+  </script>
+
 
 </body>
 

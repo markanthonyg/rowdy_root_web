@@ -15,7 +15,7 @@ class CreateVitalsTable extends Migration {
 		Schema::create('vitals', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('pid')->default(0);
+			$table->integer('pid');
 			$table->float('bps', 10, 0)->nullable()->default(0);
 			$table->float('bpd', 10, 0)->nullable()->default(0);
 			$table->float('bpunit', 10, 0)->nullable()->default(0);

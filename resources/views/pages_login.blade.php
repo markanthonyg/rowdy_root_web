@@ -45,7 +45,7 @@
       <!-- Begin: Content -->
       <section id="content">
 
-        <div class="admin-form theme-info" id="login1">
+        <div class="admin-form theme-info" id="login">
 
           <div class="row mb15 table-layout">
 
@@ -69,14 +69,22 @@
           <div class="panel panel-info mt10 br-n">
 
             <!-- end .form-header section -->
-            <form method="post" action="/" id="contact">
+            {{-- <form method="POST" action="/login" id="loginform"> --}}
+            {!! Form::open(['action' => 'Auth\LoginController@login', 'id' => 'loginform']) !!}
               <div class="panel-body bg-light p30">
+                {{-- Show login error message --}}
+                @if(Session::has('login_error_message'))
+                  <div class="alert alert-danger alert-lg fade in">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    {{ Session::get('login_error_message') }}
+                  </div>
+                @endif
                 <div class="row">
                   <div class="col-sm-7 pr30">
                     <div class="section">
-                      <label for="username" class="field-label text-muted fs18 mb10">Username</label>
+                      {!! Form::label('username', 'Username', ['class' => 'field-label text-muted fs18 mb10']) !!}
                       <label for="username" class="field prepend-icon">
-                        <input type="text" name="username" id="username" class="gui-input" placeholder="Enter username">
+                        {!! Form::text('username', null, ['id' => 'username', 'class' => 'gui-input', 'placeholder' => 'Enter Username']) !!}
                         <label for="username" class="field-icon">
                           <i class="fa fa-user"></i>
                         </label>
@@ -87,13 +95,17 @@
                     <div class="section">
                       <label for="username" class="field-label text-muted fs18 mb10">Password</label>
                       <label for="password" class="field prepend-icon">
-                        <input type="password" name="password" id="password" class="gui-input" placeholder="Enter password">
+                        {!! Form::password('password', ['id' => 'password', 'class' => 'gui-input', 'placeholder' => 'Enter Password']) !!}
+                        {{-- <input type="password" name="password" id="password" class="gui-input" placeholder="Enter password"> --}}
                         <label for="password" class="field-icon">
                           <i class="fa fa-lock"></i>
                         </label>
                       </label>
                     </div>
                     <!-- end section -->
+
+                    {{-- Token must be passed or else 500 error --}}
+                    {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
 
                   </div>
                   <div class="col-sm-5 br-l br-grey pl30">
@@ -109,7 +121,7 @@
               </div>
               <!-- end .form-body section -->
               <div class="panel-footer clearfix p10 ph15">
-                <button type="submit" class="button btn-primary mr10 pull-right">Sign In</button>
+                {!! Form::submit('Sign In', ['class' => 'button btn-primary mr10 pull-right']) !!}
                 <label class="switch ib switch-primary pull-left input-align mt10">
                   <input type="checkbox" name="remember" id="remember" checked>
                   <label for="remember" data-on="YES" data-off="NO"></label>
@@ -117,7 +129,8 @@
                 </label>
               </div>
               <!-- end .form-footer section -->
-            </form>
+            {{-- </form> --}}
+            {!! Form::close() !!}
           </div>
         </div>
 
@@ -141,8 +154,9 @@
 
   <!-- Theme Javascript -->
   <script src="assets/js/utility/utility.js"></script>
-  <script src="assets/js/demo/demo.js"></script>
-  <script src="assets/js/main.js"></script>
+  {{-- <script src="assets/js/demo/demo.js"></script> --}}
+  {{-- <script src="assets/js/main.js"></script> --}}
+  <script src="assets/js/login/Login.js"></script>
 
   <!-- Page Javascript -->
   <script type="text/javascript">
@@ -151,10 +165,13 @@
     "use strict";
 
     // Init Theme Core
-    Core.init();
+    // Core.init();
 
     // Init Demo JS
-    Demo.init();
+    // Demo.init();
+
+    // Init Login JS
+    // Login.init();
 
     // Init CanvasBG and pass target starting location
     CanvasBG.init({

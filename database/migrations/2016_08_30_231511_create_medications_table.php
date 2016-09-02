@@ -15,7 +15,7 @@ class CreateMedicationsTable extends Migration {
 		Schema::create('medications', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('pid')->default(0);
+			$table->integer('pid');
 			$table->text('trade', 65535);
 			$table->text('generic', 65535);
 			$table->text('directions', 65535)->nullable();

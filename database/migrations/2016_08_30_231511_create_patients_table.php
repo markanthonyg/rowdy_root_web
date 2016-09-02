@@ -15,7 +15,7 @@ class CreatePatientsTable extends Migration {
 		Schema::create('patients', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('unidentified_patient')->default(0);
+			$table->integer('unidentified_patient');
 			$table->text('first_name', 65535);
 			$table->text('middle', 65535);
 			$table->text('last_name', 65535);

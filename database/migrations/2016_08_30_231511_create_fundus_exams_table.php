@@ -15,7 +15,7 @@ class CreateFundusExamsTable extends Migration {
 		Schema::create('fundus_exams', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('vid')->default(0);
+			$table->integer('vid');
 			$table->integer('isDialated')->nullable()->default(0);
 			$table->text('dialNotes', 65535)->nullable();
 			$table->integer('isCDODAb')->nullable()->default(0);

@@ -15,7 +15,7 @@ class CreateGonioSketchesTable extends Migration {
 		Schema::create('gonio_sketches', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->integer('vid')->default(0);
+			$table->integer('vid');
 			$table->binary('image', 65535);
 		});
 	}
