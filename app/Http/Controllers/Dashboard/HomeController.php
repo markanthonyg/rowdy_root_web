@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
+
+use App\Models\Visit;
+use App\Models\Clinic;
+use App\Models\User;
+use App\Models\Patient;
 use Auth;
 
 class HomeController extends Controller
@@ -20,6 +26,10 @@ class HomeController extends Controller
       }
 
       $data['user'] = Auth::User();
+      $data['num_visits'] = Visit::all()->count();
+      $data['num_clinics'] = Clinic::all()->count();
+      $data['num_users'] = User::all()->count();
+      $data['num_patients'] = Patient::all()->count();
 
       return view('dashboard/home')->with($data);
     }

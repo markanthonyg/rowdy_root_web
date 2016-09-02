@@ -14,7 +14,7 @@ class HomeController extends Controller
     // viewLanding
     public function viewLanding(){
       if(Auth::check()){
-        return view('dashboard/home');
+        return Redirect::to('/dashboard');
       }
 
       return view ('landing');

@@ -4,14 +4,25 @@
   EMRS Online | Dashboard
 @endsection
 
+@section('style')
+  <!-- Datatables CSS -->
+  <link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/media/css/dataTables.bootstrap.css">
+
+  <!-- Datatables Editor Addon CSS -->
+  <link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/extensions/Editor/css/dataTables.editor.css">
+
+  <!-- Datatables ColReorder Addon CSS -->
+  <link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css">
+@endsection
+
 @section('content')
-  <!-- dashboard tiles -->
+  {{-- Dashboard Tiles --}}
   <div class="row">
     <div class="col-sm-4 col-xl-3">
       <div class="panel panel-tile text-center br-a br-grey">
         <div class="panel-body">
-          <h1 class="fs30 mt5 mbn">1,426</h1>
-          <h6 class="text-system">Patients</h6>
+          <h1 class="fs30 mt5 mbn">{{ $num_patients }}</h1>
+          <h6 class="text-system">PATIENTS</h6>
         </div>
         <div class="panel-footer br-t p12">
           <span class="fs11">
@@ -24,8 +35,8 @@
     <div class="col-sm-4 col-xl-3">
       <div class="panel panel-tile text-center br-a br-grey">
         <div class="panel-body">
-          <h1 class="fs30 mt5 mbn">63,262</h1>
-          <h6 class="text-success">Clinics</h6>
+          <h1 class="fs30 mt5 mbn">{{ $num_clinics }}</h1>
+          <h6 class="text-success">CLINICS</h6>
         </div>
         <div class="panel-footer br-t p12">
           <span class="fs11">
@@ -38,8 +49,8 @@
     <div class="col-sm-4 col-xl-3">
       <div class="panel panel-tile text-center br-a br-grey">
         <div class="panel-body">
-          <h1 class="fs30 mt5 mbn">248</h1>
-          <h6 class="text-warning">PENDING SHIPMENTS</h6>
+          <h1 class="fs30 mt5 mbn">{{ $num_users }}</h1>
+          <h6 class="text-warning">USERS</h6>
         </div>
         <div class="panel-footer br-t p12">
           <span class="fs11">
@@ -52,7 +63,7 @@
     <div class="col-sm-3 col-xl-3 visible-xl">
       <div class="panel panel-tile text-center br-a br-grey">
         <div class="panel-body">
-          <h1 class="fs30 mt5 mbn">6,718</h1>
+          <h1 class="fs30 mt5 mbn">{{ $num_visits }}</h1>
           <h6 class="text-danger">UNIQUE VISITS</h6>
         </div>
         <div class="panel-footer br-t p12">
@@ -63,5 +74,9 @@
         </div>
       </div>
     </div>
+
   </div>
+
+
+
 @endsection

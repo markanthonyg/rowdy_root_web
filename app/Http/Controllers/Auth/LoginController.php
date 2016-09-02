@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Auth;
 
 use Log;
 use Auth;
-use App\Models\User;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -31,9 +30,7 @@ class LoginController extends Controller
 
       // Attempt to authenticate then redirect based on success
       if(Auth::attempt(['username' => Input::get('username'), 'password' => Input::get('password')], $remember)) {
-        $data['user'] = Auth::User();
-
-        return view('dashboard/home')->with($data);
+        return Redirect::to('/dashboard');
       } else {
         Session::flash('login_error_message', 'Invalid credentials');
 
