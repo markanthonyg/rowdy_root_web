@@ -168,9 +168,15 @@
         <ul class="nav sidebar-menu">
           <li class="sidebar-label pt20">Menu</li>
           <li>
-            <a href="pages_calendar.html">
+            <a href="/">
               <span class="fa fa-home"></span>
               <span class="sidebar-title">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="/patients">
+              <span class="fa fa-street-view"></span>
+              <span class="sidebar-title">Patients</span>
             </a>
           </li>
 
@@ -210,6 +216,8 @@
       <!-- Begin: Content -->
       <section id="content" class="table-layout animated fadeIn">
         @yield('content')
+        </div>
+        <!-- end: .tray-center -->
       </section>
       <!-- End: Content -->
 
@@ -234,6 +242,18 @@
   <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
   <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
 
+  <!-- Datatables -->
+  <script src="vendor/plugins/datatables/media/js/jquery.dataTables.js"></script>
+
+  <!-- Datatables Tabletools addon -->
+  <script src="vendor/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+
+  <!-- Datatables ColReorder addon -->
+  <script src="vendor/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
+
+  <!-- Datatables Bootstrap Modifications  -->
+  <script src="vendor/plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+
   <!-- HighCharts Plugin -->
   <script src="vendor/plugins/highcharts/highcharts.js"></script>
 
@@ -253,6 +273,9 @@
   <script src="assets/js/demo/demo.js"></script>
   <script src="assets/js/main.js"></script>
 
+  <!-- Bootstrap Timeout Plugin -->
+  <script src="vendor/plugins/bstimeout/bs-timeout.js"></script>
+
   <!-- Widget Javascript -->
   <script src="assets/js/demo/widgets.js"></script>
 
@@ -270,84 +293,43 @@
       // Init Theme Core
       Core.init();
 
-
-      // Init Widget Demo JS
-      // demoHighCharts.init();
-
-      // Because we are using Admin Panels we use the OnFinish
-      // callback to activate the demoWidgets. It's smoother if
-      // we let the panels be moved and organized before
-      // filling them with content from various plugins
-
-      // Init plugins used on this page
-      // HighCharts, JvectorMap, Admin Panels
-
-      // Init Admin Panels on widgets inside the ".admin-panels" container
-      $('.admin-panels').adminpanel({
-        grid: '.admin-grid',
-        draggable: true,
-        preserveGrid: true,
-        // mobile: true,
-        onStart: function() {
-          // Do something before AdminPanels runs
-        },
-        onFinish: function() {
-          $('.admin-panels').addClass('animated fadeIn').removeClass('fade-onload');
-
-          // Init the rest of the plugins now that the panels
-          // have had a chance to be moved and organized.
-          // It's less taxing to organize empty panels
-          demoHighCharts.init();
-          runVectorMaps(); // function below
-        },
-        onSave: function() {
-          $(window).trigger('resize');
+      // Init DataTables
+      $('#datatable').dataTable({
+        "sDom": 't<"dt-panelfooter clearfix"ip>',
+        "oTableTools": {
+          "sSwfPath": "vendor/plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf"
         }
       });
 
-
-      // Init plugins for ".calendar-widget"
-      // plugins: FullCalendar
-      //
-      $('#calendar-widget').fullCalendar({
-        // contentHeight: 397,
-        editable: true,
-        events: [{
-            title: 'Sony Meeting',
-            start: '2015-05-1',
-            end: '2015-05-3',
-            className: 'fc-event-success',
-          }, {
-            title: 'Conference',
-            start: '2015-05-11',
-            end: '2015-05-13',
-            className: 'fc-event-warning'
-          }, {
-            title: 'Lunch Testing',
-            start: '2015-05-21',
-            end: '2015-05-23',
-            className: 'fc-event-primary'
-          },
+      $('#datatable2').dataTable({
+        "aoColumnDefs": [{
+          'bSortable': false,
+          'aTargets': [-1]
+        }],
+        "oLanguage": {
+          "oPaginate": {
+            "sPrevious": "",
+            "sNext": ""
+          }
+        },
+        "iDisplayLength": 5,
+        "aLengthMenu": [
+          [5, 10, 25, 50, -1],
+          [5, 10, 25, 50, "All"]
         ],
-        eventRender: function(event, element) {
-          // create event tooltip using bootstrap tooltips
-          $(element).attr("data-original-title", event.title);
-          $(element).tooltip({
-            container: 'body',
-            delay: {
-              "show": 100,
-              "hide": 200
-            }
-          });
-          // create a tooltip auto close timer
-          $(element).on('show.bs.tooltip', function() {
-            var autoClose = setTimeout(function() {
-              $('.tooltip').fadeOut();
-            }, 3500);
-          });
+        "sDom": '<"dt-panelmenu clearfix"lfr>t<"dt-panelfooter clearfix"ip>',
+        "oTableTools": {
+          "sSwfPath": "vendor/plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf"
         }
       });
 
+
+      // MISC DATATABLE HELPER FUNCTIONS
+
+      // Add Placeholder text to datatables filter bar
+      $('.dataTables_filter input').attr("placeholder", "Search...");
+
+      // CONTINUE TO DELETE UNNECCESARY CODE
 
       // Init plugins for ".task-widget"
       // plugins: Custom Functions + jQuery Sortable
@@ -558,6 +540,18 @@
           runJvectorMap();
         }
       }
+
+      // Init Bootstrap Timeout Demo
+      $.sessionTimeout({
+          keepAliveUrl: '',
+          logoutUrl: '/login',
+          redirUrl: '/login',
+          warnAfter: 20000,
+          redirAfter: 30000,
+          // countdownBar: true,
+          countdownMessage: 'Redirecting in {timer} seconds.',
+          onStart: function (opts) {},
+      });
 
     });
   </script>

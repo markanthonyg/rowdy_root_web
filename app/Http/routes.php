@@ -28,8 +28,9 @@ Route::get('/terms', function () {
 Route::get('/', 'HomeController@viewLanding');
 Route::get('/logout', 'HomeController@logout');
 
-// Dashboard Home Routes
+// Dashboard Routes
 Route::get('/dashboard', 'Dashboard\HomeController@showHome');
+Route::get('/patients', 'Dashboard\PatientsController@showPatients');
 
 // Login Routes
 Route::post('/login', 'Auth\LoginController@login');
