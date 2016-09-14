@@ -351,37 +351,17 @@
     </section>
 
     <!-- Clients Section -->
-    <section id="clients" class="bg-light">
-        <div class="container mw1000">
-            <div class="row">
-                <div class="client-logo">
-                    <a href="#">
-                        <img src="img/external/3.png" class="img-responsive img-centered mw100" alt="">
-                    </a>
-                </div>
-                <div class="client-logo">
-                    <a href="#">
-                        <img src="img/external/2.png" class="img-responsive img-centered mw100" alt="">
-                    </a>
-                </div>
-                <div class="client-logo">
-                    <a href="#">
-                        <img src="img/external/5.png" class="img-responsive img-centered mw100" alt="">
-                    </a>
-                </div>
-                <div class="client-logo hidden-xs">
-                    <a href="#">
-                        <img src="img/external/4.png" class="img-responsive img-centered mw100" alt="">
-                    </a>
-                </div>
-                <div class="client-logo hidden-xs hidden-sm">
-                    <a href="#">
-                        <img src="img/external/1.png" class="img-responsive img-centered mw100" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+      <section id="clients" class="bg-light">
+          <div class="container mw1000">
+              <div class="row">
+                  <div class="client-logo">
+                      <a href="https://github.com/jacobdaily737/rowdy_root_web/tree/development">
+                          <img src="img/external/2.png" class="img-responsive img-centered mw100" alt="">
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </section>
 
     <!-- Contact Section -->
     <section id="contact">

@@ -16,6 +16,18 @@ use Illuminate\Support\Facades\Hash;
 class LoginController extends Controller
 {
 
+    // Show login view
+    public function showLogin() {
+      // If user is already logged in, log them out
+      // Need to logout in cases of screenlock logout
+      if(Auth::check()){
+        Auth::logout();
+      }
+
+      // Return login view
+      return view('pages_login');
+    }
+
     //  Login user
     public function login(){
       // Make sure crsf token is valid

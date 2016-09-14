@@ -12,10 +12,6 @@
 */
 
 
-Route::get('/login', function () {
-    return view('pages_login');
-});
-
 Route::get('/register', function () {
     return view('pages_register');
 });
@@ -33,4 +29,9 @@ Route::get('/dashboard', 'Dashboard\HomeController@showHome');
 Route::get('/patients', 'Dashboard\PatientsController@showPatients');
 
 // Login Routes
+Route::get('/login', 'Auth\LoginController@showLogin');
 Route::post('/login', 'Auth\LoginController@login');
+
+// Screenlock Routes
+Route::get('/screenlock', 'MiscController@lockScreen');
+Route::post('/screenlock', 'Auth\UnlockController@unlockScreen');

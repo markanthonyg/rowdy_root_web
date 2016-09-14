@@ -15,6 +15,17 @@
   <link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css">
 @endsection
 
+@section('breadcrumb')
+  <li class="crumb-active">
+    <a href="/">Home</a>
+  </li>
+  <li class="crumb-icon">
+    <a href="/">
+      <span class="glyphicon glyphicon-home"></span>
+    </a>
+  </li>
+@endsection
+
 @section('content')
 
   <!-- begin: .tray-center -->
@@ -30,7 +41,7 @@
           </div>
           <div class="panel-footer br-t p12">
             <span class="fs11">
-              <i class="fa fa-arrow-up pr5"></i> 3% INCREASE
+              <i class="fa fa-arrow-up pr5"></i> -% INCREASE
               <b>1W AGO</b>
             </span>
           </div>
@@ -44,7 +55,7 @@
           </div>
           <div class="panel-footer br-t p12">
             <span class="fs11">
-              <i class="fa fa-arrow-up pr5"></i> 2.7% INCREASE
+              <i class="fa fa-arrow-up pr5"></i> -% INCREASE
               <b>1W AGO</b>
             </span>
           </div>
@@ -58,7 +69,7 @@
           </div>
           <div class="panel-footer br-t p12">
             <span class="fs11">
-              <i class="fa fa-arrow-up pr5 text-success"></i> 1% INCREASE
+              <i class="fa fa-arrow-up pr5 text-success"></i> -% INCREASE
               <b>1W AGO</b>
             </span>
           </div>
@@ -72,7 +83,7 @@
           </div>
           <div class="panel-footer br-t p12">
             <span class="fs11">
-              <i class="fa fa-arrow-down pr5 text-danger"></i> 6% DECREASE
+              <i class="fa fa-arrow-down pr5 text-danger"></i> -% DECREASE
               <b>1W AGO</b>
             </span>
           </div>

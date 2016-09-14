@@ -290,15 +290,11 @@ LoginController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controlle
 login	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^    public function login(){$/;"	function	line:20
 remember	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^        $remember = true;$/;"	variable	line:26
 remember	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^        $remember = false;$/;"	variable	line:28
-needed	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^         .sidebar-dark (default no class needed)$/;"	class	line:132
-onStart	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        onStart: function() {$/;"	jsfunction	line:291
-onFinish	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        onFinish: function() {$/;"	jsfunction	line:294
-below	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          runVectorMaps(); \/\/ function below$/;"	function	line:301
-onSave	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        onSave: function() {$/;"	jsfunction	line:303
-eventRender	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        eventRender: function(event, element) {$/;"	jsfunction	line:332
-update	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        update: function( event, ui ) {$/;"	jsfunction	line:366
-runVectorMaps	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^      function runVectorMaps() {$/;"	function	line:478
-runJvectorMap	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        var runJvectorMap = function() {$/;"	jsfunction	line:481
 HomeController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/HomeController.php	/^class HomeController extends Controller$/;"	class	line:12
 viewLanding	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/HomeController.php	/^    public function viewLanding(){$/;"	function	line:15
 logout	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/HomeController.php	/^    public function logout(){$/;"	function	line:24
+needed	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^         .sidebar-dark (default no class needed)$/;"	class	line:132
+update	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        update: function( event, ui ) {$/;"	jsfunction	line:337
+runVectorMaps	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^      function runVectorMaps() {$/;"	function	line:449
+runJvectorMap	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        var runJvectorMap = function() {$/;"	jsfunction	line:452
+onStart	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          onStart: function (opts) {},$/;"	jsfunction	line:542

@@ -196,18 +196,7 @@
       <header id="topbar" class="alt">
         <div class="topbar-left">
           <ol class="breadcrumb">
-            <li class="crumb-active">
-              <a href="dashboard.html">Dashboard</a>
-            </li>
-            <li class="crumb-icon">
-              <a href="dashboard.html">
-                <span class="glyphicon glyphicon-home"></span>
-              </a>
-            </li>
-            <li class="crumb-link">
-              <a href="index.html">Home</a>
-            </li>
-            <li class="crumb-trail">Dashboard</li>
+            @yield('breadcrumb')
           </ol>
         </div>
       </header>
@@ -545,7 +534,7 @@
       $.sessionTimeout({
           keepAliveUrl: '',
           logoutUrl: '/login',
-          redirUrl: '/login',
+          redirUrl: '/screenlock',
           warnAfter: 20000,
           redirAfter: 30000,
           // countdownBar: true,

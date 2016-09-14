@@ -23,7 +23,6 @@ class HomeController extends Controller
     // Logout the current user
     public function logout(){
       Auth::logout();
-      Session::flush();
       return Redirect::to('/');
     }
 }
