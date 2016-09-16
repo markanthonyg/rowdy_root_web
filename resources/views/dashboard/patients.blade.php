@@ -42,8 +42,8 @@
 
     {{-- <br /><br /><br /> --}}
 
-    {{-- ADD TABLE --}}
-    <div class="col-md-12">
+    {{-- SAMPLE TABLE --}}
+    <div class="col-md-12 hidden">
       <div class="panel panel-visible" id="spy2">
         <div class="panel-heading">
           <div class="panel-title hidden-xs">
@@ -91,3 +91,58 @@
   </div>
 
 @endsection
+
+@section('script')
+  <!-- Datatables -->
+  <script src="vendor/plugins/datatables/media/js/jquery.dataTables.js"></script>
+
+  <!-- Datatables Tabletools addon -->
+  <script src="vendor/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+
+  <!-- Datatables ColReorder addon -->
+  <script src="vendor/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
+
+  <!-- Datatables Bootstrap Modifications  -->
+  <script src="vendor/plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+
+  <script type="text/javascript">
+    jQuery(document).ready(function() {
+
+      // Init DataTables
+      $('#datatable').dataTable({
+        "sDom": 't<"dt-panelfooter clearfix"ip>',
+        "oTableTools": {
+          "sSwfPath": "vendor/plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf"
+        }
+      });
+
+      $('#datatable2').dataTable({
+        "aoColumnDefs": [{
+          'bSortable': false,
+          'aTargets': [-1]
+        }],
+        "oLanguage": {
+          "oPaginate": {
+            "sPrevious": "",
+            "sNext": ""
+          }
+        },
+        "iDisplayLength": 10,
+        "aLengthMenu": [
+          [5, 10, 25, 50, -1],
+          [5, 10, 25, 50, "All"]
+        ],
+        "sDom": '<"dt-panelmenu clearfix"lfr>t<"dt-panelfooter clearfix"ip>',
+        "oTableTools": {
+          "sSwfPath": "vendor/plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf"
+        }
+      });
+
+
+      // MISC DATATABLE HELPER FUNCTIONS
+
+      // Add Placeholder text to datatables filter bar
+      $('.dataTables_filter input').attr("placeholder", "Search...");
+    });
+  </script>
+    @endsection
