@@ -173,10 +173,43 @@
               <span class="sidebar-title">Home</span>
             </a>
           </li>
+          <li class="sidebar-label pt20">Patient</li>
           <li>
             <a href="/patients">
               <span class="fa fa-street-view"></span>
-              <span class="sidebar-title">Patients</span>
+              <span class="sidebar-title">View Patients</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="fa fa-plus"></span>
+              <span class="sidebar-title">New Patient</span>
+            </a>
+          </li>
+          <li class="sidebar-label pt20">Clinic</li>
+          <li>
+            <a href="#">
+              <span class="fa fa-hospital-o"></span>
+              <span class="sidebar-title">View Clinics</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="fa fa-plus"></span>
+              <span class="sidebar-title">New Clinic</span>
+            </a>
+          </li>
+          <li class="sidebar-label pt20">Visit</li>
+          <li>
+            <a href="#">
+              <span class="fa fa-stethoscope"></span>
+              <span class="sidebar-title">View Visits</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="fa fa-plus"></span>
+              <span class="sidebar-title">New Visit</span>
             </a>
           </li>
 
@@ -301,7 +334,7 @@
             "sNext": ""
           }
         },
-        "iDisplayLength": 5,
+        "iDisplayLength": 10,
         "aLengthMenu": [
           [5, 10, 25, 50, -1],
           [5, 10, 25, 50, "All"]

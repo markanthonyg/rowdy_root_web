@@ -36,11 +36,11 @@
   <div class="tray tray-center">
 
     {{-- ADD BUTTONS --}}
-    <div class="col-md-4">
+    <div class="col-md-4 hidden">
       <a href="#" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Add Patient</a>
     </div>
 
-    <br /><br /><br />
+    {{-- <br /><br /><br /> --}}
 
     {{-- ADD TABLE --}}
     <div class="col-md-12">
