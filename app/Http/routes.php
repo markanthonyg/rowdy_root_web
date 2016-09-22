@@ -35,3 +35,6 @@ Route::post('/login', 'Auth\LoginController@login');
 // Screenlock Routes
 Route::get('/screenlock', 'MiscController@lockScreen');
 Route::post('/screenlock', 'Auth\UnlockController@unlockScreen');
+
+// Live Search Routes
+Route::post('/livesearch', 'MiscController@livesearch');

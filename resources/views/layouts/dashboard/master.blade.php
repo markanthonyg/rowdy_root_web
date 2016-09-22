@@ -9,6 +9,7 @@
   <meta name="description" content="EMRS Online - A Portal Into Patient Records">
   <meta name="author" content="Rowdy Root">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <!-- Font CSS (Via CDN) -->
   <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
@@ -24,6 +25,9 @@
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+  <!-- CSS For live search -->
+  <link rel="stylesheet" type="text/css" href="css/livesearch.css">
 
   {{-- Yield for custom styling --}}
   @yield('style')
@@ -97,7 +101,9 @@
       </ul>
       <form class="navbar-form navbar-left navbar-search alt" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search Patient..." value="">
+          {{-- Search bar w/ results div (coming from jquery) --}}
+          <input type="text" class="search form-control" id="searchid" placeholder="Search Patient...">
+          <div id="result"></div>
         </div>
       </form>
       <ul class="nav navbar-nav navbar-right">
@@ -277,6 +283,13 @@
   <script type="text/javascript">
     jQuery(document).ready(function() {
 
+      // Collect CSRF token to allow live search to be sent
+      $.ajaxSetup({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+      });
+
       // Init Bootstrap Timeout Demo
       $.sessionTimeout({
           keepAliveUrl: '',
@@ -288,6 +301,52 @@
           countdownMessage: 'Redirecting in {timer} seconds.',
           onStart: function (opts) {},
       });
+
+      // Live search bar keyup
+      $('.search').keyup(function() {
+        var searchid = $(this).val();
+        if($('#searchid').val() == ''){
+          jQuery('#result').fadeOut();
+        }
+        var dataString = 'search='+searchid;
+        if(searchid != '') {
+            $.ajax({
+              type: "POST",
+              url: "/livesearch",
+              data: dataString,
+              cache: false,
+              success: function(html)
+              {
+                $("#result").html(html).show();
+              }
+            });
+        }
+        return false;
+      });
+
+      // Live search bar on click result
+      jQuery("#result").on("click",function(e){
+          var $clicked = $(e.target);
+          var $name = $clicked.find('.name').html();
+          var decoded = $("<div/>").html($name).text();
+          $('#searchid').val(decoded);
+      });
+
+      // Live search bar on click off bar
+      jQuery(document).on("click", function(e) {
+          var $clicked = $(e.target);
+          if (! $clicked.hasClass("search")){
+            jQuery("#result").fadeOut();
+          }
+      });
+
+      // Live search bar fade out on empty box
+      $('#searchid').click(function(){
+        if($(this).val() != ''){
+          jQuery("#result").fadeIn();
+        }
+      });
+
 
     });
   </script>

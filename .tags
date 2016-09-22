@@ -293,11 +293,6 @@ remember	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth
 HomeController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/HomeController.php	/^class HomeController extends Controller$/;"	class	line:12
 viewLanding	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/HomeController.php	/^    public function viewLanding(){$/;"	function	line:15
 logout	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/HomeController.php	/^    public function logout(){$/;"	function	line:24
-needed	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^         .sidebar-dark (default no class needed)$/;"	class	line:132
-update	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        update: function( event, ui ) {$/;"	jsfunction	line:370
-runVectorMaps	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^      function runVectorMaps() {$/;"	function	line:482
-runJvectorMap	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^        var runJvectorMap = function() {$/;"	jsfunction	line:485
-onStart	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          onStart: function (opts) {},$/;"	jsfunction	line:575
 base-path	/Users/battlestation/Documents/rowdy_root_web/public/assets/skin/default_skin/less/theme_settings.less	/^@base-path:	 "..\/..\/base";$/;"	function	line:4
 @import "@	/Users/battlestation/Documents/rowdy_root_web/public/assets/skin/default_skin/less/theme_settings.less	/^@import "@{base-path}\/animate.less"; \/\/ core animation styles$/;"	function	line:9
 animate-flips	/Users/battlestation/Documents/rowdy_root_web/public/assets/skin/default_skin/less/theme_settings.less	/^@animate-flips:       true;$/;"	function	line:10
@@ -560,3 +555,24 @@ suggestion-active-text	/Users/battlestation/Documents/rowdy_root_web/public/asse
 suggestion-active-bg	/Users/battlestation/Documents/rowdy_root_web/public/assets/skin/default_skin/less/theme_settings.less	/^@suggestion-active-bg: @brand-primary;$/;"	function	line:423
 nprogress-active-loader	/Users/battlestation/Documents/rowdy_root_web/public/assets/skin/default_skin/less/theme_settings.less	/^@nprogress-active-loader: @brand-warning; \/\/ page loading progress indicator$/;"	function	line:426
 nprogress-active-spinner	/Users/battlestation/Documents/rowdy_root_web/public/assets/skin/default_skin/less/theme_settings.less	/^@nprogress-active-spinner: @brand-primary; \/\/ spinning indicator$/;"	function	line:427
+.content	/Users/battlestation/Documents/rowdy_root_web/public/css/livesearch.css	/^.content{$/;"	function	line:1
+MiscController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^class MiscController extends Controller$/;"	class	line:16
+lockScreen	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^    public function lockScreen(){$/;"	function	line:21
+user	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^      $user = Auth::User();$/;"	variable	line:23
+livesearch	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^    public function livesearch() {$/;"	function	line:39
+users	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^      $users = Patient::where('first_name', 'like', $_POST['search'].'%')->orwhere('last_name', 'like', $_POST['search'].'%')->orwhere('id', 'like', $_POST['search'])->get();$/;"	variable	line:41
+bolded	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^          $bolded = '<strong>'.$_POST['search'].'<\/strong>';$/;"	variable	line:54
+final_first_name	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^          $final_first_name = str_ireplace($_POST['search'], $bolded, $user->first_name);$/;"	variable	line:55
+final_last_name	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^          $final_last_name = str_ireplace($_POST['search'], $bolded, $user->last_name);$/;"	variable	line:56
+final_id	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^          $final_id = str_ireplace($_POST['search'], $bolded, $user->id);$/;"	variable	line:57
+bolded	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^          $bolded = '<strong>'.$_POST['search'].'<\/strong>';$/;"	variable	line:65
+final_id	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^          $final_id = str_ireplace($_POST['search'], $bolded, $user->id);$/;"	variable	line:66
+needed	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^         .sidebar-dark (default no class needed)$/;"	class	line:138
+onStart	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          onStart: function (opts) {},$/;"	jsfunction	line:302
+success	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^              success: function(html)$/;"	jsfunction	line:318
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:329
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:329
+name	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $name = $clicked.find('.name').html();$/;"	variable	line:330
+name	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $name = $clicked.find('.name').html();$/;"	variable	line:330
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:337
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:337
