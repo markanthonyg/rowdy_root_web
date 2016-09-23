@@ -58,8 +58,8 @@ class MiscController extends Controller
 
           //  HTML block to be added to result element
           echo '<div class="show" align="left">
-                  <span class="id">'.$final_id.' | </span>
-                  <span  class="name">'.$final_last_name.', '.$final_first_name.'</span>
+                  <span class="id">'.$final_id.'</span>
+                  <span  class="name"> | '.$final_last_name.', '.$final_first_name.'</span>
                 </div>';
         } else { // If patient is unidentified, list ID and 'Unidentified Patient'
           $bolded = '<strong>'.$_POST['search'].'</strong>';
@@ -67,8 +67,8 @@ class MiscController extends Controller
 
           //  HTML block to be added to result element
           echo '<div class="show" align="left">
-                  <span class="id">'.$final_id.' | </span>
-                  <span  class="name">Unidentified Patient</span>
+                  <span class="id">'.$final_id.'</span>
+                  <span  class="name"> | Unidentified Patient</span>
                 </div>';
         }
       }

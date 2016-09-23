@@ -4,3 +4,12 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+needed	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^         .sidebar-dark (default no class needed)$/;"	class	line:139
+onStart	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          onStart: function (opts) {},$/;"	jsfunction	line:303
+success	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^              success: function(html)$/;"	jsfunction	line:319
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:330
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:330
+id	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          \/\/ var $id = $clicked.find('.id').html();$/;"	variable	line:333
+id	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          \/\/ var $id = $clicked.find('.id').html();$/;"	variable	line:333
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:340
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:340

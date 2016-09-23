@@ -27,7 +27,6 @@
   <li class="crumb-link">
     <a href="/patients">Patients</a>
   </li>
-
 @endsection
 
 @section('content')
