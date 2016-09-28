@@ -155,7 +155,7 @@
   <script src="assets/js/utility/utility.js"></script>
   {{-- <script src="assets/js/demo/demo.js"></script> --}}
   {{-- <script src="assets/js/main.js"></script> --}}
-  <script src="assets/js/login/Login.js"></script>
+  <!--<script src="assets/js/login/Login.js"></script>-->
 
   <!-- Page Javascript -->
   <script type="text/javascript">
