@@ -26,7 +26,7 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-/* Header Toggle Animation 
+/* Header Toggle Animation
  * Partially inspired by codrops
  * http://www.codrops.com
  */
@@ -41,7 +41,7 @@ var cbpAnimatedHeader = (function() {
 		window.addEventListener('scroll', function( event ) {
 			if(!didScroll) {
 				didScroll = true;
-				setTimeout( scrollPage, 150 );
+				setTimeout( scrollPage, 100000000000 );
 			}
 		}, false);
 	}

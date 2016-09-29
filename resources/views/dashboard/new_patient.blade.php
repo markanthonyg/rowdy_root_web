@@ -5,20 +5,10 @@
 @endsection
 
 @section('style')
-  <!-- Datatables CSS -->
-  <link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/media/css/dataTables.bootstrap.css">
-
-  <!-- Datatables Editor Addon CSS -->
-  <link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/extensions/Editor/css/dataTables.editor.css">
-
-  <!-- Datatables ColReorder Addon CSS -->
-  <link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
 
   <!-- Admin Forms CSS -->
   <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.css">
-
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.css">
-
 
 @endsection
 
@@ -41,211 +31,464 @@
 
   <!-- begin: .tray-center -->
   <div class="tray tray-center">
-    <div id="content" class="animated fadeIn">
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3">
-            <!-- Input Fields -->
-            <div class="panel">
-              <div class="panel">
-              <div class="panel-heading">
-                <span class="panel-title">Add a new patient</span>
-
-              </div>
-
-                <div class="panel-body">
-                  {{-- <form class="form-horizontal" role="form" method="post" action="/" id="newPatientForm"> --}}
-                  {!! Form::open(['action' => 'Dashboard\PatientsController@insertPatient', 'class' => 'form-horizontal', 'id' => 'newPatientForm', 'role' => 'form']) !!}
-                  <form class="form-horizontal" role="form" method="post" action="/" id="account2">
-                    <div class="form-group">
-                      {!! Form::label('firstnamelbl', 'First name', ['class' => 'col-lg-3 control-label', 'for' => 'inputStandard']) !!}
-                      <div class="col-lg-8">
-                        <div class="bs-component">
-                          {!! Form::text('firstname', '', ['class' => 'form-control']) !!}
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      {!! Form::label('middlenamelbl', 'Middle name', ['class' => 'col-lg-3 control-label', 'for' => 'inputStandard']) !!}
-                      <div class="col-lg-8">
-                        <div class="bs-component">
-                          {!! Form::text('middlename', '', ['class' => 'form-control']) !!}
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      {!! Form::label('lastnamelbl', 'Last name', ['class' => 'col-lg-3 control-label', 'for' => 'inputStandard']) !!}
-                      <div class="col-lg-8">
-                        <div class="bs-component">
-                          {!! Form::text('lastname', '', ['class' => 'form-control']) !!}
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      {!! Form::label('genderlbl', 'Gender', ['class' => 'col-lg-3 control-label', 'for' => 'multiselect1']) !!}
-                      <div class="col-lg-8">
-                          {{ Form::select('gender', array(
-                             'male' => 'Male',
-                             'female' => 'Female'),
-                             'male',
-                             ['id' => 'multiselect1']
-                          ) }}
-                      </div>
-                    </div>
-                    <div class="form-group">
-                        {!! Form::label('birthyear', 'Date of birth', ['class' => 'col-lg-3 control-label', 'for' => 'inputStandard']) !!}
-                        <div class="col-xs-2">
-                            {!! Form::text('birthyear', '', ['class' => 'form-control', 'id'=> 'inputStandard', 'placeholder' => 'year']) !!}
-                        </div>
-                        <div class="col-xs-2">
-                            {!! Form::text('birthmonth', '', ['class' => 'form-control', 'id'=> 'inputStandard', 'placeholder' => 'month']) !!}
-                        </div>
-                        <div class="col-xs-2">
-                            {!! Form::text('birthday', '', ['class' => 'form-control', 'id'=> 'inputStandard', 'placeholder' => 'day']) !!}
-                        </div>
-                    </div>
-                     <div class="form-group">
-                        {!! Form::label('addresslbl', 'Address', ['class' => 'col-lg-3 control-label', 'for' => 'inputStandard']) !!}
-                       <div class="col-lg-8">
-                         <div class="bs-component">
-                           {!! Form::text('address', '', ['class' => 'form-control', 'id'=> 'inputStandard']) !!}
-                         </div>
-                       </div>
-                     </div>
-                     <div class="form-group">
-                       {!! Form::label('address2lbl', 'Address 2', ['class' => 'col-lg-3 control-label', 'for' => 'inputStandard']) !!}
-                       <div class="col-lg-8">
-                         <div class="bs-component">
-                           {!! Form::text('address2', '', ['class' => 'form-control', 'id'=> 'inputStandard']) !!}
-                         </div>
-                       </div>
-                     </div>
-                     <div class="form-group">
-                       {!! Form::label('citylbl', 'City/Village', ['class' => 'col-lg-3 control-label', 'for' => 'inputStandard']) !!}
-                       <div class="col-lg-8">
-                         <div class="bs-component">
-                           {!! Form::text('city', '', ['class' => 'form-control', 'id'=> 'inputStandard']) !!}
-                         </div>
-                       </div>
-                     </div>
-                     <div class="form-group">
-                       {!! Form::label('statelbl', 'State/Province', ['class' => 'col-lg-3 control-label', 'for' => 'inputStandard']) !!}
-                       <div class="col-lg-8">
-                         <div class="bs-component">
-                           {!! Form::text('state', '', ['class' => 'form-control', 'id'=> 'inputStandard']) !!}
-                         </div>
-                       </div>
-                     </div>
-                     <div class="form-group">
-                       {!! Form::label('statelbl', 'Country', ['class' => 'col-lg-3 control-label', 'for' => 'inputStandard']) !!}
-                       <div class="col-lg-8">
-                         <div class="bs-component">
-                           {!! Form::text('country', '', ['class' => 'form-control', 'id'=> 'inputStandard']) !!}
-                         </div>
-                       </div>
-                     </div>
-                     <div class="form-group">
-                       {!! Form::label('statelbl', 'Postal code', ['class' => 'col-lg-3 control-label', 'for' => 'inputStandard']) !!}
-                       <div class="col-lg-8">
-                         <div class="bs-component">
-                           {!! Form::text('zip', '', ['class' => 'form-control', 'id'=> 'inputStandard']) !!}
-                         </div>
-                       </div>
-                     </div>
-                     <div class="form-group">
-                       {!! Form::label('statelbl', 'Phone number', ['class' => 'col-lg-3 control-label', 'for' => 'inputStandard']) !!}
-                       <div class="col-lg-8">
-                         <div class="bs-component">
-                           {!! Form::text('phone', '', ['class' => 'form-control', 'id'=> 'inputStandard']) !!}
-                         </div>
-                       </div>
-                     </div>
-                     <div class="admin-form col-lg-12">
-                       <button type="submit" class="button btn-primary pull-right">Add patient</button>
-                     </div>
-                {{-- </form> --}}
-                {!! Form::close() !!}
-
-               <div class="clearfix"></div>
-             </div>
-           </div>
-                  </form>
+    <div class="form-group">
+    <div class="admin-form theme-primary mw1000 center-block">
+      <div class="panel heading-border">
+        {{-- <form method="post" action="/" id="newPatientForm"> --}}
+        {!! Form::open(['action' => 'Dashboard\PatientsController@insertPatient', 'id' => 'admin-form', 'method' => 'post']) !!}
+          <div class="panel-body bg-light">
+            <div class="section-divider mt20 mb40">
+              <span> Add a new patient </span>
+            </div>
+              <div class="section row"  >
+                <div class="col-md-4">
+                  <label for="firstname" class="field prepend-icon">
+                    {!! Form::text('firstname', '', ['placeholder' => 'First name...', 'class' => 'gui-input', 'name' => 'firstname', 'id' => 'firstname']) !!}
+                    <label for="firstname" class="field-icon">
+                      <i class="fa fa-user"></i>
+                    </label>
+                  </label>
                 </div>
+                <div class="col-md-4">
+                  <label for="middlename" class="field prepend-icon">
+                    {!! Form::text('middlename', '', ['placeholder' => 'Middle name...', 'class' => 'gui-input', 'name' => 'middlename', 'id' => 'middlename']) !!}
+                    <label for="middlename" class="field-icon">
+                      <i class="fa fa-user"></i>
+                    </label>
+                  </label>
+                </div>
+                <div class="col-md-4">
+                  <label for="lastname" class="field prepend-icon">
+                    {!! Form::text('lastname', '', ['placeholder' => 'Last name...', 'class' => 'gui-input', 'name' => 'lastname', 'id' => 'lastname']) !!}
+                    <label for="lastname" class="field-icon">
+                      <i class="fa fa-user"></i>
+                    </label>
+                  </label>
+                </div>
+              </div>
+              <div class="section">
+                <label class="field select">
+                  {{ Form::select('gender', array(
+                      '' => 'Select a gender...',
+                      'male' => 'Male',
+                      'female' => 'Female'),
+                      '',
+                      ['id' => 'gender']
+                  ) }}
+                  <i class="arrow double"></i>
+                </label>
+              </div>
+              <div class="section row">
+                <div class ="col-md-4">
+                  <label for="birthyear" class="field prepend-icon">
+                    {!! Form::text('birthyear', '', ['placeholder' => 'Birth year...', 'class' => 'gui-input', 'name' => 'birthyear', 'id' => 'birthyear']) !!}
+                    <label for="birthyear" class="field-icon">
+                      <i class="fa fa-birthday-cake"></i>
+                    </label>
+                  </label>
+                </div>
+                <div class ="col-md-4">
+                  <label for="birthmonth" class="field prepend-icon">
+                    {!! Form::text('birthmonth', '', ['placeholder' => 'Birth month...', 'class' => 'gui-input', 'name' => 'birthmonth', 'id' => 'birthmonth']) !!}
+                    <label for="birthmonth" class="field-icon">
+                      <i class="fa fa-birthday-cake"></i>
+                    </label>
+                  </label>
+                </div>
+                <div class ="col-md-4">
+                  <label for="birthday" class="field prepend-icon">
+                    {!! Form::text('birthday', '', ['placeholder' => 'Birth day...', 'class' => 'gui-input', 'name' => 'birthday', 'id' => 'birthday']) !!}
+                    <label for="birthday" class="field-icon">
+                      <i class="fa fa-birthday-cake"></i>
+                    </label>
+                  </label>
+                </div>
+              </div>
+              <div class="section row">
+                <div class="col-md-6">
+                  <label for="address" class="field prepend-icon">
+                    {!! Form::text('address', '', ['placeholder' => 'Address...', 'class' => 'gui-input', 'name' => 'address', 'id' => 'address']) !!}
+                    <label for="address" class="field-icon">
+                      <i class="fa fa-map-marker"></i>
+                    </label>
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  <label for="address2" class="field prepend-icon">
+                    {!! Form::text('address2', '', ['placeholder' => 'Address 2...', 'class' => 'gui-input', 'name' => 'address2', 'id' => 'address2']) !!}
+                    <label for="address2" class="field-icon">
+                      <i class="fa fa-map-marker"></i>
+                    </label>
+                  </label>
+                </div>
+              </div>
+              <div class="section row">
+                <div class="col-md-3">
+                  <label for="country" class="field prepend-icon">
+                    {!! Form::text('country', '', ['placeholder' => 'Country...', 'class' => 'gui-input', 'name' => 'country', 'id' => 'country']) !!}
+                    <label for="country" class="field-icon">
+                      <i class="fa fa-map-marker"></i>
+                    </label>
+                  </label>
+                </div>
+                <div class="col-md-3">
+                  <label for="city" class="field prepend-icon">
+                    {!! Form::text('city', '', ['placeholder' => 'City/Village...', 'class' => 'gui-input', 'name' => 'city', 'id' => 'city']) !!}
+                    <label for="city" class="field-icon">
+                      <i class="fa fa-map-marker"></i>
+                    </label>
+                  </label>
+                </div>
+                <div class="col-md-3">
+                  <label for="state" class="field prepend-icon">
+                    {!! Form::text('state', '', ['placeholder' => 'State/Province...', 'class' => 'gui-input', 'name' => 'state', 'id' => 'state']) !!}
+                    <label for="state" class="field-icon">
+                      <i class="fa fa-map-marker"></i>
+                    </label>
+                  </label>
+                </div>
+                <div class="col-md-3">
+                  <label for="zip" class="field prepend-icon">
+                    {!! Form::text('zip', '', ['placeholder' => 'Postal code...', 'class' => 'gui-input', 'name' => 'zip', 'id' => 'zip']) !!}
+                    <label for="zip" class="field-icon">
+                      <i class="fa fa-map-marker"></i>
+                    </label>
+                  </label>
+                </div>
+              </div>
+              <div class="section">
+                <label for="phone" class="field prepend-icon">
+                  {!! Form::text('phone', '', ['placeholder' => 'Phone number...', 'class' => 'gui-input', 'name' => 'phone', 'id' => 'phone']) !!}
+                  <label for="phone" class="field-icon">
+                    <i class="fa fa-mobile"></i>
+                  </label>
+                </label>
+              </div>
+            </div>
+            <div class="panel-footer text-right">
+              <button type="submit" class="button btn-primary"> Add Patient </button>
             </div>
           </div>
+        </div>
       </div>
+      {{-- </form> --}}
+      {!! Form::close() !!}
     </div>
-  </div>
 
 @endsection
 
 @section('script')
-  <!-- DateTime Plugin -->
-  <script src="assets/plugins/bootstrap-datetimepicker.min.js"></script>
+<!-- jQuery -->
+<script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+<script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
 
-  <!-- Datatables -->
-  <script src="vendor/plugins/datatables/media/js/jquery.dataTables.js"></script>
+<!-- jQuery Validate Plugin-->
+<script src="assets/admin-tools/admin-forms/js/jquery.validate.min.js"></script>
 
-  <!-- Datatables Tabletools addon -->
-  <script src="vendor/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+<!-- jQuery Validate Addon -->
+<script src="assets/admin-tools/admin-forms/js/additional-methods.min.js"></script>
 
-  <!-- Datatables ColReorder addon -->
-  <script src="vendor/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
+<!-- Theme Javascript -->
+<script src="assets/js/utility/utility.js"></script>
+<!--<script src="assets/js/demo/demo.js"></script>-->
+<script src="assets/js/main.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
 
-  <!-- Time/Date Plugin Dependencies -->
-  <script src="assets/plugins/globalize.min.js"></script>
-  <script src="assets/plugins/moment.min.js"></script>
+  "use strict";
 
-  <!-- Datatables Bootstrap Modifications  -->
-  <script src="vendor/plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+  // Init Theme Core
+  Core.init();
 
-  <script type="text/javascript">
-    jQuery(document).ready(function() {
+  // Init Demo JS
+  //Demo.init();
 
-      // Init DateTimepicker - fields
-      //$('#datetimepicker1').datetimepicker();
+  /* @custom validation method (smartCaptcha)
+  ------------------------------------------------------------------ */
 
+  $.validator.methods.smartCaptcha = function(value, element, param) {
+    return value == param;
+  };
 
-      // Init Boostrap Multiselects
-     $('#multiselect1').multiselect();
-     $('#multiselect2').multiselect({
-       includeSelectAllOption: true
-     });
+  $("#admin-form").validate({
 
-      // Init DataTables
-      $('#datatable').dataTable({
-        "sDom": 't<"dt-panelfooter clearfix"ip>',
-        "oTableTools": {
-          "sSwfPath": "vendor/plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf"
+    /* @validation states + elements
+    ------------------------------------------- */
+
+    errorClass: "state-error",
+    validClass: "state-success",
+    errorElement: "em",
+
+    /* @validation rules
+    ------------------------------------------ */
+
+    rules: {
+      firstname: {
+        required: true
+      },
+      country: {
+        required: true
+      },
+      city: {
+        required: true
+      },
+      state: {
+        required: true
+      },
+      birthyear: {
+        required: true
+      },
+      useremail: {
+        required: true,
+        email: true
+      },
+      website: {
+        required: true,
+        url: true
+      },
+      upload1: {
+        required: true,
+        extension: "jpg|png|gif|jpeg|doc|docx|pdf|xls|rar|zip"
+      },
+      mobileos: {
+        required: true
+      },
+      comment: {
+        required: true,
+        minlength: 30
+      },
+      mobile_phone: {
+        require_from_group: [1, ".phone-group"]
+      },
+      home_phone: {
+        require_from_group: [1, ".phone-group"]
+      },
+      password: {
+        required: true,
+        minlength: 6,
+        maxlength: 16
+      },
+      repeatPassword: {
+        required: true,
+        minlength: 6,
+        maxlength: 16,
+        equalTo: '#password'
+      },
+      gender: {
+        required: true
+      },
+      languages: {
+        required: true
+      },
+      verification: {
+        required: true,
+        smartCaptcha: 19
+      },
+      applicant_age: {
+        required: true,
+        min: 16
+      },
+      licence_no: {
+        required: function(element) {
+          return $("#applicant_age").val() > 19;
         }
-      });
+      },
+      child_name: {
+        required: "#parents:checked"
+      }
 
-      $('#datatable2').dataTable({
-        "aoColumnDefs": [{
-          'bSortable': false,
-          'aTargets': [-1]
-        }],
-        "oLanguage": {
-          "oPaginate": {
-            "sPrevious": "",
-            "sNext": ""
-          }
-        },
-        "iDisplayLength": 10,
-        "aLengthMenu": [
-          [5, 10, 25, 50, -1],
-          [5, 10, 25, 50, "All"]
-        ],
-        "sDom": '<"dt-panelmenu clearfix"lfr>t<"dt-panelfooter clearfix"ip>',
-        "oTableTools": {
-          "sSwfPath": "vendor/plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf"
-        }
-      });
+    },
+
+    /* @validation error messages
+    ---------------------------------------------- */
+
+    messages: {
+      firstname: {
+        required: 'Enter first name or alias if unkown'
+      },
+      country: {
+        required: 'Enter country'
+      },
+      city: {
+        required: 'Enter city/village'
+      },
+      state: {
+        required: 'Enter state/province'
+      },
+      birthyear: {
+        required: 'Enter birth year or estimated birth year'
+      },
+      useremail: {
+        required: 'Enter email address',
+        email: 'Enter a VALID email address'
+      },
+      website: {
+        required: 'Enter your website URL',
+        url: 'URL should start with - http://www'
+      },
+      gender: {
+        required: 'Choose a gender'
+      },
+      upload1: {
+        required: 'Please browse a file',
+        extension: 'File format not supported'
+      },
+      mobileos: {
+        required: 'Please select a mobile platform'
+      },
+      comment: {
+        required: 'Oops you forgot to comment',
+        minlength: 'Enter at least 30 characters or more'
+      },
+      mobile_phone: {
+        require_from_group: 'Fill at least a mobile contact'
+      },
+      home_phone: {
+        require_from_group: 'Fill at least a home contact'
+      },
+      password: {
+        required: 'Please enter a password'
+      },
+      repeatPassword: {
+        required: 'Please repeat the above password',
+        equalTo: 'Password mismatch detected'
+      },
+      gender: {
+        required: 'Please choose gender'
+      },
+      languages: {
+        required: 'Select laguages spoken'
+      },
+      verification: {
+        required: 'Please enter verification code',
+        smartCaptcha: 'Oops - enter a correct verification code'
+      },
+      applicant_age: {
+        required: 'Enter applicant age',
+        min: 'Must be 16 years and above'
+      },
+      licence_no: {
+        required: 'Enter licence number'
+      },
+      child_name: {
+        required: 'Please enter your childs name'
+      }
+
+    },
+
+    /* @validation highlighting + error placement
+    ---------------------------------------------------- */
+
+    highlight: function(element, errorClass, validClass) {
+      $(element).closest('.field').addClass(errorClass).removeClass(validClass);
+    },
+    unhighlight: function(element, errorClass, validClass) {
+      $(element).closest('.field').removeClass(errorClass).addClass(validClass);
+    },
+    errorPlacement: function(error, element) {
+      if (element.is(":radio") || element.is(":checkbox")) {
+        element.closest('.option-group').after(error);
+      } else {
+        error.insertAfter(element.parent());
+      }
+    }
+
+  });
 
 
-      // MISC DATATABLE HELPER FUNCTIONS
+  // Cache several DOM elements
+  var pageHeader = $('.content-header').find('b');
+  var adminForm = $('.admin-form');
+  var options = adminForm.find('.option');
+  var switches = adminForm.find('.switch');
+  var buttons = adminForm.find('.button');
+  var Panel = adminForm.find('.panel');
 
-      // Add Placeholder text to datatables filter bar
-      $('.dataTables_filter input').attr("placeholder", "Search...");
+  // Form Skin Switcher
+  $('#skin-switcher a').on('click', function() {
+    var btnData = $(this).data('form-skin');
+
+    $('#skin-switcher a').removeClass('item-active');
+    $(this).addClass('item-active')
+
+    adminForm.each(function(i, e) {
+      var skins = 'theme-primary theme-info theme-success theme-warning theme-danger theme-alert theme-system theme-dark'
+      var panelSkins = 'panel-primary panel-info panel-success panel-warning panel-danger panel-alert panel-system panel-dark'
+      $(e).removeClass(skins).addClass('theme-' + btnData);
+      Panel.removeClass(panelSkins).addClass('panel-' + btnData);
+      pageHeader.removeClass().addClass('text-' + btnData);
     });
+
+    $(options).each(function(i, e) {
+      if ($(e).hasClass('block')) {
+        $(e).removeClass().addClass('block mt15 option option-' + btnData);
+      } else {
+        $(e).removeClass().addClass('option option-' + btnData);
+      }
+    });
+
+    // var sliders = $('.ui-timepicker-div', adminForm).find('.ui-slider');
+    $('body').find('.ui-slider').each(function(i, e) {
+      $(e).addClass('slider-primary');
+    });
+
+    $(switches).each(function(i, ele) {
+      if ($(ele).hasClass('switch-round')) {
+        if ($(ele).hasClass('block')) {
+          $(ele).removeClass().addClass('block mt15 switch switch-round switch-' + btnData);
+        } else {
+          $(ele).removeClass().addClass('switch switch-round switch-' + btnData);
+        }
+      } else {
+        if ($(ele).hasClass('block')) {
+          $(ele).removeClass().addClass('block mt15 switch switch-' + btnData);
+        } else {
+          $(ele).removeClass().addClass('switch switch-' + btnData);
+        }
+      }
+
+    });
+    buttons.removeClass().addClass('button btn-' + btnData);
+  });
+
+  setTimeout(function() {
+    adminForm.addClass('theme-primary');
+    Panel.addClass('panel-primary');
+    pageHeader.addClass('text-primary');
+
+    $(options).each(function(i, e) {
+      if ($(e).hasClass('block')) {
+        $(e).removeClass().addClass('block mt15 option option-primary');
+      } else {
+        $(e).removeClass().addClass('option option-primary');
+      }
+    });
+
+    // var sliders = $('.ui-timepicker-div', adminForm).find('.ui-slider');
+    $('body').find('.ui-slider').each(function(i, e) {
+      $(e).addClass('slider-primary');
+    });
+
+    $(switches).each(function(i, ele) {
+      if ($(ele).hasClass('switch-round')) {
+        if ($(ele).hasClass('block')) {
+          $(ele).removeClass().addClass('block mt15 switch switch-round switch-primary');
+        } else {
+          $(ele).removeClass().addClass('switch switch-round switch-primary');
+        }
+      } else {
+        if ($(ele).hasClass('block')) {
+          $(ele).removeClass().addClass('block mt15 switch switch-primary');
+        } else {
+          $(ele).removeClass().addClass('switch switch-primary');
+        }
+      }
+    });
+    buttons.removeClass().addClass('button btn-primary');
+  }, 800);
+
+
+
+});
   </script>
     @endsection
