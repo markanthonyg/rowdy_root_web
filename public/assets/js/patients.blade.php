@@ -37,13 +37,13 @@
 
     {{-- ADD BUTTONS --}}
     <div class="col-md-4 hidden">
-      <a href="/new_patient" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Add Patient</a>
+      <a href="#" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Add Patient</a>
     </div>
 
     {{-- <br /><br /><br /> --}}
 
     {{-- SAMPLE TABLE --}}
-    <div class="col-md-12">
+    <div class="col-md-12 hidden">
       <div class="panel panel-visible" id="spy2">
         <div class="panel-heading">
           <div class="panel-title hidden-xs">

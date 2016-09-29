@@ -27,6 +27,8 @@ Route::get('/logout', 'HomeController@logout');
 // Dashboard Routes
 Route::get('/dashboard', 'Dashboard\HomeController@showHome');
 Route::get('/patients', 'Dashboard\PatientsController@showPatients');
+Route::get('/new_patient', 'Dashboard\PatientsController@addPatient');
+Route::post('/new_patient', 'Dashboard\PatientsController@insertPatient');
 
 // Login Routes
 Route::get('/login', 'Auth\LoginController@showLogin');

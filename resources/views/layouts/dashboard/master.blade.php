@@ -187,7 +187,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="/new_patient">
               <span class="fa fa-plus"></span>
               <span class="sidebar-title">New Patient</span>
             </a>
