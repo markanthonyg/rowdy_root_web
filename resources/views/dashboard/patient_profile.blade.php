@@ -1,5 +1,10 @@
 @extends('layouts.dashboard.master')
 
+@section('style')
+  <!-- CSS For patient profile page -->
+  {{ Html::style('css/patient_profile.css') }}
+@endsection
+
 @section('breadcrumb')
 
 @endsection
@@ -9,5 +14,5 @@
 @endsection
 
 @section('content')
-
+  
 @endsection

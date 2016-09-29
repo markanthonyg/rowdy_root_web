@@ -27,7 +27,6 @@
   {{ Html::style('assets/img/favicon.ico') }}
 
   <!-- CSS For live search -->
-  {{-- <link rel="stylesheet" type="text/css" href="css/livesearch.css"> --}}
   {{ Html::style('css/livesearch.css') }}
 
   {{-- Yield for custom styling --}}
@@ -243,10 +242,8 @@
       <!-- End: Topbar -->
 
       <!-- Begin: Content -->
-      <section id="content" class="table-layout animated fadeIn">
+      <section id="content">
         @yield('content')
-        </div>
-        <!-- end: .tray-center -->
       </section>
       <!-- End: Content -->
 
@@ -291,13 +288,13 @@
         }
       });
 
-      // Init Bootstrap Timeout Demo
+      // Init Timeout
       $.sessionTimeout({
           keepAliveUrl: '',
           logoutUrl: '/login',
           redirUrl: '/screenlock',
-          warnAfter: 20000,
-          redirAfter: 30000,
+          warnAfter: 200000,
+          redirAfter: 300000,
           // countdownBar: true,
           countdownMessage: 'Redirecting in {timer} seconds.',
           onStart: function (opts) {},
@@ -327,12 +324,15 @@
 
       // Live search bar on click result
       jQuery("#result").on("click",function(e){
-          var $clicked = $(e.target);
-          console.log('clicked =' + $clicked);
+          // Get div of the result user clicks
+          var $clicked = $(e.target).closest('div');
 
-          // var $id = $clicked.find('.id').html();
-          // var decoded = $("<div/>").html($id).text();
-          // window.location.href = '/patient/' + decoded;
+          // Filter out finding the span class with id of id
+          var $id = $clicked.find('.id').html();
+          var decoded = $("<div/>").html($id).text();
+
+          // Relocate user to that patients page
+          window.location.href = '/patient/' + decoded;
       });
 
       // Live search bar on click off bar
