@@ -12,22 +12,22 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <!-- Font CSS (Via CDN) -->
-  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+  {{ Html::style('http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700') }}
 
   <!-- FullCalendar Plugin CSS -->
-  <link rel="stylesheet" type="text/css" href="vendor/plugins/fullcalendar/fullcalendar.min.css">
+  {{ Html::style('vendor/plugins/fullcalendar/fullcalendar.min.css') }}
 
   <!-- Theme CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+  {{ Html::style('assets/skin/default_skin/css/theme.css') }}
 
   <!-- Admin Forms CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.min.css">
+  {{ Html::style('assets/admin-tools/admin-forms/css/admin-forms.min.css') }}
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="assets/img/favicon.ico">
+  {{ Html::style('assets/img/favicon.ico') }}
 
   <!-- CSS For live search -->
-  <link rel="stylesheet" type="text/css" href="css/livesearch.css">
+  {{ Html::style('css/livesearch.css') }}
 
   {{-- Yield for custom styling --}}
   @yield('style')
@@ -78,7 +78,7 @@
     <!-- Start: Header -->
     <header class="navbar navbar-fixed-top navbar-shadow">
       <div class="navbar-branding">
-        <a class="navbar-brand" href="dashboard.html">
+        <a class="navbar-brand" href="/">
           <b>EMRS</b> Online
         </a>
         <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
@@ -242,10 +242,8 @@
       <!-- End: Topbar -->
 
       <!-- Begin: Content -->
-      <section id="content" class="table-layout animated fadeIn">
+      <section id="content">
         @yield('content')
-        </div>
-        <!-- end: .tray-center -->
       </section>
       <!-- End: Content -->
 
@@ -267,16 +265,16 @@
   <!-- BEGIN: PAGE SCRIPTS -->
 
   <!-- jQuery -->
-  <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
-  <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+  {{ Html::script('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js') }}
+  {{ Html::script('vendor/jquery/jquery_ui/jquery-ui.min.js') }}
 
   <!-- Theme Javascript -->
-  <script src="assets/js/utility/utility.js"></script>
-  <script src="assets/js/demo/demo.js"></script>
-  <script src="assets/js/main.js"></script>
+  {{ Html::script('assets/js/utility/utility.js') }}
+  {{ Html::script('assets/js/demo/demo.js') }}
+  {{ Html::script('assets/js/main.js') }}
 
   <!-- Bootstrap Timeout Plugin -->
-  <script src="vendor/plugins/bstimeout/bs-timeout.js"></script>
+  {{ Html::script('vendor/plugins/bstimeout/bs-timeout.js') }}
 
   @yield('script')
 
@@ -290,7 +288,7 @@
         }
       });
 
-      // Init Bootstrap Timeout Demo
+      // Init Timeout
       $.sessionTimeout({
           keepAliveUrl: '',
           logoutUrl: '/login',
@@ -326,10 +324,15 @@
 
       // Live search bar on click result
       jQuery("#result").on("click",function(e){
-          var $clicked = $(e.target);
-          var $name = $clicked.find('.name').html();
-          var decoded = $("<div/>").html($name).text();
-          $('#searchid').val(decoded);
+          // Get div of the result user clicks
+          var $clicked = $(e.target).closest('div');
+
+          // Filter out finding the span class with id of id
+          var $id = $clicked.find('.id').html();
+          var decoded = $("<div/>").html($id).text();
+
+          // Relocate user to that patients page
+          window.location.href = '/patient/' + decoded;
       });
 
       // Live search bar on click off bar
