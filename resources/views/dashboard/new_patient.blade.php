@@ -179,7 +179,6 @@
 
 @section('script')
 <!-- jQuery -->
-<script src="vendor/jquery/jquery-1.11.1.min.js"></script>
 <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
 
 <!-- jQuery Validate Plugin-->
@@ -198,7 +197,7 @@ jQuery(document).ready(function() {
   "use strict";
 
   // Init Theme Core
-  Core.init();
+  // Core.init();
 
   // Init Demo JS
   //Demo.init();
