@@ -94,10 +94,10 @@
                     </li>
                     <li class="divider-vertical"></li>
                     <li>
-                      <a href="register">Sign Up</a>
+                      <a href="/login">Sign In</a>
                     </li>
                     <li>
-                      <a href="/login">Log In</a>
+                      <a href="register">Register</a>
                     </li>
                 </ul>
             </div>

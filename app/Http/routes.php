@@ -11,11 +11,6 @@
 |
 */
 
-
-Route::get('/register', function () {
-    return view('pages_register');
-});
-
 Route::get('/terms', function () {
     return view('terms');
 });
@@ -33,6 +28,10 @@ Route::post('/new_patient', 'Dashboard\PatientsController@insertPatient');
 // Login Routes
 Route::get('/login', 'Auth\LoginController@showLogin');
 Route::post('/login', 'Auth\LoginController@login');
+
+// Registration Routes
+Route::get('/register', 'Auth\RegistrationController@showRegister');
+Route::post('/register', 'Auth\RegistrationController@register');
 
 // Screenlock Routes
 Route::get('/screenlock', 'MiscController@lockScreen');

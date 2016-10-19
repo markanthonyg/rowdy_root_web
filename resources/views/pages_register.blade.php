@@ -19,6 +19,10 @@
   <!-- Admin Forms CSS -->
   <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.css">
 
+  {{-- Admin Forms CSS Custom --}}
+  <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms-custom.css">
+
+
   <!-- Favicon -->
   <link rel="shortcut icon" href="assets/img/favicon.ico">
 
@@ -67,9 +71,19 @@
 
           </div>
 
+          {{-- Being FORM --}}
           <div class="panel panel-info mt10 br-n">
-            <form method="post" action="/" id="account2">
+            {!! Form::open(['action' => 'Auth\RegistrationController@register', 'id' => 'registrationform', 'files' => 'true']) !!}
               <div class="panel-body p25 bg-light">
+
+                {{-- Show registration error message --}}
+                @if(Session::has('register_validation_messages'))
+                  <div class="alert alert-danger alert-lg fade in">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    {{ Session::get('register_validation_messages') }}
+                  </div>
+                @endif
+
                 <div class="section-divider mt10 mb40">
                   <span>Set up your account</span>
                 </div>
@@ -78,7 +92,7 @@
                 <div class="section row">
                   <div class="col-md-6">
                     <label for="firstname" class="field prepend-icon">
-                      <input type="text" name="firstname" id="firstname" class="gui-input" placeholder="First name...">
+                      {!! Form::text('firstname', null, ['id' => 'firstname', 'class' => 'gui-input', 'placeholder' => 'First name...']) !!}
                       <label for="firstname" class="field-icon">
                         <i class="fa fa-user"></i>
                       </label>
@@ -88,7 +102,7 @@
 
                   <div class="col-md-6">
                     <label for="lastname" class="field prepend-icon">
-                      <input type="text" name="lastname" id="lastname" class="gui-input" placeholder="Last name...">
+                      {!! Form::text('lastname', null, ['id' => 'lastname', 'class' => 'gui-input', 'placeholder' => 'Last name...']) !!}
                       <label for="lastname" class="field-icon">
                         <i class="fa fa-user"></i>
                       </label>
@@ -97,6 +111,24 @@
                   <!-- end section -->
                 </div>
                 <!-- end .section row section -->
+
+                <div class="section row">
+                  <div class="col-md-1">
+
+                  </div>
+                  <div class="col-md-2">
+                    <span class="form-label">Date of Birth:</span>
+                  </div>
+                  <div class="col-md-5">
+                    {!! Form::select('month_dob', $months) !!}
+                    {!! Form::selectrange('day_dob', 1, 31) !!}
+                    {!! Form::selectrange('year_dob', 2016, 1900) !!}
+                  </div>
+                  <div class="col-md-3">
+                    {!! Form::radio('gender', 'Male') !!} &nbsp <span class="form-label">Male</span> &nbsp &nbsp
+                    {!! Form::radio('gender', 'Female') !!} &nbsp <span class="form-label">Female</span>
+                  </div>
+                </div>
 
                 <div class="section">
                   <label for="email" class="field prepend-icon">
@@ -130,12 +162,22 @@
                 <!-- end section -->
 
                 <div class="section">
-                  <label for="confirmPassword" class="field prepend-icon">
-                    <input type="password" name="confirmPassword" id="confirmPassword" class="gui-input" placeholder="Retype your password">
-                    <label for="confirmPassword" class="field-icon">
+                  <label for="password_confirmation" class="field prepend-icon">
+                    <input type="password" name="password_confirmation" id="password_confirmation" class="gui-input" placeholder="Retype your password">
+                    <label for="password_confirmation" class="field-icon">
                       <i class="fa fa-lock"></i>
                     </label>
                   </label>
+                </div>
+                <!-- end section -->
+
+                <div class="section">
+                    {!! Form::select('clinic', $clinics, null, ['placeholder' => '---  Select Clinic  ---', 'class' => 'select']) !!}
+                    <center>
+                      <label for="clinic" class="field-icon" style="font-size: smaller;">
+                         Account will remain inactive until <b>clinic</b> admin approves request
+                      </label>
+                    </center>
                 </div>
                 <!-- end section -->
 
@@ -189,12 +231,6 @@
   <!-- Page Javascript -->
   <script type="text/javascript">
   jQuery(document).ready(function() {
-    "use strict";
-    // Init Theme Core
-    Core.init();
-
-    // Init Demo JS
-    Demo.init();
 
     // Init CanvasBG and pass target starting location
     CanvasBG.init({

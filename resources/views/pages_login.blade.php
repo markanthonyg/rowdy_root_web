@@ -73,10 +73,22 @@
             {!! Form::open(['action' => 'Auth\LoginController@login', 'id' => 'loginform']) !!}
               <div class="panel-body bg-light p30">
                 {{-- Show login error message --}}
+                @if(Session::has('registration_success'))
+                  <div class="alert alert-info alert-lg fade in">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    {{ Session::get('registration_success') }}
+                  </div>
+                @endif
                 @if(Session::has('login_error_message'))
                   <div class="alert alert-danger alert-lg fade in">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                     {{ Session::get('login_error_message') }}
+                  </div>
+                @endif
+                @if(Session::has('activation_message'))
+                  <div class="alert alert-warning alert-lg fade in">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    {{ Session::get('activation_message') }}
                   </div>
                 @endif
                 <div class="row">
