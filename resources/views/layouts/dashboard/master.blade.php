@@ -99,6 +99,11 @@
           </a>
         </li>
       </ul>
+      <form class="navbar-form navbar-left navbar-search alt" role="clinic_select">
+        <div class="form-group">
+          {!! Form::select('clinic', $clinics, null, ['class' => 'search form-control']) !!}
+        </div>
+      </form>
       <form class="navbar-form navbar-left navbar-search alt" role="search">
         <div class="form-group">
           {{-- Search bar w/ results div (coming from jquery) --}}

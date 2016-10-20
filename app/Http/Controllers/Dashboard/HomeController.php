@@ -25,11 +25,18 @@ class HomeController extends Controller
         return Redirect::to('/');
       }
 
+      // Collect all clinics from the database for user to choose from
+      $sql_clinics = Clinic::all();
+      foreach ($sql_clinics as $clinic) {
+        $clinics[$clinic['id']] = $clinic['Name'];
+      }
+
       $data['user'] = Auth::User();
       $data['num_visits'] = Visit::all()->count();
       $data['num_clinics'] = Clinic::all()->count();
       $data['num_users'] = User::all()->count();
       $data['num_patients'] = Patient::all()->count();
+      $data['clinics'] = $clinics;
 
       return view('dashboard/home')->with($data);
     }

@@ -7,8 +7,6 @@ eventRender	/Users/battlestation/Documents/rowdy_root_web/resources/views/layout
 update	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/master.blade.php	/^      update: function( event, ui ) {$/;"	jsfunction	line:1558
 runVectorMaps	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/master.blade.php	/^    function runVectorMaps() {$/;"	function	line:1670
 runJvectorMap	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/master.blade.php	/^      var runJvectorMap = function() {$/;"	jsfunction	line:1673
-HomeController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/HomeController.php	/^class HomeController extends Controller$/;"	class	line:10
-showHome	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/HomeController.php	/^    public function showHome(){$/;"	function	line:13
 Login	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/login.js	/^var Login = function() {$/;"	function	line:8
 runLoginForms	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/login.js	/^  var runLoginForms = function() {$/;"	function	line:11
 Login.runLoginForms	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/login.js	/^  var runLoginForms = function() {$/;"	function	line:11
@@ -567,16 +565,6 @@ final_id	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Misc
 bolded	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^          $bolded = '<strong>'.$_POST['search'].'<\/strong>';$/;"	variable	line:65
 final_id	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^          $final_id = str_ireplace($_POST['search'], $bolded, $user->id);$/;"	variable	line:66
 .content	/Users/battlestation/Documents/rowdy_root_web/public/css/livesearch.css	/^.content{$/;"	function	line:1
-needed	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^         .sidebar-dark (default no class needed)$/;"	class	line:138
-onStart	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          onStart: function (opts) {},$/;"	jsfunction	line:300
-success	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^              success: function(html)$/;"	jsfunction	line:316
-clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target).closest('div');$/;"	variable	line:328
-clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target).closest('div');$/;"	variable	line:328
-with	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          \/\/ Filter out finding the span class with id of id$/;"	class	line:330
-id	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $id = $clicked.find('.id').html();$/;"	variable	line:331
-id	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $id = $clicked.find('.id').html();$/;"	variable	line:331
-clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:340
-clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:340
 .admin-form	/Users/battlestation/Documents/rowdy_root_web/public/assets/admin-tools/admin-forms/css/admin-forms.css	/^.admin-form,$/;"	function	line:4
 .admin-form *	/Users/battlestation/Documents/rowdy_root_web/public/assets/admin-tools/admin-forms/css/admin-forms.css	/^.admin-form * {$/;"	function	line:5
 .admin-form	/Users/battlestation/Documents/rowdy_root_web/public/assets/admin-tools/admin-forms/css/admin-forms.css	/^.admin-form {$/;"	function	line:10
@@ -1903,3 +1891,16 @@ login	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/Lo
 remember	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^        $remember = true;$/;"	variable	line:38
 remember	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^        $remember = false;$/;"	variable	line:40
 user	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^        $user = Auth::user();$/;"	variable	line:45
+HomeController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/HomeController.php	/^class HomeController extends Controller$/;"	class	line:17
+showHome	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/HomeController.php	/^    public function showHome(){$/;"	function	line:20
+sql_clinics	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/HomeController.php	/^      $sql_clinics = Clinic::all();$/;"	variable	line:29
+needed	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^         .sidebar-dark (default no class needed)$/;"	class	line:143
+onStart	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          onStart: function (opts) {},$/;"	jsfunction	line:305
+success	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^              success: function(html)$/;"	jsfunction	line:321
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target).closest('div');$/;"	variable	line:333
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target).closest('div');$/;"	variable	line:333
+with	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          \/\/ Filter out finding the span class with id of id$/;"	class	line:335
+id	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $id = $clicked.find('.id').html();$/;"	variable	line:336
+id	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $id = $clicked.find('.id').html();$/;"	variable	line:336
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:345
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:345
