@@ -172,7 +172,7 @@
                 <!-- end section -->
 
                 <div class="section">
-                    {!! Form::select('clinic', $clinics, null, ['placeholder' => '---  Select Clinic  ---', 'class' => 'select']) !!}
+                    {!! Form::select('clinic', $clinics, null, ['placeholder' => '---  Select Clinic  ---', 'class' => 'form-control']) !!}
                     <center>
                       <label for="clinic" class="field-icon" style="font-size: smaller;">
                          Account will remain inactive until <b>clinic</b> admin approves request
