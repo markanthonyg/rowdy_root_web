@@ -1894,13 +1894,14 @@ user	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/Log
 HomeController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/HomeController.php	/^class HomeController extends Controller$/;"	class	line:17
 showHome	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/HomeController.php	/^    public function showHome(){$/;"	function	line:20
 sql_clinics	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/HomeController.php	/^      $sql_clinics = Clinic::all();$/;"	variable	line:29
-needed	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^         .sidebar-dark (default no class needed)$/;"	class	line:143
-onStart	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          onStart: function (opts) {},$/;"	jsfunction	line:305
-success	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^              success: function(html)$/;"	jsfunction	line:321
-clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target).closest('div');$/;"	variable	line:333
-clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target).closest('div');$/;"	variable	line:333
-with	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          \/\/ Filter out finding the span class with id of id$/;"	class	line:335
-id	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $id = $clicked.find('.id').html();$/;"	variable	line:336
-id	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $id = $clicked.find('.id').html();$/;"	variable	line:336
-clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:345
-clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:345
+.clinic-select	/Users/battlestation/Documents/rowdy_root_web/public/css/clinicselect.css	/^.clinic-select {$/;"	function	line:1
+needed	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^         .sidebar-dark (default no class needed)$/;"	class	line:141
+onStart	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          onStart: function (opts) {},$/;"	jsfunction	line:303
+success	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^              success: function(html)$/;"	jsfunction	line:319
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target).closest('div');$/;"	variable	line:331
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target).closest('div');$/;"	variable	line:331
+with	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          \/\/ Filter out finding the span class with id of id$/;"	class	line:333
+id	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $id = $clicked.find('.id').html();$/;"	variable	line:334
+id	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $id = $clicked.find('.id').html();$/;"	variable	line:334
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:343
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:343

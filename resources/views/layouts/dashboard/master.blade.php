@@ -29,6 +29,9 @@
   <!-- CSS For live search -->
   {{ Html::style('css/livesearch.css') }}
 
+  <!-- CSS For Clinic Select -->
+  {{ Html::style('css/clinicselect.css') }}
+
   {{-- Yield for custom styling --}}
   @yield('style')
 
@@ -93,15 +96,10 @@
             <li><a href="#">Separated link</a></li>
           </ul>
         </li>
-        <li class="hidden-xs">
-          <a class="request-fullscreen toggle-active" href="#">
-            <span class="ad ad-screen-full fs18"></span>
-          </a>
-        </li>
       </ul>
       <form class="navbar-form navbar-left navbar-search alt" role="clinic_select">
         <div class="form-group">
-          {!! Form::select('clinic', $clinics, null, ['class' => 'search form-control']) !!}
+          {!! Form::select('clinic', $clinics, null, ['class' => 'form-control clinic-select']) !!}
         </div>
       </form>
       <form class="navbar-form navbar-left navbar-search alt" role="search">
