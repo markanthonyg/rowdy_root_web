@@ -13,6 +13,9 @@
 
   <!-- Datatables ColReorder Addon CSS -->
   <link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css">
+
+  <!-- CSS For clickable row -->
+  {{ Html::style('css/clickable_row.css') }}
 @endsection
 
 @section('breadcrumb')
@@ -50,7 +53,7 @@
             <span class="glyphicon glyphicon-tasks"></span>Patients</div>
         </div>
         <div class="panel-body pn">
-          <table class="table" id="datatable2" cellspacing="0" width="100%">
+          <table class="table table-hover" id="datatable2" cellspacing="0" width="100%">
             <thead>
               <tr>
                 <th>Patient ID</th>
@@ -64,7 +67,7 @@
             <tbody>
               @foreach($patients as $patient)
                 @if($patient->unidentified_patient == 1)
-                  <tr>
+                  <tr class="clickable-row" data-url="patient/{{ $patient->id }}">
                     <td>{{ $patient->id }}</td>
                     <td>N/A</td>
                     <td>N/A</td>
@@ -73,7 +76,7 @@
                     <td>{{ $patient->phone_number }}</td>
                   </tr>
                 @else
-                  <tr>
+                  <tr class="clickable-row" data-url="patient/{{ $patient->id }}">
                     <td>{{ $patient->id }}</td>
                     <td>{{ $patient->first_name }}</td>
                     <td>{{ $patient->last_name }}</td>
@@ -107,6 +110,11 @@
 
   <script type="text/javascript">
     jQuery(document).ready(function() {
+
+      // Make rows clickable with 'clickable-row' class
+      $('.clickable-row').click(function() {
+          window.location = $(this).data('url');
+      });
 
       // Init DataTables
       $('#datatable').dataTable({
