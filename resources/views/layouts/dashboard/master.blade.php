@@ -218,7 +218,22 @@
               <span class="sidebar-title">New Visit</span>
             </a>
           </li>
-
+          @if($user->role == "sys_admin")
+            <li class="sidebar-label pt20">Admin Tools</li>
+            <li>
+              <a href="/accountRequest">
+                <span class="fa fa-user-plus"></span>
+                <span class="sidebar-title">Account Request</span>
+                <span class="badge badge-danger">{{$num_unapproved_users}}</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa fa-users"></span>
+                <span class="sidebar-title">Users</span>
+              </a>
+            </li>
+          @endif
         </ul>
         <!-- End: Sidebar Menu -->
 

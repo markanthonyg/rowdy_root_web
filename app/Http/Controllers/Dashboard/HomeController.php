@@ -29,6 +29,7 @@ class HomeController extends Controller
       $data['num_visits'] = Visit::all()->count();
       $data['num_clinics'] = Clinic::all()->count();
       $data['num_users'] = User::all()->count();
+      $data['num_unapproved_users'] = User::where(['approved' => 0])->count();
       $data['num_patients'] = Patient::all()->count();
 
       return view('dashboard/home')->with($data);

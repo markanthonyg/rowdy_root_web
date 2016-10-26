@@ -65,6 +65,9 @@
     </table>
   </div>
 </div>
+<div class="alert alert-warning">
+  <strong>This patient has one or more known allergies.</strong>
+</div>
 <div class="col-md-12">
   <div class="tab-block">
     <ul class="nav nav-tabs">

@@ -25,9 +25,11 @@ class ProfileController extends Controller
 
       // Get user to pass to master template in view
       $data['user'] = Auth::User();
+      $data['num_unapproved_users'] = User::where(['approved' => 0])->count();
 
       // Get patient from database to pass to view
       $data['patient'] = Patient::where('id', '=', $id)->first();
+
 
       if($data['patient'] == NULL){
         // Patient not found

@@ -25,6 +25,7 @@ class PatientsController extends Controller
     $data['user'] = Auth::User();
     $data['patients'] = Patient::all();
     $data['num_patients'] = Patient::all()->count();
+    $data['num_unapproved_users'] = User::where(['approved' => 0])->count();
 
     return view('dashboard/patients')->with($data);
   }
@@ -40,6 +41,7 @@ class PatientsController extends Controller
     $data['user'] = Auth::User();
     $data['patients'] = Patient::all();
     $data['num_patients'] = Patient::all()->count();
+    $data['num_unapproved_users'] = User::where(['approved' => 0])->count();
 
     return view('dashboard/new_patient')->with($data);
   }
