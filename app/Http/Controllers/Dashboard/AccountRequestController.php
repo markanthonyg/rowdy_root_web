@@ -15,48 +15,49 @@ use Auth;
 class AccountRequestController extends Controller
 {
 
-  public function showAllAccountRequest(){
-    $data['user'] = Auth::User();
-    $data['num_unapproved_users'] = User::where(['approved' => 0])->count();
-		$data['accounts'] = User::where('approved', '=', 0)->get();
-    return view('dashboard/accountList')->with($data);
-	}
+  public function updateAccount() {
+        $id = Input::get('id');
+        if(Input::get('name') == "approve") {
+            $this->approveAccount($id);
+        } else if(Input::get('name') == "deny") {
+            $this->deleteAccount($id);
+        }
+    }
 
-	/**
-	*  Get all patients in the database
-	*
-	*  @return Json encoded array of all patient records
-	*/
-	public function getAllAccountRequest(){
-		$accounts = User::where('approved', '=', 0)->get();
-		return $accounts->toJson();
-	}
+  public function deleteAccount($id) {
+    $account = User::find($id);
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		// Update the approval on the account
-		$user = User::where('id', '=', $id);
-
-		if(!$user){
+    if(!$account){
 			Session::flash('error_message', 'User Not Found');
 			return;
 		}
 
-		$user->update([
-			'id' => $id,
-			'approved' => Input::get('approved')
-		]);
+    $account->delete();
+    return Response::json(array('success' => true));
+  }
 
-		// if(!$user->update()){
-		// 	Session::flash('error_message', 'User Could Not Be Updated');
-		// 	return;
-		// }
+  public function approveAccount($id) {
+    $account = User::find($id);
+
+		if(!$account){
+			Session::flash('error_message', 'User Not Found');
+			return;
+		}
+
+    $account->approved = 1;
+    $account->save();
+    return Response::json(array('success' => true));
 	}
 
+  public function showAllAccountRequest(){
+    $data['user'] = Auth::User();
+    $data['num_unapproved_users'] = User::where(['approved' => 0])->count();
+		$data['accounts'] = User::where('approved', '=', 0)->get();
+    return view('dashboard/accountRequestList')->with($data);
+	}
+
+	public function getAllAccountRequest(){
+		$accounts = User::where('approved', '=', 0)->get();
+		return $accounts->toJson();
+	}
 }
