@@ -181,7 +181,7 @@
       $("tr").each(function() {
         $(this).find("td:eq(7)").attr("contentEditable", true);
       });
-  		alert("change");
+  		///alert("change");
     });
   });
   </script>
