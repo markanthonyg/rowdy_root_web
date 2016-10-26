@@ -12,113 +12,30 @@ use Illuminate\Support\Facades\View;
 use Auth;
 class AccountController extends Controller {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		//
-	}
+	public function updateAccount() {
+				$id = Input::get('id');
+				if(Input::get('name') == "delete") {
+						$this->deleteAccount($id);
+				}
+		}
 
+	public function deleteAccount($id) {
+		$account = User::find($id);
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
-
-
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
-
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		// Updates the patient with id $id from the database
-		$user = User::find($id);
-
-		if(!$user){
+		if(!$account){
 			Session::flash('error_message', 'User Not Found');
 			return;
 		}
 
-		$user->update([
-			'id' => $id,
-			'first_name' => Input::get('first_name'),
-			'middle_name' => Input::get('middle_name'),
-			'last_name' => Input::get('last_name'),
-			'dob' => Input::get('dob'),
-			'gender' => Input::get('gender'),
-			'role' => Input::get('role')
-		]);
-
-		if(!$user->update()){
-			Session::flash('error_message', 'User Could Not Be Updated');
-			return;
-		}
+		$account->delete();
+		return Response::json(array('success' => true));
 	}
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		// Destroys the account with id $id from the database
-		User::destroy($id);
+	public function showAllAccounts(){
+		$data['user'] = Auth::User();
+		$data['num_unapproved_users'] = User::where(['approved' => 0])->count();
+		$data['accounts'] = User::where('approved', '=', 1)->get();
+		return view('dashboard/accountList')->with($data);
 	}
-
-	public function listAccounts(){
-		$accounts = User::where('approved', '=', 1)->get();
-		$data['accounts'] = $accounts;
-
-		return View::make('accountList', $data);
-	}
-
 
 }

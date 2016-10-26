@@ -228,7 +228,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/accountList">
                 <span class="fa fa-users"></span>
                 <span class="sidebar-title">Users</span>
               </a>
