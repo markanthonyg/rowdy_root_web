@@ -14,7 +14,7 @@ class AddNameToClinicsTable extends Migration
     {
         Schema::table('clinics', function (Blueprint $table) {
             // Add name field to clinics table
-            $table->text('name', 65535);
+            $table->text('Name', 65535);
         });
     }
 

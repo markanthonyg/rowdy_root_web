@@ -26,6 +26,8 @@ class RegistrationController extends Controller
         $clinics[$clinic['id']] = $clinic['Name'];
       }
 
+      // dd($sql_clinics);
+
       // Setup data array to pass to view
       $data['array'] = array_add(['name' => 'Desk'], 'price', 100);
       $data['clinics'] = $clinics;
@@ -107,7 +109,7 @@ class RegistrationController extends Controller
 
       // Registration successful
       Session::flash('registration_success', 'Account has been submitted for approval');
-      
+
       return Redirect::to('/login');
     }
 }
