@@ -20,6 +20,10 @@ class RegistrationController extends Controller
 {
     // Show register form
     public function showRegister() {
+      // init variables
+      $sql_clinics = array();
+      $clinics = array();
+
       // Collect all clinics from the database for user to choose from
       $sql_clinics = Clinic::all();
       foreach ($sql_clinics as $clinic) {
