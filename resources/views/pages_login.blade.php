@@ -98,7 +98,7 @@
                       <label for="username" class="field prepend-icon">
                         {!! Form::text('username', null, ['id' => 'username', 'class' => 'gui-input', 'placeholder' => 'Enter Username']) !!}
                         <label for="username" class="field-icon">
-                          <i class="fa fa-user"></i>
+                          <i class="fa fa-user-md"></i>
                         </label>
                       </label>
                     </div>

@@ -24,7 +24,9 @@ Route::get('/dashboard', 'Dashboard\HomeController@showHome');
 Route::get('/patients', 'Dashboard\PatientsController@showPatients');
 Route::get('/new_patient', 'Dashboard\PatientsController@addPatient');
 Route::post('/new_patient', 'Dashboard\PatientsController@insertPatient');
-
+Route::get('/clinics', 'Dashboard\ClinicController@showClinics');
+Route::get('/new_clinic', 'Dashboard\ClinicController@newClinic');
+Route::post('/new_clinic', 'Dashboard\ClinicController@insertClinic');
 // Login Routes
 Route::get('/login', 'Auth\LoginController@showLogin');
 Route::post('/login', 'Auth\LoginController@login');

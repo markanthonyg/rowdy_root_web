@@ -194,13 +194,13 @@
           </li>
           <li class="sidebar-label pt20">Clinic</li>
           <li>
-            <a href="#">
+            <a href="/clinics">
               <span class="fa fa-hospital-o"></span>
               <span class="sidebar-title">View Clinics</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="/new_clinic">
               <span class="fa fa-plus"></span>
               <span class="sidebar-title">New Clinic</span>
             </a>
