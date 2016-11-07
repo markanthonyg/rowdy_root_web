@@ -44,3 +44,11 @@ Route::post('/livesearch', 'MiscController@livesearch');
 
 // Profile Routes
 Route::get('/patient/{id}', 'Dashboard\ProfileController@showPatientProfile');
+
+// Account Request Routes
+Route::get('/accountRequestList', 'Dashboard\AccountRequestController@showAllAccountRequest');
+Route::post('/accountRequestList', 'Dashboard\AccountRequestController@updateAccount');
+
+// Account Routes
+Route::get('/accountList', 'Dashboard\AccountController@showAllAccounts');
+Route::post('/accountList', 'Dashboard\AccountController@updateAccount');
