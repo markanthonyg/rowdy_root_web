@@ -14,6 +14,8 @@
   <!-- Datatables ColReorder Addon CSS -->
   <link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+
   <!-- CSS For clickable row -->
   {{ Html::style('css/clickable_row.css') }}
 @endsection
@@ -34,7 +36,6 @@
 @endsection
 
 @section('content')
-  <p>Simple show clinics page</p>
   <!-- begin: .tray-center -->
   <div class="tray tray-center">
 
@@ -44,6 +45,35 @@
     </div>
 
     {{-- <br /><br /><br /> --}}
+
+    {{-- SAMPLE TABLE --}}
+    <div class="col-md-12">
+      <div class="panel panel-visible" id="spy2">
+        <div class="panel-heading">
+          <div class="panel-title hidden-xs">
+            <span class="glyphicon glyphicon-tasks"></span>Clinics</div>
+        </div>
+        <div class="panel-body pn">
+          <table class="table table-hover" id="datatable2" cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                <th>Clinic Name</th>
+                <th>Phone Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach($clinics as $clinic)
+                <tr class="clickable-row" data-url="#">
+                  <td>{{ $clinic->Name }}</td>
+                  <td>123-456-7890</td>
+                </tr>
+              @endforeach
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 @endsection
 
 @section('script')
@@ -58,4 +88,7 @@
 
   <!-- Datatables Bootstrap Modifications  -->
   <script src="vendor/plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+
 @endsection
