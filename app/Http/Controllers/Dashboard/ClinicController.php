@@ -40,6 +40,8 @@ class ClinicController extends Controller
     // ...
 
     $data['user'] = Auth::User();
+    $data['clinics'] = Clinic::all();
+    $data['num_clinics'] = Clinic::all()->count();
     return view('dashboard/clinics')->with($data);
 
   }
