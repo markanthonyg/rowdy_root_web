@@ -25,7 +25,7 @@ class ClinicController extends Controller
     }
 
     $data['user'] = Auth::User();
-
+    $data['num_unapproved_users'] = User::where(['approved' => 0])->count();
     return view('dashboard/new_clinic')->with($data);
     // ...
   }
@@ -42,6 +42,7 @@ class ClinicController extends Controller
     $data['user'] = Auth::User();
     $data['clinics'] = Clinic::all();
     $data['num_clinics'] = Clinic::all()->count();
+    $data['num_unapproved_users'] = User::where(['approved' => 0])->count();
     return view('dashboard/clinics')->with($data);
 
   }
