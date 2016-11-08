@@ -14,8 +14,6 @@
   <!-- Datatables ColReorder Addon CSS -->
   <link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-
   <!-- CSS For clickable row -->
   {{ Html::style('css/clickable_row.css') }}
 @endsection
@@ -88,7 +86,5 @@
 
   <!-- Datatables Bootstrap Modifications  -->
   <script src="vendor/plugins/datatables/media/js/dataTables.bootstrap.js"></script>
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
 
 @endsection
