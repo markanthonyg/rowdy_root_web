@@ -1,0 +1,11 @@
+/* Labels */
+.vcenter {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/*Textarea box*/
+#chief_complaint {
+  width: 100%;
+  resize: none;
+}

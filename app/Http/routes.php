@@ -42,3 +42,7 @@ Route::post('/livesearch', 'MiscController@livesearch');
 
 // Profile Routes
 Route::get('/patient/{id}', 'Dashboard\ProfileController@showPatientProfile');
+
+// Visit Routes
+Route::get('/new_visit', 'Dashboard\VisitsController@addVisit');
+Route::post('/new_visit', 'Dashboard\VisitsController@insertVisit');

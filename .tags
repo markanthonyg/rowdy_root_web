@@ -1903,3 +1903,5 @@ login	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/Lo
 remember	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^        $remember = true;$/;"	variable	line:38
 remember	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^        $remember = false;$/;"	variable	line:40
 user	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^        $user = Auth::user();$/;"	variable	line:45
+.vcenter	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.vcenter {$/;"	function	line:2
+#chief_complaint	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#chief_complaint {$/;"	function	line:8

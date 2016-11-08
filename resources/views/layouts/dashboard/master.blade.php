@@ -213,7 +213,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="/new_visit">
               <span class="fa fa-plus"></span>
               <span class="sidebar-title">New Visit</span>
             </a>
