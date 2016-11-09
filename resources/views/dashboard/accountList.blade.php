@@ -38,7 +38,7 @@
 @section('content')
 
   <!-- begin: .tray-center -->
-  <div class="tray tray-center">
+<div class="tray tray-center">
 
     {{-- ADD BUTTONS --}}
     <div class="col-md-4 hidden">
@@ -55,9 +55,10 @@
             <span class="glyphicon glyphicon-tasks"></span>User Accounts</div>
         </div>
         <div class="panel-body pn">
-          <table class="table" id="datatable2" cellspacing="0" width="100%">
+          <table class="table table-hover" id="datatable2" cellspacing="0" width="100%">
             <thead>
               <tr>
+                  <th>id</th>
                   <th>Firt Name</th>
                   <th>Middle Name</th>
                   <th>Last Name</th>
@@ -66,20 +67,21 @@
                   <th>Role</th>
                   <th>Eamil</th>
                   <th></th>
-                  <th></th>
               </tr>
             </thead>
             @foreach($accounts as $account)
                 <tr id="{{$account->id}}">
-                    <td><input type="text" id="first_name" value="{{$account->first_name}}" style="border:none"/></td>
-                    <td> <input type="text"  id="middle_name" value="{{$account->middle_name}}"/></td>
-                    <td><input type="text"  id="last_name" value="{{$account->last_name}}"/></td>
-                    <td> <input type="text"  id="gender" value="{{$account->gender}}"/></td>
-                    <td> <input type="text"  id="dob" value="{{$account->dob}}"/></td>
-                    <td> <input type="text"  id="role" value="{{$account->role}}"/></td>
-                    <td> <input type="text"  id="email" value="{{$account->email}}"/></td>
-                    <td><a href="{{action('Dashboard\AccountController@updateAccount')}}" class="btn btn-danger account_update" data-id="{{ $account->id }}" name ="delete">Delete</a></td>
-                    <td><a href="{{action('Dashboard\AccountController@updateAccount')}}" data-id="{{ $account->id }}" disabled class="btn btn-success save_btn" name ="update">Update</a></td>
+                    <td>{{$account->id}}</td>
+                    <td>{{$account->first_name}}</td>
+                    <td>{{$account->middle_name}}</td>
+                    <td>{{$account->last_name}}</td>
+                    <td>{{$account->gender}}</td>
+                    <td>{{$account->dob}}</td>
+                    <td>{{$account->role}}</td>
+                    <td>{{$account->email}}</td>
+
+                    <td><a href="{{action('Dashboard\AccountController@deleteAccount')}}" class="btn btn-danger" data-id="{{ $account->id }}" name ="delete">
+                      <i class="fa fa-trash-o fa-lg"></i>  Delete</a></td>
                 </tr>
             @endforeach
             </tbody>
@@ -88,7 +90,107 @@
       </div>
     </div>
   </div>
-
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="tray tray-center">
+          <div class="form-group">
+          <div class="admin-form theme-primary mw1000 center-block">
+            <div class="panel heading-border">
+              {{-- <form method="post" action="/" id="newPatientForm"> --}}
+              {!! Form::open(['action' => 'Dashboard\AccountController@updateAccount', 'id' => 'admin-form', 'method' => 'post']) !!}
+                {!! Form::hidden('id', '', ['class' => 'gui-input', 'name' => 'id', 'id' => 'id']) !!}
+                <div class="panel-body bg-light">
+                  <div class="section-divider mt20 mb40">
+                    <span> Edit user information </span>
+                  </div>
+                    <div class="section row"  >
+                      <div class="col-md-4">
+                        <label for="firstname" class="field prepend-icon">
+                          {!! Form::text('firstname', '', ['placeholder' => 'First name...', 'class' => 'gui-input', 'name' => 'firstname', 'id' => 'firstname']) !!}
+                          <label for="firstname" class="field-icon">
+                            <i class="fa fa-user"></i>
+                          </label>
+                        </label>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="middlename" class="field prepend-icon">
+                          {!! Form::text('middlename', '', ['placeholder' => 'Middle name...', 'class' => 'gui-input', 'name' => 'middlename', 'id' => 'middlename']) !!}
+                          <label for="middlename" class="field-icon">
+                            <i class="fa fa-user"></i>
+                          </label>
+                        </label>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="lastname" class="field prepend-icon">
+                          {!! Form::text('lastname', '', ['placeholder' => 'Last name...', 'class' => 'gui-input', 'name' => 'lastname', 'id' => 'lastname']) !!}
+                          <label for="lastname" class="field-icon">
+                            <i class="fa fa-user"></i>
+                          </label>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="section row">
+                      <div class="col-md-6">
+                        <label class="field select">
+                          {{ Form::select('role', array(
+                              '' => 'Select a role...',
+                              'sys_admin' => 'System Administrator',
+                              'user' => 'User'),
+                              '',
+                              ['id' => 'role']
+                          ) }}
+                          <i class="arrow double"></i>
+                        </label>
+                      </div>
+                      <div class ="col-md-6">
+                        <label class="field select">
+                          {{ Form::select('gender', array(
+                              '' => 'Select a gender...',
+                              'male' => 'Male',
+                              'female' => 'Female'),
+                              '',
+                              ['id' => 'gender']
+                          ) }}
+                          <i class="arrow double"></i>
+                        </div>
+                    </div>
+                    <div class="section row">
+                      <div class ="col-md-6">
+                        <label for="dob" class="field prepend-icon">
+                          {!! Form::text('dob', '', ['placeholder' => 'Date of birth...', 'class' => 'gui-input', 'name' => 'dob', 'id' => 'dob']) !!}
+                          <label for="dob" class="field-icon">
+                            <i class="fa fa-birthday-cake"></i>
+                          </label>
+                        </label>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="address2" class="field prepend-icon">
+                          {!! Form::text('email', '', ['placeholder' => 'Email...', 'class' => 'gui-input', 'name' => 'email', 'id' => 'email']) !!}
+                          <label for="address2" class="field-icon">
+                            <i class="fa fa-envelope"></i>
+                          </label>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel-footer text-right">
+                    <button type="button" class="button btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="button btn-primary"> Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{-- </form> --}}
+            {!! Form::close() !!}
+          </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 @endsection
 
 @section('script')
@@ -123,7 +225,7 @@
       $('#datatable2').dataTable({
         "aoColumnDefs": [{
           'bSortable': false,
-          'aTargets': [-2]
+          'aTargets': [-1]
         }],
         "oLanguage": {
           "oPaginate": {
@@ -171,57 +273,230 @@
   </script>
 
   <script>
-  $(document).ready(function () {
-    $('#datatable2').on('change', function () {
-      var row = $(this).closest('tr');
-      //test stuff please ignore
-      //row.find('.btn btn-success save_btn').attr("contentEditable", true);
-      //$('#datatable2 row.index td:eq(7)').attr("contentEditable", true);
-      //$($(this).closest('tr') tr:eq(7)).attr("contentEditable", true);
-      $("tr").each(function() {
-        $(this).find("td:eq(7)").attr("contentEditable", true);
+      //When the approve or deny button is clicked
+      $('.account_update').click(function(){
+          //Get the clicked row
+          var row = $(this).closest('tr');
+          row.remove();
+          // Fire ajax call to update account table
+          $.post('/accountList', {
+              id: $(this).attr('data-id'),
+              name : $(this).attr('name'),
+              class : $(this).attr('class')
+             }, function(data, textStatus, xhr) {
+              if(data.success)
+                  alert('account successfully updated');
+              else
+                  alert('Something went wrong!');
+          });
       });
-  		///alert("change");
-    });
+  </script>
+
+  <script>
+  $(document).ready(function () {
+    $('table tbody tr  td').on('click',function(){
+    $("#myModal").modal("show");
+    $("#id").val($(this).closest('tr').children()[0].textContent);
+    $("#firstname").val($(this).closest('tr').children()[1].textContent);
+    $("#middlename").val($(this).closest('tr').children()[2].textContent);
+    $("#lastname").val($(this).closest('tr').children()[3].textContent);
+    $("#gender").val($(this).closest('tr').children()[4].textContent);
+    $("#dob").val($(this).closest('tr').children()[5].textContent);
+    $("#role").val($(this).closest('tr').children()[6].textContent);
+    $("#email").val($(this).closest('tr').children()[7].textContent);
+});
   });
   </script>
 
-<!--
   <script>
-    $(document).ready(function () {
-      $("#datatable2").on("change", function () {
-        alert("change");
-        /*
-        $("tr").each(function() {
-          $(this).find("td:eq(7)").attr("disabled", false);
-        });
-        */
-      });
-      /*
-        $('.edit_btn').click(function () {
-            var currentTD = $(this).parents('tr').find('td');
-            if ($(this).html() == 'Edit') {
-                $.each(currentTD, function () {
-                    $(this).prop('contenteditable', true)
-                    //makes last column uneditiable
-                    $("tr").each(function() {
-                      $(this).find("td:eq(7)").attr("contentEditable", false);
-                    });
-                });
-            } else {
-              $(".edit_btn").attr('class', 'btn btn-warning edit_btn');
-               $.each(currentTD, function () {
-                    $(this).prop('contenteditable', false)
-                });
-            }
+  $.validator.methods.smartCaptcha = function(value, element, param) {
+    return value == param;
+  };
 
-            $(this).html($(this).html() == 'Edit' ? 'Save' : 'Edit')
+  $("#admin-form").validate({
 
+    /* @validation states + elements
+    ------------------------------------------- */
 
+    errorClass: "state-error",
+    validClass: "state-success",
+    errorElement: "em",
 
-        });
-        */
-    });
+    /* @validation rules
+    ------------------------------------------ */
+
+    rules: {
+      firstname: {
+        required: true
+      },
+      country: {
+        required: true
+      },
+      city: {
+        required: true
+      },
+      state: {
+        required: true
+      },
+      birthyear: {
+        required: true
+      },
+      useremail: {
+        required: true,
+        email: true
+      },
+      website: {
+        required: true,
+        url: true
+      },
+      upload1: {
+        required: true,
+        extension: "jpg|png|gif|jpeg|doc|docx|pdf|xls|rar|zip"
+      },
+      mobileos: {
+        required: true
+      },
+      comment: {
+        required: true,
+        minlength: 30
+      },
+      mobile_phone: {
+        require_from_group: [1, ".phone-group"]
+      },
+      home_phone: {
+        require_from_group: [1, ".phone-group"]
+      },
+      password: {
+        required: true,
+        minlength: 6,
+        maxlength: 16
+      },
+      repeatPassword: {
+        required: true,
+        minlength: 6,
+        maxlength: 16,
+        equalTo: '#password'
+      },
+      gender: {
+        required: true
+      },
+      languages: {
+        required: true
+      },
+      verification: {
+        required: true,
+        smartCaptcha: 19
+      },
+      applicant_age: {
+        required: true,
+        min: 16
+      },
+      licence_no: {
+        required: function(element) {
+          return $("#applicant_age").val() > 19;
+        }
+      },
+      child_name: {
+        required: "#parents:checked"
+      }
+
+    },
+
+    /* @validation error messages
+    ---------------------------------------------- */
+
+    messages: {
+      firstname: {
+        required: 'Enter first name or alias if unkown'
+      },
+      country: {
+        required: 'Enter country'
+      },
+      city: {
+        required: 'Enter city/village'
+      },
+      state: {
+        required: 'Enter state/province'
+      },
+      birthyear: {
+        required: 'Enter birth year or estimated birth year'
+      },
+      useremail: {
+        required: 'Enter email address',
+        email: 'Enter a VALID email address'
+      },
+      website: {
+        required: 'Enter your website URL',
+        url: 'URL should start with - http://www'
+      },
+      gender: {
+        required: 'Choose a gender'
+      },
+      upload1: {
+        required: 'Please browse a file',
+        extension: 'File format not supported'
+      },
+      mobileos: {
+        required: 'Please select a mobile platform'
+      },
+      comment: {
+        required: 'Oops you forgot to comment',
+        minlength: 'Enter at least 30 characters or more'
+      },
+      mobile_phone: {
+        require_from_group: 'Fill at least a mobile contact'
+      },
+      home_phone: {
+        require_from_group: 'Fill at least a home contact'
+      },
+      password: {
+        required: 'Please enter a password'
+      },
+      repeatPassword: {
+        required: 'Please repeat the above password',
+        equalTo: 'Password mismatch detected'
+      },
+      gender: {
+        required: 'Please choose gender'
+      },
+      languages: {
+        required: 'Select laguages spoken'
+      },
+      verification: {
+        required: 'Please enter verification code',
+        smartCaptcha: 'Oops - enter a correct verification code'
+      },
+      applicant_age: {
+        required: 'Enter applicant age',
+        min: 'Must be 16 years and above'
+      },
+      licence_no: {
+        required: 'Enter licence number'
+      },
+      child_name: {
+        required: 'Please enter your childs name'
+      }
+
+    },
+
+    /* @validation highlighting + error placement
+    ---------------------------------------------------- */
+
+    highlight: function(element, errorClass, validClass) {
+      $(element).closest('.field').addClass(errorClass).removeClass(validClass);
+    },
+    unhighlight: function(element, errorClass, validClass) {
+      $(element).closest('.field').removeClass(errorClass).addClass(validClass);
+    },
+    errorPlacement: function(error, element) {
+      if (element.is(":radio") || element.is(":checkbox")) {
+        element.closest('.option-group').after(error);
+      } else {
+        error.insertAfter(element.parent());
+      }
+    }
+
+  });
   </script>
--->
-    @endsection
+
+  @endsection
