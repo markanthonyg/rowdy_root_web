@@ -138,7 +138,8 @@
                           {{ Form::select('role', array(
                               '' => 'Select a role...',
                               'sys_admin' => 'System Administrator',
-                              'user' => 'User'),
+                              'clinic_admin' => 'Clinic Administrator',
+                              'emp' => 'Employee'),
                               '',
                               ['id' => 'role']
                           ) }}
