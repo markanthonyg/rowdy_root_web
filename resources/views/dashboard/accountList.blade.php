@@ -91,6 +91,11 @@
 <div class="modal fade" id="myModal" style="padding:0;">
   <div class="modal-dialog" style="padding:0;">
     <div class="modal-content" style="padding:0;">
+      <div class="modal-header" style="padding:0;">
+        <div class="header panel-footer text-right">
+          <a href="#" id="test" class="fa fa-times fa-2x" data-dismiss="modal"></a>
+        </div>
+      </div>
       <div class="modal-body" style="padding:0;">
         <div class="tray tray-center">
           <div class="form-group">
@@ -175,7 +180,6 @@
                     </div>
                   </div>
                   <div class="panel-footer text-right">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" style="margin-right: 5px;">Close</button>
                     <button type="submit" class="btn btn-primary" name="action" value="Update" style="margin-right: 5px;"> Save</button>
                     <button type="submit" class="btn btn-danger" name="action" value="Delete" id="Delete" style="margin-right: 5px;"> Delete</button>
                   </div>
