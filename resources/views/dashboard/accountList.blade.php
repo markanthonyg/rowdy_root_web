@@ -78,9 +78,6 @@
                     <td>{{$account->dob}}</td>
                     <td>{{$account->role}}</td>
                     <td>{{$account->email}}</td>
-
-                    <!--<td><a href="{{action('Dashboard\AccountController@deleteAccount')}}" class="delete_account btn btn-danger" data-id="{{ $account->id }}" name ="delete">
-                      <i class="fa fa-trash-o fa-lg"></i>  Delete</a></td>-->
                 </tr>
             @endforeach
             </tbody>
