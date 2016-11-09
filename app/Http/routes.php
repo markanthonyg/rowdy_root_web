@@ -11,6 +11,45 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/terms', function () {
+    return view('terms');
 });
+
+// HomeController
+Route::get('/', 'HomeController@viewLanding');
+Route::get('/logout', 'HomeController@logout');
+
+// Dashboard Routes
+Route::get('/dashboard', 'Dashboard\HomeController@showHome');
+Route::get('/patients', 'Dashboard\PatientsController@showPatients');
+Route::get('/new_patient', 'Dashboard\PatientsController@addPatient');
+Route::post('/new_patient', 'Dashboard\PatientsController@insertPatient');
+Route::get('/clinics', 'Dashboard\ClinicController@showClinics');
+Route::get('/new_clinic', 'Dashboard\ClinicController@newClinic');
+Route::post('/new_clinic', 'Dashboard\ClinicController@insertClinic');
+// Login Routes
+Route::get('/login', 'Auth\LoginController@showLogin');
+Route::post('/login', 'Auth\LoginController@login');
+
+// Registration Routes
+Route::get('/register', 'Auth\RegistrationController@showRegister');
+Route::post('/register', 'Auth\RegistrationController@register');
+
+// Screenlock Routes
+Route::get('/screenlock', 'MiscController@lockScreen');
+Route::post('/screenlock', 'Auth\UnlockController@unlockScreen');
+
+// Live Search Routes
+Route::post('/livesearch', 'MiscController@livesearch');
+
+// Profile Routes
+Route::get('/patient/{id}', 'Dashboard\ProfileController@showPatientProfile');
+
+// Account Request Routes
+Route::get('/accountRequestList', 'Dashboard\AccountRequestController@showAllAccountRequest');
+Route::post('/accountRequestList', 'Dashboard\AccountRequestController@updateAccount');
+
+// Account Routes
+Route::get('/accountList', 'Dashboard\AccountController@showAllAccounts');
+Route::post('/accountList', 'Dashboard\AccountController@deleteAccount');
+Route::post('/accountList', 'Dashboard\AccountController@updateAccount');
