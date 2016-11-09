@@ -51,4 +51,5 @@ Route::post('/accountRequestList', 'Dashboard\AccountRequestController@updateAcc
 
 // Account Routes
 Route::get('/accountList', 'Dashboard\AccountController@showAllAccounts');
+Route::post('/accountList', 'Dashboard\AccountController@deleteAccount');
 Route::post('/accountList', 'Dashboard\AccountController@updateAccount');
