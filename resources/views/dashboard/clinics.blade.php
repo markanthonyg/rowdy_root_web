@@ -19,15 +19,12 @@
 @endsection
 
 @section('breadcrumb')
-  <li class="crumb-active">
-    <a href="/clinics">Clinics</a>
-  </li>
   <li class="crumb-icon">
     <a href="/">
       <span class="glyphicon glyphicon-home"></span>
     </a>
   </li>
-  <li class="crumb-link">
+  <li class="crumb-active">
     <a href="/clinics">Clinics</a>
   </li>
 
@@ -210,7 +207,7 @@
      $('#datatable2').dataTable({
        "aoColumnDefs": [{
          'bSortable': false,
-         'aTargets': [-1]
+         'aTargets': []
        }],
        "oLanguage": {
          "oPaginate": {

@@ -19,11 +19,6 @@
   <li class="crumb-active">
     <a href="/">Home</a>
   </li>
-  <li class="crumb-icon">
-    <a href="/">
-      <span class="glyphicon glyphicon-home"></span>
-    </a>
-  </li>
 @endsection
 
 @section('content')
@@ -89,10 +84,8 @@
           </div>
         </div>
       </div>
-
-
-
   </div>
+</div>
 
 
 

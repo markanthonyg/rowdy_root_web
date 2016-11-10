@@ -19,15 +19,12 @@
 @endsection
 
 @section('breadcrumb')
+<li class="crumb-icon">
+  <a href="/">
+    <span class="glyphicon glyphicon-home"></span>
+  </a>
+</li>
   <li class="crumb-active">
-    <a href="/patients">Patients</a>
-  </li>
-  <li class="crumb-icon">
-    <a href="/">
-      <span class="glyphicon glyphicon-home"></span>
-    </a>
-  </li>
-  <li class="crumb-link">
     <a href="/patients">Patients</a>
   </li>
 

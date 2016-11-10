@@ -21,15 +21,15 @@
 @endsection
 
 @section('breadcrumb')
-<li class="crumb-active">
-  <a href="/patients">Patients</a>
-</li>
 <li class="crumb-icon">
   <a href="/">
     <span class="glyphicon glyphicon-home"></span>
   </a>
 </li>
-<li class="crumb-link">
+<li class="crumb-active">
+  <a href="/patients">Patients</a>
+</li>
+<li class="crumb-active">
   <a href="{{ $patient->id }}">{{ $patient->first_name }} {{ $patient->last_name }}</a>
 </li>
 @endsection
