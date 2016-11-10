@@ -176,25 +176,25 @@
           <li>
             <a href="/">
               <span class="fa fa-home"></span>
-              <span class="sidebar-title">Home</span>
+              <span class="sidebar-title" onmouseover="this.style.color='#dddddd'" onmouseout="this.style.color='#ffffff'">Home</span>
             </a>
           </li>
           <li>
             <a href="/patients">
               <span class="fa fa-street-view"></span>
-              <span class="sidebar-title">Patients</span>
+              <span class="sidebar-title" onmouseover="this.style.color='#dddddd'" onmouseout="this.style.color='#ffffff'">Patients</span>
             </a>
           </li>
           <li>
             <a href="#">
               <span class="fa fa-stethoscope"></span>
-              <span class="sidebar-title">View Visits</span>
+              <span class="sidebar-title" onmouseover="this.style.color='#dddddd'" onmouseout="this.style.color='#ffffff'">View Visits</span>
             </a>
           </li>
           <li>
             <a href="#">
               <span class="fa fa-plus"></span>
-              <span class="sidebar-title">New Visit</span>
+              <span class="sidebar-title" onmouseover="this.style.color='#dddddd'" onmouseout="this.style.color='#ffffff'">New Visit</span>
             </a>
           </li>
           @if($user->role == "sys_admin")
@@ -202,20 +202,20 @@
             <li>
               <a href="/accountRequestList">
                 <span class="fa fa-user-plus"></span>
-                <span class="sidebar-title">Account Request</span>
-                <span class="badge badge-danger">{{$num_unapproved_users}}</span>
+                <span class="sidebar-title" onmouseover="this.style.color='#dddddd'" onmouseout="this.style.color='#ffffff'">Account Request</span>
+                <span class="badge badge-warning" style="color:#dbd9d9; margin-left: 30px;">{{$num_unapproved_users}}</span>
               </a>
             </li>
             <li>
               <a href="/accountList">
                 <span class="fa fa-users"></span>
-                <span class="sidebar-title">Users</span>
+                <span class="sidebar-title" onmouseover="this.style.color='#dddddd'" onmouseout="this.style.color='#ffffff'">Users</span>
               </a>
             </li>
             <li>
               <a href="/clinics">
                 <span class="fa fa-hospital-o"></span>
-                <span class="sidebar-title">Clinics</span>
+                <span class="sidebar-title" onmouseover="this.style.color='#dddddd'" onmouseout="this.style.color='#ffffff'">Clinics</span>
               </a>
             </li>
           @endif
