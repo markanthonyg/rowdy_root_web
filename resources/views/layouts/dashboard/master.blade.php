@@ -81,8 +81,9 @@
         <a class="navbar-brand" href="/">
           <b>EMRS</b> Online
         </a>
-        <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
+        <!--<span id="toggle_sidemenu_l" class="ad ad-lines"></span>-->
       </div>
+      <!--
       <ul class="nav navbar-nav navbar-left">
         <li class="dropdown menu-merge hidden-xs">
           <ul class="dropdown-menu" role="menu">
@@ -98,11 +99,11 @@
             <span class="ad ad-screen-full fs18"></span>
           </a>
         </li>
-      </ul>
+    </ul>-->
       <form class="navbar-form navbar-left navbar-search alt" role="search">
-        <div class="form-group">
+        <div class="form-group col-md-12">
           {{-- Search bar w/ results div (coming from jquery) --}}
-          <input type="text" class="search form-control" id="searchid" placeholder="Search Patient...">
+          <input type="text" class="search form-control col-md-12" id="searchid" placeholder="Search Patient...">
           <div id="result"></div>
         </div>
       </form>
@@ -203,7 +204,7 @@
               <a href="/accountRequestList">
                 <span class="fa fa-user-plus"></span>
                 <span class="sidebar-title" onmouseover="this.style.color='#dddddd'" onmouseout="this.style.color='#ffffff'">Account Request</span>
-                <span class="badge badge-warning" style="color:#dbd9d9; margin-left: 30px;">{{$num_unapproved_users}}</span>
+                <span class="badge badge-danger" style="color:#dbd9d9; margin-left: 30px;">{{$num_unapproved_users}}</span>
               </a>
             </li>
             <li>
