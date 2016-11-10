@@ -70,9 +70,9 @@
                 <td id="last_name">{{$account->last_name}}</td>
                 <td id="gender">{{$account->gender}}</td>
                 <td id="dob">{{$account->dob}}</td>
-                <td>
-                  <a href="{{action('Dashboard\AccountRequestController@updateAccount')}}" class="btn btn-success account_update" data-id="{{ $account->id }}" name="approve">Approve</a>
-                  <a href="{{action('Dashboard\AccountRequestController@updateAccount')}}" class="btn btn-danger account_update" data-id="{{ $account->id }}" name ="deny">Deny</a>
+                <td class="text-right">
+                  <a href="{{action('Dashboard\AccountRequestController@updateAccount')}}" class="fa fa-check fa-2x account_update" data-id="{{ $account->id }}" name="approve" style="margin-right: 30px; color:#5cb85c;"></a>
+                  <a href="{{action('Dashboard\AccountRequestController@updateAccount')}}" class="fa fa-times fa-2x account_update" data-id="{{ $account->id }}" name ="deny" style="margin-right: 5px; color:#d9534f;"></a>
                 </td>
             </tr>
         @endforeach
