@@ -30,9 +30,6 @@
   </a>
 </li>
 <li class="crumb-link">
-  <a href="/new_patient">Patients</a>
-</li>
-<li class="crumb-link">
   <a href="{{ $patient->id }}">{{ $patient->first_name }} {{ $patient->last_name }}</a>
 </li>
 @endsection

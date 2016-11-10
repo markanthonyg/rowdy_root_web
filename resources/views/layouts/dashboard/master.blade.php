@@ -183,26 +183,14 @@
           <li>
             <a href="/patients">
               <span class="fa fa-street-view"></span>
-              <span class="sidebar-title">View Patients</span>
-            </a>
-          </li>
-          <li>
-            <a href="/new_patient">
-              <span class="fa fa-plus"></span>
-              <span class="sidebar-title">New Patient</span>
+              <span class="sidebar-title">Patients</span>
             </a>
           </li>
           <li class="sidebar-label pt20">Clinic</li>
           <li>
             <a href="/clinics">
               <span class="fa fa-hospital-o"></span>
-              <span class="sidebar-title">View Clinics</span>
-            </a>
-          </li>
-          <li>
-            <a href="/new_clinic">
-              <span class="fa fa-plus"></span>
-              <span class="sidebar-title">New Clinic</span>
+              <span class="sidebar-title">Clinics</span>
             </a>
           </li>
           <li class="sidebar-label pt20">Visit</li>
