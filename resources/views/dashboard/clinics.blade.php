@@ -174,7 +174,7 @@
       $('#Delete').hide();
       $('#Update').hide();
       $('#Add').show();
-      $('#modalTitle').text('Add new patient details');
+      $('#modalTitle').text('Add new clinic details');
       $("#myModal").modal("show");
     });
   });
@@ -187,7 +187,7 @@
       $('#Delete').show();
       $('#Update').show();
       $('#Add').hide();
-      $('#modalTitle').text('Edit new patient details');
+      $('#modalTitle').text('Edit clinic details');
       $("#id").val($(this).closest('tr').children()[0].textContent);
       $("#clinicName").val($(this).closest('tr').children()[1].textContent);
     });
