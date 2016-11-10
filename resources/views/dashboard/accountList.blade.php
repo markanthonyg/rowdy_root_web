@@ -57,7 +57,7 @@
         <div class="panel-body pn">
           <table class="table table-hover" id="datatable2" cellspacing="0" width="100%">
             <thead>
-              <tr>
+              <tr class="clickable-row" class="visible">
                   <th>id</th>
                   <th>Firt Name</th>
                   <th>Middle Name</th>
@@ -223,7 +223,7 @@
 
 
   <script>
-    $(document).ready(function(){
+    jQuery(document).ready(function(){
       var date_input=$('input[name="dob"]');
       var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
       var options={
@@ -283,7 +283,7 @@
   </script>
 
   <script>
-  $(document).ready(function () {
+  jQuery(document).ready(function () {
     $('table tbody td').on('click',function(){
       $("#myModal").modal("show");
       $("#id").val($(this).closest('tr').children()[0].textContent);
@@ -319,7 +319,6 @@
     $.validator.methods.smartCaptcha = function(value, element, param) {
       return value == param;
     };
-
     $("#admin-form").validate({
 
       /* @validation states + elements
@@ -510,7 +509,6 @@
       }
 
     });
-
 
     // Cache several DOM elements
     var pageHeader = $('.content-header').find('b');
