@@ -93,20 +93,21 @@ class PatientsController extends Controller
     $middlename = Input::get('middlename');
     $lastname= Input::get('lastname');
     $gender = Input::get('gender');
-    $birthday = Input::get('birthday');
-    $birthmonth = Input::get('birthmonth');
-    $birthyear = Input::get('birthyear');
+    $dob = Input::get('dob');
+    $birthyear = substr($dob,0,4);
+    $birthmonth = substr($dob,5,2);
+    $birthday = substr($dob,8,2);
     $address = Input::get('address');
     $address2 = Input::get('address2');
     $city = Input::get('city');
     $state = Input::get('state');
     $country = Input::get('country');
-    $zip = Input::get('zip');
+    $zip = Input::get('postal');
     $phone = Input::get('phone');
 
     try {
         // Create user
-        Patient::create([
+        $patient = Patient::create([
             'unidentified_patient' => 0,
             'first_name' => $firstname,
             'middle' => $middlename,
@@ -130,6 +131,6 @@ class PatientsController extends Controller
         return Response::json($error_message, 401);
     }
 
-    return Redirect::to('/dashboard');
+    return Redirect::to('patient/'.$patient->id);
   }
 }
