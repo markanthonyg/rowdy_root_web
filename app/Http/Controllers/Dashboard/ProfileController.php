@@ -2,16 +2,14 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use Auth;
-
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
 use App\Models\User;
 use App\Models\Patient;
-
+use Auth;
 class ProfileController extends Controller
 {
     /*
@@ -25,6 +23,8 @@ class ProfileController extends Controller
 
       // Get user to pass to master template in view
       $data['user'] = Auth::User();
+      $data['patients'] = Patient::all();
+      $data['num_patients'] = Patient::all()->count();
       $data['num_unapproved_users'] = User::where(['approved' => 0])->count();
 
       // Get patient from database to pass to view
@@ -35,7 +35,8 @@ class ProfileController extends Controller
         // Patient not found
         return Redirect::to('/');
       }
+      	$data['accounts'] = User::where('approved', '=', 1)->get();
 
-      return view('Dashboard/patient_profile', $data);
+      return view('Dashboard/patient_profile')->with($data);
     }
 }
