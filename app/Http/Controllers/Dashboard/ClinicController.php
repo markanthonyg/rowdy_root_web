@@ -18,6 +18,52 @@ use Auth;
 class ClinicController extends Controller
 {
 
+  public function updateClinic() {
+    if ($_POST['action'] == 'Update') {
+      $id = Input::get('id');
+  		$clinic = Clinic::find($id);
+      $clinic->Name = Input::get('clinicName');
+      $clinic->save();
+    } else if ($_POST['action'] == 'Delete') {
+      $id = Input::get('id');
+  		$clinic = Clinic::find($id);
+      $clinic->delete();
+    } else if ($_POST['action'] == 'Add') {
+      // check if user is logged in, if not send back to Home
+      if (!Auth::check()) {
+        return Redirect::to('/');
+      }
+
+      $validation = Validator::make(Input::all(), [
+          'clinicName' => 'required|unique:clinics,Name'
+      ]);
+
+      // If validation fails
+      if ($validation->fails()) {
+          $messages = "Clinic name already taken";
+          //$messages = $validation->messages();
+          Session::flash('clinic_validation_messages', $messages);
+
+          return Redirect::to('/new_clinic')->withInput();
+      }
+
+      $clinicName = Input::get('clinicName');
+
+      try {
+          // Create and insert clinic
+          Clinic::create([
+              'Name' => $clinicName
+          ]);
+      } catch (Exception $error_message) {
+          // Error log
+          Session::flash('error_message', 'Oops!, something went wrong!');
+
+          return Response::json($error_message, 401);
+      }
+    }
+    return Redirect::back();
+  }
+
   public function newClinic() {
     // check if user is logged in, if not send back to Home
     if (!Auth::check()) {
@@ -46,44 +92,5 @@ class ClinicController extends Controller
     return view('dashboard/clinics')->with($data);
 
   }
-
-  public function insertClinic() {
-    // check if user is logged in, if not send back to Home
-    if (!Auth::check()) {
-      return Redirect::to('/');
-    }
-
-    $validation = Validator::make(Input::all(), [
-        'clinicName' => 'required|unique:clinics,Name'
-    ]);
-
-    // If validation fails
-    if ($validation->fails()) {
-        $messages = "Clinic name already taken";
-        //$messages = $validation->messages();
-        Session::flash('clinic_validation_messages', $messages);
-
-        return Redirect::to('/new_clinic')->withInput();
-    }
-
-    $clinicName = Input::get('clinicName');
-
-    try {
-        // Create and insert clinic
-        Clinic::create([
-            'Name' => $clinicName
-        ]);
-    } catch (Exception $error_message) {
-        // Error log
-        Session::flash('error_message', 'Oops!, something went wrong!');
-
-        return Response::json($error_message, 401);
-    }
-
-    // ...
-    return Redirect::to('/dashboard');
-  }
-
-
 
 }

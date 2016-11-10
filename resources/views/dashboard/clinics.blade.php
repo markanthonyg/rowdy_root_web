@@ -45,7 +45,7 @@
     {{-- <br /><br /><br /> --}}
 
     <div class="col-md-12">
-      <button class="btn btn-primary" id="addClinicBtn" style="float: left;margin: 10px;"><i class="fa fa-plus fa-lg"></i> Add Clinic </button>
+      <button class="btn btn-primary" id="addClinicBtn" style="float: left;margin: 10px; "><i class="fa fa-plus fa-lg"></i> Add Clinic </button>
     </div>
 
     {{-- SAMPLE TABLE --}}
@@ -59,15 +59,15 @@
           <table class="table table-hover" id="datatable2" cellspacing="0" width="100%">
             <thead>
               <tr>
+                <th>ID</th>
                 <th>Clinic Name</th>
-                <th>Phone Number</th>
               </tr>
             </thead>
             <tbody>
               @foreach($clinics as $clinic)
                 <tr class="clickable-row" data-url="#">
+                  <td>{{ $clinic->id }}</td>
                   <td>{{ $clinic->Name }}</td>
-                  <td>123-456-7890</td>
                 </tr>
               @endforeach
             </tbody>
@@ -78,52 +78,56 @@
   </div>
 
   <!-- Modal -->
-  <div class="modal fade" id="myModal" style="padding:0;">
-    <div class="modal-dialog" style="padding:0;">
-      <div class="modal-content" style="padding:0;">
-        <div class="modal-header" style="padding:0;">
-          <div class="header panel-footer text-right">
-            <a href="#" id="test" class="fa fa-times fa-2x" data-dismiss="modal"></a>
+  <div>
+    <div class="modal fade" id="myModal" style="padding:0;">
+      <div class="modal-dialog" style="padding:0;">
+        <div class="modal-content" style="padding:0;">
+          <div class="modal-header" style="padding:0;">
+            <div class="header panel-footer text-right">
+              <a href="#" id="test" class="fa fa-times fa-2x" data-dismiss="modal"></a>
+            </div>
           </div>
-        </div>
-        <div class="modal-body" style="padding:0;">
-          <div class="tray tray-center">
-            <div class="form-group">
-            <div class="admin-form theme-primary mw1000 center-block" style="border:none;">
-              <div class="panel heading-border">
-                {{-- <form method="post" action="/" id="newPatientForm"> --}}
-                {!! Form::open(['action' => 'Dashboard\ClinicController@insertClinic', 'id' => 'admin-form', 'method' => 'post']) !!}
-                  {!! Form::hidden('id', '', ['class' => 'gui-input', 'name' => 'id', 'id' => 'id']) !!}
-                  <div class="panel-body bg-light">
-                    <div class="section-divider mt20 mb40">
-                      <span>Add new patient details</span>
-                    </div>
-                    <div class="section row">
-                      <div class="col-md-12">
-                        <label for="clinicName" class="field prepend-icon">
-                          {!! Form::text('clinicName', '', ['placeholder' => 'Name of clinic', 'class' => 'gui-input', 'name' => 'clinicName', 'id' => 'clinicName']) !!}
-                          <label for="clinicName" class="field-icon">
-                            <i class="fa fa-hospital-o"></i>
-                          </label>
-                        </label>
+          <div class="modal-body" style="padding:0;">
+            <div class="tray tray-center">
+              <div class="form-group">
+              <div class="admin-form theme-primary mw1000 center-block" style="border:none;">
+                <div class="panel heading-border">
+                  {{-- <form method="post" action="/" id="insertClinicForm"> --}}
+                  {!! Form::open(['action' => 'Dashboard\ClinicController@updateClinic', 'id' => 'admin-form', 'method' => 'post']) !!}
+                    {!! Form::hidden('id', '', ['class' => 'gui-input', 'name' => 'id', 'id' => 'id']) !!}
+                    <div class="panel-body bg-light">
+                      <div class="section-divider mt20 mb40">
+                        <span id="modalTitle">Add new clinic details</span>
                       </div>
-                    </div>
-                    <div class="panel-footer text-right">
-                      <button type="submit" class="btn btn-primary" name="action" value="Update" style="margin-right: 5px;"> Save</button>
+                      <div class="section row">
+                        <div class="col-md-12">
+                          <label for="clinicName" class="field prepend-icon">
+                            {!! Form::text('clinicName', '', ['placeholder' => 'Name of clinic', 'class' => 'gui-input', 'name' => 'clinicName', 'id' => 'clinicName']) !!}
+                            <label for="clinicName" class="field-icon">
+                              <i class="fa fa-hospital-o"></i>
+                            </label>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="panel-footer text-right">
+                        <button type="submit" class="btn btn-primary" name="action" value="Add" id="Add" style="margin-right: 5px;"> Add Clinic</button>
+                        <button type="submit" class="btn btn-primary" name="action" value="Update" id="Update" style="margin-right: 5px;"> Save</button>
+                        <button type="submit" class="btn btn-danger" name="action" value="Delete" id="Delete"> Delete</button>
+                      </div>
                     </div>
                   </div>
                 </div>
+                {{-- </form> --}}
+                {!! Form::close() !!}
               </div>
-              {{-- </form> --}}
-              {!! Form::close() !!}
-            </div>
-        </div>
-        <div class="modal-footer" style="padding:0;">
+          </div>
+          <div class="modal-footer" style="padding:0;">
 
-        </div><!-- /.modal-footer-->
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
+          </div><!-- /.modal-footer-->
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+  </div>
 @endsection
 @section('script')
 
@@ -162,6 +166,32 @@
       };
       date_input.datepicker(options);
     })
+  </script>
+
+  <script>
+  $(document).ready(function () {
+    $('#addClinicBtn').on('click',function(){
+      $('#Delete').hide();
+      $('#Update').hide();
+      $('#Add').show();
+      $('#modalTitle').text('Add new patient details');
+      $("#myModal").modal("show");
+    });
+  });
+  </script>
+
+  <script>
+  $(document).ready(function () {
+    $('table tbody td').on('click',function(){
+      $("#myModal").modal("show");
+      $('#Delete').show();
+      $('#Update').show();
+      $('#Add').hide();
+      $('#modalTitle').text('Edit new patient details');
+      $("#id").val($(this).closest('tr').children()[0].textContent);
+      $("#clinicName").val($(this).closest('tr').children()[1].textContent);
+    });
+  });
   </script>
 
   <script type="text/javascript">
@@ -203,14 +233,6 @@
      $('.dataTables_filter input').attr("placeholder", "Search...");
    });
  </script>
-
-  <script>
-  $(document).ready(function () {
-    $('#addClinicBtn').on('click',function(){
-      $("#myModal").modal("show");
-    });
-  });
-  </script>
 
   <!-- Theme Javascript -->
   <script src="assets/js/utility/utility.js"></script>
