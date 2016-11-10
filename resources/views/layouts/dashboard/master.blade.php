@@ -179,21 +179,12 @@
               <span class="sidebar-title">Home</span>
             </a>
           </li>
-          <li class="sidebar-label pt20">Patient</li>
           <li>
             <a href="/patients">
               <span class="fa fa-street-view"></span>
               <span class="sidebar-title">Patients</span>
             </a>
           </li>
-          <li class="sidebar-label pt20">Clinic</li>
-          <li>
-            <a href="/clinics">
-              <span class="fa fa-hospital-o"></span>
-              <span class="sidebar-title">Clinics</span>
-            </a>
-          </li>
-          <li class="sidebar-label pt20">Visit</li>
           <li>
             <a href="#">
               <span class="fa fa-stethoscope"></span>
@@ -219,6 +210,12 @@
               <a href="/accountList">
                 <span class="fa fa-users"></span>
                 <span class="sidebar-title">Users</span>
+              </a>
+            </li>
+            <li>
+              <a href="/clinics">
+                <span class="fa fa-hospital-o"></span>
+                <span class="sidebar-title">Clinics</span>
               </a>
             </li>
           @endif

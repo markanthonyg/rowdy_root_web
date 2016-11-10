@@ -19669,7 +19669,7 @@ body.sb-l-m #sidebar_left {
   width: 60px;
   height: 100%;
   left: 0;
-  background-color: #4c4a49;
+  background-color: #5D92B1;
 }
 body.sb-l-m #sidebar_left:before {
   width: 60px;
@@ -19770,11 +19770,11 @@ body.sb-l-m .navbar-brand {
 ========================================================= */
 /* Sidebar Container */
 #sidebar_left {
-  background-color: #4c4a49;
+  background-color: #5D92B1;
 }
 /* Menu Item - Label Color */
 .sidebar-menu .sidebar-label {
-  color: #908885;
+  color: #d8d8d8;
 }
 /* Menu item Caret */
 .sidebar-menu li > a > span.caret {
