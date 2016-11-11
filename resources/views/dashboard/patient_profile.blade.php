@@ -257,11 +257,15 @@
       </li>
     </ul>
     <div class="tab-content p30" style="height: 730px;">
+      <!-- TABSHERE-->
       <div id="tab1" class="tab-pane active">
 
       </div>
       <div id="tab2" class="tab-pane"></div>
-      <div id="tab3" class="tab-pane"></div>
+      <div id="tab3" class="tab-pane">
+        TEST
+      </div>
+
       <div id="tab4" class="tab-pane"></div>
       <div id="tab5" class="tab-pane"></div>
     </div>
