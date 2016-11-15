@@ -234,6 +234,159 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+
+
+
+<!-- Update Vital Modal -->
+<div class="modal fade" id="vitalModel" style="padding:0;">
+  <div class="modal-dialog" style="padding:0;">
+    <div class="modal-content" style="padding:0;">
+      <div class="modal-header" style="padding:0;">
+        <div class="header panel-footer text-right">
+          <a href="#" id="test" class="fa fa-times fa-2x" data-dismiss="modal"></a>
+        </div>
+      </div>
+      <div class="modal-body" style="padding:0;">
+        <div class="tray tray-center">
+          <div class="form-group">
+          <div class="admin-form theme-primary mw1000 center-block" style="border:none;">
+            <div class="panel heading-border">
+              {{-- <form method="post" action="/" id="newVitalForm"> --}}
+              {!! Form::open(['action' => 'Dashboard\VitalsController@updateVital', 'id' => 'admin-form', 'method' => 'post']) !!}
+                {!! Form::hidden('id', '', ['class' => 'gui-input', 'name' => 'id', 'id' => 'id']) !!}
+                <div class="panel-body bg-light">
+                  <div class="section-divider mt20 mb40">
+                    <span>Edit patient details</span>
+                  </div>
+                    <div class="section row"  >
+                      <div class="col-md-4">
+                        <label for="firstname" class="field prepend-icon">
+                          {!! Form::text('firstname', '', ['placeholder' => 'First name...', 'class' => 'gui-input', 'name' => 'firstname', 'id' => 'firstname']) !!}
+                          <label for="firstname" class="field-icon">
+                            <i class="fa fa-user"></i>
+                          </label>
+                        </label>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="middlename" class="field prepend-icon">
+                          {!! Form::text('middlename', '', ['placeholder' => 'Middle name...', 'class' => 'gui-input', 'name' => 'middlename', 'id' => 'middlename']) !!}
+                          <label for="middlename" class="field-icon">
+                            <i class="fa fa-user"></i>
+                          </label>
+                        </label>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="lastname" class="field prepend-icon">
+                          {!! Form::text('lastname', '', ['placeholder' => 'Last name...', 'class' => 'gui-input', 'name' => 'lastname', 'id' => 'lastname']) !!}
+                          <label for="lastname" class="field-icon">
+                            <i class="fa fa-user"></i>
+                          </label>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="section row">
+                      <div class="col-md-6">
+                        <label for="dob" class="field prepend-icon">
+                          {!! Form::text('dob', '', ['placeholder' => 'Date of birth...', 'class' => 'gui-input', 'name' => 'dob', 'id' => 'dob']) !!}
+                          <label for="dob" class="field-icon">
+                            <i class="fa fa-birthday-cake"></i>
+                          </label>
+                        </label>
+                      </div>
+                      <div class ="col-md-6">
+                        <label class="field select">
+                          {{ Form::select('gender', array(
+                              '' => 'Select a gender...',
+                              'male' => 'Male',
+                              'female' => 'Female'),
+                              '',
+                              ['id' => 'gender']
+                          ) }}
+                          <i class="arrow double"></i>
+                        </div>
+                    </div>
+                    <div class="section row">
+                      <div class ="col-md-6">
+                        <label for="address" class="field prepend-icon">
+                          {!! Form::text('address', '', ['placeholder' => 'Address 1...', 'class' => 'gui-input', 'name' => 'address', 'id' => 'address']) !!}
+                          <label for="address" class="field-icon">
+                            <i class="fa fa-map-marker"></i>
+                          </label>
+                        </label>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="address2" class="field prepend-icon">
+                          {!! Form::text('address2', '', ['placeholder' => 'Address 2...', 'class' => 'gui-input', 'name' => 'address2', 'id' => 'address2']) !!}
+                          <label for="address2" class="field-icon">
+                            <i class="fa fa-map-marker"></i>
+                          </label>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="section row">
+                      <div class ="col-md-4">
+                        <label for="city" class="field prepend-icon">
+                          {!! Form::text('city', '', ['placeholder' => 'City/Village...', 'class' => 'gui-input', 'name' => 'city', 'id' => 'city']) !!}
+                          <label for="city" class="field-icon">
+                            <i class="fa fa-map-marker"></i>
+                          </label>
+                        </label>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="state" class="field prepend-icon">
+                          {!! Form::text('state', '', ['placeholder' => 'State/Province ...', 'class' => 'gui-input', 'name' => 'state', 'id' => 'state']) !!}
+                          <label for="state" class="field-icon">
+                            <i class="fa fa-map-marker"></i>
+                          </label>
+                        </label>
+                      </div>
+                      <div class ="col-md-4">
+                        <label for="postal" class="field prepend-icon">
+                          {!! Form::text('postal', '', ['placeholder' => 'Zip Code...', 'class' => 'gui-input', 'name' => 'postal', 'id' => 'postal']) !!}
+                          <label for="postal" class="field-icon">
+                            <i class="fa fa-map-marker"></i>
+                          </label>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="section row">
+                      <div class="col-md-6">
+                        <label for="country" class="field prepend-icon">
+                          {!! Form::text('country', '', ['placeholder' => 'Country...', 'class' => 'gui-input', 'name' => 'country', 'id' => 'country']) !!}
+                          <label for="country" class="field-icon">
+                            <i class="fa fa-map-marker"></i>
+                          </label>
+                        </label>
+                      </div>
+                      <div class ="col-md-6">
+                        <label for="phone" class="field prepend-icon">
+                          {!! Form::text('phone', '', ['placeholder' => 'Phone Number...', 'class' => 'gui-input', 'name' => 'phone', 'id' => 'phone']) !!}
+                          <label for="phone" class="field-icon">
+                            <i class="fa fa-mobile"></i>
+                          </label>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel-footer text-right">
+                    <button type="submit" class="btn btn-primary" name="action" value="Update" style="margin-right: 5px;"> Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{-- </form> --}}
+            {!! Form::close() !!}
+          </div>
+      </div>
+      <div class="modal-footer" style="padding:0;">
+
+      </div><!-- /.modal-footer-->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
 <div class="alert alert-warning">
   <strong>This patient has one or more known allergies.</strong>
 </div>
@@ -263,7 +416,104 @@
       </div>
       <div id="tab2" class="tab-pane"></div>
       <div id="tab3" class="tab-pane">
-        TEST
+
+        <!-- begin: .tray-center -->
+        <div class="tray tray-center">
+
+          {{-- ADD BUTTONS --}}
+          <div class="col-md-4 hidden">
+            <a href="/new_patient" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Add Patient</a>
+            <br/><br/><br/>
+          </div>
+
+
+          <div class="col-md-12">
+            <button class="btn btn-primary" id="addPatientBtn" style="float: left;margin: 10px;"><i class="fa fa-plus fa-lg"></i> Add Patient </button>
+          </div>
+
+          {{-- <br /><br /><br /> --}}
+
+          {{-- SAMPLE TABLE --}}
+          <div class="col-md-12">
+            <div class="panel panel-visible" id="spy2">
+              <div class="panel-heading">
+                <div class="panel-title hidden-xs">
+                  <span class="glyphicon glyphicon-tasks"></span>Patients</div>
+              </div>
+              <div class="panel-body pn">
+                <table class="table table-hover" id="datatable2" cellspacing="0" width="100%">
+                  <thead>
+                    <tr>
+                      <th>Patient ID</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Gender</th>
+                      <th>Phone Number</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @foreach($patients as $patient)
+                      @if($patient->unidentified_patient == 1)
+                        <tr class="clickable-row" data-url="patient/{{ $patient->id }}">
+                          <td>{{ $patient->id }}</td>
+                          <td>N/A</td>
+                          <td>N/A</td>
+                          <td>{{ $patient->gender }}</td>
+                          <td>{{ $patient->phone_number }}</td>
+                        </tr>
+                      @else
+                        <tr class="clickable-row" data-url="patient/{{ $patient->id }}">
+                          <td>{{ $patient->id }}</td>
+                          <td>{{ $patient->first_name }}</td>
+                          <td>{{ $patient->last_name }}</td>
+                          <td>{{ $patient->gender }}</td>
+                          <td>{{ $patient->phone_number }}</td>
+                        </tr>
+                      @endif
+                    @endforeach
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <!--
+      table is clickable by default (what?!)
+
+      -->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>BP</th>
+              <th>Fasting</th>
+              <th>BG</th>
+              <th>O2</th>
+              <th>Hb</th>
+              <th>Height</th>
+              <th>Weight</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            @foreach ($vitals as $v)
+              <tr class="clickable-row" data-url="#">
+                <td>{{$v -> dateCreated}}</td>
+                <td>b</td>
+                <td>c</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            @endforeach
+          </tbody>
+        </table>
+
+
       </div>
 
       <div id="tab4" class="tab-pane"></div>

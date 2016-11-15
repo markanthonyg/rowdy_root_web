@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\User;
 use App\Models\Patient;
+use App\Models\Vital;
+use DB;
+
 use Auth;
 class ProfileController extends Controller
 {
@@ -30,13 +33,28 @@ class ProfileController extends Controller
       // Get patient from database to pass to view
       $data['patient'] = Patient::where('id', '=', $id)->first();
 
+      // $data['vitals'] = Vital::where('approved', '=', 'id')
 
-      if($data['patient'] == NULL){
+
+      if($data['patient'] == NULL) {
         // Patient not found
         return Redirect::to('/');
       }
-      	$data['accounts'] = User::where('approved', '=', 1)->get();
+      $data['accounts'] = User::where('approved', '=', 1)->get();
+
+      // $result = DB::table('vitals')->where('id', '222');
+      // $result = DB::table('vitals');
+
+
+
+
+      // $data['vitals'] = Vital::where('id', '=', '222');
+      $data['vitals'] = Vital::where(['pid' => 2])->get();
+      // $data['vitals'] = Vital::all()->where('pid','=','2');
+      // $data['vitals'] = Vital::where('pid', '=', $id);
+      // dd($data['vitals']);
 
       return view('Dashboard/patient_profile')->with($data);
     }
+
 }
