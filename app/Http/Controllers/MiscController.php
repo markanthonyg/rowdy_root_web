@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Session;
 
 use App\Models\User;
 use App\Models\Patient;
+use App\Models\Drug;
 
 use App\Http\Requests;
 
@@ -73,4 +74,36 @@ class MiscController extends Controller
         }
       }
     }
+
+    public function livesearchMeds() {
+		      // Search Users table for all users matching the query
+		      $drugs = Drug::where('PROPRIETARYNAME', 'like', $_POST['search'].'%')->orwhere('NONPROPRIETARYNAME', 'like', $_POST['search'].'%')->get();
+
+		      if($drugs->count() == 0){
+		        echo '<div class="name">
+		                No results found.
+		              </div>';
+		      }
+		      else if($drugs->count() > 5) {
+		        echo '<div class="name">
+		                Too many results: ', $drugs->count(),
+		              '</div>';
+		      }
+		      else {
+  		      // For each user found in the query, list them under the live search bar
+  		      foreach($drugs as $drug){
+  		        // Echo out the div block to be added to result
+  		        // If patient is not an unidentified patient, list ID, FirstName, LastName
+  		        $bolded = '<strong>'.$_POST['search'].'</strong>';
+  		        $generic = str_ireplace($_POST['search'], $bolded, $drug->PROPRIETARYNAME);
+  		        $trade = str_ireplace($_POST['search'], $bolded, $drug->NONPROPRIETARYNAME);
+  		        //$final_id = str_ireplace($_POST['search'], $bolded, $user->id);
+
+  		        //  HTML block to be added to result element
+  		        echo '<div class="show" align="left">
+  		                <span  class="name">'.$trade.' | '.$generic.'</span>
+  		              </div>';
+  		      }
+		    }
+		}
 }

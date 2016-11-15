@@ -259,7 +259,93 @@
     <div class="tab-content p30" style="height: 730px;">
       <!-- TABSHERE-->
       <div id="tab1" class="tab-pane active">
-
+        <div class="row">
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">Major Drug Allergies?</div>
+              <div class="panel-body fill">
+                <div class="checkbox-custom checkbox-primary">
+                  <input type="checkbox" checked="" disabled="" id="nkdaCheckbox">
+                  <label for="nkdaCheckbox">NKDA</label>
+                </div>
+                    <div class="checkbox-custom checkbox-primary">
+                      <input type="checkbox" checked="" disabled="" id="drug_allergyCheckbox">
+                      <label for="drug_allergyCheckbox">Drug Allergies:</label>
+                    </div>
+                    <div class="form-group">
+                      {{-- Search bar w/ results div (coming from jquery) --}}
+                      <input type="text" class="search form-control input-sm" id="drug_search" placeholder="Search drugs...">
+                      <div id="drug_result"></div>
+                    </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">Bleeding Tendency?</div>
+              <div class="panel-body fill">
+                <div class="checkbox-custom checkbox-primary">
+                  <input type="checkbox" checked="" disabled="" id="aspirinCheckbox">
+                  <label for="aspirinCheckbox">Aspirin</label>
+                </div>
+                <div class="checkbox-custom checkbox-primary">
+                  <input type="checkbox" id="plavixCheckbox">
+                  <label for="plavixCheckbox">Plavix</label>
+                </div>
+                <div class="checkbox-custom checkbox-primary">
+                  <input type="checkbox" id="bleedingCheckbox">
+                  <label for="bleedingCheckbox">Blood Disorder?</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">Past Medical History</div>
+              <div class="panel-body fill">
+                <div class="checkbox-custom checkbox-primary">
+                  <input type="checkbox" checked="" disabled="" id="diabetesCheckbox">
+                  <label for="diabetesCheckbox">Diabetes</label>
+                </div>
+                <div class="checkbox-custom checkbox-primary">
+                  <input type="checkbox" id="copdCheckbox">
+                  <label for="copdCheckbox">COPD</label>
+                </div>
+                <div class="checkbox-custom checkbox-primary">
+                  <input type="checkbox" checked="" disabled="" id="htnCheckbox">
+                  <label for="htnCheckbox">Hypertension (HTN)</label>
+                </div>
+                <div class="checkbox-custom checkbox-primary">
+                  <input type="checkbox" id="cadCheckbox">
+                  <label for="cadCheckbox">Coronary Artery Disease (CAD)</label>
+                </div>
+                <div class="checkbox-custom checkbox-primary">
+                  <input type="checkbox" checked="" disabled="" id="pvdCheckbox">
+                  <label for="pvdCheckbox">Peripheral Vascular Disease (PVD)</label>
+                </div>
+                <div class="checkbox-custom checkbox-primary">
+                  <input type="checkbox" id="chfCheckbox">
+                  <label for="chfCheckbox">Congestive Heart Failure (CHF)</label>
+                </div>
+                <div class="checkbox-custom checkbox-primary">
+                  <input type="checkbox" id="hypoCheckbox">
+                  <label for="hypoCheckbox">Hypothyroidism</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">Past Surgical History Notes:</div>
+              <div class="panel-body fill">
+                <textarea class="form-control" id="textArea3" rows="8" disabled="">Eye surgery,
+cataract removal</textarea>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="tab2" class="tab-pane"></div>
       <div id="tab3" class="tab-pane">

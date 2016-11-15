@@ -42,6 +42,7 @@ Route::post('/screenlock', 'Auth\UnlockController@unlockScreen');
 
 // Live Search Routes
 Route::post('/livesearch', 'MiscController@livesearch');
+Route::post('/livesearchMeds', 'MiscController@livesearchMeds');
 
 // Profile Routes
 Route::get('/patient/{id}', 'Dashboard\ProfileController@showPatientProfile');
