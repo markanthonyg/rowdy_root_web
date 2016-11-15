@@ -302,7 +302,7 @@
       });
 
       // Live search bar keyup
-      $('.search').keyup(function() {
+      $('#searchid').keyup(function() {
         var searchid = $(this).val();
         if($('#searchid').val() == ''){
           jQuery('#result').fadeOut();
@@ -317,6 +317,28 @@
               success: function(html)
               {
                 $("#result").html(html).show();
+              }
+            });
+        }
+        return false;
+      });
+
+      // Live search for drugs on keyup
+      $('#drug_search').keyup(function() {
+        var searchid = $(this).val();
+        if($('#drug_search').val() == ''){
+          jQuery('#drug_result').fadeOut();
+        }
+        var dataString = 'search='+searchid;
+        if(searchid != '') {
+            $.ajax({
+              type: "POST",
+              url: "/livesearchMeds",
+              data: dataString,
+              cache: false,
+              success: function(html)
+              {
+                $("#drug_result").html(html).show();
               }
             });
         }
