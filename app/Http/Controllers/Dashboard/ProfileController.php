@@ -49,7 +49,7 @@ class ProfileController extends Controller
 
 
       // $data['vitals'] = Vital::where('id', '=', '222');
-      $data['vitals'] = Vital::where(['pid' => 2])->get();
+      $data['vitals'] = Vital::where(['pid' => $id])->get();
       // $data['vitals'] = Vital::all()->where('pid','=','2');
       // $data['vitals'] = Vital::where('pid', '=', $id);
       // dd($data['vitals']);

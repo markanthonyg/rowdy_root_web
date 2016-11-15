@@ -86,7 +86,7 @@
   </div>
 </div>
 
-<!-- Modal -->
+<!-- EDIT PATIENT Modal -->
 <div class="modal fade" id="myModal" style="padding:0;">
   <div class="modal-dialog" style="padding:0;">
     <div class="modal-content" style="padding:0;">
@@ -238,7 +238,7 @@
 
 
 <!-- Update Vital Modal -->
-<div class="modal fade" id="vitalModel" style="padding:0;">
+<div class="modal fade" id="myVital" style="padding:0;">
   <div class="modal-dialog" style="padding:0;">
     <div class="modal-content" style="padding:0;">
       <div class="modal-header" style="padding:0;">
@@ -249,127 +249,151 @@
       <div class="modal-body" style="padding:0;">
         <div class="tray tray-center">
           <div class="form-group">
-          <div class="admin-form theme-primary mw1000 center-block" style="border:none;">
+          <div class="admin-form theme-primary mw1000 center-block">
             <div class="panel heading-border">
               {{-- <form method="post" action="/" id="newVitalForm"> --}}
-              {!! Form::open(['action' => 'Dashboard\VitalsController@updateVital', 'id' => 'admin-form', 'method' => 'post']) !!}
-                {!! Form::hidden('id', '', ['class' => 'gui-input', 'name' => 'id', 'id' => 'id']) !!}
+              {!! Form::open(['action' => 'Dashboard\VitalsController@insertVital', 'id' => 'admin-form', 'method' => 'post']) !!}
                 <div class="panel-body bg-light">
                   <div class="section-divider mt20 mb40">
-                    <span>Edit patient details</span>
+                    <span> Add a new vital </span>
                   </div>
-                    <div class="section row"  >
+                    <div class="section row"  > <!-- BLOOD PRESSURE  ROW -->
                       <div class="col-md-4">
-                        <label for="firstname" class="field prepend-icon">
-                          {!! Form::text('firstname', '', ['placeholder' => 'First name...', 'class' => 'gui-input', 'name' => 'firstname', 'id' => 'firstname']) !!}
-                          <label for="firstname" class="field-icon">
+                        <label for="BPS" class="field prepend-icon">
+                          {!! Form::text('bps', '', ['placeholder' => 'BP Systolic...', 'class' => 'gui-input', 'name' => 'bps', 'id' => 'bps']) !!}
+                          <label for="BPS" class="field-icon">
                             <i class="fa fa-user"></i>
                           </label>
                         </label>
                       </div>
                       <div class="col-md-4">
-                        <label for="middlename" class="field prepend-icon">
-                          {!! Form::text('middlename', '', ['placeholder' => 'Middle name...', 'class' => 'gui-input', 'name' => 'middlename', 'id' => 'middlename']) !!}
-                          <label for="middlename" class="field-icon">
-                            <i class="fa fa-user"></i>
-                          </label>
-                        </label>
-                      </div>
-                      <div class="col-md-4">
-                        <label for="lastname" class="field prepend-icon">
-                          {!! Form::text('lastname', '', ['placeholder' => 'Last name...', 'class' => 'gui-input', 'name' => 'lastname', 'id' => 'lastname']) !!}
-                          <label for="lastname" class="field-icon">
+                        <label for="BPD" class="field prepend-icon">
+                          {!! Form::text('bpd', '', ['placeholder' => 'BP Diastolic...', 'class' => 'gui-input', 'name' => 'bpd', 'id' => 'bpd']) !!}
+                          <label for="BPD" class="field-icon">
                             <i class="fa fa-user"></i>
                           </label>
                         </label>
                       </div>
                     </div>
-                    <div class="section row">
-                      <div class="col-md-6">
-                        <label for="dob" class="field prepend-icon">
-                          {!! Form::text('dob', '', ['placeholder' => 'Date of birth...', 'class' => 'gui-input', 'name' => 'dob', 'id' => 'dob']) !!}
-                          <label for="dob" class="field-icon">
+                    <div class="section"> <!-- need to modify schema in DB so saves as string, not double-->
+                      <label class="field select">
+                        {{ Form::select('bpunit', array(
+                            'mmHg' => '1',
+                            'Pa' => '2'),
+                            '',
+                            ['id' => 'bpunit']
+                        ) }}
+                        <i class="arrow double"></i>
+                      </label>
+                    </div>
+                    <div class="section row"> <!-- BLOOD GLUCOSE ROW -->
+                      <div class="col-md-4"> <!-- need to modify schema in DB so saves as string, not double-->
+                        <label class="field select">
+                          {{ Form::select('fasting', array(
+                              'Yes' => '1',
+                              'No' => '0'),
+                              '',
+                              ['id' => 'fasting']
+                          ) }}
+                          <i class="arrow double"></i>
+                        </label>
+                      </div>
+                      <div class ="col-md-4">
+                        <label for="bg" class="field prepend-icon">
+                          {!! Form::text('bg', '', ['placeholder' => 'Enter Blood Glucose Value...', 'class' => 'gui-input', 'name' => 'bg', 'id' => 'bg']) !!}
+                          <label for="bg" class="field-icon">
                             <i class="fa fa-birthday-cake"></i>
                           </label>
                         </label>
                       </div>
-                      <div class ="col-md-6">
+                      <div class="col-md-4"> <!-- need to modify schema in DB so saves as string, not double--> <!-- COLUM or section???? -->
                         <label class="field select">
-                          {{ Form::select('gender', array(
-                              '' => 'Select a gender...',
-                              'male' => 'Male',
-                              'female' => 'Female'),
+                          {{ Form::select('bgUnit', array(
+                              'mg/dL' => '1',
+                              'mmol/L' => '2'),
                               '',
-                              ['id' => 'gender']
+                              ['id' => 'bgUnit']
                           ) }}
                           <i class="arrow double"></i>
-                        </div>
+                        </label>
+                      </div>
                     </div>
-                    <div class="section row">
-                      <div class ="col-md-6">
-                        <label for="address" class="field prepend-icon">
-                          {!! Form::text('address', '', ['placeholder' => 'Address 1...', 'class' => 'gui-input', 'name' => 'address', 'id' => 'address']) !!}
-                          <label for="address" class="field-icon">
+                    <div class="section row"> <!-- O2 AND HB ROW -->
+                      <div class="col-md-6">
+                        <label for="o2sat" class="field prepend-icon"> <!-- I WANT TO HAVE % APPENDED IN INPUT FIELD -->
+                          {!! Form::text('o2sat', '', ['placeholder' => 'O2 Saturation %...', 'class' => 'gui-input', 'name' => 'o2sat', 'id' => 'o2sat']) !!}
+                          <label for="o2sat" class="field-icon">
                             <i class="fa fa-map-marker"></i>
                           </label>
                         </label>
                       </div>
                       <div class="col-md-6">
-                        <label for="address2" class="field prepend-icon">
-                          {!! Form::text('address2', '', ['placeholder' => 'Address 2...', 'class' => 'gui-input', 'name' => 'address2', 'id' => 'address2']) !!}
-                          <label for="address2" class="field-icon">
+                        <label for="hb" class="field prepend-icon">
+                          {!! Form::text('hb', '', ['placeholder' => 'Hemoglobin...', 'class' => 'gui-input', 'name' => 'hb', 'id' => 'hb']) !!}
+                          <label for="hb" class="field-icon">
                             <i class="fa fa-map-marker"></i>
                           </label>
                         </label>
                       </div>
                     </div>
-                    <div class="section row">
-                      <div class ="col-md-4">
-                        <label for="city" class="field prepend-icon">
-                          {!! Form::text('city', '', ['placeholder' => 'City/Village...', 'class' => 'gui-input', 'name' => 'city', 'id' => 'city']) !!}
-                          <label for="city" class="field-icon">
+                    <div class="section row"> <!-- HEIGHT, WOULDN'T IT BE NICE TO BE ABLE TO CONVERT FROM ENGLISH TO METRIC, VISAVERSA AND PUSH BOTH VALUES orsomething-->
+                      <div class="col-md-3">
+                        <label for="hfeet" class="field prepend-icon">
+                          {!! Form::text('hfeet', '', ['placeholder' => 'Height, feet...', 'class' => 'gui-input', 'name' => 'hfeet', 'id' => 'hfeet']) !!}
+                          <label for="hfeet" class="field-icon">
                             <i class="fa fa-map-marker"></i>
                           </label>
                         </label>
                       </div>
-                      <div class="col-md-4">
-                        <label for="state" class="field prepend-icon">
-                          {!! Form::text('state', '', ['placeholder' => 'State/Province ...', 'class' => 'gui-input', 'name' => 'state', 'id' => 'state']) !!}
-                          <label for="state" class="field-icon">
+                      <div class="col-md-3">
+                        <label for="hinches" class="field prepend-icon">
+                          {!! Form::text('hinches', '', ['placeholder' => 'Height, inches...', 'class' => 'gui-input', 'name' => 'hinches', 'id' => 'hinches']) !!}
+                          <label for="hinches" class="field-icon">
                             <i class="fa fa-map-marker"></i>
                           </label>
                         </label>
                       </div>
-                      <div class ="col-md-4">
-                        <label for="postal" class="field prepend-icon">
-                          {!! Form::text('postal', '', ['placeholder' => 'Zip Code...', 'class' => 'gui-input', 'name' => 'postal', 'id' => 'postal']) !!}
-                          <label for="postal" class="field-icon">
+                      <div class="col-md-3">
+                        <label for="hcm" class="field prepend-icon">
+                          {!! Form::text('hcm', '', ['placeholder' => 'Height, cm...', 'class' => 'gui-input', 'name' => 'hcm', 'id' => 'hcm']) !!}
+                          <label for="hcm" class="field-icon">
                             <i class="fa fa-map-marker"></i>
                           </label>
                         </label>
                       </div>
                     </div>
-                    <div class="section row">
-                      <div class="col-md-6">
-                        <label for="country" class="field prepend-icon">
-                          {!! Form::text('country', '', ['placeholder' => 'Country...', 'class' => 'gui-input', 'name' => 'country', 'id' => 'country']) !!}
-                          <label for="country" class="field-icon">
+                    <div class="section row"> <!-- WEIGHT, WOULDN'T IT BE NICE TO BE ABLE TO CONVERT FROM ENGLISH TO METRIC, VISAVERSA AND PUSH BOTH VALUES orsomething-->
+                      <div class="col-md-3">
+                        <label for="weight" class="field prepend-icon">
+                          {!! Form::text('weight', '', ['placeholder' => 'Weight...', 'class' => 'gui-input', 'name' => 'weight', 'id' => 'weight']) !!}
+                          <label for="weight" class="field-icon">
                             <i class="fa fa-map-marker"></i>
                           </label>
                         </label>
                       </div>
-                      <div class ="col-md-6">
-                        <label for="phone" class="field prepend-icon">
-                          {!! Form::text('phone', '', ['placeholder' => 'Phone Number...', 'class' => 'gui-input', 'name' => 'phone', 'id' => 'phone']) !!}
-                          <label for="phone" class="field-icon">
-                            <i class="fa fa-mobile"></i>
-                          </label>
+                      <div class="col-md-3"> <!--  -->
+                        <label class="field select">
+                          {{ Form::select('wunit', array(
+                              'lbs' => 'lbs',
+                              'kg' => 'kg'),
+                              '',
+                              ['id' => 'wunit']
+                          ) }}
+                          <i class="arrow double"></i>
                         </label>
                       </div>
+                    </div>
+                    <div class="section"> <!-- NOTES -->
+                      <label for="notes" class="field prepend-icon">
+                        {!! Form::text('notes', '', ['placeholder' => 'Additional Notes...', 'class' => 'gui-input', 'name' => 'notes', 'id' => 'notes']) !!}
+                        <label for="notes" class="field-icon">
+                          <i class="fa fa-mobile"></i>
+                        </label>
+                      </label>
                     </div>
                   </div>
                   <div class="panel-footer text-right">
-                    <button type="submit" class="btn btn-primary" name="action" value="Update" style="margin-right: 5px;"> Save</button>
+                    <button type="submit" class="button btn-primary"> Add Vitals </button>
                   </div>
                 </div>
               </div>
@@ -417,59 +441,60 @@
       <div id="tab2" class="tab-pane"></div>
       <div id="tab3" class="tab-pane">
 
+        <!-- BEGIN VITALS TAB -->
         <!-- begin: .tray-center -->
         <div class="tray tray-center">
 
           {{-- ADD BUTTONS --}}
           <div class="col-md-4 hidden">
-            <a href="/new_patient" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Add Patient</a>
+            <a href="/new_vital" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Add Vital</a>
             <br/><br/><br/>
           </div>
 
 
           <div class="col-md-12">
-            <button class="btn btn-primary" id="addPatientBtn" style="float: left;margin: 10px;"><i class="fa fa-plus fa-lg"></i> Add Patient </button>
+            <button class="btn btn-primary" id="addVitalBtn" style="float: left;margin: 10px;"><i class="fa fa-plus fa-lg"></i> Add Vital </button>
           </div>
 
           {{-- <br /><br /><br /> --}}
+
+          <!-- BEGIN VITALS TABLE -->
 
           {{-- SAMPLE TABLE --}}
           <div class="col-md-12">
             <div class="panel panel-visible" id="spy2">
               <div class="panel-heading">
                 <div class="panel-title hidden-xs">
-                  <span class="glyphicon glyphicon-tasks"></span>Patients</div>
+                  <span class="glyphicon glyphicon-tasks"></span>Vitals</div>
               </div>
               <div class="panel-body pn">
                 <table class="table table-hover" id="datatable2" cellspacing="0" width="100%">
                   <thead>
                     <tr>
-                      <th>Patient ID</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
-                      <th>Gender</th>
-                      <th>Phone Number</th>
+                      <th>Date</th>
+                      <th>BP</th>
+                      <th>Fasting</th>
+                      <th>BG</th>
+                      <th>O2</th>
+                      <th>Hb</th>
+                      <th>Height</th>
+                      <th>Weight</th>
+                      <th>Notes</th>
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach($patients as $patient)
-                      @if($patient->unidentified_patient == 1)
-                        <tr class="clickable-row" data-url="patient/{{ $patient->id }}">
-                          <td>{{ $patient->id }}</td>
-                          <td>N/A</td>
-                          <td>N/A</td>
-                          <td>{{ $patient->gender }}</td>
-                          <td>{{ $patient->phone_number }}</td>
+                    @foreach($vitals as $vital)
+                        <tr class="clickable-row" data-url="{{ $vital->id }}">
+                          <td>{{ $vital->dateCreated }}</td>
+                          <td>{{ $vital->bps }}/{{ $vital->bpd}}</td>
+                          <td>{{ $vital->fasting }}</td>
+                          <td>{{ $vital->bg }} {{ $vital->bgUnit }}</td>
+                          <td>{{ $vital->o2sat }}%</td>
+                          <td>{{ $vital->hb}} HbUNIT</td>
+                          <td>{{ $vital->hfeet}}'{{ $vital->hinches}}" | {{ $vital->hcm }}cm</td>
+                          <td>{{ $vital->weight}} {{ $vital-> wunit}}</td>
+                          <td>{{ $vital->notes}}</td>
                         </tr>
-                      @else
-                        <tr class="clickable-row" data-url="patient/{{ $patient->id }}">
-                          <td>{{ $patient->id }}</td>
-                          <td>{{ $patient->first_name }}</td>
-                          <td>{{ $patient->last_name }}</td>
-                          <td>{{ $patient->gender }}</td>
-                          <td>{{ $patient->phone_number }}</td>
-                        </tr>
-                      @endif
                     @endforeach
                   </tbody>
                 </table>
@@ -477,43 +502,7 @@
             </div>
           </div>
         </div>
-
-      <!--
-      table is clickable by default (what?!)
-
-      -->
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>BP</th>
-              <th>Fasting</th>
-              <th>BG</th>
-              <th>O2</th>
-              <th>Hb</th>
-              <th>Height</th>
-              <th>Weight</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-
-            @foreach ($vitals as $v)
-              <tr class="clickable-row" data-url="#">
-                <td>{{$v -> dateCreated}}</td>
-                <td>b</td>
-                <td>c</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            @endforeach
-          </tbody>
-        </table>
-
-
+        <!-- END VITALS TABLE -->
       </div>
 
       <div id="tab4" class="tab-pane"></div>
@@ -626,6 +615,14 @@
       $("#postal").val($(this).closest('tr').children()[10].textContent);
       $("#country").val($(this).closest('tr').children()[11].textContent);
       $("#phone").val($(this).closest('tr').children()[12].textContent);
+    });
+  });
+  </script>
+
+  <script>
+  $(document).ready(function () {
+    $('#addVitalBtn').on('click',function(){
+      $("#myVital").modal("show");
     });
   });
   </script>
