@@ -9,3 +9,25 @@
   width: 100%;
   resize: none;
 }
+
+/*Textarea box*/
+#rx_notes {
+  width: 100%;
+  resize: none;
+}
+
+/*Textarea box*/
+#assesment {
+  width: 100%;
+  resize: none;
+}
+
+/*Textarea box*/
+#plan {
+  width: 100%;
+  resize: none;
+}
+
+#fundus_dialation_notes {
+  width: 100%;
+}
