@@ -623,19 +623,98 @@
                   Dialation notes:
                 </div>
                 <div class="col-md-10">
-                  {!! Form::text('fundus_dialation_notes', '', ['id' => 'fundus_dialation_notes', 'class']) !!}
+                  {!! Form::text('fundus_dialation_notes', '', ['id' => 'fundus_dialation_notes']) !!}
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 fundus_exam">
                   <div class="section-divider mt20 mb40">
                     <span> OD </span>
                   </div>
+                  <div class="row">
+                    <div class="col-md-2 text-center">
+                      <b>C/D</b>
+                    </div>
+                    <div class="col-md-10 text-center">
+                      {!! Form::checkbox('fundus_od_cd_abnormal', 'true') !!} Abnormal
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2 text-right">
+                      Notes
+                    </div>
+                    <div class="col-md-10 text-center">
+                      {!! Form::text('fundus_od_cd_notes', '', ['id' => 'fundus_od_cd_notes']) !!}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2 text-center">
+                      <b>Retina</b>
+                    </div>
+                    <div class="col-md-10 text-center">
+                      {!! Form::checkbox('fundus_od_retina_abnormal', 'true') !!} Abnormal
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2 text-right">
+                      Notes
+                    </div>
+                    <div class="col-md-10 text-center">
+                      {!! Form::text('fundus_od_retina_notes', '', ['id' => 'fundus_od_retina_notes']) !!}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2 text-center">
+                      <b>Macula</b>
+                    </div>
+                    <div class="col-md-10 text-center">
+                      {!! Form::checkbox('fundus_od_cd_abnormal', 'true') !!} Abnormal
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2 text-right">
+                      Notes
+                    </div>
+                    <div class="col-md-10 text-center">
+                      {!! Form::text('fundus_od_macula_notes', '', ['id' => 'fundus_od_macula_notes']) !!}
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 fundus_exam">
                   <div class="section-divider mt20 mb40">
                     <span> OS </span>
                   </div>
+                  <div class="row">
+                    <div class="col-md-10 col-md-offset-1 text-center">
+                      {!! Form::checkbox('fundus_os_cd_abnormal', 'true') !!} Abnormal
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-10 col-md-offset-1 text-center">
+                      {!! Form::text('fundus_os_cd_notes', '', ['id' => 'fundus_os_cd_notes']) !!}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-10 col-md-offset-1 text-center">
+                      {!! Form::checkbox('fundus_os_retina_abnormal', 'true') !!} Abnormal
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-10 col-md-offset-1 text-center">
+                      {!! Form::text('fundus_os_retina_notes', '', ['id' => 'fundus_os_retina_notes']) !!}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-10 col-md-offset-1 text-center">
+                      {!! Form::checkbox('fundus_os_cd_abnormal', 'true') !!} Abnormal
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-10 col-md-offset-1 text-center">
+                      {!! Form::text('fundus_os_macula_notes', '', ['id' => 'fundus_os_macula_notes']) !!}
+                    </div>
+                  </div>
+                </div>
                 </div>
               </div>
             </div>

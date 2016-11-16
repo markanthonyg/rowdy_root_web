@@ -4,6 +4,10 @@
   vertical-align: middle;
 }
 
+.fundus_exam > .row {
+  padding-bottom: 10px;
+}
+
 /*Textarea box*/
 #chief_complaint {
   width: 100%;
@@ -29,5 +33,29 @@
 }
 
 #fundus_dialation_notes {
+  width: 100%;
+}
+
+#fundus_od_cd_notes {
+  width: 100%;
+}
+
+#fundus_od_retina_notes {
+  width: 100%;
+}
+
+#fundus_od_macula_notes {
+  width: 100%;
+}
+
+#fundus_os_cd_notes {
+  width: 100%;
+}
+
+#fundus_os_retina_notes {
+  width: 100%;
+}
+
+#fundus_os_macula_notes {
   width: 100%;
 }
