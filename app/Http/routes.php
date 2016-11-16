@@ -62,3 +62,7 @@ Route::post('/accountRequestList', 'Dashboard\AccountRequestController@updateAcc
 Route::get('/accountList', 'Dashboard\AccountController@showAllAccounts');
 Route::post('/accountList', 'Dashboard\AccountController@deleteAccount');
 Route::post('/accountList', 'Dashboard\AccountController@updateAccount');
+
+// Visit Routes
+Route::get('/new_visit', 'Dashboard\VisitsController@addVisit');
+Route::post('/new_visit', 'Dashboard\VisitsController@insertVisit');

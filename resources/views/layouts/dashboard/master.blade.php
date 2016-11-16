@@ -193,7 +193,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="/new_visit">
               <span class="fa fa-plus"></span>
               <span class="sidebar-title" onmouseover="this.style.color='#dddddd'" onmouseout="this.style.color='#ffffff'">New Visit</span>
             </a>
