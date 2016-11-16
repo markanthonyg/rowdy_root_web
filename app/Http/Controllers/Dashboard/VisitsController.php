@@ -17,6 +17,7 @@ class VisitsController extends Controller
     public function addVisit() {
       // Get user to pass to master template in view
       $data['user'] = Auth::User();
+      $data['num_unapproved_users'] = User::where(['approved' => 0])->count();
 
       return view('dashboard/new_visit', $data);
     }

@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.master')
 
 @section('title')
-  New Patient
+  New Visit
 @endsection
 
 @section('style')

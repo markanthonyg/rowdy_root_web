@@ -1916,3 +1916,6 @@ user	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/Log
 #fundus_os_cd_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#fundus_os_cd_notes {$/;"	function	line:51
 #fundus_os_retina_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#fundus_os_retina_notes {$/;"	function	line:55
 #fundus_os_macula_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#fundus_os_macula_notes {$/;"	function	line:59
+VisitsController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^class VisitsController extends Controller$/;"	class	line:14
+addVisit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^    public function addVisit() {$/;"	function	line:17
+insertVisit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^    public function insertVisit() {$/;"	function	line:26
