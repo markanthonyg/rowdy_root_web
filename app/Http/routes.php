@@ -48,6 +48,12 @@ Route::post('/livesearchMeds', 'MiscController@livesearchMeds');
 Route::get('/patient/{id}', 'Dashboard\ProfileController@showPatientProfile');
 Route::post('/patient', 'Dashboard\PatientsController@updatePatient');
 
+Route::post('/new_patient', 'Dashboard\VitalsController@insertVital');
+Route::post('/patient_profile', 'Dashboard\VitalsController@updateVital');
+Route::get('/patient_profile', 'Dashboard\VitalsController@updateVital');
+
+// Route::get('/foobar/')
+
 // Account Request Routes
 Route::get('/accountRequestList', 'Dashboard\AccountRequestController@showAllAccountRequest');
 Route::post('/accountRequestList', 'Dashboard\AccountRequestController@updateAccount');

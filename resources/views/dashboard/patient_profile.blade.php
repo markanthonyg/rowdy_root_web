@@ -86,7 +86,7 @@
   </div>
 </div>
 
-<!-- Modal -->
+<!-- EDIT PATIENT Modal -->
 <div class="modal fade" id="myModal" style="padding:0;">
   <div class="modal-dialog" style="padding:0;">
     <div class="modal-content" style="padding:0;">
@@ -234,6 +234,183 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+
+
+
+<!-- Update Vital Modal -->
+<div class="modal fade" id="myVital" style="padding:0;">
+  <div class="modal-dialog" style="padding:0;">
+    <div class="modal-content" style="padding:0;">
+      <div class="modal-header" style="padding:0;">
+        <div class="header panel-footer text-right">
+          <a href="#" id="test" class="fa fa-times fa-2x" data-dismiss="modal"></a>
+        </div>
+      </div>
+      <div class="modal-body" style="padding:0;">
+        <div class="tray tray-center">
+          <div class="form-group">
+          <div class="admin-form theme-primary mw1000 center-block">
+            <div class="panel heading-border">
+              {{-- <form method="post" action="/" id="newVitalForm"> --}}
+              {!! Form::open(['action' => 'Dashboard\VitalsController@insertVital', 'id' => 'admin-form', 'method' => 'post']) !!}
+                <div class="panel-body bg-light">
+                  <div class="section-divider mt20 mb40">
+                    <span> Add a new vital </span>
+                  </div>
+                    <div class="section row"  > <!-- BLOOD PRESSURE  ROW -->
+                      <div class="col-md-4">
+                        <label for="BPS" class="field prepend-icon">
+                          {!! Form::text('bps', '', ['placeholder' => 'BP Systolic...', 'class' => 'gui-input', 'name' => 'bps', 'id' => 'bps']) !!}
+                          <label for="BPS" class="field-icon">
+                            <i class="fa fa-user"></i>
+                          </label>
+                        </label>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="BPD" class="field prepend-icon">
+                          {!! Form::text('bpd', '', ['placeholder' => 'BP Diastolic...', 'class' => 'gui-input', 'name' => 'bpd', 'id' => 'bpd']) !!}
+                          <label for="BPD" class="field-icon">
+                            <i class="fa fa-user"></i>
+                          </label>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="section"> <!-- need to modify schema in DB so saves as string, not double-->
+                      <label class="field select">
+                        {{ Form::select('bpunit', array(
+                            'mmHg' => '1',
+                            'Pa' => '2'),
+                            '',
+                            ['id' => 'bpunit']
+                        ) }}
+                        <i class="arrow double"></i>
+                      </label>
+                    </div>
+                    <div class="section row"> <!-- BLOOD GLUCOSE ROW -->
+                      <div class="col-md-4"> <!-- need to modify schema in DB so saves as string, not double-->
+                        <label class="field select">
+                          {{ Form::select('fasting', array(
+                              'Yes' => '1',
+                              'No' => '0'),
+                              '',
+                              ['id' => 'fasting']
+                          ) }}
+                          <i class="arrow double"></i>
+                        </label>
+                      </div>
+                      <div class ="col-md-4">
+                        <label for="bg" class="field prepend-icon">
+                          {!! Form::text('bg', '', ['placeholder' => 'Enter Blood Glucose Value...', 'class' => 'gui-input', 'name' => 'bg', 'id' => 'bg']) !!}
+                          <label for="bg" class="field-icon">
+                            <i class="fa fa-birthday-cake"></i>
+                          </label>
+                        </label>
+                      </div>
+                      <div class="col-md-4"> <!-- need to modify schema in DB so saves as string, not double--> <!-- COLUM or section???? -->
+                        <label class="field select">
+                          {{ Form::select('bgUnit', array(
+                              'mg/dL' => '1',
+                              'mmol/L' => '2'),
+                              '',
+                              ['id' => 'bgUnit']
+                          ) }}
+                          <i class="arrow double"></i>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="section row"> <!-- O2 AND HB ROW -->
+                      <div class="col-md-6">
+                        <label for="o2sat" class="field prepend-icon"> <!-- I WANT TO HAVE % APPENDED IN INPUT FIELD -->
+                          {!! Form::text('o2sat', '', ['placeholder' => 'O2 Saturation %...', 'class' => 'gui-input', 'name' => 'o2sat', 'id' => 'o2sat']) !!}
+                          <label for="o2sat" class="field-icon">
+                            <i class="fa fa-map-marker"></i>
+                          </label>
+                        </label>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="hb" class="field prepend-icon">
+                          {!! Form::text('hb', '', ['placeholder' => 'Hemoglobin...', 'class' => 'gui-input', 'name' => 'hb', 'id' => 'hb']) !!}
+                          <label for="hb" class="field-icon">
+                            <i class="fa fa-map-marker"></i>
+                          </label>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="section row"> <!-- HEIGHT, WOULDN'T IT BE NICE TO BE ABLE TO CONVERT FROM ENGLISH TO METRIC, VISAVERSA AND PUSH BOTH VALUES orsomething-->
+                      <div class="col-md-3">
+                        <label for="hfeet" class="field prepend-icon">
+                          {!! Form::text('hfeet', '', ['placeholder' => 'Height, feet...', 'class' => 'gui-input', 'name' => 'hfeet', 'id' => 'hfeet']) !!}
+                          <label for="hfeet" class="field-icon">
+                            <i class="fa fa-map-marker"></i>
+                          </label>
+                        </label>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="hinches" class="field prepend-icon">
+                          {!! Form::text('hinches', '', ['placeholder' => 'Height, inches...', 'class' => 'gui-input', 'name' => 'hinches', 'id' => 'hinches']) !!}
+                          <label for="hinches" class="field-icon">
+                            <i class="fa fa-map-marker"></i>
+                          </label>
+                        </label>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="hcm" class="field prepend-icon">
+                          {!! Form::text('hcm', '', ['placeholder' => 'Height, cm...', 'class' => 'gui-input', 'name' => 'hcm', 'id' => 'hcm']) !!}
+                          <label for="hcm" class="field-icon">
+                            <i class="fa fa-map-marker"></i>
+                          </label>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="section row"> <!-- WEIGHT, WOULDN'T IT BE NICE TO BE ABLE TO CONVERT FROM ENGLISH TO METRIC, VISAVERSA AND PUSH BOTH VALUES orsomething-->
+                      <div class="col-md-3">
+                        <label for="weight" class="field prepend-icon">
+                          {!! Form::text('weight', '', ['placeholder' => 'Weight...', 'class' => 'gui-input', 'name' => 'weight', 'id' => 'weight']) !!}
+                          <label for="weight" class="field-icon">
+                            <i class="fa fa-map-marker"></i>
+                          </label>
+                        </label>
+                      </div>
+                      <div class="col-md-3"> <!--  -->
+                        <label class="field select">
+                          {{ Form::select('wunit', array(
+                              'lbs' => 'lbs',
+                              'kg' => 'kg'),
+                              '',
+                              ['id' => 'wunit']
+                          ) }}
+                          <i class="arrow double"></i>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="section"> <!-- NOTES -->
+                      <label for="notes" class="field prepend-icon">
+                        {!! Form::text('notes', '', ['placeholder' => 'Additional Notes...', 'class' => 'gui-input', 'name' => 'notes', 'id' => 'notes']) !!}
+                        <label for="notes" class="field-icon">
+                          <i class="fa fa-mobile"></i>
+                        </label>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="panel-footer text-right">
+                    <button type="submit" class="button btn-primary"> Add Vitals </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{-- </form> --}}
+            {!! Form::close() !!}
+          </div>
+      </div>
+      <div class="modal-footer" style="padding:0;">
+
+      </div><!-- /.modal-footer-->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
 <div class="alert alert-warning">
   <strong>This patient has one or more known allergies.</strong>
 </div>
@@ -360,7 +537,69 @@ cataract removal</textarea>
       </div>
       <div id="tab2" class="tab-pane"></div>
       <div id="tab3" class="tab-pane">
-        TEST
+
+        <!-- BEGIN VITALS TAB -->
+        <!-- begin: .tray-center -->
+        <div class="tray tray-center">
+
+          {{-- ADD BUTTONS --}}
+          <div class="col-md-4 hidden">
+            <a href="/new_vital" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Add Vital</a>
+            <br/><br/><br/>
+          </div>
+
+
+          <div class="col-md-12">
+            <button class="btn btn-primary" id="addVitalBtn" style="float: left;margin: 10px;"><i class="fa fa-plus fa-lg"></i> Add Vital </button>
+          </div>
+
+          {{-- <br /><br /><br /> --}}
+
+          <!-- BEGIN VITALS TABLE -->
+
+          {{-- SAMPLE TABLE --}}
+          <div class="col-md-12">
+            <div class="panel panel-visible" id="spy2">
+              <div class="panel-heading">
+                <div class="panel-title hidden-xs">
+                  <span class="glyphicon glyphicon-tasks"></span>Vitals</div>
+              </div>
+              <div class="panel-body pn">
+                <table class="table table-hover" id="datatable2" cellspacing="0" width="100%">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>BP</th>
+                      <th>Fasting</th>
+                      <th>BG</th>
+                      <th>O2</th>
+                      <th>Hb</th>
+                      <th>Height</th>
+                      <th>Weight</th>
+                      <th>Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @foreach($vitals as $vital)
+                        <tr class="clickable-row" data-url="{{ $vital->id }}">
+                          <td>{{ $vital->dateCreated }}</td>
+                          <td>{{ $vital->bps }}/{{ $vital->bpd}}</td>
+                          <td>{{ $vital->fasting }}</td>
+                          <td>{{ $vital->bg }} {{ $vital->bgUnit }}</td>
+                          <td>{{ $vital->o2sat }}%</td>
+                          <td>{{ $vital->hb}} HbUNIT</td>
+                          <td>{{ $vital->hfeet}}'{{ $vital->hinches}}" | {{ $vital->hcm }}cm</td>
+                          <td>{{ $vital->weight}} {{ $vital-> wunit}}</td>
+                          <td>{{ $vital->notes}}</td>
+                        </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END VITALS TABLE -->
       </div>
 
       <div id="tab4" class="tab-pane">
@@ -1494,6 +1733,14 @@ The patient will have a post-op IOP check.
       $("#postal").val($(this).closest('tr').children()[10].textContent);
       $("#country").val($(this).closest('tr').children()[11].textContent);
       $("#phone").val($(this).closest('tr').children()[12].textContent);
+    });
+  });
+  </script>
+
+  <script>
+  $(document).ready(function () {
+    $('#addVitalBtn').on('click',function(){
+      $("#myVital").modal("show");
     });
   });
   </script>
