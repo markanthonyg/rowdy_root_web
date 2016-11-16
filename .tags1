@@ -4,9 +4,3 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-.vcenter	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.vcenter {$/;"	function	line:2
-#chief_complaint	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#chief_complaint {$/;"	function	line:8
-#rx_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#rx_notes {$/;"	function	line:14
-#assesment	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#assesment {$/;"	function	line:20
-#plan	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#plan {$/;"	function	line:26
-#fundus_dialation_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#fundus_dialation_notes {$/;"	function	line:31
