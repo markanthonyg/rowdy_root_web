@@ -308,12 +308,51 @@
       </div>
 
       {{-- Row 5: Slit Lamp --}}
-      <div class="row hidden">
+      <div class="row">
         <div class="col-md-12">
           <div class="panel heading-border">
             <div class="panel-body bg-light">
               <div class="section-divider mt20 mb40">
                 <span> Slit Lamp </span>
+              </div>
+              <div class="row">
+                <div class="section-divider mt20 mb40">
+                  <span> Pupils </span>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="section-divider mt20 mb40">
+                      <span> Left </span>
+                    </div>
+                    <div class="row text-center">
+                      {!! Form::checkbox('sle_pupil_left_normal', 'true') !!} Normal
+                    </div>
+                    <br />
+                    <div class="row">
+                      <div class="col-md-5 text-center">
+                        Shape
+                      </div>
+                      <div class="col-md-7">
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_left_shape', 'round') !!} Round &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_left_shape', 'irregular') !!} Irregular &nbsp; &nbsp; &nbsp;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="section-divider mt20 mb40">
+                      <span> Right </span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="section-divider mt20 mb40">
+                      <span> Both </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
