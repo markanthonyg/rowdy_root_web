@@ -47,7 +47,7 @@
     <span class="panel-title"> Patient Information</span>
   </div>
   <div class="panel-body pn">
-    <table class="table table-hover" id="datatable2" style="">
+    <table class="table table-hover" id="demographicsTable" style="">
       <thead>
         <tr class="clickable-row" class="visible">
           <th>ID</th>
@@ -87,7 +87,7 @@
 </div>
 
 <!-- EDIT PATIENT Modal -->
-<div class="modal fade" id="myModal" style="padding:0;">
+<div class="modal fade" id="demographicsModal" style="padding:0;">
   <div class="modal-dialog" style="padding:0;">
     <div class="modal-content" style="padding:0;">
       <div class="modal-header" style="padding:0;">
@@ -238,7 +238,7 @@
 
 
 <!-- Update Vital Modal -->
-<div class="modal fade" id="myVital" style="padding:0;">
+<div class="modal fade" id="myVitalModal" style="padding:0;">
   <div class="modal-dialog" style="padding:0;">
     <div class="modal-content" style="padding:0;">
       <div class="modal-header" style="padding:0;">
@@ -251,18 +251,19 @@
           <div class="form-group">
           <div class="admin-form theme-primary mw1000 center-block">
             <div class="panel heading-border">
-              {{-- <form method="post" action="/" id="newVitalForm"> --}}
-              {!! Form::open(['action' => 'Dashboard\VitalsController@insertVital', 'id' => 'admin-form', 'method' => 'post']) !!}
+              {{-- <form method="post" action="/" id="myVitalForm"> --}}
+              {!! Form::open(['action' => 'Dashboard\VitalsController@updateVital', 'id' => 'admin-form', 'method' => 'post']) !!}
+                {!! Form::hidden('id', '', ['class' => 'gui-input', 'name' => 'id', 'vitalid' => 'id']) !!}
                 <div class="panel-body bg-light">
                   <div class="section-divider mt20 mb40">
-                    <span> Add a new vital </span>
+                    <span id="VitalModalTitle">Add New Vital Details</span>
                   </div>
                     <div class="section row"  > <!-- BLOOD PRESSURE  ROW -->
                       <div class="col-md-4">
                         <label for="BPS" class="field prepend-icon">
                           {!! Form::text('bps', '', ['placeholder' => 'BP Systolic...', 'class' => 'gui-input', 'name' => 'bps', 'id' => 'bps']) !!}
                           <label for="BPS" class="field-icon">
-                            <i class="fa fa-user"></i>
+                            <i class="fa fa-heart"></i>
                           </label>
                         </label>
                       </div>
@@ -270,28 +271,30 @@
                         <label for="BPD" class="field prepend-icon">
                           {!! Form::text('bpd', '', ['placeholder' => 'BP Diastolic...', 'class' => 'gui-input', 'name' => 'bpd', 'id' => 'bpd']) !!}
                           <label for="BPD" class="field-icon">
-                            <i class="fa fa-user"></i>
+                            <i class="fa fa-heart-o"></i>
                           </label>
                         </label>
                       </div>
-                    </div>
-                    <div class="section"> <!-- need to modify schema in DB so saves as string, not double-->
+                    <div class="col-md-3"> <!-- need to modify schema in DB so saves as string, not double-->
                       <label class="field select">
                         {{ Form::select('bpunit', array(
-                            'mmHg' => '1',
-                            'Pa' => '2'),
+                            '1' => 'mmHg',
+                            '2' => 'Pa'),
                             '',
                             ['id' => 'bpunit']
                         ) }}
                         <i class="arrow double"></i>
                       </label>
                     </div>
+
+                  </div>
                     <div class="section row"> <!-- BLOOD GLUCOSE ROW -->
                       <div class="col-md-4"> <!-- need to modify schema in DB so saves as string, not double-->
                         <label class="field select">
                           {{ Form::select('fasting', array(
-                              'Yes' => '1',
-                              'No' => '0'),
+                              '-1'=> 'Fasting?',
+                              '1' => 'Yes, Fasting',
+                              '0' => 'No, Not Fasting'),
                               '',
                               ['id' => 'fasting']
                           ) }}
@@ -300,17 +303,17 @@
                       </div>
                       <div class ="col-md-4">
                         <label for="bg" class="field prepend-icon">
-                          {!! Form::text('bg', '', ['placeholder' => 'Enter Blood Glucose Value...', 'class' => 'gui-input', 'name' => 'bg', 'id' => 'bg']) !!}
+                          {!! Form::text('bg', '', ['placeholder' => 'Blood Glucose...', 'class' => 'gui-input', 'name' => 'bg', 'id' => 'bg']) !!}
                           <label for="bg" class="field-icon">
-                            <i class="fa fa-birthday-cake"></i>
+                            <i class="fa fa-tint"></i>
                           </label>
                         </label>
                       </div>
-                      <div class="col-md-4"> <!-- need to modify schema in DB so saves as string, not double--> <!-- COLUM or section???? -->
+                      <div class="col-md-3"> <!-- need to modify schema in DB so saves as string, not double--> <!-- COLUM or section???? -->
                         <label class="field select">
                           {{ Form::select('bgUnit', array(
-                              'mg/dL' => '1',
-                              'mmol/L' => '2'),
+                              'mg/dL' => 'mg/dL',
+                              'mmol/L' => 'mmol/L'),
                               '',
                               ['id' => 'bgUnit']
                           ) }}
@@ -319,45 +322,55 @@
                       </div>
                     </div>
                     <div class="section row"> <!-- O2 AND HB ROW -->
-                      <div class="col-md-6">
+                      <div class="col-md-4">
                         <label for="o2sat" class="field prepend-icon"> <!-- I WANT TO HAVE % APPENDED IN INPUT FIELD -->
                           {!! Form::text('o2sat', '', ['placeholder' => 'O2 Saturation %...', 'class' => 'gui-input', 'name' => 'o2sat', 'id' => 'o2sat']) !!}
                           <label for="o2sat" class="field-icon">
-                            <i class="fa fa-map-marker"></i>
+                            <i class="fa fa-circle-o"></i>
                           </label>
                         </label>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-md-4">
                         <label for="hb" class="field prepend-icon">
-                          {!! Form::text('hb', '', ['placeholder' => 'Hemoglobin...', 'class' => 'gui-input', 'name' => 'hb', 'id' => 'hb']) !!}
+                          {!! Form::text('hemob', '', ['placeholder' => 'Hemoglobin...', 'class' => 'gui-input', 'name' => 'hb', 'id' => 'hb']) !!}
                           <label for="hb" class="field-icon">
-                            <i class="fa fa-map-marker"></i>
+                            <i class="fa fa-tint"></i>
                           </label>
+                        </label>
+                      </div>
+                      <div class="col-md-3">
+                        <label class="field select">
+                          {{ Form::select('bgUnit', array(
+                              '1' => 'g/dL'),
+                              '',
+                              ['id' => 'bgUnit']
+                          ) }}
+                          <i class="arrow double"></i>
                         </label>
                       </div>
                     </div>
                     <div class="section row"> <!-- HEIGHT, WOULDN'T IT BE NICE TO BE ABLE TO CONVERT FROM ENGLISH TO METRIC, VISAVERSA AND PUSH BOTH VALUES orsomething-->
-                      <div class="col-md-3">
+                      <div class="col-md-4">
                         <label for="hfeet" class="field prepend-icon">
-                          {!! Form::text('hfeet', '', ['placeholder' => 'Height, feet...', 'class' => 'gui-input', 'name' => 'hfeet', 'id' => 'hfeet']) !!}
+                          {!! Form::text('hfeet', '', ['placeholder' => 'Height, feet...', 'class' => 'gui-input', 'name'=>'hfeet', 'id' => 'hfeet']) !!}
                           <label for="hfeet" class="field-icon">
-                            <i class="fa fa-map-marker"></i>
+                            <i class="fa fa-user"></i>
                           </label>
                         </label>
                       </div>
-                      <div class="col-md-3">
+                      <div class="col-md-4">
                         <label for="hinches" class="field prepend-icon">
-                          {!! Form::text('hinches', '', ['placeholder' => 'Height, inches...', 'class' => 'gui-input', 'name' => 'hinches', 'id' => 'hinches']) !!}
+                          {!! Form::text('hinches', '', ['placeholder' => 'Height, inches...', 'class' => 'gui-input','name' => 'hinches', 'id' => 'hinches']) !!}
                           <label for="hinches" class="field-icon">
-                            <i class="fa fa-map-marker"></i>
+                            <i class="fa fa-user"></i>
                           </label>
                         </label>
                       </div>
-                      <div class="col-md-3">
+                      <div class="col-md-4">
                         <label for="hcm" class="field prepend-icon">
-                          {!! Form::text('hcm', '', ['placeholder' => 'Height, cm...', 'class' => 'gui-input', 'name' => 'hcm', 'id' => 'hcm']) !!}
+                          {!! Form::text('hcm', '', ['placeholder' => 'Height, cm...', 'class' => 'gui-input', 'name'=>'hcm', 'id' => 'hcm']) !!}
                           <label for="hcm" class="field-icon">
-                            <i class="fa fa-map-marker"></i>
+                            <i class="fa fa-user"></i>
                           </label>
                         </label>
                       </div>
@@ -367,7 +380,7 @@
                         <label for="weight" class="field prepend-icon">
                           {!! Form::text('weight', '', ['placeholder' => 'Weight...', 'class' => 'gui-input', 'name' => 'weight', 'id' => 'weight']) !!}
                           <label for="weight" class="field-icon">
-                            <i class="fa fa-map-marker"></i>
+                            <i class="fa fa-cube"></i>
                           </label>
                         </label>
                       </div>
@@ -393,7 +406,9 @@
                     </div>
                   </div>
                   <div class="panel-footer text-right">
-                    <button type="submit" class="button btn-primary"> Add Vitals </button>
+                    <button type="submit" class="btn btn-primary" name="action" value="AddVital" id="AddVital" style="margin-right: 5px;"> Add Vitals</button>
+                    <button type="submit" class="btn btn-primary" name="action" value="UpdateVital" id="UpdateVital" style="margin-right: 5px;"> Save</button>
+                    <button type="submit" class="btn btn-danger" name="action" value="DeleteVital" id="DeleteVital"> Delete</button>
                   </div>
                 </div>
               </div>
@@ -555,7 +570,7 @@ cataract removal</textarea>
 
           {{-- <br /><br /><br /> --}}
 
-          <!-- BEGIN VITALS TABLE -->
+          <!-- BVITALS TABLE -->
 
           {{-- SAMPLE TABLE --}}
           <div class="col-md-12">
@@ -565,7 +580,7 @@ cataract removal</textarea>
                   <span class="glyphicon glyphicon-tasks"></span>Vitals</div>
               </div>
               <div class="panel-body pn">
-                <table class="table table-hover" id="datatable2" cellspacing="0" width="100%">
+                <table class="table table-hover" id="vitalTable" cellspacing="0" width="100%">
                   <thead>
                     <tr>
                       <th>Date</th>
@@ -581,13 +596,17 @@ cataract removal</textarea>
                   </thead>
                   <tbody>
                     @foreach($vitals as $vital)
-                        <tr class="clickable-row" data-url="{{ $vital->id }}">
+                        <tr class="clickable-row" onclick="getVitalIndex(this)" data-url="{{ $vital->id }}">
                           <td>{{ $vital->dateCreated }}</td>
-                          <td>{{ $vital->bps }}/{{ $vital->bpd}}</td>
-                          <td>{{ $vital->fasting }}</td>
+                          <td>
+                            {{ $vital->bps }}/{{ $vital->bpd}} {{ ($vital->bpunit == 2) ? 'Pa' : 'mmHg' }}
+                          </td>
+                          <td>
+                            {{ ($vital->fasting == 1) ? 'Yes' : 'No'  }}
+                          </td>
                           <td>{{ $vital->bg }} {{ $vital->bgUnit }}</td>
                           <td>{{ $vital->o2sat }}%</td>
-                          <td>{{ $vital->hb}} HbUNIT</td>
+                          <td>{{ $vital->hb}} mg/dL</td>
                           <td>{{ $vital->hfeet}}'{{ $vital->hinches}}" | {{ $vital->hcm }}cm</td>
                           <td>{{ $vital->weight}} {{ $vital-> wunit}}</td>
                           <td>{{ $vital->notes}}</td>
@@ -610,7 +629,7 @@ cataract removal</textarea>
           <option>Argon Iridoplasty</option>
         </select>
 
-</br>
+      </br>
         <div class="panel">
   <div class="panel-body pn of-h" id="summer-demo">
     <div class="summernote" style="height: 400px; display: none;">
@@ -1717,33 +1736,99 @@ The patient will have a post-op IOP check.
   </script>
 
   <script>
+    $(document).ready(function () {
+      $('#demographicsTable').on('click','td',function(){
+        $("#demographicsModal").modal("show");
+        $("#id").val($(this).closest('tr').children()[0].textContent);
+        $("#firstname").val($(this).closest('tr').children()[1].textContent);
+        $("#middlename").val($(this).closest('tr').children()[2].textContent);
+        $("#lastname").val($(this).closest('tr').children()[3].textContent);
+        $("#gender").val($(this).closest('tr').children()[4].textContent);
+        $("#dob").val($(this).closest('tr').children()[5].textContent);
+        $("#address").val($(this).closest('tr').children()[6].textContent);
+        $("#address2").val($(this).closest('tr').children()[7].textContent);
+        $("#city").val($(this).closest('tr').children()[8].textContent);
+        $("#state").val($(this).closest('tr').children()[9].textContent);
+        $("#postal").val($(this).closest('tr').children()[10].textContent);
+        $("#country").val($(this).closest('tr').children()[11].textContent);
+        $("#phone").val($(this).closest('tr').children()[12].textContent);
+      });
+    });
+  </script>
+
+
+
+<!-- BEGIN VITALS -->
+  <script>
+    $(document).ready(function () {
+
+    });
+  </script>
+
+  <script>
+  var vitalTableIndex;
+  function getVitalIndex(i) {
+    // alert(i.rowIndex);
+    vitalTableIndex = i.rowIndex;
+  }
   $(document).ready(function () {
-    $('table tbody td').on('click',function(){
-      $("#myModal").modal("show");
-      $("#id").val($(this).closest('tr').children()[0].textContent);
-      $("#firstname").val($(this).closest('tr').children()[1].textContent);
-      $("#middlename").val($(this).closest('tr').children()[2].textContent);
-      $("#lastname").val($(this).closest('tr').children()[3].textContent);
-      $("#gender").val($(this).closest('tr').children()[4].textContent);
-      $("#dob").val($(this).closest('tr').children()[5].textContent);
-      $("#address").val($(this).closest('tr').children()[6].textContent);
-      $("#address2").val($(this).closest('tr').children()[7].textContent);
-      $("#city").val($(this).closest('tr').children()[8].textContent);
-      $("#state").val($(this).closest('tr').children()[9].textContent);
-      $("#postal").val($(this).closest('tr').children()[10].textContent);
-      $("#country").val($(this).closest('tr').children()[11].textContent);
-      $("#phone").val($(this).closest('tr').children()[12].textContent);
+
+    $('#addVitalBtn').on('click',function() {
+      $("#myVitalModal").modal("show");
+      $('#DeleteVital').hide();
+      $('#UpdateVital').hide();
+      $('#AddVital').show();
+      $('#VitalModalTitle').text('Add New Vital Details');
+      $("#bps").val("");
+      $("#bpd").val("");
+      $("#bpunit").val(1);
+      $("#fasting").val(-1);
+      $("#bg").val("");
+      $("#bgUnit").val("mg/dL");
+      $("#o2sat").val("");
+      $("#hb").val("");
+      $("#hfeet").val("");
+      $("#hinches").val("");
+      $("#hcm").val("");
+      $("#hunit").val("");
+      $("#weight").val("");
+      $("#wunit").val("lbs");
+      $("#notes").val("");
+    });
+
+    $('#vitalTable').on('click','td',function() {
+      var vitalsA = {!! json_encode($vitals->toArray()) !!};
+
+      var sVital = vitalsA[vitalTableIndex-1];
+      // alert(JSON.stringify(sVital));
+      $("#myVitalModal").modal("show");
+      // alert("hb"+sVital.hb + " h" + sVital.hfeet);
+      $("#bps").val(sVital.bps);
+      $("#bpd").val(sVital.bpd);
+      $("#bpunit").val(sVital.bpunit);
+      $("#fasting").val(sVital.fasting);
+      $("#bg").val(sVital.bg);
+      $("#bgUnit").val(sVital.bgUnit);
+      $("#o2sat").val(sVital.o2sat);
+      $("#hb").val(sVital.hb);
+      $("#hfeet").val(sVital.hfeet);
+      $("#hinches").val(sVital.hinches);
+      $("#hcm").val(sVital.hcm);
+      $("#hunit").val(sVital.hunit);
+      $("#weight").val(sVital.weight);
+      $("#wunit").val(sVital.wunit);
+      $("#notes").val(sVital.notes);
+
+      $('#DeleteVital').show();
+      $('#UpdateVital').show();
+      $('#AddVital').hide();
+      $('#modalTitle').text('Edit Vital Details');
+
     });
   });
   </script>
 
-  <script>
-  $(document).ready(function () {
-    $('#addVitalBtn').on('click',function(){
-      $("#myVital").modal("show");
-    });
-  });
-  </script>
+  <!-- END VITALS -->
 
   <!-- Theme Javascript -->
   <script src="assets/js/utility/utility.js"></script>
