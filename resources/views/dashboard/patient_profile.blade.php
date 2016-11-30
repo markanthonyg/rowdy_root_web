@@ -253,12 +253,16 @@
             <div class="panel heading-border">
               {{-- <form method="post" action="/" id="myVitalForm"> --}}
               {!! Form::open(['action' => 'Dashboard\VitalsController@updateVital', 'id' => 'admin-form', 'method' => 'post']) !!}
-                {!! Form::hidden('id', '', ['class' => 'gui-input', 'name' => 'id', 'vitalid' => 'id']) !!}
+                {!! Form::hidden('vid', '', ['class' => 'gui-input', 'name' => 'vid', 'id' => 'vid']) !!}
+                {!! Form::hidden('vpid', '', ['class' => 'gui-input', 'name' => 'vpid', 'id' => 'vpid']) !!}
                 <div class="panel-body bg-light">
                   <div class="section-divider mt20 mb40">
                     <span id="VitalModalTitle">Add New Vital Details</span>
                   </div>
-                    <div class="section row"  > <!-- BLOOD PRESSURE  ROW -->
+                  <div class="section-divider mt10 mb10">
+                    <span>Blood Pressure</span>
+                  </div>
+                    <div class="section row"  >
                       <div class="col-md-4">
                         <label for="BPS" class="field prepend-icon">
                           {!! Form::text('bps', '', ['placeholder' => 'BP Systolic...', 'class' => 'gui-input', 'name' => 'bps', 'id' => 'bps']) !!}
@@ -275,7 +279,7 @@
                           </label>
                         </label>
                       </div>
-                    <div class="col-md-3"> <!-- need to modify schema in DB so saves as string, not double-->
+                    <div class="col-md-3">
                       <label class="field select">
                         {{ Form::select('bpunit', array(
                             '1' => 'mmHg',
@@ -286,9 +290,11 @@
                         <i class="arrow double"></i>
                       </label>
                     </div>
-
                   </div>
-                    <div class="section row"> <!-- BLOOD GLUCOSE ROW -->
+                    <div class="section row">
+                      <div class="section-divider mt10 mb10">
+                        <span>Blood Glucose</span>
+                      </div>
                       <div class="col-md-4"> <!-- need to modify schema in DB so saves as string, not double-->
                         <label class="field select">
                           {{ Form::select('fasting', array(
@@ -321,12 +327,15 @@
                         </label>
                       </div>
                     </div>
-                    <div class="section row"> <!-- O2 AND HB ROW -->
+                    <div class="section row">
+                      <div class="section-divider mt10 mb10">
+                        <span>O2 Saturation and Hemoglobin</span>
+                      </div>
                       <div class="col-md-4">
-                        <label for="o2sat" class="field prepend-icon"> <!-- I WANT TO HAVE % APPENDED IN INPUT FIELD -->
-                          {!! Form::text('o2sat', '', ['placeholder' => 'O2 Saturation %...', 'class' => 'gui-input', 'name' => 'o2sat', 'id' => 'o2sat']) !!}
+                        <label for="o2sat" class="field append-icon">
+                          {!! Form::text('o2sat', '', ['placeholder' => 'O2 Saturation...', 'class' => 'gui-input', 'name' => 'o2sat', 'id' => 'o2sat']) !!}
                           <label for="o2sat" class="field-icon">
-                            <i class="fa fa-circle-o"></i>
+                            <i>%</i>
                           </label>
                         </label>
                       </div>
@@ -340,16 +349,19 @@
                       </div>
                       <div class="col-md-3">
                         <label class="field select">
-                          {{ Form::select('bgUnit', array(
-                              '1' => 'g/dL'),
+                          {{ Form::select('hgUnit', array(
+                              'mg/dL' => 'mg/dL'),
                               '',
-                              ['id' => 'bgUnit']
+                              ['id' => 'hgUnit']
                           ) }}
                           <i class="arrow double"></i>
                         </label>
                       </div>
                     </div>
                     <div class="section row"> <!-- HEIGHT, WOULDN'T IT BE NICE TO BE ABLE TO CONVERT FROM ENGLISH TO METRIC, VISAVERSA AND PUSH BOTH VALUES orsomething-->
+                      <div class="section-divider mt10 mb10">
+                        <span>Height</span>
+                      </div>
                       <div class="col-md-4">
                         <label for="hfeet" class="field prepend-icon">
                           {!! Form::text('hfeet', '', ['placeholder' => 'Height, feet...', 'class' => 'gui-input', 'name'=>'hfeet', 'id' => 'hfeet']) !!}
@@ -376,6 +388,9 @@
                       </div>
                     </div>
                     <div class="section row"> <!-- WEIGHT, WOULDN'T IT BE NICE TO BE ABLE TO CONVERT FROM ENGLISH TO METRIC, VISAVERSA AND PUSH BOTH VALUES orsomething-->
+                      <div class="section-divider mt10 mb10">
+                        <span>Weight</span>
+                      </div>
                       <div class="col-md-3">
                         <label for="weight" class="field prepend-icon">
                           {!! Form::text('weight', '', ['placeholder' => 'Weight...', 'class' => 'gui-input', 'name' => 'weight', 'id' => 'weight']) !!}
@@ -397,6 +412,9 @@
                       </div>
                     </div>
                     <div class="section"> <!-- NOTES -->
+                      <div class="section-divider mt10 mb10">
+                        <span>Notes</span>
+                      </div>
                       <label for="notes" class="field prepend-icon">
                         {!! Form::text('notes', '', ['placeholder' => 'Additional Notes...', 'class' => 'gui-input', 'name' => 'notes', 'id' => 'notes']) !!}
                         <label for="notes" class="field-icon">
@@ -1759,26 +1777,31 @@ The patient will have a post-op IOP check.
 
 
 <!-- BEGIN VITALS -->
-  <script>
-    $(document).ready(function () {
-
-    });
-  </script>
 
   <script>
+
   var vitalTableIndex;
+
   function getVitalIndex(i) {
     // alert(i.rowIndex);
     vitalTableIndex = i.rowIndex;
   }
+
   $(document).ready(function () {
 
     $('#addVitalBtn').on('click',function() {
+
+      var patientA = {!! json_encode($patient->toArray()) !!};
+
       $("#myVitalModal").modal("show");
+
       $('#DeleteVital').hide();
       $('#UpdateVital').hide();
       $('#AddVital').show();
       $('#VitalModalTitle').text('Add New Vital Details');
+
+      $("#vid").val("");
+      $("#vpid").val(patientA.id);
       $("#bps").val("");
       $("#bpd").val("");
       $("#bpunit").val(1);
@@ -1797,12 +1820,17 @@ The patient will have a post-op IOP check.
     });
 
     $('#vitalTable').on('click','td',function() {
+
+      var patientA = {!! json_encode($patient->toArray()) !!};
       var vitalsA = {!! json_encode($vitals->toArray()) !!};
 
       var sVital = vitalsA[vitalTableIndex-1];
+
       // alert(JSON.stringify(sVital));
       $("#myVitalModal").modal("show");
-      // alert("hb"+sVital.hb + " h" + sVital.hfeet);
+      $('#VitalModalTitle').text('Edit Vital Details');
+      $("#vid").val(sVital.id);
+      $("#vpid").val(patientA.id);
       $("#bps").val(sVital.bps);
       $("#bpd").val(sVital.bpd);
       $("#bpunit").val(sVital.bpunit);

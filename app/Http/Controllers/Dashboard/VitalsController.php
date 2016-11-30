@@ -8,9 +8,11 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 use App\Models\User;
-use App\Models\Patient;
+// use App\Models\Patient;
 use App\Models\Vital;
 
 use Auth;
@@ -20,14 +22,14 @@ class VitalsController extends Controller
 {
 
   public function updateVital() {
-    if ($_POST['action'] == 'Update') {
 
-      $id = Input::get('id');
-      // dd($vitalid);
-  		$vital = Vital::find($id);
+    if ($_POST['action'] == 'UpdateVital') {
 
-      // $vital->id = Input::get('vitalid');
-      // $vital->pid = Input::get('pid');
+      $vid = Input::get('vid');
+  		$vital = Vital::find($vid);
+
+      // $vital->id = Input::get('vid');
+      $vital->pid = Input::get('vpid');
       $vital->bps = Input::get('bps');
       $vital->bpd = Input::get('bpd');
       $vital->bpunit = Input::get('bpunit');
@@ -44,14 +46,15 @@ class VitalsController extends Controller
       $vital->wunit = Input::get('wunit');
       $vital->notes = Input::get('notes');
 
+      $vital->save();
 
-      // $vital->save();
+    } else if ($_POST['action'] == 'DeleteVital') {
 
-    } else if ($_POST['action'] == 'Delete') {
-      $id = Input::get('id');
+      $id = Input::get('vid');
       $vital = Vital::find($id);
       $vital->delete();
-    } else if ($_POST['action'] == 'Add') {
+
+    } else if ($_POST['action'] == 'AddVital') {
       // check if user is logged in, if not send back to Home
       if (!Auth::check()) {
         return Redirect::to('/');
@@ -70,7 +73,7 @@ class VitalsController extends Controller
       //     return Redirect::to('/new_clinic')->withInput();
       // }
 
-      $pid = Input::get('pid');
+      $pid = Input::get('vpid');
       $bps = Input::get('bps');
       $bpd = Input::get('bpd');
       $bpunit = Input::get('bpunit');
@@ -89,7 +92,7 @@ class VitalsController extends Controller
 
       try {
           // Create and insert clinic
-          Clinic::create([
+          Vital::create([
               'pid' => $pid,
               'bps' => $bps,
               'bpd' => $bpd,
@@ -113,12 +116,12 @@ class VitalsController extends Controller
           return Response::json($error_message, 401);
       }
     } //end switch
-    return response()->json(['test' => 'Vital::find(Input::get('id'))']);
 
-    // return Redirect::back();
+    // return response()->json(['test' => Vital::find(Input::get('vid'))]);
+
+    return Redirect::back();
 
     // Get user to pass to master template in view
-
 
     // // Probably not need
     // $data['user'] = Auth::User();
@@ -132,7 +135,6 @@ class VitalsController extends Controller
     // // return Redirect::back();//->with($data);
     //
     // $data['patient'] = Patient::where('id', '=', $id)->first();
-    //
     //
     // return view('Dashboard/patient_profile')->with($data);
   }
