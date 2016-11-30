@@ -85,7 +85,7 @@
                   <label for="bg" class="field prepend-icon">
                     {!! Form::text('bg', '', ['placeholder' => 'Enter Blood Glucose Value...', 'class' => 'gui-input', 'name' => 'bg', 'id' => 'bg']) !!}
                     <label for="bg" class="field-icon">
-                      <i class="fa fa-birthday-cake"></i>
+                      <i class="fa fa-tint"></i>
                     </label>
                   </label>
                 </div>
