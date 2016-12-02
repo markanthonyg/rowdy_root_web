@@ -1916,10 +1916,36 @@ user	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/Log
 #fundus_os_cd_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#fundus_os_cd_notes {$/;"	function	line:51
 #fundus_os_retina_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#fundus_os_retina_notes {$/;"	function	line:55
 #fundus_os_macula_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#fundus_os_macula_notes {$/;"	function	line:59
-VisitsController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^class VisitsController extends Controller$/;"	class	line:14
-addVisit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^    public function addVisit() {$/;"	function	line:17
-insertVisit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^    public function insertVisit() {$/;"	function	line:26
+<<<<<<< HEAD
 required	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^          required: function(element) {$/;"	jsfunction	line:1851
 highlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^      highlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:1944
 unhighlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^      unhighlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:1947
 errorPlacement	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^      errorPlacement: function(error, element) {$/;"	jsfunction	line:1950
+=======
+#sle_lens_od_ns_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#sle_lens_od_ns_notes {$/;"	function	line:63
+#sle_lens_od_psc_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#sle_lens_od_psc_notes {$/;"	function	line:67
+#sle_lens_od_cortical_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#sle_lens_od_cortical_notes {$/;"	function	line:71
+#sle_lens_os_ns_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#sle_lens_os_ns_notes {$/;"	function	line:75
+#sle_lens_os_cortical_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#sle_lens_os_cortical_notes {$/;"	function	line:79
+#sle_lens_os_psc_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#sle_lens_os_psc_notes {$/;"	function	line:83
+.admin-form .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .my-section-divider span {$/;"	function	line:87
+.admin-form .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .my-section-divider span {$/;"	function	line:95
+.admin-form .my-section-divider	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .my-section-divider {$/;"	function	line:105
+.admin-form .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .my-section-divider span {$/;"	function	line:113
+.admin-form.panel .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form.panel .my-section-divider span,$/;"	function	line:123
+.admin-form .panel .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .panel .my-section-divider span,$/;"	function	line:124
+.admin-form.tab-content .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form.tab-content .my-section-divider span,$/;"	function	line:125
+.admin-form .tab-content .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .tab-content .my-section-divider span {$/;"	function	line:126
+.admin-form.bg-light .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form.bg-light .my-section-divider span,$/;"	function	line:129
+.admin-form .bg-light .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .bg-light .my-section-divider span {$/;"	function	line:130
+.admin-form.bg-light.light .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form.bg-light.light .my-section-divider span,$/;"	function	line:133
+.admin-form .bg-light.light .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .bg-light.light .my-section-divider span {$/;"	function	line:134
+.admin-form.bg-light.dark .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form.bg-light.dark .my-section-divider span,$/;"	function	line:137
+.admin-form .bg-light.dark .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .bg-light.dark .my-section-divider span {$/;"	function	line:138
+.admin-form.well .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form.well .my-section-divider span,$/;"	function	line:141
+.admin-form .well .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .well .my-section-divider span {$/;"	function	line:142
+.admin-form.theme-primary .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form.theme-primary .my-section-divider span {$/;"	function	line:146
+>>>>>>> new_visit
+VisitsController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^class VisitsController extends Controller$/;"	class	line:15
+addVisit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^    public function addVisit() {$/;"	function	line:18
+insertVisit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^    public function insertVisit() {$/;"	function	line:31
