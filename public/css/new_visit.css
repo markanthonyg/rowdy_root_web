@@ -59,3 +59,90 @@
 #fundus_os_macula_notes {
   width: 100%;
 }
+
+#sle_lens_od_ns_notes {
+  width: 100%;
+}
+
+#sle_lens_od_psc_notes {
+  width: 100%;
+}
+
+#sle_lens_od_cortical_notes {
+  width: 100%;
+}
+
+#sle_lens_os_ns_notes {
+  width: 100%;
+}
+
+#sle_lens_os_cortical_notes {
+  width: 100%;
+}
+
+#sle_lens_os_psc_notes {
+  width: 100%;
+}
+
+.admin-form .my-section-divider span {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.admin-form .my-section-divider span {
+  display: inline-block;
+  position: relative;
+  padding: 0 17px;
+  background: #e9e9e9;
+  color: #999;
+  top: -11px;
+  font-size: 15px;
+}
+
+.admin-form .my-section-divider {
+  height: 0;
+  border-top: 1px solid #DDD;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.admin-form .my-section-divider span {
+  display: inline-block;
+  position: relative;
+  padding: 0 17px;
+  background: #e9e9e9;
+  color: #999;
+  top: -11px;
+  font-size: 15px;
+}
+
+.admin-form.panel .my-section-divider span,
+.admin-form .panel .my-section-divider span,
+.admin-form.tab-content .my-section-divider span,
+.admin-form .tab-content .my-section-divider span {
+  background: #fff;
+}
+.admin-form.bg-light .my-section-divider span,
+.admin-form .bg-light .my-section-divider span {
+  background: #FAFAFA;
+}
+.admin-form.bg-light.light .my-section-divider span,
+.admin-form .bg-light.light .my-section-divider span {
+  background: #FEFEFE;
+}
+.admin-form.bg-light.dark .my-section-divider span,
+.admin-form .bg-light.dark .my-section-divider span {
+  background: #F2F2F2;
+}
+.admin-form.well .my-section-divider span,
+.admin-form .well .my-section-divider span {
+  background: #f5f5f5;
+}
+
+.admin-form.theme-primary .my-section-divider span {
+  color: #3498db;
+}

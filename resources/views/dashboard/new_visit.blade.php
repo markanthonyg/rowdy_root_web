@@ -312,24 +312,27 @@
         <div class="col-md-12">
           <div class="panel heading-border">
             <div class="panel-body bg-light">
-              <div class="section-divider mt20 mb40">
-                <span> Slit Lamp </span>
+              <div class="my-section-divider mt20 mb40">
+                <span> Slit Lamp Exam </span>
               </div>
+
+              {{-- Pupils --}}
               <div class="row">
-                <div class="section-divider mt20 mb40">
-                  <span> Pupils </span>
-                </div>
                 <div class="row">
                   <div class="col-md-4">
-                    <div class="section-divider mt20 mb40">
-                      <span> Left </span>
+                    <div class="my-section-divider">
+                      <span> Left Pupil </span>
                     </div>
-                    <div class="row text-center">
-                      {!! Form::checkbox('sle_pupil_left_normal', 'true') !!} Normal
+                    <div class="row">
+                      <div class="col-md-5 text-left">
+                        Normal
+                      </div>
+                      {!! Form::checkbox('sle_pupil_left_normal', 'true') !!}
                     </div>
                     <br />
+                    <br />
                     <div class="row">
-                      <div class="col-md-5 text-center">
+                      <div class="col-md-5 text-left">
                         Shape
                       </div>
                       <div class="col-md-7">
@@ -341,15 +344,637 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="section-divider mt20 mb40">
-                      <span> Right </span>
+                    <br />
+                    <div class="row">
+                      <div class="col-md-5 text-left">
+                        Diameter
+                      </div>
+                      <div class="col-md-7">
+                        {{ Form::select('sle_pupil_left_diameter', [
+                          '1' => '1',
+                          '2' => '2',
+                          '3' => '3',
+                          '4' => '4',
+                          '5' => '5',
+                          '6' => '6',
+                          '7' => '7',
+                          '8' => '8',
+                          '9' => '9'])
+                        }}
+                         mm
+                      </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      <div class="col-md-5 text-left">
+                        RAPD
+                      </div>
+                      <div class="col-md-7">
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_left_rapd', 'true') !!} Yes &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_left_rapd', 'false') !!} No &nbsp; &nbsp; &nbsp;
+                        </div>
+                      </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      <div class="col-md-5 text-left">
+                        Synechia
+                      </div>
+                      <div class="col-md-7">
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_left_synechia', 'true') !!} Yes &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_left_synechia', 'false') !!} No &nbsp; &nbsp; &nbsp;
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="col-md-4">
-                    <div class="section-divider mt20 mb40">
-                      <span> Both </span>
+                    <div class="my-section-divider">
+                      <span> Right Pupil </span>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-5 text-left">
+                        Normal
+                      </div>
+                      {!! Form::checkbox('sle_pupil_right_normal', 'true') !!}
+                    </div>
+                    <br />
+                    <br />
+                    <div class="row">
+                      <div class="col-md-5 text-left">
+                        Shape
+                      </div>
+                      <div class="col-md-7">
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_right_shape', 'round') !!} Round &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_right_shape', 'irregular') !!} Irregular &nbsp; &nbsp; &nbsp;
+                        </div>
+                      </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      <div class="col-md-5 text-left">
+                        Diameter
+                      </div>
+                      <div class="col-md-7">
+                        {{ Form::select('sle_pupil_right_diameter', [
+                          '1' => '1',
+                          '2' => '2',
+                          '3' => '3',
+                          '4' => '4',
+                          '5' => '5',
+                          '6' => '6',
+                          '7' => '7',
+                          '8' => '8',
+                          '9' => '9'])
+                        }}
+                         mm
+                      </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      <div class="col-md-5 text-left">
+                        RAPD
+                      </div>
+                      <div class="col-md-7">
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_right_rapd', 'true') !!} Yes &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_right_rapd', 'false') !!} No &nbsp; &nbsp; &nbsp;
+                        </div>
+                      </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      <div class="col-md-5 text-left">
+                        Synechia
+                      </div>
+                      <div class="col-md-7">
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_right_synechia', 'true') !!} Yes &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_right_synechia', 'false') !!} No &nbsp; &nbsp; &nbsp;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="my-section-divider">
+                      <span> Both Pupils </span>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-5 text-left">
+                        Normal
+                      </div>
+                      {!! Form::checkbox('sle_pupil_both_normal', 'true') !!}
+                    </div>
+                    <br />
+                    <br />
+                    <div class="row">
+                      <div class="col-md-5 text-left">
+                        Shape
+                      </div>
+                      <div class="col-md-7">
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_both_shape', 'round') !!} Round &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_both_shape', 'irregular') !!} Irregular &nbsp; &nbsp; &nbsp;
+                        </div>
+                      </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      <div class="col-md-5 text-left">
+                        Diameter
+                      </div>
+                      <div class="col-md-7">
+                        {{ Form::select('sle_pupil_both_diameter', [
+                          '1' => '1',
+                          '2' => '2',
+                          '3' => '3',
+                          '4' => '4',
+                          '5' => '5',
+                          '6' => '6',
+                          '7' => '7',
+                          '8' => '8',
+                          '9' => '9'])
+                        }}
+                         mm
+                      </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      <div class="col-md-5 text-left">
+                        RAPD
+                      </div>
+                      <div class="col-md-7">
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_both_rapd', 'true') !!} Yes &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_both_rapd', 'false') !!} No &nbsp; &nbsp; &nbsp;
+                        </div>
+                      </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      <div class="col-md-5 text-left">
+                        Synechia
+                      </div>
+                      <div class="col-md-7">
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_both_synechia', 'true') !!} Yes &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <div class="row">
+                          {!! Form::radio('sle_pupil_both_synechia', 'false') !!} No &nbsp; &nbsp; &nbsp;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <br />
+              <br />
+
+              {{-- Anterior Chamber --}}
+              <div class="row">
+                <div class="my-section-divider">
+                  <span> Anterior Chamber </span>
+                </div>
+                <div class="col-md-6">
+                  <div class="my-section-divider">
+                    <span> OD </span>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-2 text-left">
+                      Normal
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                      {!! Form::checkbox('sle_anterior_chamber_od_normal', 'true') !!}
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-2 text-left">
+                      Depth
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_depth', '1') !!} +1
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_depth', '2') !!} +2
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_depth', '3') !!} +3
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_depth', '4') !!} +4
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-2 text-left">
+                      Angle
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_angle', 'open') !!} Open
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_angle', 'closed') !!} Closed
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-2 text-left">
+                      PAS
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_pas', 'present') !!} Present
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_pas', 'absent') !!} Absent
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-2 text-left">
+                      KP
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_kp', '1') !!} +1
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_kp', '2') !!} +2
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_kp', '3') !!} +3
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_kp', '4') !!} +4
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-2 text-left">
+                      Other
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                      <div class="row">
+                        {!! Form::checkbox('sle_anterior_chamber_od_shunt', 'true') !!} Shunt
+                      </div>
+                      <div class="row">
+                        {!! Form::checkbox('sle_anterior_chamber_od_scarring', 'true') !!} Scarring
+                      </div>
+                      <div class="row">
+                        {!! Form::checkbox('sle_anterior_chamber_od_trauma', 'true') !!} Trauma
+                      </div>
+                      <div class="row">
+                        {!! Form::checkbox('sle_anterior_chamber_od_bleb', 'true') !!} Bleb
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-2 text-left">
+                      Bleb
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_bleb_type', 'vascular') !!} Vascular &nbsp;
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_bleb_type', 'avascular') !!} Avascular
+                      </div>
+                      <br />
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_bleb_level', '1') !!} +1
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_bleb_level', '2') !!} +2
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_bleb_level', '3') !!} +3
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_bleb_level', '4') !!} +4
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-2 text-left">
+                      K Spindle
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_bleb_k_spindle', 'true') !!} Yes
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_od_bleb_k_spindle', 'false') !!} No
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="my-section-divider">
+                    <span> OS </span>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-2 text-left">
+                      Normal
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                      {!! Form::checkbox('sle_anterior_chamber_os_normal', 'true') !!}
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-2 text-left">
+                      Depth
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_depth', '1') !!} +1
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_depth', '2') !!} +2
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_depth', '3') !!} +3
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_depth', '4') !!} +4
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-2 text-left">
+                      Angle
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_angle', 'open') !!} Open
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_angle', 'closed') !!} Closed
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-2 text-left">
+                      PAS
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_pas', 'present') !!} Present
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_pas', 'absent') !!} Absent
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-2 text-left">
+                      KP
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_kp', '1') !!} +1
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_kp', '2') !!} +2
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_kp', '3') !!} +3
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_kp', '4') !!} +4
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-2 text-left">
+                      Other
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                      <div class="row">
+                        {!! Form::checkbox('sle_anterior_chamber_os_shunt', 'true') !!} Shunt
+                      </div>
+                      <div class="row">
+                        {!! Form::checkbox('sle_anterior_chamber_os_scarring', 'true') !!} Scarring
+                      </div>
+                      <div class="row">
+                        {!! Form::checkbox('sle_anterior_chamber_os_trauma', 'true') !!} Trauma
+                      </div>
+                      <div class="row">
+                        {!! Form::checkbox('sle_anterior_chamber_os_bleb', 'true') !!} Bleb
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-2 text-left">
+                      Bleb
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_bleb_type', 'vascular') !!} Vascular &nbsp;
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_bleb_type', 'avascular') !!} Avascular
+                      </div>
+                      <br />
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_bleb_level', '1') !!} +1
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_bleb_level', '2') !!} +2
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_bleb_level', '3') !!} +3
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_bleb_level', '4') !!} +4
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-md-4 col-md-offset-2 text-left">
+                      K Spindle
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_bleb_k_spindle', 'true') !!} Yes
+                      </div>
+                      <div class="row">
+                        {!! Form::radio('sle_anterior_chamber_os_bleb_k_spindle', 'false') !!} No
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <br />
+              <br />
+
+              {{-- Lens --}}
+              <div class="row">
+                <div class="my-section-divider">
+                  <span> Lens </span>
+                </div>
+                <div class="col-md-6">
+                  <div class="my-section-divider">
+                    <span> OD </span>
+                  </div>
+                  <div class="row text-center">
+                    {!! Form::checkbox('sle_lens_od_stable', 'true') !!} Stable &nbsp;
+                    {!! Form::checkbox('sle_lens_od_pseudohakia', 'true') !!} Pseudohakia &nbsp;
+                    {!! Form::checkbox('sle_lens_od_pco', 'true') !!} PCO
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-md-2">
+                      NS
+                    </div>
+                    <div class="col-md-3">
+                      {{ Form::select('sle_lens_od_ns_type', [
+                        'clear' => 'Clear',
+                        'trace' => 'Trace',
+                        '1' => '+1',
+                        '2' => '+2',
+                        '3' => '+3',
+                        '4' => '+4',
+                        'brunescent' => 'Brunescent'])
+                      }}
+                    </div>
+                    <div class="col-md-7">
+                      {!! Form::text('sle_lens_od_ns_notes', '', ['id' => 'sle_lens_od_ns_notes']) !!}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2">
+                      Cortical
+                    </div>
+                    <div class="col-md-3">
+                      {{ Form::select('sle_lens_od_cortical_type', [
+                        'clear' => 'Clear',
+                        'trace' => 'Trace',
+                        '1' => '+1',
+                        '2' => '+2',
+                        '3' => '+3',
+                        '4' => '+4'])
+                      }}
+                    </div>
+                    <div class="col-md-7">
+                      {!! Form::text('sle_lens_od_cortical_notes', '', ['id' => 'sle_lens_od_cortical_notes']) !!}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2">
+                      PSC
+                    </div>
+                    <div class="col-md-3">
+                      {{ Form::select('sle_lens_od_psc_type', [
+                        'clear' => 'Clear',
+                        'trace' => 'Trace',
+                        '1' => '+1',
+                        '2' => '+2',
+                        '3' => '+3',
+                        '4' => '+4'])
+                      }}
+                    </div>
+                    <div class="col-md-7">
+                      {!! Form::text('sle_lens_od_psc_notes', '', ['id' => 'sle_lens_od_psc_notes']) !!}
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="my-section-divider">
+                    <span> OS </span>
+                  </div>
+                  <div class="row text-center">
+                    {!! Form::checkbox('sle_lens_os_stable', 'true') !!} Stable &nbsp;
+                    {!! Form::checkbox('sle_lens_os_pseudohakia', 'true') !!} Pseudohakia &nbsp;
+                    {!! Form::checkbox('sle_lens_os_pco', 'true') !!} PCO
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-md-2">
+                      NS
+                    </div>
+                    <div class="col-md-3">
+                      {{ Form::select('sle_lens_os_ns_type', [
+                        'clear' => 'Clear',
+                        'trace' => 'Trace',
+                        '1' => '+1',
+                        '2' => '+2',
+                        '3' => '+3',
+                        '4' => '+4',
+                        'brunescent' => 'Brunescent'])
+                      }}
+                    </div>
+                    <div class="col-md-7">
+                      {!! Form::text('sle_lens_os_ns_notes', '', ['id' => 'sle_lens_os_ns_notes']) !!}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2">
+                      Cortical
+                    </div>
+                    <div class="col-md-3">
+                      {{ Form::select('sle_lens_os_cortical_type', [
+                        'clear' => 'Clear',
+                        'trace' => 'Trace',
+                        '1' => '+1',
+                        '2' => '+2',
+                        '3' => '+3',
+                        '4' => '+4'])
+                      }}
+                    </div>
+                    <div class="col-md-7">
+                      {!! Form::text('sle_lens_os_cortical_notes', '', ['id' => 'sle_lens_os_cortical_notes']) !!}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-2">
+                      PSC
+                    </div>
+                    <div class="col-md-3">
+                      {{ Form::select('sle_lens_os_psc_type', [
+                        'clear' => 'Clear',
+                        'trace' => 'Trace',
+                        '1' => '+1',
+                        '2' => '+2',
+                        '3' => '+3',
+                        '4' => '+4'])
+                      }}
+                    </div>
+                    <div class="col-md-7">
+                      {!! Form::text('sle_lens_os_psc_notes', '', ['id' => 'sle_lens_os_psc_notes']) !!}
                     </div>
                   </div>
                 </div>
@@ -462,7 +1087,20 @@
                         </div>
                       </div>
                       <div class="col-md-3 text-center">
-                        0.0 to 1.0
+                        {{ Form::select('fundus_od_cd_noncompressed', [
+                          '0' => '0',
+                          '5' => '5',
+                          '10' => '10',
+                          '15' => '15',
+                          '20' => '20',
+                          '25' => '25',
+                          '30' => '30',
+                          '35' => '35',
+                          '40' => '40',
+                          '45' => '45',
+                          '50' => '50'])
+                        }}
+                        &deg;
                       </div>
                       <div class="col-md-2 text-right">
                         <div class="row">
@@ -497,7 +1135,20 @@
                         </div>
                       </div>
                       <div class="col-md-3 text-center">
-                        0.0 to 1.0
+                        {{ Form::select('fundus_od_cd_compressed', [
+                          '0' => '0',
+                          '5' => '5',
+                          '10' => '10',
+                          '15' => '15',
+                          '20' => '20',
+                          '25' => '25',
+                          '30' => '30',
+                          '35' => '35',
+                          '40' => '40',
+                          '45' => '45',
+                          '50' => '50'])
+                        }}
+                        &deg;
                       </div>
                       <div class="col-md-2 text-right">
                         <div class="row">
@@ -566,7 +1217,20 @@
                         </div>
                       </div>
                       <div class="col-md-3 text-center">
-                        0.0 to 1.0
+                        {{ Form::select('fundus_os_cd_noncompressed', [
+                          '0' => '0',
+                          '5' => '5',
+                          '10' => '10',
+                          '15' => '15',
+                          '20' => '20',
+                          '25' => '25',
+                          '30' => '30',
+                          '35' => '35',
+                          '40' => '40',
+                          '45' => '45',
+                          '50' => '50'])
+                        }}
+                        &deg;
                       </div>
                       <div class="col-md-2 text-right">
                         <div class="row">
@@ -601,7 +1265,20 @@
                         </div>
                       </div>
                       <div class="col-md-3 text-center">
-                        0.0 to 1.0
+                        {{ Form::select('fundus_os_cd_compressed', [
+                          '0' => '0',
+                          '5' => '5',
+                          '10' => '10',
+                          '15' => '15',
+                          '20' => '20',
+                          '25' => '25',
+                          '30' => '30',
+                          '35' => '35',
+                          '40' => '40',
+                          '45' => '45',
+                          '50' => '50'])
+                        }}
+                        &deg;
                       </div>
                       <div class="col-md-2 text-right">
                         <div class="row">
@@ -753,7 +1430,6 @@
                       {!! Form::text('fundus_os_macula_notes', '', ['id' => 'fundus_os_macula_notes']) !!}
                     </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>
