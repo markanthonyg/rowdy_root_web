@@ -362,28 +362,39 @@
                       <div class="section-divider mt10 mb10">
                         <span>Height</span>
                       </div>
-                      <div class="col-md-4">
+                      <div class="col-md-3">
                         <label for="hfeet" class="field prepend-icon">
                           {!! Form::text('hfeet', '', ['placeholder' => 'Height, feet...', 'class' => 'gui-input', 'name'=>'hfeet', 'id' => 'hfeet']) !!}
                           <label for="hfeet" class="field-icon">
-                            <i class="fa fa-user"></i>
+                            <i class="fa fa-user" id="hfi"></i>
                           </label>
                         </label>
                       </div>
-                      <div class="col-md-4">
+                      <div class="col-md-3">
                         <label for="hinches" class="field prepend-icon">
                           {!! Form::text('hinches', '', ['placeholder' => 'Height, inches...', 'class' => 'gui-input','name' => 'hinches', 'id' => 'hinches']) !!}
                           <label for="hinches" class="field-icon">
-                            <i class="fa fa-user"></i>
+                            <i class="fa fa-user" id="hii"></i>
                           </label>
                         </label>
                       </div>
-                      <div class="col-md-4">
+                      <div class="col-md-3">
                         <label for="hcm" class="field prepend-icon">
                           {!! Form::text('hcm', '', ['placeholder' => 'Height, cm...', 'class' => 'gui-input', 'name'=>'hcm', 'id' => 'hcm']) !!}
                           <label for="hcm" class="field-icon">
-                            <i class="fa fa-user"></i>
+                            <i class="fa fa-user" id="hci"></i>
                           </label>
+                        </label>
+                      </div>
+                      <div class="col-md-2">
+                        <label class="field select">
+                          {{ Form::select('hunit', array(
+                              'ft/in' => 'ft/in',
+                              'cm' => 'cm'),
+                              '',
+                              ['id' => 'hunit']
+                          ) }}
+                          <i class="arrow double"></i>
                         </label>
                       </div>
                     </div>
@@ -399,7 +410,7 @@
                           </label>
                         </label>
                       </div>
-                      <div class="col-md-3"> <!--  -->
+                      <div class="col-md-3">
                         <label class="field select">
                           {{ Form::select('wunit', array(
                               'lbs' => 'lbs',
@@ -625,7 +636,13 @@ cataract removal</textarea>
                           <td>{{ $vital->bg }} {{ $vital->bgUnit }}</td>
                           <td>{{ $vital->o2sat }}%</td>
                           <td>{{ $vital->hb}} mg/dL</td>
-                          <td>{{ $vital->hfeet}}'{{ $vital->hinches}}" | {{ $vital->hcm }}cm</td>
+                          <td>
+                            @if ($vital->hunit == 'ft/in')
+                              {{ $vital->hfeet}}'{{ $vital->hinches}}"
+                            @else
+                              {{ $vital->hcm }} cm
+                            @endif
+                          </td>
                           <td>{{ $vital->weight}} {{ $vital-> wunit}}</td>
                           <td>{{ $vital->notes}}</td>
                         </tr>
@@ -1789,16 +1806,53 @@ The patient will have a post-op IOP check.
 
   $(document).ready(function () {
 
+    $('#hunit').change(function() {
+
+      // $('#hcm').val('');
+      // $('#hfeet').val('');
+      // $('#hinches').val('');
+
+      if ($( this ).val() == 'ft/in') {
+        $('#hcm').hide();
+        $('#hfeet').show();
+        $('#hinches').show();
+        $('#hfi').show();
+        $('#hii').show();
+        $('#hci').hide();
+
+      } else if ($( this ).val() == 'cm') {
+        $('#hcm').show();
+        $('#hfeet').hide();
+        $('#hinches').hide();
+        $('#hci').show();
+        $('#hfi').hide();
+        $('#hii').hide();
+      }
+    });
+
+    // $('#hunit').on('change',function(){
+    //     alert("it equals " + this.options[this.selectedIndex].innerHTML);
+    //     // if ($('#hunit').value == 'ft/in') {
+    //     //   $('#hcm').hide();
+    //     //   $('#hfeet').show();
+    //     //   $('#hinches').show();
+    //     // } else {
+    //     //   $('#hcm').show();
+    //     //   $('#hfeet').hide();
+    //     //   $('#hinches').hide();
+    //     // }
+    //   )};
+
     $('#addVitalBtn').on('click',function() {
 
       var patientA = {!! json_encode($patient->toArray()) !!};
 
       $("#myVitalModal").modal("show");
+      $('#VitalModalTitle').text('Add New Vital Details');
 
       $('#DeleteVital').hide();
       $('#UpdateVital').hide();
       $('#AddVital').show();
-      $('#VitalModalTitle').text('Add New Vital Details');
 
       $("#vid").val("");
       $("#vpid").val(patientA.id);
@@ -1813,7 +1867,15 @@ The patient will have a post-op IOP check.
       $("#hfeet").val("");
       $("#hinches").val("");
       $("#hcm").val("");
-      $("#hunit").val("");
+
+      $("#hunit").val("ft/in");
+      $('#hcm').hide();
+      $('#hfeet').show();
+      $('#hinches').show();
+      $('#hfi').show();
+      $('#hii').show();
+      $('#hci').hide();
+
       $("#weight").val("");
       $("#wunit").val("lbs");
       $("#notes").val("");
@@ -1829,6 +1891,29 @@ The patient will have a post-op IOP check.
       // alert(JSON.stringify(sVital));
       $("#myVitalModal").modal("show");
       $('#VitalModalTitle').text('Edit Vital Details');
+
+      $('#DeleteVital').show();
+      $('#UpdateVital').show();
+      $('#AddVital').hide();
+
+      if ( sVital.hunit == 'ft/in') {
+        $('#hcm').hide();
+        $('#hfeet').show();
+        $('#hinches').show();
+        $('#hfi').show();
+        $('#hii').show();
+        $('#hci').hide();
+        $("#hunit").val('ft/in');
+      } else {
+        $('#hcm').show();
+        $('#hfeet').hide();
+        $('#hinches').hide();
+        $('#hci').show();
+        $('#hfi').hide();
+        $('#hii').hide();
+        $("#hunit").val('cm');
+      }
+
       $("#vid").val(sVital.id);
       $("#vpid").val(patientA.id);
       $("#bps").val(sVital.bps);
@@ -1842,7 +1927,6 @@ The patient will have a post-op IOP check.
       $("#hfeet").val(sVital.hfeet);
       $("#hinches").val(sVital.hinches);
       $("#hcm").val(sVital.hcm);
-      $("#hunit").val(sVital.hunit);
       $("#weight").val(sVital.weight);
       $("#wunit").val(sVital.wunit);
       $("#notes").val(sVital.notes);

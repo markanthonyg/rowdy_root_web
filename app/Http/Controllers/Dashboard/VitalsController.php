@@ -23,6 +23,8 @@ class VitalsController extends Controller
 
   public function updateVital() {
 
+    // if (Input::get('hunit'))
+
     if ($_POST['action'] == 'UpdateVital') {
 
       $vid = Input::get('vid');
