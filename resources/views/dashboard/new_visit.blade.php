@@ -1443,9 +1443,9 @@
           <div class="panel heading-border">
             <div class="panel-body bg-light">
               <div class="section-divider mt20 mb40">
-                <span> Assesment </span>
+                <span> Assessment </span>
               </div>
-              {!! Form::textarea('assesment', '', ['id' => 'assesment']) !!}
+              {!! Form::textarea('assessment', '', ['id' => 'assessment']) !!}
             </div>
           </div>
         </div>
