@@ -47,7 +47,7 @@
                 <span> Patient </span>
               </div>
               <div class="row">
-                {!! Form::select('patient', $patients, $patient->id, ['id' => 'patient_list', 'class' => 'form-control', 'readonly' => 'true', 'value' => $patient->id]) !!}
+                {!! Form::select('patient', [$patient->id => $patient->id . ' || ' . $patient->last_name . ', ' . $patient->first_name . ' ' . $patient->middle], $patient->id, ['id' => 'patient_list', 'class' => 'form-control', 'readonly' => 'true', 'value' => $patient->id]) !!}
               </div>
             </div>
           </div>
