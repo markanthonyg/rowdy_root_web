@@ -63,3 +63,7 @@ Route::post('/accountList', 'Dashboard\AccountController@updateAccount');
 // Visit Routes
 Route::get('/new_visit', 'Dashboard\VisitsController@addVisit');
 Route::post('/new_visit', 'Dashboard\VisitsController@insertVisit');
+
+// api
+Route::get('patientsapi', 'API\APIController@allPatients');
+Route::get('usersapi', 'API\APIController@allUsers');

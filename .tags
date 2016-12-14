@@ -2107,3 +2107,6 @@ firstname	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Aut
 lastname	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $lastname = Input::get('lastname');$/;"	variable	line:92
 clinic	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $clinic = Input::get('clinic');$/;"	variable	line:93
 role	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $role = Input::get('role');$/;"	variable	line:94
+APIController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/API/APIController.php	/^class APIController extends Controller$/;"	class	line:13
+allPatients	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/API/APIController.php	/^    public function allPatients(){$/;"	function	line:16
+allUsers	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/API/APIController.php	/^    public function allUsers(){$/;"	function	line:21
