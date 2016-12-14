@@ -47,10 +47,10 @@
                 <span> Patient </span>
               </div>
               <div class="row">
-                {!! Form::select('patient', ['1' => 'jacob'], null, ['placeholder' => '---  Select Patient  ---', 'class' => 'form-control']) !!}
+                {!! Form::select('patient', $patients, null, ['id' => 'patient_list', 'placeholder' => '---  Select Patient  ---', 'class' => 'form-control']) !!}
               </div>
               <div class="row">
-                <input type="checkbox" name="new_patient"> New Patient
+                {!! Form::checkbox('new_patient', '1', null, ['id' => 'new_patient']) !!} New Patient
               </div>
             </div>
           </div>
@@ -61,6 +61,12 @@
               <div class="section-divider mt20 mb40">
                 <span> Patient Information </span>
               </div>
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  {!! Form::checkbox('patient_anon', '1', null, ['id' => 'patient_anon']) !!} Anonymous
+                </div>
+              </div>
+              <br />
               <div class="row">
                 <div class="col-md-2 vcenter">
                   First Name
@@ -327,7 +333,7 @@
                       <div class="col-md-5 text-left">
                         Normal
                       </div>
-                      {!! Form::checkbox('sle_pupil_left_normal', 'true') !!}
+                      {!! Form::checkbox('sle_pupil_left_normal', '1') !!}
                     </div>
                     <br />
                     <br />
@@ -371,10 +377,10 @@
                       </div>
                       <div class="col-md-7">
                         <div class="row">
-                          {!! Form::radio('sle_pupil_left_rapd', 'true') !!} Yes &nbsp; &nbsp; &nbsp;
+                          {!! Form::radio('sle_pupil_left_rapd', '1') !!} Yes &nbsp; &nbsp; &nbsp;
                         </div>
                         <div class="row">
-                          {!! Form::radio('sle_pupil_left_rapd', 'false') !!} No &nbsp; &nbsp; &nbsp;
+                          {!! Form::radio('sle_pupil_left_rapd', '0') !!} No &nbsp; &nbsp; &nbsp;
                         </div>
                       </div>
                     </div>
@@ -385,10 +391,10 @@
                       </div>
                       <div class="col-md-7">
                         <div class="row">
-                          {!! Form::radio('sle_pupil_left_synechia', 'true') !!} Yes &nbsp; &nbsp; &nbsp;
+                          {!! Form::radio('sle_pupil_left_synechia', '1') !!} Yes &nbsp; &nbsp; &nbsp;
                         </div>
                         <div class="row">
-                          {!! Form::radio('sle_pupil_left_synechia', 'false') !!} No &nbsp; &nbsp; &nbsp;
+                          {!! Form::radio('sle_pupil_left_synechia', '0') !!} No &nbsp; &nbsp; &nbsp;
                         </div>
                       </div>
                     </div>
@@ -401,7 +407,7 @@
                       <div class="col-md-5 text-left">
                         Normal
                       </div>
-                      {!! Form::checkbox('sle_pupil_right_normal', 'true') !!}
+                      {!! Form::checkbox('sle_pupil_right_normal', '1') !!}
                     </div>
                     <br />
                     <br />
@@ -445,10 +451,10 @@
                       </div>
                       <div class="col-md-7">
                         <div class="row">
-                          {!! Form::radio('sle_pupil_right_rapd', 'true') !!} Yes &nbsp; &nbsp; &nbsp;
+                          {!! Form::radio('sle_pupil_right_rapd', '1') !!} Yes &nbsp; &nbsp; &nbsp;
                         </div>
                         <div class="row">
-                          {!! Form::radio('sle_pupil_right_rapd', 'false') !!} No &nbsp; &nbsp; &nbsp;
+                          {!! Form::radio('sle_pupil_right_rapd', '0') !!} No &nbsp; &nbsp; &nbsp;
                         </div>
                       </div>
                     </div>
@@ -459,10 +465,10 @@
                       </div>
                       <div class="col-md-7">
                         <div class="row">
-                          {!! Form::radio('sle_pupil_right_synechia', 'true') !!} Yes &nbsp; &nbsp; &nbsp;
+                          {!! Form::radio('sle_pupil_right_synechia', '1') !!} Yes &nbsp; &nbsp; &nbsp;
                         </div>
                         <div class="row">
-                          {!! Form::radio('sle_pupil_right_synechia', 'false') !!} No &nbsp; &nbsp; &nbsp;
+                          {!! Form::radio('sle_pupil_right_synechia', '0') !!} No &nbsp; &nbsp; &nbsp;
                         </div>
                       </div>
                     </div>
@@ -475,7 +481,7 @@
                       <div class="col-md-5 text-left">
                         Normal
                       </div>
-                      {!! Form::checkbox('sle_pupil_both_normal', 'true') !!}
+                      {!! Form::checkbox('sle_pupil_both_normal', '1') !!}
                     </div>
                     <br />
                     <br />
@@ -519,10 +525,10 @@
                       </div>
                       <div class="col-md-7">
                         <div class="row">
-                          {!! Form::radio('sle_pupil_both_rapd', 'true') !!} Yes &nbsp; &nbsp; &nbsp;
+                          {!! Form::radio('sle_pupil_both_rapd', '1') !!} Yes &nbsp; &nbsp; &nbsp;
                         </div>
                         <div class="row">
-                          {!! Form::radio('sle_pupil_both_rapd', 'false') !!} No &nbsp; &nbsp; &nbsp;
+                          {!! Form::radio('sle_pupil_both_rapd', '0') !!} No &nbsp; &nbsp; &nbsp;
                         </div>
                       </div>
                     </div>
@@ -533,10 +539,10 @@
                       </div>
                       <div class="col-md-7">
                         <div class="row">
-                          {!! Form::radio('sle_pupil_both_synechia', 'true') !!} Yes &nbsp; &nbsp; &nbsp;
+                          {!! Form::radio('sle_pupil_both_synechia', '1') !!} Yes &nbsp; &nbsp; &nbsp;
                         </div>
                         <div class="row">
-                          {!! Form::radio('sle_pupil_both_synechia', 'false') !!} No &nbsp; &nbsp; &nbsp;
+                          {!! Form::radio('sle_pupil_both_synechia', '0') !!} No &nbsp; &nbsp; &nbsp;
                         </div>
                       </div>
                     </div>
@@ -561,7 +567,7 @@
                       Normal
                     </div>
                     <div class="col-md-4 col-md-offset-2">
-                      {!! Form::checkbox('sle_anterior_chamber_od_normal', 'true') !!}
+                      {!! Form::checkbox('sle_anterior_chamber_od_normal', '1') !!}
                     </div>
                   </div>
                   <br />
@@ -639,16 +645,16 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::checkbox('sle_anterior_chamber_od_shunt', 'true') !!} Shunt
+                        {!! Form::checkbox('sle_anterior_chamber_od_shunt', '1') !!} Shunt
                       </div>
                       <div class="row">
-                        {!! Form::checkbox('sle_anterior_chamber_od_scarring', 'true') !!} Scarring
+                        {!! Form::checkbox('sle_anterior_chamber_od_scarring', '1') !!} Scarring
                       </div>
                       <div class="row">
-                        {!! Form::checkbox('sle_anterior_chamber_od_trauma', 'true') !!} Trauma
+                        {!! Form::checkbox('sle_anterior_chamber_od_trauma', '1') !!} Trauma
                       </div>
                       <div class="row">
-                        {!! Form::checkbox('sle_anterior_chamber_od_bleb', 'true') !!} Bleb
+                        {!! Form::checkbox('sle_anterior_chamber_od_bleb', '1') !!} Bleb
                       </div>
                     </div>
                   </div>
@@ -686,10 +692,10 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_bleb_k_spindle', 'true') !!} Yes
+                        {!! Form::radio('sle_anterior_chamber_od_bleb_k_spindle', '1') !!} Yes
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_bleb_k_spindle', 'false') !!} No
+                        {!! Form::radio('sle_anterior_chamber_od_bleb_k_spindle', '0') !!} No
                       </div>
                     </div>
                   </div>
@@ -703,7 +709,7 @@
                       Normal
                     </div>
                     <div class="col-md-4 col-md-offset-2">
-                      {!! Form::checkbox('sle_anterior_chamber_os_normal', 'true') !!}
+                      {!! Form::checkbox('sle_anterior_chamber_os_normal', '1') !!}
                     </div>
                   </div>
                   <br />
@@ -781,16 +787,16 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::checkbox('sle_anterior_chamber_os_shunt', 'true') !!} Shunt
+                        {!! Form::checkbox('sle_anterior_chamber_os_shunt', '1') !!} Shunt
                       </div>
                       <div class="row">
-                        {!! Form::checkbox('sle_anterior_chamber_os_scarring', 'true') !!} Scarring
+                        {!! Form::checkbox('sle_anterior_chamber_os_scarring', '1') !!} Scarring
                       </div>
                       <div class="row">
-                        {!! Form::checkbox('sle_anterior_chamber_os_trauma', 'true') !!} Trauma
+                        {!! Form::checkbox('sle_anterior_chamber_os_trauma', '1') !!} Trauma
                       </div>
                       <div class="row">
-                        {!! Form::checkbox('sle_anterior_chamber_os_bleb', 'true') !!} Bleb
+                        {!! Form::checkbox('sle_anterior_chamber_os_bleb', '1') !!} Bleb
                       </div>
                     </div>
                   </div>
@@ -828,10 +834,10 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_bleb_k_spindle', 'true') !!} Yes
+                        {!! Form::radio('sle_anterior_chamber_os_bleb_k_spindle', '1') !!} Yes
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_bleb_k_spindle', 'false') !!} No
+                        {!! Form::radio('sle_anterior_chamber_os_bleb_k_spindle', '0') !!} No
                       </div>
                     </div>
                   </div>
@@ -851,9 +857,9 @@
                     <span> OD </span>
                   </div>
                   <div class="row text-center">
-                    {!! Form::checkbox('sle_lens_od_stable', 'true') !!} Stable &nbsp;
-                    {!! Form::checkbox('sle_lens_od_pseudohakia', 'true') !!} Pseudohakia &nbsp;
-                    {!! Form::checkbox('sle_lens_od_pco', 'true') !!} PCO
+                    {!! Form::checkbox('sle_lens_od_stable', '1') !!} Stable &nbsp;
+                    {!! Form::checkbox('sle_lens_od_pseudohakia', '1') !!} Pseudohakia &nbsp;
+                    {!! Form::checkbox('sle_lens_od_pco', '1') !!} PCO
                   </div>
                   <br />
                   <div class="row">
@@ -917,9 +923,9 @@
                     <span> OS </span>
                   </div>
                   <div class="row text-center">
-                    {!! Form::checkbox('sle_lens_os_stable', 'true') !!} Stable &nbsp;
-                    {!! Form::checkbox('sle_lens_os_pseudohakia', 'true') !!} Pseudohakia &nbsp;
-                    {!! Form::checkbox('sle_lens_os_pco', 'true') !!} PCO
+                    {!! Form::checkbox('sle_lens_os_stable', '1') !!} Stable &nbsp;
+                    {!! Form::checkbox('sle_lens_os_pseudohakia', '1') !!} Pseudohakia &nbsp;
+                    {!! Form::checkbox('sle_lens_os_pco', '1') !!} PCO
                   </div>
                   <br />
                   <div class="row">
@@ -1046,8 +1052,8 @@
                   History of frontal headaches?
                 </div>
                 <div class="col-md-2 text-center">
-                  {!! Form::radio('hx_front_headache', 'true') !!} Yes &nbsp; &nbsp; &nbsp;
-                  {!! Form::radio('hx_front_headache', 'false') !!} No &nbsp; &nbsp; &nbsp;
+                  {!! Form::radio('hx_front_headache', '1') !!} Yes &nbsp; &nbsp; &nbsp;
+                  {!! Form::radio('hx_front_headache', '0') !!} No &nbsp; &nbsp; &nbsp;
                 </div>
                 <div class="col-md-3 text-center">
                   {!! Form::radio('hx_front_headache_side', 'right') !!} Right &nbsp; &nbsp; &nbsp;
@@ -1065,7 +1071,7 @@
                 </div>
                 <div class="row">
                   <div class="col-md-2">
-                    {!! Form::checkbox('gonio_normal_od', 'true') !!} Normal
+                    {!! Form::checkbox('gonio_normal_od', '1') !!} Normal
                   </div>
                   <div class="col-md-4">
                     <div class="section-divider mt20 mb40">
@@ -1087,7 +1093,7 @@
                         </div>
                       </div>
                       <div class="col-md-3 text-center">
-                        {{ Form::select('fundus_od_cd_noncompressed', [
+                        {{ Form::select('gonio_od_cd_noncompressed', [
                           '0' => '0',
                           '5' => '5',
                           '10' => '10',
@@ -1135,7 +1141,7 @@
                         </div>
                       </div>
                       <div class="col-md-3 text-center">
-                        {{ Form::select('fundus_od_cd_compressed', [
+                        {{ Form::select('gonio_od_cd_compressed', [
                           '0' => '0',
                           '5' => '5',
                           '10' => '10',
@@ -1178,8 +1184,8 @@
                       </div>
                       <div class="col-md-6 col-md-offset-1">
                         Anterior Pigment Line &nbsp; &nbsp; &nbsp;
-                        {!! Form::radio('gonio_anterior_pigment_line_od', 'true') !!} Yes &nbsp; &nbsp; &nbsp;
-                        {!! Form::radio('gonio_anterior_pigment_line_od', 'false') !!} No &nbsp; &nbsp; &nbsp;
+                        {!! Form::radio('gonio_anterior_pigment_line_od', '1') !!} Yes &nbsp; &nbsp; &nbsp;
+                        {!! Form::radio('gonio_anterior_pigment_line_od', '0') !!} No &nbsp; &nbsp; &nbsp;
                       </div>
                     </div>
                   </div>
@@ -1195,7 +1201,7 @@
                 </div>
                 <div class="row">
                   <div class="col-md-2">
-                    {!! Form::checkbox('gonio_normal_os', 'true') !!} Normal
+                    {!! Form::checkbox('gonio_normal_os', '1') !!} Normal
                   </div>
                   <div class="col-md-4">
                     <div class="section-divider mt20 mb40">
@@ -1217,7 +1223,7 @@
                         </div>
                       </div>
                       <div class="col-md-3 text-center">
-                        {{ Form::select('fundus_os_cd_noncompressed', [
+                        {{ Form::select('gonio_os_cd_noncompressed', [
                           '0' => '0',
                           '5' => '5',
                           '10' => '10',
@@ -1265,7 +1271,7 @@
                         </div>
                       </div>
                       <div class="col-md-3 text-center">
-                        {{ Form::select('fundus_os_cd_compressed', [
+                        {{ Form::select('gonio_os_cd_compressed', [
                           '0' => '0',
                           '5' => '5',
                           '10' => '10',
@@ -1307,8 +1313,8 @@
                         </div>
                         <div class="col-md-6 col-md-offset-1">
                           Anterior Pigment Line &nbsp; &nbsp; &nbsp;
-                          {!! Form::radio('gonio_anterior_pigment_line_os', 'true') !!} Yes &nbsp; &nbsp; &nbsp;
-                          {!! Form::radio('gonio_anterior_pigment_line_os', 'false') !!} No &nbsp; &nbsp; &nbsp;
+                          {!! Form::radio('gonio_anterior_pigment_line_os', '1') !!} Yes &nbsp; &nbsp; &nbsp;
+                          {!! Form::radio('gonio_anterior_pigment_line_os', '0') !!} No &nbsp; &nbsp; &nbsp;
                         </div>
                       </div>
                     </div>
@@ -1332,7 +1338,7 @@
                 <span> Fundus Exam </span>
               </div>
               <div class="row">
-                {!! Form::checkbox('fundus_dialated', 'true') !!} Dialated?
+                {!! Form::checkbox('fundus_dialated', '1') !!} Dialated?
               </div>
               <div class="row">
                 <div class="col-md-2">
@@ -1352,7 +1358,20 @@
                       <b>C/D</b>
                     </div>
                     <div class="col-md-10 text-center">
-                      {!! Form::checkbox('fundus_od_cd_abnormal', 'true') !!} Abnormal
+                      {!! Form::checkbox('fundus_od_cd_abnormal', '1') !!} Abnormal
+                      {{ Form::select('fundus_od_cd_count', [
+                        '0.0' => '0.0',
+                        '0.1' => '0.1',
+                        '0.2' => '0.2',
+                        '0.3' => '0.3',
+                        '0.4' => '0.4',
+                        '0.5' => '0.5',
+                        '0.6' => '0.6',
+                        '0.7' => '0.7',
+                        '0.8' => '0.8',
+                        '0.9' => '0.9',
+                        '1.0' => '1.0'])
+                      }}
                     </div>
                   </div>
                   <div class="row">
@@ -1368,7 +1387,7 @@
                       <b>Retina</b>
                     </div>
                     <div class="col-md-10 text-center">
-                      {!! Form::checkbox('fundus_od_retina_abnormal', 'true') !!} Abnormal
+                      {!! Form::checkbox('fundus_od_retina_abnormal', '1') !!} Abnormal
                     </div>
                   </div>
                   <div class="row">
@@ -1384,7 +1403,7 @@
                       <b>Macula</b>
                     </div>
                     <div class="col-md-10 text-center">
-                      {!! Form::checkbox('fundus_od_cd_abnormal', 'true') !!} Abnormal
+                      {!! Form::checkbox('fundus_od_macula_abnormal', '1') !!} Abnormal
                     </div>
                   </div>
                   <div class="row">
@@ -1402,7 +1421,20 @@
                   </div>
                   <div class="row">
                     <div class="col-md-10 col-md-offset-1 text-center">
-                      {!! Form::checkbox('fundus_os_cd_abnormal', 'true') !!} Abnormal
+                      {!! Form::checkbox('fundus_os_cd_abnormal', '1') !!} Abnormal
+                      {{ Form::select('fundus_os_cd_count', [
+                        '0.0' => '0.0',
+                        '0.1' => '0.1',
+                        '0.2' => '0.2',
+                        '0.3' => '0.3',
+                        '0.4' => '0.4',
+                        '0.5' => '0.5',
+                        '0.6' => '0.6',
+                        '0.7' => '0.7',
+                        '0.8' => '0.8',
+                        '0.9' => '0.9',
+                        '1.0' => '1.0'])
+                      }}
                     </div>
                   </div>
                   <div class="row">
@@ -1412,7 +1444,7 @@
                   </div>
                   <div class="row">
                     <div class="col-md-10 col-md-offset-1 text-center">
-                      {!! Form::checkbox('fundus_os_retina_abnormal', 'true') !!} Abnormal
+                      {!! Form::checkbox('fundus_os_retina_abnormal', '1') !!} Abnormal
                     </div>
                   </div>
                   <div class="row">
@@ -1422,7 +1454,7 @@
                   </div>
                   <div class="row">
                     <div class="col-md-10 col-md-offset-1 text-center">
-                      {!! Form::checkbox('fundus_os_cd_abnormal', 'true') !!} Abnormal
+                      {!! Form::checkbox('fundus_os_macula_abnormal', '1') !!} Abnormal
                     </div>
                   </div>
                   <div class="row">
@@ -1482,6 +1514,9 @@
 @section('script')
   <!-- jQuery -->
   <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+
+  {{-- Custom new_visit js --}}
+  {!! HTML::script('js/new_visit.js'); !!}
 
   <!-- jQuery Validate Plugin-->
   <script src="assets/admin-tools/admin-forms/js/jquery.validate.min.js"></script>
