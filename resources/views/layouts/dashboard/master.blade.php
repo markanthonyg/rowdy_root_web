@@ -104,6 +104,8 @@
         <div class="form-group col-md-12">
           {{-- Search bar w/ results div (coming from jquery) --}}
           <input type="text" class="search form-control col-md-12" id="searchid" placeholder="Search Patient...">
+          <br />
+          <br />
           <div id="result"></div>
         </div>
       </form>
