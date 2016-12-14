@@ -34,6 +34,7 @@ class VisitsController extends Controller
       $data['num_unapproved_users'] = User::where(['approved' => 0])->count();
 
       // Collect all patients from the database for user to choose from
+      $patients = array();
       $sql_patients = Patient::all()->sortBy('last_name');
       foreach ($sql_patients as $patient) {
         $patients[$patient['id']] = $patient['id'] . ' || ' . $patient['last_name'] . ', ' . $patient['first_name'] . ' ' . $patient['middle'];
