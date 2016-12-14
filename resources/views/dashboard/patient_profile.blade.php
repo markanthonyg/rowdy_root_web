@@ -587,8 +587,51 @@ cataract removal</textarea>
       {{-- Patient profile tab --}}
       <div id="tab2" class="tab-pane">
         <div class="row">
-          <button type="button" class="btn btn-primary btn-lg" name="new_physical_exam">New Visit</button>
+          <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='/new_patient_visit/{{$patient->id}}'" name="new_physical_exam">New Visit</button>
         </div>
+
+        <br />
+
+        @if (count($visits) == 0 )
+          <br />
+          <br />
+          <div class="text-center" id="no_visits">
+            No previous visits recorded
+          </div>
+        @else
+          <div class="col-md-12">
+            <div class="panel panel-visible" id="spy2">
+              <div class="panel-heading">
+                <div class="panel-title hidden-xs">
+                  <span class="glyphicon glyphicon-calendar"></span>Previous Visits</div>
+              </div>
+              <div class="panel-body pn">
+                <table class="table table-hover table-striped" id="datatable2" cellspacing="0" width="100%">
+                  <thead>
+                    <tr>
+                      <th>Visit ID</th>
+                      <th>Date</th>
+                      <th>Chief Complaint</th>
+                      <th>Assesment</th>
+                      <th>Plan</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @foreach($visits as $visit)
+                      <tr class="clickable-row" data-url="visit/{{ $visit->id }}">
+                        <td>{{ $visit->id }}</td>
+                        <td>{{ date('m/d/Y', strtotime($visit->dateCreated)) }}</td>
+                        <td>{{ $visit->chiefComplaint }}</td>
+                        <td>{{ $visit->assessment }}</td>
+                        <td>{{ $visit->plan }}</td>
+                      </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        @endif
       </div>
 
       <div id="tab3" class="tab-pane">
@@ -1720,22 +1763,7 @@ The patient will have a post-op IOP check.
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
-
   <script>
-    jQuery(document).ready(function(){
-      var date_input=$('input[name="dob"]');
-      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-      var options={
-        format: 'yyyy-mm-dd',
-        container: container,
-        todayHighlight: true,
-        autoclose: true,
-      };
-      date_input.datepicker(options);
-    })
-  </script>
-
-  <script type="text/javascript">
     jQuery(document).ready(function() {
 
       // Make rows clickable with 'clickable-row' class
@@ -1751,34 +1779,21 @@ The patient will have a post-op IOP check.
         }
       });
 
-      $('#datatable2').dataTable({
-        "aoColumnDefs": [{
-          'bSortable': false,
-          null
-        }],
-        "oLanguage": {
-          "oPaginate": {
-            "sPrevious": "",
-            "sNext": ""
-          }
-        },
-        "iDisplayLength": 10,
-        "aLengthMenu": [
-          [5, 10, 25, 50, -1],
-          [5, 10, 25, 50, "All"]
-        ],
-        "sDom": '<"dt-panelmenu clearfix"lfr>t<"dt-panelfooter clearfix"ip>',
-        "oTableTools": {
-          "sSwfPath": "vendor/plugins/datatables/extensions/TableTools/swf/copy_csv_xls_pdf.swf"
-        }
-      });
-
-
-      // MISC DATATABLE HELPER FUNCTIONS
-
-      // Add Placeholder text to datatables filter bar
-      $('.dataTables_filter input').attr("placeholder", "Search...");
     });
+  </script>
+
+  <script>
+    jQuery(document).ready(function(){
+      var date_input=$('input[name="dob"]');
+      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+      var options={
+        format: 'yyyy-mm-dd',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    })
   </script>
 
   <script>

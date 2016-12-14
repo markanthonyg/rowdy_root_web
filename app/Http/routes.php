@@ -63,6 +63,8 @@ Route::post('/accountList', 'Dashboard\AccountController@updateAccount');
 // Visit Routes
 Route::get('/new_visit', 'Dashboard\VisitsController@addVisit');
 Route::post('/new_visit', 'Dashboard\VisitsController@insertVisit');
+Route::get('/new_patient_visit/{pid}', 'Dashboard\VisitsController@addPatientVisit');
+Route::post('/new_patient_visit', 'Dashboard\VisitsController@insertPatientVisit');
 
 // EMAIL (SEND)
 Route::post('/', 'EMailController@send');

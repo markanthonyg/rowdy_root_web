@@ -11,6 +11,7 @@ use App\Models\User;
 use App\Models\Patient;
 use App\Models\Vital;
 use App\Models\Allergy;
+use App\Models\Visit;
 use DB;
 
 use Auth;
@@ -49,6 +50,10 @@ class ProfileController extends Controller
       } else {
         $data['allergy_alert'] = false;
       }
+
+      // Pass all visits for this patient to the profile view
+      $visits = array();
+      $data['visits'] = Visit::where('pid', '=', $data['patient']->id)->get();
 
       // $result = DB::table('vitals')->where('id', '222');
       // $result = DB::table('vitals');
