@@ -618,7 +618,7 @@ cataract removal</textarea>
                   </thead>
                   <tbody>
                     @foreach($visits as $visit)
-                      <tr class="clickable-row" data-url="visit/{{ $visit->id }}">
+                      <tr class="clickable-visit-row" data-url="visit/{{ $visit->id }}">
                         <td>{{ $visit->id }}</td>
                         <td>{{ date('m/d/Y', strtotime($visit->dateCreated)) }}</td>
                         <td>{{ $visit->chiefComplaint }}</td>
@@ -1767,7 +1767,7 @@ The patient will have a post-op IOP check.
     jQuery(document).ready(function() {
 
       // Make rows clickable with 'clickable-row' class
-      $('.clickable-row').click(function() {
+      $('.clickable-visit-row').click(function() {
           window.location = $(this).data('url');
       });
 

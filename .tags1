@@ -4,3 +4,5 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+tr.clickable-row	/Users/battlestation/Documents/rowdy_root_web/public/css/clickable_row.css	/^tr.clickable-row {$/;"	function	line:1
+tr.clickable-visit-row	/Users/battlestation/Documents/rowdy_root_web/public/css/clickable_row.css	/^tr.clickable-visit-row {$/;"	function	line:5
