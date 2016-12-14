@@ -454,10 +454,14 @@
 </div><!-- /.modal -->
 
 
+{{-- Show alert if patient has any known allergies --}}
+@if ( $allergy_alert )
+  <div class="alert alert-warning">
+    <strong>This patient has one or more known allergies.</strong>
+  </div>
+@endif
 
-<div class="alert alert-warning">
-  <strong>This patient has one or more known allergies.</strong>
-</div>
+
 <div class="col-md-12">
   <div class="tab-block">
     <ul class="nav nav-tabs">

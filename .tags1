@@ -4,3 +4,8 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+getVitalIndex	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^  function getVitalIndex(i) {$/;"	function	line:1806
+required	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^          required: function(element) {$/;"	jsfunction	line:2052
+highlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^      highlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:2145
+unhighlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^      unhighlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:2148
+errorPlacement	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^      errorPlacement: function(error, element) {$/;"	jsfunction	line:2151

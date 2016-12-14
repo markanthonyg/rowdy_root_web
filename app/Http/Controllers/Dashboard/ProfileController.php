@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 use App\Models\User;
 use App\Models\Patient;
 use App\Models\Vital;
+use App\Models\Allergy;
 use DB;
 
 use Auth;
@@ -41,6 +42,13 @@ class ProfileController extends Controller
         return Redirect::to('/');
       }
       $data['accounts'] = User::where('approved', '=', 1)->get();
+
+      // Check if patient has any allergies and set allergy_alert variable
+      if ( Allergy::where('pid', '=', $data['patient']->id)->count() > 0 ){
+        $data['allergy_alert'] = true;
+      } else {
+        $data['allergy_alert'] = false;
+      }
 
       // $result = DB::table('vitals')->where('id', '222');
       // $result = DB::table('vitals');
