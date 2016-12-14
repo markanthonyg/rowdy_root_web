@@ -1946,6 +1946,12 @@ errorPlacement	/Users/battlestation/Documents/rowdy_root_web/resources/views/das
 .admin-form.well .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form.well .my-section-divider span,$/;"	function	line:141
 .admin-form .well .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .well .my-section-divider span {$/;"	function	line:142
 .admin-form.theme-primary .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form.theme-primary .my-section-divider span {$/;"	function	line:146
+FixGonioTableFHASide	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_12_14_080553_fix_gonio_table_FHASide.php	/^class FixGonioTableFHASide extends Migration$/;"	class	line:6
+up	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_12_14_080553_fix_gonio_table_FHASide.php	/^    public function up()$/;"	function	line:13
+down	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_12_14_080553_fix_gonio_table_FHASide.php	/^    public function down()$/;"	function	line:28
+CreateGoniosTable	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_gonios_table.php	/^class CreateGoniosTable extends Migration {$/;"	class	line:6
+up	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_gonios_table.php	/^	public function up()$/;"	function	line:13
+down	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_gonios_table.php	/^	public function down()$/;"	function	line:48
 VisitsController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^class VisitsController extends Controller$/;"	class	line:27
 addVisit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^    public function addVisit() {$/;"	function	line:30
 sql_patients	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $sql_patients = Patient::all()->sortBy('last_name');$/;"	variable	line:37
