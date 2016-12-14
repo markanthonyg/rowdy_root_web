@@ -26,6 +26,9 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="assets/img/favicon.ico">
 
+  {{-- Google recap --}}
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -192,6 +195,14 @@
                     <span class="checkbox"></span>I agree to the
                     <a href="/terms" class="theme-link"> terms of use. </a>
                   </label>
+                </div>
+                <!-- end section -->
+
+                {{-- Google Recaptcha --}}
+                <div class="center">
+                  <center>
+                    {!! Recaptcha::render() !!}
+                  </center>
                 </div>
                 <!-- end section -->
 
