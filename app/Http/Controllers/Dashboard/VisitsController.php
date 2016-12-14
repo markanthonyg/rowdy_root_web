@@ -6,6 +6,7 @@ use Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -37,6 +38,10 @@ class VisitsController extends Controller
       $patients = array();
       $sql_patients = Patient::all()->sortBy('last_name');
       foreach ($sql_patients as $patient) {
+        if($patient['first_name'] == "" && $patient['last_name'] == "") {
+          $patients[$patient['id']] = $patient['id'] . ' || UNIDENTIFIED PATIENT ';
+          continue;
+        }
         $patients[$patient['id']] = $patient['id'] . ' || ' . $patient['last_name'] . ', ' . $patient['first_name'] . ' ' . $patient['middle'];
       }
       $data['patients'] = $patients;
@@ -78,6 +83,7 @@ class VisitsController extends Controller
         $patient_id = $new_patient->id;
       } elseif (Input::get('new_patient') == 0){
         // Take value from select list and grab patient id
+        $patient_id = (int)Input::get('patient');
       }
 
       $chief_complaint = Input::get('chief_complaint');
@@ -407,6 +413,8 @@ class VisitsController extends Controller
         'MaculaOSNotes' => $MaculaOSNotes,
         'vid' => $new_visit->id
       ]);
+
+      return Redirect::to('/patient/'.$patient_id);
 
     }
 }
