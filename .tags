@@ -2055,42 +2055,6 @@ new_lense	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Das
 new_iop	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_iop = Iop::create([$/;"	variable	line:363
 new_gonio	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_gonio = Gonio::create([$/;"	variable	line:373
 new_fundus_exam	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_fundus_exam = FundusExam::create([$/;"	variable	line:397
-name	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "name": "laravel\/laravel",$/;"	function	line:2
-description	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "description": "The Laravel Framework.",$/;"	function	line:3
-keywords	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "keywords": ["framework", "laravel"],$/;"	function	line:4
-license	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "license": "MIT",$/;"	function	line:5
-type	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "type": "project",$/;"	function	line:6
-require	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "require": {$/;"	function	line:7
-php	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "php": ">=5.5.9",$/;"	function	line:8
-laravel/framework	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "laravel\/framework": "5.2.*",$/;"	function	line:9
-laravelcollective/html	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "laravelcollective\/html": "~5.0",$/;"	function	line:10
-google/recaptcha	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "google\/recaptcha": "~1.1",$/;"	function	line:11
-greggilbert/recaptcha	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "greggilbert\/recaptcha": "dev-master"$/;"	function	line:12
-require-dev	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "require-dev": {$/;"	function	line:14
-fzaninotto/faker	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "fzaninotto\/faker": "~1.4",$/;"	function	line:15
-mockery/mockery	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "mockery\/mockery": "0.9.*",$/;"	function	line:16
-phpunit/phpunit	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "phpunit\/phpunit": "~4.0",$/;"	function	line:17
-symfony/css-selector	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "symfony\/css-selector": "2.8.*|3.0.*",$/;"	function	line:18
-symfony/dom-crawler	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "symfony\/dom-crawler": "2.8.*|3.0.*",$/;"	function	line:19
-xethron/migrations-generator	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "xethron\/migrations-generator": "dev-l5",$/;"	function	line:20
-way/generators	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "way\/generators": "dev-feature\/laravel-five-stable",$/;"	function	line:21
-ignasbernotas/laravel-model-generator	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "ignasbernotas\/laravel-model-generator": "^1"$/;"	function	line:22
-repositories	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "repositories": [$/;"	function	line:24
-type	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^            "type": "git",$/;"	function	line:26
-url	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^            "url": "https:\/\/github.com\/jamisonvalenta\/Laravel-4-Generators.git"$/;"	function	line:27
-autoload	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "autoload": {$/;"	function	line:30
-classmap	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "classmap": [$/;"	function	line:31
-psr-4	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "psr-4": {$/;"	function	line:34
-App\\	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^            "App\\\\": "app\/"$/;"	function	line:35
-autoload-dev	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "autoload-dev": {$/;"	function	line:38
-classmap	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "classmap": [$/;"	function	line:39
-scripts	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "scripts": {$/;"	function	line:43
-post-root-package-install	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-root-package-install": [$/;"	function	line:44
-post-create-project-cmd	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-create-project-cmd": [$/;"	function	line:47
-post-install-cmd	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-install-cmd": [$/;"	function	line:50
-post-update-cmd	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-update-cmd": [$/;"	function	line:54
-config	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "config": {$/;"	function	line:59
-preferred-install	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "preferred-install": "dist"$/;"	function	line:60
 aliases	/Users/battlestation/Documents/rowdy_root_web/config/app.php	/^    | This array of class aliases will be registered when this application$/;"	class	line:170
 RegistrationController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^class RegistrationController extends Controller$/;"	class	line:19
 showRegister	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^    public function showRegister() {$/;"	function	line:22
@@ -2110,13 +2074,50 @@ role	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/Reg
 APIController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/API/APIController.php	/^class APIController extends Controller$/;"	class	line:13
 allPatients	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/API/APIController.php	/^    public function allPatients(){$/;"	function	line:16
 allUsers	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/API/APIController.php	/^    public function allUsers(){$/;"	function	line:21
-as	/Users/battlestation/Documents/rowdy_root_web/config/mail.php	/^    | Laravel supports both SMTP and PHP's "mail" function as drivers for the$/;"	function	line:10
 submitError	/Users/battlestation/Documents/rowdy_root_web/public/js/contact_me.js	/^        submitError: function($form, event, errors) {$/;"	function	line:5
 submitSuccess	/Users/battlestation/Documents/rowdy_root_web/public/js/contact_me.js	/^        submitSuccess: function($form, event) {$/;"	function	line:8
 success	/Users/battlestation/Documents/rowdy_root_web/public/js/contact_me.js	/^                success: function() {$/;"	function	line:26
 error	/Users/battlestation/Documents/rowdy_root_web/public/js/contact_me.js	/^                error: function() {$/;"	function	line:39
 filter	/Users/battlestation/Documents/rowdy_root_web/public/js/contact_me.js	/^        filter: function() {$/;"	function	line:51
-EMailController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/EMailController.php	/^class EMailController extends Controller$/;"	class	line:10
-send	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/EMailController.php	/^    public function send(){$/;"	function	line:13
-title	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/EMailController.php	/^      $title = Input::get('name');$/;"	variable	line:14
-content	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/EMailController.php	/^      $content = Input::get('email');$/;"	variable	line:15
+name	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "name": "laravel\/laravel",$/;"	function	line:2
+description	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "description": "The Laravel Framework.",$/;"	function	line:3
+keywords	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "keywords": ["framework", "laravel"],$/;"	function	line:4
+license	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "license": "MIT",$/;"	function	line:5
+type	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "type": "project",$/;"	function	line:6
+require	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "require": {$/;"	function	line:7
+php	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "php": ">=5.5.9",$/;"	function	line:8
+laravel/framework	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "laravel\/framework": "5.2.*",$/;"	function	line:9
+laravelcollective/html	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "laravelcollective\/html": "~5.0",$/;"	function	line:10
+google/recaptcha	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "google\/recaptcha": "~1.1",$/;"	function	line:11
+greggilbert/recaptcha	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "greggilbert\/recaptcha": "dev-master",$/;"	function	line:12
+guzzlehttp/guzzle	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "guzzlehttp\/guzzle": "~5.3|~6.0"$/;"	function	line:13
+require-dev	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "require-dev": {$/;"	function	line:15
+fzaninotto/faker	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "fzaninotto\/faker": "~1.4",$/;"	function	line:16
+mockery/mockery	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "mockery\/mockery": "0.9.*",$/;"	function	line:17
+phpunit/phpunit	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "phpunit\/phpunit": "~4.0",$/;"	function	line:18
+symfony/css-selector	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "symfony\/css-selector": "2.8.*|3.0.*",$/;"	function	line:19
+symfony/dom-crawler	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "symfony\/dom-crawler": "2.8.*|3.0.*",$/;"	function	line:20
+xethron/migrations-generator	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "xethron\/migrations-generator": "dev-l5",$/;"	function	line:21
+way/generators	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "way\/generators": "dev-feature\/laravel-five-stable",$/;"	function	line:22
+ignasbernotas/laravel-model-generator	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "ignasbernotas\/laravel-model-generator": "^1"$/;"	function	line:23
+repositories	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "repositories": [$/;"	function	line:25
+type	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^            "type": "git",$/;"	function	line:27
+url	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^            "url": "https:\/\/github.com\/jamisonvalenta\/Laravel-4-Generators.git"$/;"	function	line:28
+autoload	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "autoload": {$/;"	function	line:31
+classmap	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "classmap": [$/;"	function	line:32
+psr-4	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "psr-4": {$/;"	function	line:35
+App\\	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^            "App\\\\": "app\/"$/;"	function	line:36
+autoload-dev	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "autoload-dev": {$/;"	function	line:39
+classmap	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "classmap": [$/;"	function	line:40
+scripts	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "scripts": {$/;"	function	line:44
+post-root-package-install	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-root-package-install": [$/;"	function	line:45
+post-create-project-cmd	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-create-project-cmd": [$/;"	function	line:48
+post-install-cmd	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-install-cmd": [$/;"	function	line:51
+post-update-cmd	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-update-cmd": [$/;"	function	line:55
+config	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "config": {$/;"	function	line:60
+preferred-install	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "preferred-install": "dist"$/;"	function	line:61
+as	/Users/battlestation/Documents/rowdy_root_web/config/mail.php	/^    | Laravel supports both SMTP and PHP's "mail" function as drivers for the$/;"	function	line:10
+EMailController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/EMailController.php	/^class EMailController extends Controller$/;"	class	line:13
+send	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/EMailController.php	/^    public function send(){$/;"	function	line:16
+name	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/EMailController.php	/^      $name = Input::get('name');$/;"	variable	line:17
+email	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/EMailController.php	/^      $email = Input::get('email');$/;"	variable	line:18

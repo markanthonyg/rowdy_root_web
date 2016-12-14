@@ -1,9 +1,1 @@
-{{-- <html>
-<head></head>
-<body style="background: black; color: white">
-<h1>{{$title}}</h1>
-<p>{{$content}}</p>
-</body>
-</html> --}}
-
-hi my name is
+{{ $name }}, which can be reached at {{ $email }}, has a question or concern regarding the Rowdy Root EMRS Webpage. Please respond within 48 hours.

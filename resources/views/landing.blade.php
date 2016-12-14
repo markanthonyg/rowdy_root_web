@@ -371,19 +371,30 @@
                     <h2 class="section-heading">Questions or concerns? Contact our dev team!</h2>
                 </div>
             </div>
-			<form name="sentMessage" class="mw800 center-block clearfix" novalidate>
+			{{-- <form name="sentMessage" id="contactForm" class="mw800 center-block clearfix" novalidate>
         	   <div class="form-group">
-        	  	 <input type="text" class="form-control" placeholder="Your Name *" name="name" id="name" required data-validation-required-message="Please enter your name.">
+        	  	 <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
                  <p class="help-block text-danger"></p>
         	  </div>
         	   <div class="form-group">
-        	  	 <input type="email" class="form-control" placeholder="Your Email *" name="email" id="email" required data-validation-required-message="Please enter your email address.">
+        	  	 <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
                  <p class="help-block text-danger"></p>
         	  </div>
         	   <div class="form-group">
         	  	  <button type="submit" class="btn btn-xl btn-block btn-wire">Contact</button>
         	   </div>
-	        </form>
+	        </form> --}}
+          {!! Form::open(['action' => 'EMailController@send', 'id' => 'contactForm', 'class' => 'mw800 center-block clearfix']) !!}
+          <div class="form-group">
+            {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Your Name *', 'id' => 'name', 'required'] ) !!}
+          </div>
+          <div class="form-group">
+            {!! Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'Your EMail *', 'id' => 'email', 'required'] ) !!}
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-xl btn-block btn-wire">Contact</button>
+          </div>
+          {!! Form::close() !!}
 	        <p> Please allow 24-48 hours for a response. </p>
 
         </div>

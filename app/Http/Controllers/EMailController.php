@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 
 use App\Http\Requests;
@@ -11,17 +14,13 @@ class EMailController extends Controller
 {
     // Send email to jacobdaily737@gmail.com to notify of question or concern
     public function send(){
-      $title = Input::get('name');
-      $content = Input::get('email');
+      $name = Input::get('name');
+      $email = Input::get('email');
 
-      Mail::send('emails.send', ['title' => $title, 'content' => $content], function ($message)
-      {
-          $message->from('RRW_Webpage@qoc.com', 'RowdyRootWeb');
-
-          $message->to('jacobdaily737@gmail.com');
+      Mail::send('emails.send', ['name' => $name, 'email' => $email], function ($message) {
+          $message->from(Input::get('email'));
+          $message->to('jacobdaily737@gmail.com', 'RRW')->subject('Question or concern from RRW');
       });
-
-      dd('got here');
 
       return Redirect::to('/');
     }
