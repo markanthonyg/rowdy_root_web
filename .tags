@@ -2110,3 +2110,13 @@ role	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/Reg
 APIController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/API/APIController.php	/^class APIController extends Controller$/;"	class	line:13
 allPatients	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/API/APIController.php	/^    public function allPatients(){$/;"	function	line:16
 allUsers	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/API/APIController.php	/^    public function allUsers(){$/;"	function	line:21
+as	/Users/battlestation/Documents/rowdy_root_web/config/mail.php	/^    | Laravel supports both SMTP and PHP's "mail" function as drivers for the$/;"	function	line:10
+submitError	/Users/battlestation/Documents/rowdy_root_web/public/js/contact_me.js	/^        submitError: function($form, event, errors) {$/;"	function	line:5
+submitSuccess	/Users/battlestation/Documents/rowdy_root_web/public/js/contact_me.js	/^        submitSuccess: function($form, event) {$/;"	function	line:8
+success	/Users/battlestation/Documents/rowdy_root_web/public/js/contact_me.js	/^                success: function() {$/;"	function	line:26
+error	/Users/battlestation/Documents/rowdy_root_web/public/js/contact_me.js	/^                error: function() {$/;"	function	line:39
+filter	/Users/battlestation/Documents/rowdy_root_web/public/js/contact_me.js	/^        filter: function() {$/;"	function	line:51
+EMailController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/EMailController.php	/^class EMailController extends Controller$/;"	class	line:10
+send	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/EMailController.php	/^    public function send(){$/;"	function	line:13
+title	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/EMailController.php	/^      $title = Input::get('name');$/;"	variable	line:14
+content	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/EMailController.php	/^      $content = Input::get('email');$/;"	variable	line:15

@@ -371,13 +371,13 @@
                     <h2 class="section-heading">Questions or concerns? Contact our dev team!</h2>
                 </div>
             </div>
-			<form name="sentMessage" id="contactForm" class="mw800 center-block clearfix" novalidate>
+			<form name="sentMessage" class="mw800 center-block clearfix" novalidate>
         	   <div class="form-group">
-        	  	 <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+        	  	 <input type="text" class="form-control" placeholder="Your Name *" name="name" id="name" required data-validation-required-message="Please enter your name.">
                  <p class="help-block text-danger"></p>
         	  </div>
         	   <div class="form-group">
-        	  	 <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+        	  	 <input type="email" class="form-control" placeholder="Your Email *" name="email" id="email" required data-validation-required-message="Please enter your email address.">
                  <p class="help-block text-danger"></p>
         	  </div>
         	   <div class="form-group">
@@ -430,7 +430,7 @@
 
     <!-- Contact Form JavaScript -->
     <script src="js/vendor/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    {{-- <script src="js/contact_me.js"></script> --}}
 
     <!-- Custom Theme JavaScript -->
     <script src="js/main.js"></script>
