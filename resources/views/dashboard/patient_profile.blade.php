@@ -583,7 +583,14 @@ cataract removal</textarea>
           </div>
         </div>
       </div>
-      <div id="tab2" class="tab-pane"></div>
+
+      {{-- Patient profile tab --}}
+      <div id="tab2" class="tab-pane">
+        <div class="row">
+          <button type="button" class="btn btn-primary btn-lg" name="new_physical_exam">New Visit</button>
+        </div>
+      </div>
+
       <div id="tab3" class="tab-pane">
 
         <!-- BEGIN VITALS TAB -->
