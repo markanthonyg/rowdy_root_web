@@ -27,6 +27,24 @@ use App\Models\FundusExam;
 
 class VisitsController extends Controller
 {
+
+    // Show the dashboard Home
+    public function showVisits(){
+      // Logic will need to be added to pass $data and authenticate user
+
+      // Check if user is logged in, if not send back to home
+      if(!Auth::check()){
+        return Redirect::to('/');
+      }
+
+      $data['user'] = Auth::User();
+      $data['visits'] = Visit::all();
+      $data['num_visits'] = Visit::all()->count();
+      $data['num_unapproved_users'] = User::where(['approved' => 0])->count();
+
+      return view('dashboard/visits')->with($data);
+    }
+
     // Show form to add a new visit
     public function addVisit() {
       // Get user to pass to master template in view

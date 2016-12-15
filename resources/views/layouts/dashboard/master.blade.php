@@ -189,7 +189,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="/visits">
               <span class="fa fa-stethoscope"></span>
               <span class="sidebar-title" onmouseover="this.style.color='#dddddd'" onmouseout="this.style.color='#ffffff'">View Visits</span>
             </a>
