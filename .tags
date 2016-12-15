@@ -1979,10 +1979,6 @@ id	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboa
 id	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $id = $clicked.find('.id').html();$/;"	variable	line:356
 clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:365
 clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:365
-required	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/visits.blade.php	/^          required: function(element) {$/;"	jsfunction	line:273
-highlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/visits.blade.php	/^      highlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:366
-unhighlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/visits.blade.php	/^      unhighlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:369
-errorPlacement	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/visits.blade.php	/^      errorPlacement: function(error, element) {$/;"	jsfunction	line:372
 VisitsController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^class VisitsController extends Controller$/;"	class	line:28
 visitDetailView	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^    public function visitDetailView($vid){$/;"	function	line:32
 showVisits	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^    public function showVisits(){$/;"	function	line:59
@@ -2316,3 +2312,7 @@ pid	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard
 title	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/SurgicalProceduresController.php	/^    $title = Input::get('templateSelect');$/;"	variable	line:29
 body	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/SurgicalProceduresController.php	/^    $body = Input::get('surgicalTemplate');$/;"	variable	line:30
 surgery	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/SurgicalProceduresController.php	/^        $surgery = Surgery::create([$/;"	variable	line:33
+required	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/visits.blade.php	/^          required: function(element) {$/;"	jsfunction	line:275
+highlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/visits.blade.php	/^      highlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:368
+unhighlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/visits.blade.php	/^      unhighlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:371
+errorPlacement	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/visits.blade.php	/^      errorPlacement: function(error, element) {$/;"	jsfunction	line:374
