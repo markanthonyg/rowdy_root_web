@@ -1775,7 +1775,7 @@
                       Notes
                     </div>
                     <div class="col-md-10 text-center">
-                      {!! Form::text('fundus_od_cd_notes', '', ['id' => 'fundus_od_cd_notes']) !!}
+                      {!! Form::text('fundus_od_cd_notes', $fundus->CDODNotes, ['id' => 'fundus_od_cd_notes', 'disabled' => 'true']) !!}
                     </div>
                   </div>
                   <div class="row">
@@ -1795,7 +1795,7 @@
                       Notes
                     </div>
                     <div class="col-md-10 text-center">
-                      {!! Form::text('fundus_od_retina_notes', '', ['id' => 'fundus_od_retina_notes']) !!}
+                      {!! Form::text('fundus_od_retina_notes', $fundus->RetinaODNotes, ['id' => 'fundus_od_retina_notes', 'disabled' => 'true']) !!}
                     </div>
                   </div>
                   <div class="row">
@@ -1815,7 +1815,7 @@
                       Notes
                     </div>
                     <div class="col-md-10 text-center">
-                      {!! Form::text('fundus_od_macula_notes', '', ['id' => 'fundus_od_macula_notes']) !!}
+                      {!! Form::text('fundus_od_macula_notes', $fundus->MaculaODNotes, ['id' => 'fundus_od_macula_notes', 'disabled' => 'true']) !!}
                     </div>
                   </div>
                 </div>
@@ -1838,7 +1838,7 @@
                   </div>
                   <div class="row">
                     <div class="col-md-10 col-md-offset-1 text-center">
-                      {!! Form::text('fundus_os_cd_notes', '', ['id' => 'fundus_os_cd_notes']) !!}
+                      {!! Form::text('fundus_os_cd_notes', $fundus->CDOSNotes, ['id' => 'fundus_os_cd_notes', 'disabled' => 'true']) !!}
                     </div>
                   </div>
                   <div class="row">
@@ -1852,7 +1852,7 @@
                   </div>
                   <div class="row">
                     <div class="col-md-10 col-md-offset-1 text-center">
-                      {!! Form::text('fundus_os_retina_notes', '', ['id' => 'fundus_os_retina_notes']) !!}
+                      {!! Form::text('fundus_os_retina_notes', $fundus->RetinaOSNotes, ['id' => 'fundus_os_retina_notes', 'disabled' => 'true']) !!}
                     </div>
                   </div>
                   <div class="row">
@@ -1866,7 +1866,7 @@
                   </div>
                   <div class="row">
                     <div class="col-md-10 col-md-offset-1 text-center">
-                      {!! Form::text('fundus_os_macula_notes', '', ['id' => 'fundus_os_macula_notes']) !!}
+                      {!! Form::text('fundus_os_macula_notes', $fundus->MaculaOSNotes, ['id' => 'fundus_os_macula_notes', 'disabled' => 'true']) !!}
                     </div>
                   </div>
                 </div>
