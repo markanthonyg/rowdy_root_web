@@ -2280,8 +2280,39 @@ new_lense	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Das
 new_iop	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_iop = Iop::create([$/;"	variable	line:780
 new_gonio	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_gonio = Gonio::create([$/;"	variable	line:790
 new_fundus_exam	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_fundus_exam = FundusExam::create([$/;"	variable	line:814
-getVitalIndex	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^  function getVitalIndex(i) {$/;"	function	line:1827
-required	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^          required: function(element) {$/;"	jsfunction	line:2073
-highlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^      highlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:2166
-unhighlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^      unhighlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:2169
-errorPlacement	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^      errorPlacement: function(error, element) {$/;"	jsfunction	line:2172
+VitalsController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^class VitalsController extends Controller$/;"	class	line:21
+updateVital	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^  public function updateVital() {$/;"	function	line:24
+vid	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $vid = Input::get('vid');$/;"	variable	line:30
+vital	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^  		$vital = Vital::find($vid);$/;"	variable	line:31
+id	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $id = Input::get('vid');$/;"	variable	line:55
+vital	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $vital = Vital::find($id);$/;"	variable	line:56
+validation	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      \/\/ $validation = Validator::make(Input::all(), [$/;"	variable	line:65
+messages	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      \/\/     $messages = "Clinic name already taken";$/;"	variable	line:71
+pid	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $pid = Input::get('vpid');$/;"	variable	line:78
+bps	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $bps = Input::get('bps');$/;"	variable	line:79
+bpd	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $bpd = Input::get('bpd');$/;"	variable	line:80
+bpunit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $bpunit = Input::get('bpunit');$/;"	variable	line:81
+fasting	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $fasting = Input::get('fasting');$/;"	variable	line:82
+bg	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $bg = Input::get('bg');$/;"	variable	line:83
+bgUnit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $bgUnit = Input::get('bgUnit');$/;"	variable	line:84
+o2sat	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $o2sat = Input::get('o2sat');$/;"	variable	line:85
+hb	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $hb = Input::get('hb');$/;"	variable	line:86
+hfeet	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $hfeet = Input::get('hfeet');$/;"	variable	line:87
+hinches	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $hinches = Input::get('hinches');$/;"	variable	line:88
+hcm	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $hcm = Input::get('hcm');$/;"	variable	line:89
+hunit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $hunit = Input::get('hunit');$/;"	variable	line:90
+weight	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $weight = Input::get('weight');$/;"	variable	line:91
+wunit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $wunit = Input::get('wunit');$/;"	variable	line:92
+notes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $notes = Input::get('notes');$/;"	variable	line:93
+getVitalIndex	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^  function getVitalIndex(i) {$/;"	function	line:884
+required	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^          required: function(element) {$/;"	jsfunction	line:1131
+highlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^      highlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:1224
+unhighlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^      unhighlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:1227
+errorPlacement	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^      errorPlacement: function(error, element) {$/;"	jsfunction	line:1230
+showCSTemplates	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^    function showCSTemplates(sel){$/;"	function	line:1336
+SurgicalProceduresController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/SurgicalProceduresController.php	/^class SurgicalProceduresController extends Controller$/;"	class	line:15
+addProcedure	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/SurgicalProceduresController.php	/^  public function addProcedure(){$/;"	function	line:18
+pid	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/SurgicalProceduresController.php	/^    $pid = Input::get('pid');$/;"	variable	line:28
+title	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/SurgicalProceduresController.php	/^    $title = Input::get('templateSelect');$/;"	variable	line:29
+body	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/SurgicalProceduresController.php	/^    $body = Input::get('surgicalTemplate');$/;"	variable	line:30
+surgery	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/SurgicalProceduresController.php	/^        $surgery = Surgery::create([$/;"	variable	line:33

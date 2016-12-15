@@ -17,7 +17,7 @@ class SurgicalProceduresController extends Controller
 
   public function addProcedure(){
 
-    
+
 
    // Check if user is logged in, if not send back to home
     if(!Auth::check()){
