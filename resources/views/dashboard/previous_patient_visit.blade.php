@@ -706,7 +706,7 @@
                         @endif
                       </div>
                       <div class="row">
-                        @if ($ant_chamber->PASOS == "absent")
+                        @if ($ant_chamber->PASOD == "absent")
                           {!! Form::radio('sle_anterior_chamber_od_pas', 'absent', true, ['disabled' => 'true']) !!} Absent
                         @else
                           {!! Form::radio('sle_anterior_chamber_od_pas', 'absent', false, ['disabled' => 'true']) !!} Absent
@@ -941,17 +941,17 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        @if ($ant_chamber->PASOD == "present")
-                          {!! Form::radio('sle_anterior_chamber_od_pas', 'present', true, ['disabled' => 'true']) !!} Present
+                        @if ($ant_chamber->PASOS == "present")
+                          {!! Form::radio('sle_anterior_chamber_os_pas', 'present', true, ['disabled' => 'true']) !!} Present
                         @else
-                          {!! Form::radio('sle_anterior_chamber_od_pas', 'present', false, ['disabled' => 'true']) !!} Present
+                          {!! Form::radio('sle_anterior_chamber_os_pas', 'present', false, ['disabled' => 'true']) !!} Present
                         @endif
                       </div>
                       <div class="row">
                         @if ($ant_chamber->PASOS == "absent")
-                          {!! Form::radio('sle_anterior_chamber_od_pas', 'absent', true, ['disabled' => 'true']) !!} Absent
+                          {!! Form::radio('sle_anterior_chamber_os_pas', 'absent', true, ['disabled' => 'true']) !!} Absent
                         @else
-                          {!! Form::radio('sle_anterior_chamber_od_pas', 'absent', false, ['disabled' => 'true']) !!} Absent
+                          {!! Form::radio('sle_anterior_chamber_os_pas', 'absent', false, ['disabled' => 'true']) !!} Absent
                         @endif
                       </div>
                     </div>
