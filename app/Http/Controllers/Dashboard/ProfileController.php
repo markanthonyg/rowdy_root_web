@@ -12,6 +12,7 @@ use App\Models\Patient;
 use App\Models\Vital;
 use App\Models\Allergy;
 use App\Models\Visit;
+use App\Models\Surgery;
 use DB;
 
 use Auth;
@@ -66,6 +67,8 @@ class ProfileController extends Controller
       // $data['vitals'] = Vital::all()->where('pid','=','2');
       // $data['vitals'] = Vital::where('pid', '=', $id);
       // dd($data['vitals']);
+
+      $data['surgeries'] = Surgery::where(['pid' => $id])->get();
 
       return view('Dashboard/patient_profile')->with($data);
     }

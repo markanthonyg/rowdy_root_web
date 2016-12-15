@@ -74,3 +74,9 @@ Route::post('/', 'EMailController@send');
 // api
 Route::get('patientsapi', 'API\APIController@allPatients');
 Route::get('usersapi', 'API\APIController@allUsers');
+
+// File upload Routes
+Route::post('/patient_profile', 'Dashboard\UploadController@uploadFile');
+
+// Surgical Procedure routes
+Route::post('/patient_profile', 'Dashboard\SurgicalProceduresController@addProcedure');
