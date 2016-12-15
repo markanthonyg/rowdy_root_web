@@ -51,7 +51,10 @@ Route::get('/patient/{id}', 'Dashboard\ProfileController@showPatientProfile');
 Route::post('/patient', 'Dashboard\PatientsController@updatePatient');
 
 // Vital Routes
-Route::post('/patient_profile', 'Dashboard\VitalsController@updateVital');
+Route::post('/patient_profile/updateVital', 'Dashboard\VitalsController@updateVital');
+
+// Health History Routes
+Route::post('/patient_profile/updateHistory', 'Dashboard\HxController@updateHealthHistory');
 
 // Account Request Routes
 Route::get('/accountRequestList', 'Dashboard\AccountRequestController@showAllAccountRequest');
@@ -64,9 +67,11 @@ Route::post('/accountList', 'Dashboard\AccountController@updateAccount');
 
 // Visit Routes
 Route::get('/new_visit', 'Dashboard\VisitsController@addVisit');
-Route::post('/new_visit', 'Dashboard\VisitsController@insertVisit');
+Route::post('/new_visit/newvisit', 'Dashboard\VisitsController@insertVisit');
 Route::get('/new_patient_visit/{pid}', 'Dashboard\VisitsController@addPatientVisit');
 Route::post('/new_patient_visit', 'Dashboard\VisitsController@insertPatientVisit');
+Route::get('/visit/{vid}', 'Dashboard\VisitsController@visitDetailView');
+Route::post('/visit', 'Dashboard\VisitsController@goBack');
 
 // EMAIL (SEND)
 Route::post('/', 'EMailController@send');
@@ -81,4 +86,4 @@ Route::get('/patient_profile/upload', function() {
 Route::post('/patient_profile/upload', 'Dashboard\UploadController@upload');
 
 // Surgical Procedure routes
-Route::post('/patient_profile', 'Dashboard\SurgicalProceduresController@addProcedure');
+Route::post('/patient_profile/addPro', 'Dashboard\SurgicalProceduresController@addProcedure');

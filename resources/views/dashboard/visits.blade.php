@@ -47,6 +47,7 @@
             <thead>
               <tr>
                 <th>Visit ID</th>
+                <th>Patient ID</th>
                 <th>Visit Date</th>
                 <th>Chief Complaint</th>
                 <th>Assessment</th>
@@ -57,6 +58,7 @@
               @foreach($visits as $visit)
                 <tr class="clickable-row" data-url="visit/{{ $visit->id }}">
                   <td>{{ $visit->id }}</td>
+                  <td>{{ $visit->pid }}</td>
                   <td>{{ date('m/d/Y', strtotime($visit->dateCreated)) }}</td>
                   <td>{{ $visit->chiefComplaint }}</td>
                   <td>{{ $visit->assessment }}</td>

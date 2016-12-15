@@ -14,6 +14,7 @@ use App\Models\Allergy;
 use App\Models\Visit;
 use App\Models\File;
 use App\Models\Surgery;
+use App\Models\HealthHistory;
 use DB;
 
 use Auth;
@@ -60,7 +61,7 @@ class ProfileController extends Controller
       // $result = DB::table('vitals')->where('id', '222');
       // $result = DB::table('vitals');
 
-
+      $data['health_history'] = HealthHistory::where('pid', '=', $id);
 
 
       // $data['vitals'] = Vital::where('id', '=', '222');
