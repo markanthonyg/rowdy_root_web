@@ -740,11 +740,11 @@ cataract removal</textarea>
                               array('id' => 'templateSelect', 'class' => 'form-control input-sm', 'onchange' => 'showCSTemplates(this)')
                           ) }}
 
-        
+
         </br>
         {!! Form::hidden('pid', '', ['class' => 'gui-input', 'name' => 'pid', 'id' => 'pid']) !!}
         {!! Form::textarea('surgicalTemplate', '', ['class' => 'gui-input', 'name' => 'surgicalTemplate', 'id' => 'surgicalTemplate', 'style' => 'height: 300px; width: 100%']) !!}
-      
+
         <button type="submit" class="btn btn-primary pull-right" name="action"style="margin-right: 5px;" id="saveSurgery"> Save</button>
       {!! Form::close() !!}
       </br>
@@ -780,14 +780,41 @@ cataract removal</textarea>
 
       </div>
       <div id="tab5" class="tab-pane">
-        {!! Form::open(['action' => 'Dashboard\UploadController@uploadFile', 'method' => 'post']) !!}
-         <input type="file" name="profile" class="upload" id="file" />
-          <button type="submit" class="btn btn-primary" name="action" value="Update" style="margin-right: 5px;"> Save</button>
-        {!! Form::close() !!}
-            
+        <div class="about-section">
+         <div class="text-content">
+           <div class="span7 offset1">
+              @if(Session::has('success'))
+                <div class="alert-box success">
+                <h2>{!! Session::get('success') !!}</h2>
+                </div>
+              @endif
+              <div class="secure">Upload form</div>
+              {!! Form::open(array('url'=>'patient_profile/upload','method'=>'POST', 'files'=>true)) !!}
+               <div class="control-group">
+                <div class="controls">
+                {!! Form::file('image') !!}
+                {!! Form::hidden('fpid', '', ['class' => 'gui-input', 'name' => 'fpid', 'id' => 'fpid']) !!}
+      	  <p class="errors">{!!$errors->first('image')!!}</p>
+      	@if(Session::has('error'))
+      	<p class="errors">{!! Session::get('error') !!}</p>
+      	@endif
+              </div>
+              </div>
+              <div id="success"> </div>
+            {!! Form::submit('Submit', array('class'=>'send-btn', 'id' => 'fileSend')) !!}
+            {!! Form::close() !!}
+            </div>
+         </div>
+      </div>
+      @foreach($files as $file)
+        <div class="row">
+          <a href="/uploads/{{$file->file_name}}"><img src="/uploads/{{$file->file_name}}"/></a>
+        </div>
+      @endforeach
         <!--<form action="/file-upload"class="dropzone"id="my-awesome-dropzone"></form>-->
 
       </div>
+
     </div> <!-- /container -->
       </div>
     </div>
@@ -1334,69 +1361,69 @@ cataract removal</textarea>
     </script>
 
     <script>
-    function showCSTemplates(sel){   
+    function showCSTemplates(sel){
 
-      locations =[ /*this remains blank for first selection in drop-down list*/ 
+      locations =[ /*this remains blank for first selection in drop-down list*/
 
       " ",
 
-      /*option 1*/                 
+      /*option 1*/
       "Risks and benefits of the proposed procedure were discussed with the patient and the informed consent document was signed by the patient.\n\nThe Patient was then prepped with 1% betadine solution and a drop of Tetracaine topical Ophthalmic drop was applied to the _ eye.  An ophtalmic assistant stabilized the patient's head and elevated the lids with cotton tip applicators.\n\n0._ of Healon was injected into the anterior chamber with a 30 gauge needle.  Topical antibiotic was applied immediately to the eye.\n\nThe procedure was successful and without complication.",
 
-      /*option 2*/                
+      /*option 2*/
       "Patient was prepped with 1 drop of Tetracaine topical Ophthalmic drop to the left eye and the area was cleaned with 1% betadine solution.  1 unit of Healon was injected into the anterior chamber with a 30 guage needle. All risks and benefits were discussed with the patient.",
 
-      /*option 3*/                 
+      /*option 3*/
       "Hospital or Surgery Center:\n Indication: Uncontrolled Intraocular Pressure\n\n Pre-Operative Diagnosis: Glaucoma-Right Eye\nPost-Operative Diagnosis: Glaucoma-Right Eye\n\nAnesthesia: IV Sedation and Peribulbar Anesthesia with 2% lidocaine without epinephrine and 0.75% bupivacaine with 0.5 cc wydase for a total of _ cc.\nAnesthesiologist:\nSurgical Assistant:\n\nProcedure: Ahmed Valve/Tube Shunt with Tutoplast Scleral Reinforcement Graft-Right Eye CPT 66180 and 67255\n\nThe patient was identified in the preoperative holding area and informed consent was verified. The eye was marked for surgery. After appropriate sedation, the periocular area was cleaned with alcohol and a peribulbar block was delivered to the orbit consisting of 2% Xylocaine and 0.75% Marcaine in a 50:50 mixture with Wydase for a total of __ cc. Anesthesia was confirmed and the patient was transported to the OR. The patient was sterilely prepped with 10% povidone-iodine (a 50:50 mixture with sterile saline was used to paint the lashes, irrigate the fornices and surface of the eye). The patient was draped in the usual manner taking care to keep the eyelashes out of the surgical field. A 4-0 silk suture was passed through the corneal stromal adjacent to the limbus superior and temporal. The silk bridal suture was used to retract the eye inferior.  A conjunctival peritomy was performed from 9:00 to 12:00 o'clock and Tenon's and conjunctiva were retracted backwards. Appropriate hemostasis was achieved with wetfield cautery. A subconjunctival pocket was created using curved Stevens scissors. A FP7 model Ahmed valve, serial no: _______, was first checked for patency with BSS and found to be patent. The Ahmed valve was placed into the _______________ subconjunctival pocket without complications and harnessed to the sclera using 9-0 nylon suture. The eye was placed back in primary position and the silk bridal suture was removed. A supersharp blade was used to create a temporal paracentesis. A 23-gauge needle was used to create a sclerotomy track superior-temporal into the anterior chamber flat with the iris plane. The tube was appropriately trimmed and then passed through the sclerotomy site into the anterior chamber. The anterior neck of the tube was harnessed to the sclera using a 9-0 nylon suture. Tutoplast that had been previously soaked in BSS was trimmed appropriately to be placed on top of the tube. 9-0 nylon was used to anchor the tutoplast on to sclera on each side. The conjunctiva was then reapproximated at the limbus using 8-0 vicryl suture. Subconjunctival injections of Ancef and Dexamethasone were placed in the inferior fornix (0.3 cc of each). The eye was appropriately cleaned. Maxitrol ointment was placed on the surface of the eye. The eye was patched and shielded, and the patient was transported to the post-operative recovery unit in stable condition.\n\nComplications: None\nEBL: less than 1 cc\nSpecimens: None\n\nPlan: The eye was patched and shielded. The patient is to leave the patch and shield in place until tomorrow morning when it will be removed in the clinic and post-operative medications will be started. Tylenol 1-2 tablets q4-6 hours prn for pain. ",
 
-      /*option 4*/                 
+      /*option 4*/
       "Procedure: ALT\n\nProcedure Note: Informed consent was verified. The eye undergoing treatment was pre-treated with alphagan-P and proparacaine. A Ritch laser lens was used to direct the laser beam to the trabecular meshwork.\n\nPower:  mW\nDurantion: 0.2 seconds\nSpot Size: 50 microns\nNumber of Shots:\n\nComplications: None\n\nThe eye was rinsed with sterile saline and alphagan P was placed in the eye.\n\nThe patient will have a post-op IOP check.",
 
-      /*option 5*/                 
-      "Argon Iridoplasty", 
+      /*option 5*/
+      "Argon Iridoplasty",
 
-      /*option 6*/                 
+      /*option 6*/
       "Automated Keratometry was performed/confirmed today:\nReadings are as follow:\n\nOD: @\nOS: @",
-      
-      /*option 7*/                 
+
+      /*option 7*/
       "Procedure: Axial Length Measurement/A-Scan\nPerson Performing Procedure: Relief Jones, III, M.D.\n\nThe patient's eyes were anesthetized with proparacaine eye drops. The axial length of each eye was then measure with the PalmScan AP2000 using the _ method.\n\nResults:\nOD:  mm with SEM=\nOS:  mm with SEM=\n\nThe patient tolerated the procedure well, and no complications were encountered.",
 
-      /*option 8*/                 
+      /*option 8*/
       "Indication: Uncontrolled Intraocular Pressure\nPre-Operative Diagnosis: Glaucoma-Left Eye\nPost-Operative Diagnosis: Glaucoma-Left Eye\n\nAnesthesia: Sedation and Peribulbar Anesthesia with 2% lidocaine without epinephrine and 0.75% bupivacaine with 0.5 cc wydase for a total of _ cc.\nAnesthesiologist:\nSurgical Assistant:\n\nProcedure: Baerveldt Valve/Tube Shunt with Tutoplast Scleral Reinforcement Graft-Left Eye CPT 66180 and 67255\n\nThe patient was identified in the preoperative holding area and informed consent was verified. The eye was marked for surgery. After appropriate sedation, the periocular area was cleaned with alcohol and a peribulbar block was delivered to the orbit. Anesthesia was confirmed and the patient was transported to the OR. The patient was sterilely prepped with 10% povidone-iodine (a 50:50 mixture with sterile saline was used to paint the lashes, irrigate the fornices and surface of the eye). The patient was draped in the usual sterile manner taking care to keep the eyelashes out of the surgical field. A conjunctival peritomy was performed for 3 clock hours in the superior-temporal quandrant. Tenon's and conjunctiva were retracted. Appropriate hemostasis was achieved with blunt-tip wet-field cautery. A subconjunctival pocket was created using curved Stevens scissors. The size of the pocket was checked by placing a weckcell into the pocket. A Baerveldt glaucoma valve was checked for patency by attaching a 30 gauge cannula on a syringe filled with BSS to the tube. The device was patent. The Baerveldt valve was placed into the superior-temporal subconjunctival pocket placing one edge under the superior rectus muscle and the other edge under the lateral rectus (muscle hooks were used to identify and lift the rectus muscles). The valve was harnessed to the sclera using 9-0 nylon suture. The eye was returned to primary position and the tube was trimmed to an appropriate length. A temporal paracentesis was created with a super-sharp blade. A 23-gauge needle was used to create a sclerotomy track into the anterior chamber. The tube was passed through the sclerotomy and into the anterior chamber. The anterior neck of the tube was tied tightly to occlude flow with 9-0 vicryl suture. The 23 gauge needle was then used to create 3 openings in the tube anterior to the part of the tube that had been occluded with the 9-0 vicryl suture. Tutoplast that had been previously soaked in BSS was trimmed to an appropriate size and harnessed with 9-0 nylon on each side to the sclera. The conjunctiva was then reapproximated at the limbus using two 8-0 Vicryl wing sutures. Subconjunctival injections of Ancef (0.3 cc) and Dexamethasone (0.3 cc) were placed in the inferior nasal fornix. The eye was irrigated with BSS. Vigamox and Maxitrol ointment was placed on the surface of the eye.\n\nComplications: None\nEBL: less than 1 cc\nSpecimens: None\n\nPlan: The eye was patched and shielded. The patient is to leave the patch and shield in place until tomorrow morning when it will be removed in the clinic and post-operative medications will be started. Tylenol 1-2 tablets q4-6 hours prn for pain.",
 
-      /*option 9*/                 
+      /*option 9*/
       "Hospital or Surgery Center:\nIndication: Uncontrolled Intraocular Pressure\n\nPre-Operative Diagnosis: Glaucoma-Right Eye\nPost-Operative Diagnosis: Glaucoma-Right Eye\n\nAnesthesia: IV Sedation and Peribulbar Anesthesia with 2% lidocaine without epinephrine and 0.75% bupivacaine with 0.5 cc wydase for a total of _ cc.\nAnesthesiologist:\nSurgical Assistant:\n\nProcedure: Ahmed Valve/Tube Shunt with Tutoplast Scleral Reinforcement Graft-Right Eye CPT 66180 and 67255\nThe patient was identified in the preoperative holding area and informed consent was verified. The eye was marked for surgery. After appropriate sedation, the periocular area was cleaned with alcohol and a peribulbar block was delivered to the orbit consisting of 2% Xylocaine and 0.75% Marcaine in a 50:50 mixture with Wydase for a total of __ cc. Anesthesia was confirmed and the patient was transported to the OR. The patient was sterilely prepped with 10% povidone-iodine (a 50:50 mixture with sterile saline was used to paint the lashes, irrigate the fornices and surface of the eye). The patient was draped in the usual manner taking care to keep the eyelashes out of the surgical field. A 4-0 silk suture was passed through the corneal stromal adjacent to the limbus superior and temporal. The silk bridal suture was used to retract the eye inferior.  A conjunctival peritomy was performed from 9:00 to 12:00 o'clock and Tenon's and conjunctiva were retracted backwards. Appropriate hemostasis was achieved with wetfield cautery. A subconjunctival pocket was created using curved Stevens scissors. A FP7 model Ahmed valve, serial no: _______, was first checked for patency with BSS and found to be patent. The Ahmed valve was placed into the _______________ subconjunctival pocket without complications and harnessed to the sclera using 9-0 nylon suture. The eye was placed back in primary position and the silk bridal suture was removed. A supersharp blade was used to create a temporal paracentesis. A 23-gauge needle was used to create a sclerotomy track superior-temporal into the anterior chamber flat with the iris plane. The tube was appropriately trimmed and then passed through the sclerotomy site into the anterior chamber. The anterior neck of the tube was harnessed to the sclera using a 9-0 nylon suture. Tutoplast that had been previously soaked in BSS was trimmed appropriately to be placed on top of the tube. 9-0 nylon was used to anchor the tutoplast on to sclera on each side. The conjunctiva was then reapproximated at the limbus using 8-0 vicryl suture. Subconjunctival injections of Ancef and Dexamethasone were placed in the inferior fornix (0.3 cc of each). The eye was appropriately cleaned. Maxitrol ointment was placed on the surface of the eye. The eye was patched and shielded, and the patient was transported to the post-operative recovery unit in stable condition.\n\nComplications: None\nEBL: less than 1 cc\nSpecimens: None\n\nPlan: The eye was patched and shielded. The patient is to leave the patch and shield in place until tomorrow morning when it will be removed in the clinic and post-operative medications will be started. Tylenol 1-2 tablets q4-6 hours prn for pain. ",
 
-      /*option 10*/                 
+      /*option 10*/
       "One drop of proparacaine was instilled into both eyes. The eyelid with the chalazion was cleaned with an alcohol pad. 1 cc of lidocaine 2% with Epinephrine 1:100,000 was injected sub-cutaneously into the lid. After the lid was anesthetized, the periocular area was prepped with povidone-iodine and draped. The chalazion clamp was placed on the lid over the chalazion adn the lid was inverted. The lesion was incised with a 15-0 blade. The chalazion was excised using 0.12 forceps and sharp Wescott scissors. A chalazion scoop was used to scrape any remaining remnants of the capsule. The chalazion clamp was removed and hemostasis was obtained with pressure. Bacitracin ung was applied to the surface of the eye and a pressure patch was applied to the eye. The patient is to remove the pressure patch in 3-4 hours and start the bacitracin ung qid. Ice packs can be applied to help with swelling and Tylenol can be used as directed on the bottle for pain.\n\n F/U in 1 week.",
 
-      /*option 11*/                 
+      /*option 11*/
       "Date of Procedure:\n\nProcedure: Diode Cyclophotocoagulation _ Eye\nDiagnosis: _ Glaucoma uncontrolled with maximum tolerated medical therapy\n\nSurgeon: Relief Jones, III, MD\nAssistant:\n\nAnesthesia: Retrobulbar anesthesia with 2% Lidocaine without epinephrine and 0.75 bupivacaine (1:1) for a total of _ cc.\n\nThe eye was anesthetized with a drop of proparacaine. The periocular area and eyelashes with prepped with povidone-iodine. A retrobular bulbar block was performed (see above) without complication. An eyelid speculum was placed. A G-probe was used to trans-sclerally treat the ciliary body with the diode laser.\n\nPower: 2000 mW\nDuration: 2000 ms\nNumber of Spots: Superior: _  Inferior: _\n\nComplications: None\nEstimated Blood Loss: None\nSpecimens: None\n\nThe patient is to continue the current drop regimen including Atropine TID and Prednisolone QID. A prescription for Vicodin was provided for pain control.\n\n F/U in 1 week.",
 
-      /*option 12*/                 
+      /*option 12*/
       "Indication: Decreased visual acuity affecting activities of daily living (ADLs)\n\nPre-Operative Diagnosis: Cataract-Left Eye\nPost-Operative Diagnosis: Cataract-Left Eye\nICD-9 366.16\nAnesthesia: Sedation and Topical with Intracameral Anesthesia with 2% lidocaine gel and Non-preserved 1% lidocaine _ cc, respectively.\nAnesthesiologist:\nSurgical Assistant:\n\n\nProcedure: ECCE (Phacoemulsificaton) with IOL Placement CPT 66984\n         The patient was identified in the preoperative holding area and informed consent was verified. The eye was marked for surgery. After sedation, 2% Lidocaine gel was placed on the surface of the eye. Anesthesia was confirmed and the patient was transported to the OR. The patient was sterilely prepped with 10% povidone-iodine (a 1:1mixture with sterile saline was used to paint the lashes, irrigate the fornices and surface of the eye). The patient was draped in the usual sterile manner taking care to keep the eyelashes out of the surgical field. The eye was entered using a supersharp blade at the 1:30 o'clock position and 0.2 cc of 1%, non-preserved lidocaine was placed in the anterior chamber for 30 seconds. The anterior chamber was filled with Viscoat. A microkeratome was used to create a biplanar clear corneal incision at the 11:00 o'clock position. A cystotome was used to initiate a capsular flap and Utrata forceps were used to create a continuous curvilinear capsulorrhexis. Hydrodissection and nucleus rotation were achieved. Phacoemulsification was used to remove the nucleus in a divide and conquer fashion. Remaining cortical material was removed with the irrigation/aspiration handpiece. Provisc was used to inflate the capsular bag. The lens was placed in the bag without complications. The remaining viscoelastic was aspirated using irrigation and aspiration. BSS was used to hydrate the surgical wounds. No wound leaks were identified. Vigamox was placed on the eye. The patient was transported to the post-operative recovery area in stable condition.\n\n\nLens Model and Serial #:\nU/S Time:\nComplications: None\nEBL: less than 0.1 cc\nSpecimens: None\n        Plan: The eye was shielded. The patient is to leave the shield in place, removing it only to place the post-operative drops (same as pre-operative drops). Tylenol 1-2 tablets q4-6 hours prn for pain.",
 
-      /*option 13*/                 
+      /*option 13*/
       "Indication: Decreased visual acuity affecting activities of daily living (ADLs)\n\n    Pre-Operative Diagnosis: Cataract-Right Eye\nPost-Operative Diagnosis: Cataract-Right Eye\n  ICD-9 366.16Anesthesia: Sedation and Topical with Intracameral Anesthesia with 2% lidocaine gel and Non-preserved 1% lidocaine _ cc, respectively.\n\nAnesthesiologist:\nSurgical Assistant:\n\n  Procedure: ECCE (Phacoemulsificaton) with IOL Placement CPT 66984  The patient was identified in the preoperative holding area and informed consent was verified. The eye was marked for surgery. After sedation, 2% Lidocaine gel was placed on the surface of the eye. Anesthesia was confirmed and the patient was transported to the OR. The patient was sterilely prepped with 10% povidone-iodine (a 1:1mixture with sterile saline was used to paint the lashes, irrigate the fornices and surface of the eye). The patient was draped in the usual sterile manner taking care to keep the eyelashes out of the surgical field. The eye was entered using a supersharp blade at the 1:30 o'clock position and 0.2 cc of 1%, non-preserved lidocaine was placed in the anterior chamber for 30 seconds. The anterior chamber was filled with Viscoat. A microkeratome was used to create a biplanar clear corneal incision at the 11:00 o'clock position. A cystotome was used to initiate a capsular flap and Utrata forceps were used to create a continuous curvilinear capsulorrhexis. Hydrodissection and nucleus rotation were achieved. Phacoemulsification was used to remove the nucleus in a divide and conquer fashion. Remaining cortical material was removed with the irrigation/aspiration handpiece. Provisc was used to inflate the capsular bag. The lens was placed in the bag without complications. The remaining viscoelastic was aspirated using irrigation and aspiration. BSS was used to hydrate the surgical wounds. No wound leaks were identified. Vigamox was placed on the eye. The patient was transported to the post-operative recovery area in stable condition.\n\nLens Model and Serial #:\nU/S Time:\nComplications: None\nEBL: less than 0.1 cc\nSpecimens: None\n\n Plan: The eye was shielded. The patient is to leave the shield in place, removing it only to place the post-operative drops (same as pre-operative drops). Tylenol 1-2 tablets q4-6 hours prn for pain.",
 
-      /*option 14*/                 
+      /*option 14*/
       "Indication:\nPre-Operative Diagnosis:\nPost-Operative Diagnosis:\nAnesthesia:\n Anesthesiologist:\nSurgical Assistant:\nProcedure:\nComplications:\nEBL:\nSpecimens:\nPlan:",
 
-      /*option 15*/                 
+      /*option 15*/
       "OD:RIGHT  Topical proparicaine anesthesia +2 PCO removed: 79 spots range 2.3-4.1 mJ; successful, no complications, total laser energy .219 Joule.  Topical Omnipred taper over 15 days.",
 
-      /*option 16*/                 
+      /*option 16*/
       "Indication: The patient reports a decrease in best corrected visual acuity in the left eye which is affecting activities of daily living (ADLs).\n      Pre-operative Diagnosis: Posterior Capsular Opacification-Left Eye\nPost-operative Diagnosis: Posterior Capsular Opacification-Left Eye\nICD-9 366.50\n\nProcedure: YAG Laser Capsulotomy CPT 66821-LT\nInformed consent was obtained after discussing the risks, benefits, and alternatives to the procedure. One drop of brimonidine 0.10%, phenylephrine 2.5, and tropicamide 1% was placed on the left eye prior to the procedure. After dilation, one drop of proparicaine was placed on the left eye. A Mandelkorn iridotomy/capsulotomy lens was placed on the left eye with goniosol. A circular opening was created in the opacified posterior capsule. The suface of the eye was irigated with saline and a drop of brimonidine 0.10% was placed on the left eye.\n\nLaser Settings\nInterval: single\n# Shots:\nPower: mJ\nTotal Energy:\n\nComplications: No complications were encountered.\n EBL: None\nSpecimens: None\n\nPlan: The patient was prescribed prednisolone acetate 1% to be used in the surgical eye (left) four times per day for 1 week. The patient will return for a dilated fundus exam in 1 week.    ",
 
-      /*option 17*/                 
+      /*option 17*/
       "Indication: The patient reports a decrease in best corrected visual acuity in the left eye which is affecting activities of daily living (ADLs).\nPre-operative Diagnosis: Posterior Capsular Opacification-Left Eye\nPost-operative Diagnosis: Posterior Capsular Opacification-Left Eye\n      ICD-9 366.50\n\nProcedure: YAG Laser Capsulotomy CPT 66821-LT\nInformed consent was obtained after discussing the risks, benefits, and alternatives to the procedure. One drop of brimonidine 0.10%, phenylephrine 2.5, and tropicamide 1% was placed on the left eye prior to the procedure. After dilation, one drop of proparicaine was placed on the left eye. A Mandelkorn iridotomy/capsulotomy lens was placed on the left eye with goniosol. A circular opening was created in the opacified posterior capsule. The suface of the eye was irigated with saline and a drop of brimonidine 0.10% was placed on the left eye.\n\nLaser Settings\nInterval: single\n# Shots:\nPower: mJ\nTotal Energy:\n\nComplications: No complications were encountered.\nEBL: None\nSpecimens: None\n\nPlan: The patient was prescribed prednisolone acetate 1% to be used in the surgical eye (left) four times per day for 1 week. The patient will return for a dilated fundus exam in 1 week.    ",
 
-      /*option 18*/  
+      /*option 18*/
       "Procedure: YAG Laser Iridotomy _ Eye\nIndication: _\nThe vision and IOP were checked prior to the laser procedure. The eye was pre-treated with alphagan-p and pilocarpine 2%.\n\n The patient was taken to the laser room where the YAG laser was used to create a peripheral iridotomy.\n\n  Complications: None\nLens: Abraham Iridotomy Lens\n\nPower:\n # of Shots:\n\nPost-Laser: The eye was irrigated with Saline and a drop of _ was instilled.\n\nF/U in 1 week",];
-        srcLocation = locations[sel.selectedIndex];    
-        if (srcLocation != undefined && srcLocation != "") {      
-                        document.getElementById('surgicalTemplate').innerHTML= srcLocation;   
-      } 
+        srcLocation = locations[sel.selectedIndex];
+        if (srcLocation != undefined && srcLocation != "") {
+                        document.getElementById('surgicalTemplate').innerHTML= srcLocation;
+      }
     }
     </script>
 
@@ -1409,6 +1436,14 @@ $(document).ready(function () {
 })
 </script>
 
+<script>
+$(document).ready(function () {
+    $('#fileSend').on('click',function() {
+      var patientA = {!! json_encode($patient->toArray()) !!};
+      $("#fpid").val(patientA.id);
+    })
+})
+</script>
 
 
 
