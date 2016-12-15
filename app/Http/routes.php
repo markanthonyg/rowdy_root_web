@@ -51,10 +51,10 @@ Route::get('/patient/{id}', 'Dashboard\ProfileController@showPatientProfile');
 Route::post('/patient', 'Dashboard\PatientsController@updatePatient');
 
 // Vital Routes
-Route::post('/patient_profile', 'Dashboard\VitalsController@updateVital');
+Route::post('/patient_profile/updateVital', 'Dashboard\VitalsController@updateVital');
 
 // Health History Routes
-Route::post('/patient_profile', 'Dashboard\HxController@updateHealthHistory');
+Route::post('/patient_profile/updateHistory', 'Dashboard\HxController@updateHealthHistory');
 
 // Account Request Routes
 Route::get('/accountRequestList', 'Dashboard\AccountRequestController@showAllAccountRequest');

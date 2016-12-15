@@ -10,13 +10,10 @@ use Illuminate\Support\Facades\Redirect;
 use App\Models\User;
 use App\Models\Patient;
 use App\Models\Vital;
-<<<<<<< HEAD
 use App\Models\Allergy;
 use App\Models\Visit;
 use App\Models\Surgery;
-=======
 use App\Models\HealthHistory;
->>>>>>> mark
 use DB;
 
 use Auth;

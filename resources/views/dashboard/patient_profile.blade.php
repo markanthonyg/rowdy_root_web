@@ -462,10 +462,6 @@
 @endif
 
 
-<<<<<<< HEAD
-=======
-
-
 
 
 <!-- Update HX PROTOTYPE Modal -->
@@ -622,7 +618,6 @@
 <div class="alert alert-warning">
   <strong>This patient has one or more known allergies.</strong>
 </div>
->>>>>>> mark
 <div class="col-md-12">
   <div class="tab-block">
     <ul class="nav nav-tabs">
@@ -882,7 +877,6 @@ cataract removal</textarea>
         <!-- END VITALS TABLE -->
       </div>
 
-<<<<<<< HEAD
       <div id="tab4" class="tab-pane">
       {!! Form::open(['action' => 'Dashboard\SurgicalProceduresController@addProcedure', 'id' => 'admin-form', 'method' => 'post']) !!}
         <label for="#templateSelect">Add a Surgery:</label>
@@ -963,10 +957,6 @@ cataract removal</textarea>
       </div>
     </div> <!-- /container -->
       </div>
-=======
-      <div id="tab4" class="tab-pane"></div>
-      <div id="tab5" class="tab-pane"></div>
->>>>>>> mark
     </div>
   </div>
 </div>
