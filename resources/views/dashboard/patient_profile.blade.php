@@ -462,6 +462,167 @@
 @endif
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+<!-- Update HX PROTOTYPE Modal -->
+<div class="modal fade" id="myHxModal" style="padding:0;">
+  <div class="modal-dialog" style="padding:0;">
+    <div class="modal-content" style="padding:0;">
+      <div class="modal-header" style="padding:0;">
+        <div class="header panel-footer text-right">
+          <a href="#" id="test" class="fa fa-times fa-2x" data-dismiss="modal"></a>
+        </div>
+      </div>
+      <div class="modal-body" style="padding:0;">
+        <div class="tray tray-center">
+          <div class="form-group">
+          <div class="admin-form theme-primary mw1000 center-block">
+            <!-- <div class="panel heading-border"> -->
+              {{-- <form method="post" action="/" id="myHxForm"> --}}
+              {!! Form::open(['action' => 'Dashboard\HxController@updateHealthHistory', 'id' => 'admin-form', 'method' => 'post']) !!}
+                {!! Form::hidden('hpid', $patient->id, ['name' => 'hpid', 'id' => 'hpid']) !!}
+                <div class="panel-body bg-light">
+                  <div class="section-divider mt20 mb40">
+                    <span id="hxTitle">Add Health History Details</span>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                  <!-- <div class="section-divider mt10 mb10"> -->
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">Major Drug Allergies?</div>
+                      <div class="panel-body">
+                        <div class="checkbox-custom checkbox-primary">
+                          <input type="checkbox" id="nkdaCheckbox">
+                          <label for="nkdaCheckbox">NKDA</label>
+                        </div>
+                      </br>
+                        <div class="checkbox-custom checkbox-primary">
+                          <input type="checkbox" id="drug_allergyCheckbox">
+                          <label for="drug_allergyCheckbox">Drug Allergies:</label>
+                        </div>
+                          </br>
+                            <div class="panel">
+                              <div class="panel-heading bg-dark">
+                                <span class="panel-title">Med Finder</span>
+                              </div>
+                              <div class="panel-body">
+                                <div class="form-group">
+                                  {{-- Search bar w/ results div (coming from jquery) --}}
+                                  <input type="text" class="search form-control input-sm" id="drug_search" placeholder="Search drugs...">
+                                  <div id="drug_result"></div>
+                                </div>
+                              </div>
+                            </div>
+
+                      </div>
+                    </div>
+                  <!-- </div> -->
+                </div>
+              </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                      <div class="panel panel-primary">
+                        <div class="panel-heading">Past Medical History</div>
+                        <div class="panel-body">
+                          <div class="checkbox-custom checkbox-primary">
+                            <input type="checkbox" id="diabetesCheckbox">
+                            <label for="diabetesCheckbox">Diabetes</label>
+                          </div>
+                        </br>
+                          <div class="checkbox-custom checkbox-primary">
+                            <input type="checkbox" id="copdCheckbox">
+                            <label for="copdCheckbox">COPD</label>
+                          </div>
+                        </br>
+                          <div class="checkbox-custom checkbox-primary">
+                            <input type="checkbox" id="htnCheckbox">
+                            <label for="htnCheckbox">Hypertension (HTN)</label>
+                          </div>
+                        </br>
+                          <div class="checkbox-custom checkbox-primary">
+                            <input type="checkbox" id="cadCheckbox">
+                            <label for="cadCheckbox">Coronary Artery Disease (CAD)</label>
+                          </div>
+                        </br>
+                          <div class="checkbox-custom checkbox-primary">
+                            <input type="checkbox" id="pvdCheckbox">
+                            <label for="pvdCheckbox">Peripheral Vascular Disease (PVD)</label>
+                          </div>
+                        </br>
+                          <div class="checkbox-custom checkbox-primary">
+                            <input type="checkbox" id="chfCheckbox">
+                            <label for="chfCheckbox">Congestive Heart Failure (CHF)</label>
+                          </div>
+                        </br>
+                          <div class="checkbox-custom checkbox-primary">
+                            <input type="checkbox" id="hypoCheckbox">
+                            <label for="hypoCheckbox">Hypothyroidism</label>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                      <div class="panel panel-primary">
+                        <div class="panel-heading">Bleeding Tendency?</div>
+                        <div class="panel-body">
+                          <div class="checkbox-custom checkbox-primary">
+                            <input type="checkbox" id="aspirinCheckbox">
+                            <label for="aspirinCheckbox">Aspirin</label>
+                          </div>
+                        </br>
+                          <div class="checkbox-custom checkbox-primary">
+                            <input type="checkbox" id="plavixCheckbox">
+                            <label for="plavixCheckbox">Plavix</label>
+                          </div>
+                        </br>
+                          <div class="checkbox-custom checkbox-primary">
+                            <input type="checkbox" id="bleedingCheckbox">
+                            <label for="bleedingCheckbox">Blood Disorder?</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                      <div class="panel panel-primary">
+                        <div class="panel-heading">Past Surgical History Notes:</div>
+                        <div class="panel-body">
+                          <textarea class="form-control" id="textArea3" rows="8"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel-footer text-right">
+                    <button type="submit" class="btn btn-primary" name="action" value="AddHx" id="addHx" style="margin-right: 5px;"> Save </button>
+                  </div>
+                </div>
+              <!-- </div> -->
+            </div>
+            {{-- </form> --}}
+            {!! Form::close() !!}
+          </div>
+      </div>
+      <div class="modal-footer" style="padding:0;">
+
+      </div><!-- /.modal-footer-->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</div>
+
+
+<div class="alert alert-warning">
+  <strong>This patient has one or more known allergies.</strong>
+</div>
+>>>>>>> mark
 <div class="col-md-12">
   <div class="tab-block">
     <ul class="nav nav-tabs">
@@ -484,6 +645,17 @@
     <div class="tab-content p30" style="height: 730px;">
       <!-- TABSHERE-->
       <div id="tab1" class="tab-pane active">
+        @if ($health_history->count() == 0)
+          <div class="row">
+            <div class="col-md-12">
+              <h3><i>No health history found</i></h3>
+            </div>
+            <div class="col-md-12">
+              <button class="btn btn-primary" id="hxModalButton" style="float: left;margin: 10px;"><i class="fa fa-plus fa-lg"></i> Fill Out Health History </button>
+            </div>
+          </div>
+
+        @else
         <div class="row">
           <div class="col-md-6">
             <div class="panel panel-primary">
@@ -582,6 +754,7 @@ cataract removal</textarea>
             </div>
           </div>
         </div>
+      @endif
       </div>
 
       {{-- Patient profile tab --}}
@@ -709,6 +882,7 @@ cataract removal</textarea>
         <!-- END VITALS TABLE -->
       </div>
 
+<<<<<<< HEAD
       <div id="tab4" class="tab-pane">
       {!! Form::open(['action' => 'Dashboard\SurgicalProceduresController@addProcedure', 'id' => 'admin-form', 'method' => 'post']) !!}
         <label for="#templateSelect">Add a Surgery:</label>
@@ -789,6 +963,10 @@ cataract removal</textarea>
       </div>
     </div> <!-- /container -->
       </div>
+=======
+      <div id="tab4" class="tab-pane"></div>
+      <div id="tab5" class="tab-pane"></div>
+>>>>>>> mark
     </div>
   </div>
 </div>
@@ -888,6 +1066,7 @@ cataract removal</textarea>
 
   $(document).ready(function () {
 
+
     $('#hunit').change(function() {
 
       // $('#hcm').val('');
@@ -924,6 +1103,10 @@ cataract removal</textarea>
     //     //   $('#hinches').hide();
     //     // }
     //   )};
+
+    $('#hxModalButton').on('click',function() {
+      $("#myHxModal").modal("show");
+    })
 
     $('#addVitalBtn').on('click',function() {
 

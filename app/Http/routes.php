@@ -53,6 +53,9 @@ Route::post('/patient', 'Dashboard\PatientsController@updatePatient');
 // Vital Routes
 Route::post('/patient_profile', 'Dashboard\VitalsController@updateVital');
 
+// Health History Routes
+Route::post('/patient_profile', 'Dashboard\HxController@updateHealthHistory');
+
 // Account Request Routes
 Route::get('/accountRequestList', 'Dashboard\AccountRequestController@showAllAccountRequest');
 Route::post('/accountRequestList', 'Dashboard\AccountRequestController@updateAccount');
