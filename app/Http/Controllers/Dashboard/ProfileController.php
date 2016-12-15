@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 use App\Models\User;
 use App\Models\Patient;
 use App\Models\Vital;
+use App\Models\HealthHistory;
 use DB;
 
 use Auth;
@@ -45,7 +46,7 @@ class ProfileController extends Controller
       // $result = DB::table('vitals')->where('id', '222');
       // $result = DB::table('vitals');
 
-
+      $data['health_history'] = HealthHistory::where('pid', '=', $id);
 
 
       // $data['vitals'] = Vital::where('id', '=', '222');
