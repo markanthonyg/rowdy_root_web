@@ -28,6 +28,42 @@ use App\Models\FundusExam;
 class VisitsController extends Controller
 {
 
+    // Go back function
+    public function goBack(){
+
+      $data['user'] = Auth::User();
+      $data['num_unapproved_users'] = User::where(['approved' => 0])->count();
+
+      return Redirect::back()->with($data);
+    }
+
+    // Detailed visit information
+    public function visitDetailView($vid){
+
+      // Check if user is logged in, if not send back to home
+      if(!Auth::check()){
+        return Redirect::to('/');
+      }
+
+      $data['user'] = Auth::User();
+      $data['num_unapproved_users'] = User::where(['approved' => 0])->count();
+
+      $data['visit'] = Visit::where('id', '=', $vid)->first();
+
+      $data['patient'] = Patient::where('id', '=', $data['visit']->pid)->first();
+      $data['dv'] = DistanceVision::where('vid', '=', $vid)->first();
+      $data['refrac'] = Refraction::where('vid', '=', $vid)->first();
+      $data['pupil'] = Pupil::where('vid', '=', $vid)->first();
+      $data['GlassesRx'] = GlassesRx::where('vid', '=', $vid)->first();
+      $data['ant_chamber'] = AnteriorChamber::where('vid', '=', $vid)->first();
+      $data['lense'] = Lense::where('vid', '=', $vid)->first();
+      $data['iop'] = Iop::where('vid', '=', $vid)->first();
+      $data['gonio'] = Gonio::where('vid', '=', $vid)->first();
+      $data['fundus'] = FundusExam::where('vid', '=', $vid)->first();
+
+      return view('dashboard/previous_patient_visit', $data);
+    }
+
     // Show the dashboard Home
     public function showVisits(){
       // Logic will need to be added to pass $data and authenticate user
