@@ -947,14 +947,42 @@ cataract removal</textarea>
 
       </div>
       <div id="tab5" class="tab-pane">
-        {!! Form::open(['action' => 'Dashboard\UploadController@uploadFile', 'method' => 'post']) !!}
-         <input type="file" name="profile" class="upload" id="file" />
-          <button type="submit" class="btn btn-primary" name="action" value="Update" style="margin-right: 5px;"> Save</button>
-        {!! Form::close() !!}
+        <div class="about-section">
+         <div class="text-content">
+           <div class="span7 offset1">
+              @if(Session::has('success'))
+                <div class="alert-box success">
+                <h2>{!! Session::get('success') !!}</h2>
+                </div>
+              @endif
+              <div class="secure">Upload form</div>
+              {!! Form::open(array('url'=>'patient_profile/upload','method'=>'POST', 'files'=>true)) !!}
+               <div class="control-group">
+                <div class="controls">
+                {!! Form::file('image') !!}
+                {!! Form::hidden('fpid', '', ['class' => 'gui-input', 'name' => 'fpid', 'id' => 'fpid']) !!}
+      	  <p class="errors">{!!$errors->first('image')!!}</p>
+      	@if(Session::has('error'))
+      	<p class="errors">{!! Session::get('error') !!}</p>
+      	@endif
+              </div>
+              </div>
+              <div id="success"> </div>
+            {!! Form::submit('Submit', array('class'=>'send-btn', 'id' => 'fileSend')) !!}
+            {!! Form::close() !!}
+            </div>
+         </div>
+      </div>
+      @foreach($files as $file)
+        <div class="row">
+          <a href="/uploads/{{$file->file_name}}"><img src="/uploads/{{$file->file_name}}"/></a>
+        </div>
+      @endforeach
 
         <!--<form action="/file-upload"class="dropzone"id="my-awesome-dropzone"></form>-->
 
       </div>
+
     </div> <!-- /container -->
       </div>
     </div>
@@ -1581,6 +1609,14 @@ $(document).ready(function () {
 })
 </script>
 
+<script>
+$(document).ready(function () {
+    $('#fileSend').on('click',function() {
+      var patientA = {!! json_encode($patient->toArray()) !!};
+      $("#fpid").val(patientA.id);
+    })
+})
+</script>
 
 
 

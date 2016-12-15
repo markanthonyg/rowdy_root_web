@@ -80,8 +80,10 @@ Route::post('/', 'EMailController@send');
 Route::get('patientsapi', 'API\APIController@allPatients');
 Route::get('usersapi', 'API\APIController@allUsers');
 
-// File upload Routes
-Route::post('/patient_profile/uploadFile', 'Dashboard\UploadController@uploadFile');
+Route::get('/patient_profile/upload', function() {
+  return View::make('pages.upload');
+});
+Route::post('/patient_profile/upload', 'Dashboard\UploadController@upload');
 
 // Surgical Procedure routes
 Route::post('/patient_profile/addPro', 'Dashboard\SurgicalProceduresController@addProcedure');

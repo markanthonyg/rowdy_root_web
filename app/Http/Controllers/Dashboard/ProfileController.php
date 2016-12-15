@@ -12,6 +12,7 @@ use App\Models\Patient;
 use App\Models\Vital;
 use App\Models\Allergy;
 use App\Models\Visit;
+use App\Models\File;
 use App\Models\Surgery;
 use App\Models\HealthHistory;
 use DB;
@@ -70,6 +71,7 @@ class ProfileController extends Controller
       // dd($data['vitals']);
 
       $data['surgeries'] = Surgery::where(['pid' => $id])->get();
+      $data['files'] = File::where(['pid' => $id])->get();
 
       return view('Dashboard/patient_profile')->with($data);
     }
