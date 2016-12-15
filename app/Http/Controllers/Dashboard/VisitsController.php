@@ -28,6 +28,15 @@ use App\Models\FundusExam;
 class VisitsController extends Controller
 {
 
+    // Go back function
+    public function goBack(){
+
+      $data['user'] = Auth::User();
+      $data['num_unapproved_users'] = User::where(['approved' => 0])->count();
+
+      return Redirect::back()->with($data);
+    }
+
     // Detailed visit information
     public function visitDetailView($vid){
 

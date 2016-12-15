@@ -665,10 +665,10 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_bleb_type', 'vascular') !!} Vascular &nbsp;
+                        {!! Form::radio('sle_anterior_chamber_od_bleb_type', 1) !!} Vascular &nbsp;
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_bleb_type', 'avascular') !!} Avascular
+                        {!! Form::radio('sle_anterior_chamber_od_bleb_type', 0) !!} Avascular
                       </div>
                       <br />
                       <div class="row">
@@ -807,10 +807,10 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_bleb_type', 'vascular') !!} Vascular &nbsp;
+                        {!! Form::radio('sle_anterior_chamber_os_bleb_type', 1) !!} Vascular &nbsp;
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_bleb_type', 'avascular') !!} Avascular
+                        {!! Form::radio('sle_anterior_chamber_os_bleb_type', 0) !!} Avascular
                       </div>
                       <br />
                       <div class="row">

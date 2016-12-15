@@ -32,7 +32,7 @@
     <div class="form-group">
     <div class="admin-form theme-primary mw1000 center-block">
       {{-- FORM BEGIN --}}
-      {!! Form::open(['action' => 'Dashboard\VisitsController@insertVisit', 'id' => 'admin-form', 'method' => 'post']) !!}
+      {!! Form::open(['action' => 'Dashboard\VisitsController@goBack', 'id' => 'admin-form', 'method' => 'post']) !!}
 
       {{-- Begin panels --}}
       {{-- Row 1: Patient and demographics --}}
@@ -229,11 +229,11 @@
               <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
                   @if ($refrac->isManifest == 1)
-                    {!! Form::radio('refraction_type', 'manifest_refraction', true) !!} Manifest Refraction &nbsp; &nbsp; &nbsp;
-                    {!! Form::radio('refraction_type', 'autorefraction') !!} Autorefraction
+                    {!! Form::radio('refraction_type', 'manifest_refraction', true, ['disabled' => 'true']) !!} Manifest Refraction &nbsp; &nbsp; &nbsp;
+                    {!! Form::radio('refraction_type', 'autorefraction', false, ['disabled' => 'true']) !!} Autorefraction
                   @else
-                    {!! Form::radio('refraction_type', 'manifest_refraction') !!} Manifest Refraction &nbsp; &nbsp; &nbsp;
-                    {!! Form::radio('refraction_type', 'autorefraction', true) !!} Autorefraction
+                    {!! Form::radio('refraction_type', 'manifest_refraction', false, ['disabled' => 'true']) !!} Manifest Refraction &nbsp; &nbsp; &nbsp;
+                    {!! Form::radio('refraction_type', 'autorefraction', true, ['disabled' => 'true']) !!} Autorefraction
                   @endif
                 </div>
               </div>
@@ -250,13 +250,13 @@
                   OD (sc)
                 </div>
                 <div class="col-md-3">
-                  {!! Form::text('refraction_sc_od_sphere', '', ['id' => 'refraction_sc_od_sphere', 'class', 'size' => '20']) !!}
+                  {!! Form::text('refraction_sc_od_sphere', $refrac->SC_OD_Sphere, ['id' => 'refraction_sc_od_sphere', 'class', 'size' => '20', 'disabled' => 'true']) !!}
                 </div>
                 <div class="col-md-3">
-                  {!! Form::text('refraction_sc_od_cylinder', '', ['id' => 'refraction_sc_od_cylinder', 'class', 'size' => '20']) !!}
+                  {!! Form::text('refraction_sc_od_cylinder', $refrac->SC_OD_Cyl, ['id' => 'refraction_sc_od_cylinder', 'class', 'size' => '20', 'disabled' => 'true']) !!}
                 </div>
                 <div class="col-md-3">
-                  {!! Form::text('refraction_sc_od_axis', '', ['id' => 'refraction_sc_od_axis', 'class', 'size' => '20']) !!}
+                  {!! Form::text('refraction_sc_od_axis', $refrac->SC_OD_Axis, ['id' => 'refraction_sc_od_axis', 'class', 'size' => '20', 'disabled' => 'true']) !!}
                 </div>
               </div>
               <div class="row text-center">
@@ -265,13 +265,13 @@
                   OS (sc)
                 </div>
                 <div class="col-md-3">
-                  {!! Form::text('refraction_sc_os_sphere', '', ['id' => 'refraction_sc_os_sphere', 'class', 'size' => '20']) !!}
+                  {!! Form::text('refraction_sc_os_sphere', $refrac->SC_OS_Sphere, ['id' => 'refraction_sc_os_sphere', 'class', 'size' => '20', 'disabled' => 'true']) !!}
                 </div>
                 <div class="col-md-3">
-                  {!! Form::text('refraction_sc_os_cylinder', '', ['id' => 'refraction_sc_os_cylinder', 'class', 'size' => '20']) !!}
+                  {!! Form::text('refraction_sc_os_cylinder', $refrac->SC_OS_Cyl, ['id' => 'refraction_sc_os_cylinder', 'class', 'size' => '20', 'disabled' => 'true']) !!}
                 </div>
                 <div class="col-md-3">
-                  {!! Form::text('refraction_sc_os_axis', '', ['id' => 'refraction_sc_os_axis', 'class', 'size' => '20']) !!}
+                  {!! Form::text('refraction_sc_os_axis', $refrac->SC_OS_Axis, ['id' => 'refraction_sc_os_axis', 'class', 'size' => '20', 'disabled' => 'true']) !!}
                 </div>
               </div>
               <br />
@@ -281,13 +281,13 @@
                   OD (cc)
                 </div>
                 <div class="col-md-3">
-                  {!! Form::text('refraction_cc_od_sphere', '', ['id' => 'refraction_cc_od_sphere', 'class', 'size' => '20']) !!}
+                  {!! Form::text('refraction_cc_od_sphere', $refrac->CC_OD_Sphere, ['id' => 'refraction_cc_od_sphere', 'class', 'size' => '20', 'disabled' => 'true']) !!}
                 </div>
                 <div class="col-md-3">
-                  {!! Form::text('refraction_cc_od_cylinder', '', ['id' => 'refraction_cc_od_cylinder', 'class', 'size' => '20']) !!}
+                  {!! Form::text('refraction_cc_od_cylinder', $refrac->CC_OD_Cyl, ['id' => 'refraction_cc_od_cylinder', 'class', 'size' => '20', 'disabled' => 'true']) !!}
                 </div>
                 <div class="col-md-3">
-                  {!! Form::text('refraction_cc_od_axis', '', ['id' => 'refraction_cc_od_axis', 'class', 'size' => '20']) !!}
+                  {!! Form::text('refraction_cc_od_axis', $refrac->CC_OD_Axis, ['id' => 'refraction_cc_od_axis', 'class', 'size' => '20', 'disabled' => 'true']) !!}
                 </div>
               </div>
               <div class="row text-center">
@@ -296,13 +296,13 @@
                   OS (cc)
                 </div>
                 <div class="col-md-3">
-                  {!! Form::text('refraction_cc_os_sphere', '', ['id' => 'refraction_cc_os_sphere', 'class', 'size' => '20']) !!}
+                  {!! Form::text('refraction_cc_os_sphere', $refrac->CC_OS_Sphere, ['id' => 'refraction_cc_os_sphere', 'class', 'size' => '20', 'disabled' => 'true']) !!}
                 </div>
                 <div class="col-md-3">
-                  {!! Form::text('refraction_cc_os_cylinder', '', ['id' => 'refraction_cc_os_cylinder', 'class', 'size' => '20']) !!}
+                  {!! Form::text('refraction_cc_os_cylinder', $refrac->CC_OS_Cyl, ['id' => 'refraction_cc_os_cylinder', 'class', 'size' => '20', 'disabled' => 'true']) !!}
                 </div>
                 <div class="col-md-3">
-                  {!! Form::text('refraction_cc_os_axis', '', ['id' => 'refraction_cc_os_axis', 'class', 'size' => '20']) !!}
+                  {!! Form::text('refraction_cc_os_axis', $refrac->CC_OS_Axis, ['id' => 'refraction_cc_os_axis', 'class', 'size' => '20', 'disabled' => 'true']) !!}
                 </div>
               </div>
             </div>
@@ -330,7 +330,11 @@
                       <div class="col-md-5 text-left">
                         Normal
                       </div>
-                      {!! Form::checkbox('sle_pupil_left_normal', '1') !!}
+                      @if ($pupil->isLeftPupilNormal == 1)
+                        {!! Form::checkbox('sle_pupil_left_normal', '1', true, ['disabled' => 'true']) !!}
+                      @else
+                        {!! Form::checkbox('sle_pupil_left_normal', '1', false, ['disabled' => 'true']) !!}
+                      @endif
                     </div>
                     <br />
                     <br />
@@ -340,10 +344,18 @@
                       </div>
                       <div class="col-md-7">
                         <div class="row">
-                          {!! Form::radio('sle_pupil_left_shape', 'round') !!} Round &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->leftShape == "round")
+                            {!! Form::radio('sle_pupil_left_shape', 'round', true, ['disabled' => 'true']) !!} Round &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_left_shape', 'round', false, ['disabled' => 'true']) !!} Round &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                         <div class="row">
-                          {!! Form::radio('sle_pupil_left_shape', 'irregular') !!} Irregular &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->leftShape == "irregular")
+                            {!! Form::radio('sle_pupil_left_shape', 'irregular', true, ['disabled' => 'true']) !!} Irregular &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_left_shape', 'irregular', false, ['disabled' => 'true']) !!} Irregular &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                       </div>
                     </div>
@@ -354,15 +366,8 @@
                       </div>
                       <div class="col-md-7">
                         {{ Form::select('sle_pupil_left_diameter', [
-                          '1' => '1',
-                          '2' => '2',
-                          '3' => '3',
-                          '4' => '4',
-                          '5' => '5',
-                          '6' => '6',
-                          '7' => '7',
-                          '8' => '8',
-                          '9' => '9'])
+                          $pupil->leftDiameter => $pupil->leftDiameter
+                        ], $pupil->leftDiameter, ['disabled' => 'true'])
                         }}
                          mm
                       </div>
@@ -374,10 +379,18 @@
                       </div>
                       <div class="col-md-7">
                         <div class="row">
-                          {!! Form::radio('sle_pupil_left_rapd', '1') !!} Yes &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->isLeftRAPD == 1)
+                            {!! Form::radio('sle_pupil_left_rapd', 1, true, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_left_rapd', 1, false, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                         <div class="row">
-                          {!! Form::radio('sle_pupil_left_rapd', '0') !!} No &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->isLeftRAPD == 0)
+                            {!! Form::radio('sle_pupil_left_rapd', 0, true, ['disabled' => 'true']) !!} No &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_left_rapd', 0, false, ['disabled' => 'true']) !!} No &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                       </div>
                     </div>
@@ -388,10 +401,18 @@
                       </div>
                       <div class="col-md-7">
                         <div class="row">
-                          {!! Form::radio('sle_pupil_left_synechia', '1') !!} Yes &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->isLeftSynechia == 1)
+                            {!! Form::radio('sle_pupil_left_synechia', 1, true, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_left_synechia', 1, false, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                         <div class="row">
-                          {!! Form::radio('sle_pupil_left_synechia', '0') !!} No &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->isLeftSynechia == 0)
+                            {!! Form::radio('sle_pupil_left_synechia', 0, true, ['disabled' => 'true']) !!} No &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_left_synechia', 0, false, ['disabled' => 'true']) !!} No &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                       </div>
                     </div>
@@ -404,7 +425,11 @@
                       <div class="col-md-5 text-left">
                         Normal
                       </div>
-                      {!! Form::checkbox('sle_pupil_right_normal', '1') !!}
+                      @if ($pupil->isRightPupilNormal == 1)
+                        {!! Form::checkbox('sle_pupil_right_normal', '1', true, ['disabled' => 'true']) !!}
+                      @else
+                        {!! Form::checkbox('sle_pupil_right_normal', '1', false, ['disabled' => 'true']) !!}
+                      @endif
                     </div>
                     <br />
                     <br />
@@ -414,10 +439,18 @@
                       </div>
                       <div class="col-md-7">
                         <div class="row">
-                          {!! Form::radio('sle_pupil_right_shape', 'round') !!} Round &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->rightShape == "round")
+                            {!! Form::radio('sle_pupil_right_shape', 'round', true, ['disabled' => 'true']) !!} Round &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_right_shape', 'round', false, ['disabled' => 'true']) !!} Round &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                         <div class="row">
-                          {!! Form::radio('sle_pupil_right_shape', 'irregular') !!} Irregular &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->rightShape == "irregular")
+                            {!! Form::radio('sle_pupil_right_shape', 'irregular', true, ['disabled' => 'true']) !!} Irregular &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_right_shape', 'irregular', false, ['disabled' => 'true']) !!} Irregular &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                       </div>
                     </div>
@@ -428,15 +461,8 @@
                       </div>
                       <div class="col-md-7">
                         {{ Form::select('sle_pupil_right_diameter', [
-                          '1' => '1',
-                          '2' => '2',
-                          '3' => '3',
-                          '4' => '4',
-                          '5' => '5',
-                          '6' => '6',
-                          '7' => '7',
-                          '8' => '8',
-                          '9' => '9'])
+                          $pupil->rightDiameter => $pupil->rightDiameter
+                        ], $pupil->rightDiameter, ['disabled' => 'true'])
                         }}
                          mm
                       </div>
@@ -448,10 +474,18 @@
                       </div>
                       <div class="col-md-7">
                         <div class="row">
-                          {!! Form::radio('sle_pupil_right_rapd', '1') !!} Yes &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->isRightRAPD == 1)
+                            {!! Form::radio('sle_pupil_right_rapd', 1, true, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_right_rapd', 1, false, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                         <div class="row">
-                          {!! Form::radio('sle_pupil_right_rapd', '0') !!} No &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->isRightRAPD == 0)
+                            {!! Form::radio('sle_pupil_right_rapd', 0, true, ['disabled' => 'true']) !!} No &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_right_rapd', 0, false, ['disabled' => 'true']) !!} No &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                       </div>
                     </div>
@@ -462,10 +496,18 @@
                       </div>
                       <div class="col-md-7">
                         <div class="row">
-                          {!! Form::radio('sle_pupil_right_synechia', '1') !!} Yes &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->isRightSynechia == 1)
+                            {!! Form::radio('sle_pupil_right_synechia', 1, true, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_right_synechia', 1, false, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                         <div class="row">
-                          {!! Form::radio('sle_pupil_right_synechia', '0') !!} No &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->isRightSynechia == 0)
+                            {!! Form::radio('sle_pupil_right_synechia', 0, true, ['disabled' => 'true']) !!} No &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_right_synechia', 0, false, ['disabled' => 'true']) !!} No &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                       </div>
                     </div>
@@ -478,7 +520,11 @@
                       <div class="col-md-5 text-left">
                         Normal
                       </div>
-                      {!! Form::checkbox('sle_pupil_both_normal', '1') !!}
+                      @if ($pupil->isBothPupilsNormal == 1)
+                        {!! Form::checkbox('sle_pupil_both_normal', '1', true, ['disabled' => 'true']) !!}
+                      @else
+                        {!! Form::checkbox('sle_pupil_both_normal', '1', false, ['disabled' => 'true']) !!}
+                      @endif
                     </div>
                     <br />
                     <br />
@@ -488,10 +534,18 @@
                       </div>
                       <div class="col-md-7">
                         <div class="row">
-                          {!! Form::radio('sle_pupil_both_shape', 'round') !!} Round &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->bothShape == "round")
+                            {!! Form::radio('sle_pupil_both_shape', 'round', true, ['disabled' => 'true']) !!} Round &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_both_shape', 'round', false, ['disabled' => 'true']) !!} Round &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                         <div class="row">
-                          {!! Form::radio('sle_pupil_both_shape', 'irregular') !!} Irregular &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->bothShape == "irregular")
+                            {!! Form::radio('sle_pupil_both_shape', 'irregular', true, ['disabled' => 'true']) !!} Irregular &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_both_shape', 'irregular', false, ['disabled' => 'true']) !!} Irregular &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                       </div>
                     </div>
@@ -502,15 +556,8 @@
                       </div>
                       <div class="col-md-7">
                         {{ Form::select('sle_pupil_both_diameter', [
-                          '1' => '1',
-                          '2' => '2',
-                          '3' => '3',
-                          '4' => '4',
-                          '5' => '5',
-                          '6' => '6',
-                          '7' => '7',
-                          '8' => '8',
-                          '9' => '9'])
+                          $pupil->bothDiameter => $pupil->bothDiameter
+                        ], $pupil->bothDiameter, ['disabled' => 'true'])
                         }}
                          mm
                       </div>
@@ -522,10 +569,18 @@
                       </div>
                       <div class="col-md-7">
                         <div class="row">
-                          {!! Form::radio('sle_pupil_both_rapd', '1') !!} Yes &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->isBothRAPD == 1)
+                            {!! Form::radio('sle_pupil_both_rapd', 1, true, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_both_rapd', 1, false, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                         <div class="row">
-                          {!! Form::radio('sle_pupil_both_rapd', '0') !!} No &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->isBothRAPD == 0)
+                            {!! Form::radio('sle_pupil_both_rapd', 0, true, ['disabled' => 'true']) !!} No &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_both_rapd', 0, false, ['disabled' => 'true']) !!} No &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                       </div>
                     </div>
@@ -536,10 +591,18 @@
                       </div>
                       <div class="col-md-7">
                         <div class="row">
-                          {!! Form::radio('sle_pupil_both_synechia', '1') !!} Yes &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->isBothSynechia == 1)
+                            {!! Form::radio('sle_pupil_both_synechia', 1, true, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_both_synechia', 1, false, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                         <div class="row">
-                          {!! Form::radio('sle_pupil_both_synechia', '0') !!} No &nbsp; &nbsp; &nbsp;
+                          @if ($pupil->isBothSynechia == 0)
+                            {!! Form::radio('sle_pupil_both_synechia', 0, true, ['disabled' => 'true']) !!} No &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('sle_pupil_both_synechia', 0, false, ['disabled' => 'true']) !!} No &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                       </div>
                     </div>
@@ -564,7 +627,11 @@
                       Normal
                     </div>
                     <div class="col-md-4 col-md-offset-2">
-                      {!! Form::checkbox('sle_anterior_chamber_od_normal', '1') !!}
+                      @if ($ant_chamber->isACODNormal == 1)
+                        {!! Form::checkbox('sle_anterior_chamber_od_normal', '1', true, ['disabled' => 'true']) !!}
+                      @else
+                        {!! Form::checkbox('sle_anterior_chamber_od_normal', '1', false, ['disabled' => 'true']) !!}
+                      @endif
                     </div>
                   </div>
                   <br />
@@ -574,16 +641,32 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_depth', '1') !!} +1
+                        @if ($ant_chamber->ACDepthOD == "1")
+                          {!! Form::radio('sle_anterior_chamber_od_depth', '1', true, ['disabled' => 'true']) !!} +1
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_depth', '1', false, ['disabled' => 'true']) !!} +1
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_depth', '2') !!} +2
+                        @if ($ant_chamber->ACDepthOD == "2")
+                          {!! Form::radio('sle_anterior_chamber_od_depth', '2', true, ['disabled' => 'true']) !!} +2
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_depth', '2', false, ['disabled' => 'true']) !!} +2
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_depth', '3') !!} +3
+                        @if ($ant_chamber->ACDepthOD == "3")
+                          {!! Form::radio('sle_anterior_chamber_od_depth', '3', true, ['disabled' => 'true']) !!} +3
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_depth', '3', false, ['disabled' => 'true']) !!} +3
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_depth', '4') !!} +4
+                        @if ($ant_chamber->ACDepthOD == "4")
+                          {!! Form::radio('sle_anterior_chamber_od_depth', '4', true, ['disabled' => 'true']) !!} +4
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_depth', '4', false, ['disabled' => 'true']) !!} +4
+                        @endif
                       </div>
                     </div>
                   </div>
@@ -594,10 +677,18 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_angle', 'open') !!} Open
+                        @if ($ant_chamber->ACAngleOD == "open")
+                          {!! Form::radio('sle_anterior_chamber_od_angle', 'open', true, ['disabled' => 'true']) !!} Open
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_angle', 'open', false, ['disabled' => 'true']) !!} Open
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_angle', 'closed') !!} Closed
+                        @if ($ant_chamber->ACAngleOD == "closed")
+                          {!! Form::radio('sle_anterior_chamber_od_angle', 'closed', true, ['disabled' => 'true']) !!} Closed
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_angle', 'closed', false, ['disabled' => 'true']) !!} Closed
+                        @endif
                       </div>
                     </div>
                   </div>
@@ -608,10 +699,18 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_pas', 'present') !!} Present
+                        @if ($ant_chamber->PASOD == "present")
+                          {!! Form::radio('sle_anterior_chamber_od_pas', 'present', true, ['disabled' => 'true']) !!} Present
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_pas', 'present', false, ['disabled' => 'true']) !!} Present
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_pas', 'absent') !!} Absent
+                        @if ($ant_chamber->PASOS == "absent")
+                          {!! Form::radio('sle_anterior_chamber_od_pas', 'absent', true, ['disabled' => 'true']) !!} Absent
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_pas', 'absent', false, ['disabled' => 'true']) !!} Absent
+                        @endif
                       </div>
                     </div>
                   </div>
@@ -622,16 +721,32 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_kp', '1') !!} +1
+                        @if ($ant_chamber->ACODKP == "1")
+                          {!! Form::radio('sle_anterior_chamber_od_kp', '1', true, ['disabled' => 'true']) !!} +1
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_kp', '1', false, ['disabled' => 'true']) !!} +1
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_kp', '2') !!} +2
+                        @if ($ant_chamber->ACODKP == "2")
+                          {!! Form::radio('sle_anterior_chamber_od_kp', '2', true, ['disabled' => 'true']) !!} +2
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_kp', '2', false, ['disabled' => 'true']) !!} +2
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_kp', '3') !!} +3
+                        @if ($ant_chamber->ACODKP == "3")
+                          {!! Form::radio('sle_anterior_chamber_od_kp', '3', true, ['disabled' => 'true']) !!} +3
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_kp', '3', false, ['disabled' => 'true']) !!} +3
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_kp', '4') !!} +4
+                        @if ($ant_chamber->ACODKP == "4")
+                          {!! Form::radio('sle_anterior_chamber_od_kp', '4', true, ['disabled' => 'true']) !!} +4
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_kp', '4', false, ['disabled' => 'true']) !!} +4
+                        @endif
                       </div>
                     </div>
                   </div>
@@ -642,16 +757,32 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::checkbox('sle_anterior_chamber_od_shunt', '1') !!} Shunt
+                        @if ($ant_chamber->isShuntOD == 1)
+                          {!! Form::checkbox('sle_anterior_chamber_od_shunt', '1', true, ['disabled' => 'true']) !!} Shunt
+                        @else
+                          {!! Form::checkbox('sle_anterior_chamber_od_shunt', '1', false, ['disabled' => 'true']) !!} Shunt
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::checkbox('sle_anterior_chamber_od_scarring', '1') !!} Scarring
+                        @if ($ant_chamber->isScarringOD == 1)
+                          {!! Form::checkbox('sle_anterior_chamber_od_scarring', '1', true, ['disabled' => 'true']) !!} Scarring
+                        @else
+                          {!! Form::checkbox('sle_anterior_chamber_od_scarring', '1', false, ['disabled' => 'true']) !!} Scarring
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::checkbox('sle_anterior_chamber_od_trauma', '1') !!} Trauma
+                        @if ($ant_chamber->isTraumaOD == 1)
+                          {!! Form::checkbox('sle_anterior_chamber_od_trauma', '1', true, ['disabled' => 'true']) !!} Trauma
+                        @else
+                          {!! Form::checkbox('sle_anterior_chamber_od_trauma', '1', false, ['disabled' => 'true']) !!} Trauma
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::checkbox('sle_anterior_chamber_od_bleb', '1') !!} Bleb
+                        @if ($ant_chamber->isBlebOD == 1)
+                          {!! Form::checkbox('sle_anterior_chamber_od_bleb', '1', true, ['disabled' => 'true']) !!} Bleb
+                        @else
+                          {!! Form::checkbox('sle_anterior_chamber_od_bleb', '1', false, ['disabled' => 'true']) !!} Bleb
+                        @endif
                       </div>
                     </div>
                   </div>
@@ -662,23 +793,47 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_bleb_type', 'vascular') !!} Vascular &nbsp;
+                        @if ($ant_chamber->isVascularOD == 1)
+                          {!! Form::radio('sle_anterior_chamber_od_bleb_type', 1, true, ['disabled' => 'true']) !!} Vascular &nbsp;
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_bleb_type', 1, false, ['disabled' => 'true']) !!} Vascular &nbsp;
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_bleb_type', 'avascular') !!} Avascular
+                        @if ($ant_chamber->isVascularOD == 0)
+                          {!! Form::radio('sle_anterior_chamber_od_bleb_type', 0, true, ['disabled' => 'true']) !!} Avascular
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_bleb_type', 0, false, ['disabled' => 'true']) !!} Avascular
+                        @endif
                       </div>
                       <br />
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_bleb_level', '1') !!} +1
+                        @if ($ant_chamber->BlebOD_Num == "1")
+                          {!! Form::radio('sle_anterior_chamber_od_bleb_level', '1', true, ['disabled' => 'true']) !!} +1
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_bleb_level', '1', false, ['disabled' => 'true']) !!} +1
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_bleb_level', '2') !!} +2
+                        @if ($ant_chamber->BlebOD_Num == "2")
+                          {!! Form::radio('sle_anterior_chamber_od_bleb_level', '2', true, ['disabled' => 'true']) !!} +2
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_bleb_level', '2', false, ['disabled' => 'true']) !!} +2
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_bleb_level', '3') !!} +3
+                        @if ($ant_chamber->BlebOD_Num == "3")
+                          {!! Form::radio('sle_anterior_chamber_od_bleb_level', '3', true, ['disabled' => 'true']) !!} +3
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_bleb_level', '3', false, ['disabled' => 'true']) !!} +3
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_bleb_level', '4') !!} +4
+                        @if ($ant_chamber->BlebOD_Num == "4")
+                          {!! Form::radio('sle_anterior_chamber_od_bleb_level', '4', true, ['disabled' => 'true']) !!} +4
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_bleb_level', '4', false, ['disabled' => 'true']) !!} +4
+                        @endif
                       </div>
                     </div>
                   </div>
@@ -689,10 +844,18 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_bleb_k_spindle', '1') !!} Yes
+                        @if ($ant_chamber->isKSpindleOD == 1)
+                          {!! Form::radio('sle_anterior_chamber_od_bleb_k_spindle', 1, true, ['disabled' => 'true']) !!} Yes
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_bleb_k_spindle', 1, false, ['disabled' => 'true']) !!} Yes
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_od_bleb_k_spindle', '0') !!} No
+                        @if ($ant_chamber->isKSpindleOD == 0)
+                          {!! Form::radio('sle_anterior_chamber_od_bleb_k_spindle', 0, true, ['disabled' => 'true']) !!} No
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_bleb_k_spindle', 0, false, ['disabled' => 'true']) !!} No
+                        @endif
                       </div>
                     </div>
                   </div>
@@ -706,7 +869,11 @@
                       Normal
                     </div>
                     <div class="col-md-4 col-md-offset-2">
-                      {!! Form::checkbox('sle_anterior_chamber_os_normal', '1') !!}
+                      @if ($ant_chamber->isACOSNormal == 1)
+                        {!! Form::checkbox('sle_anterior_chamber_os_normal', '1', true, ['disabled' => 'true']) !!}
+                      @else
+                        {!! Form::checkbox('sle_anterior_chamber_os_normal', '1', false, ['disabled' => 'true']) !!}
+                      @endif
                     </div>
                   </div>
                   <br />
@@ -716,16 +883,32 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_depth', '1') !!} +1
+                        @if ($ant_chamber->ACDepthOS == "1")
+                          {!! Form::radio('sle_anterior_chamber_os_depth', '1', true, ['disabled' => 'true']) !!} +1
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_depth', '1', false, ['disabled' => 'true']) !!} +1
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_depth', '2') !!} +2
+                        @if ($ant_chamber->ACDepthOS == "2")
+                          {!! Form::radio('sle_anterior_chamber_os_depth', '2', true, ['disabled' => 'true']) !!} +2
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_depth', '2', false, ['disabled' => 'true']) !!} +2
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_depth', '3') !!} +3
+                        @if ($ant_chamber->ACDepthoOS == "3")
+                          {!! Form::radio('sle_anterior_chamber_os_depth', '3', true, ['disabled' => 'true']) !!} +3
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_depth', '3', false, ['disabled' => 'true']) !!} +3
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_depth', '4') !!} +4
+                        @if ($ant_chamber->ACDepthOS == "4")
+                          {!! Form::radio('sle_anterior_chamber_os_depth', '4', true, ['disabled' => 'true']) !!} +4
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_depth', '4', false, ['disabled' => 'true']) !!} +4
+                        @endif
                       </div>
                     </div>
                   </div>
@@ -736,10 +919,18 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_angle', 'open') !!} Open
+                        @if ($ant_chamber->ACAngleOS == "open")
+                          {!! Form::radio('sle_anterior_chamber_os_angle', 'open', true, ['disabled' => 'true']) !!} Open
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_angle', 'open', false, ['disabled' => 'true']) !!} Open
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_angle', 'closed') !!} Closed
+                        @if ($ant_chamber->ACAngleOS == "closed")
+                          {!! Form::radio('sle_anterior_chamber_os_angle', 'closed', true, ['disabled' => 'true']) !!} Closed
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_angle', 'closed', false, ['disabled' => 'true']) !!} Closed
+                        @endif
                       </div>
                     </div>
                   </div>
@@ -750,10 +941,18 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_pas', 'present') !!} Present
+                        @if ($ant_chamber->PASOD == "present")
+                          {!! Form::radio('sle_anterior_chamber_od_pas', 'present', true, ['disabled' => 'true']) !!} Present
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_pas', 'present', false, ['disabled' => 'true']) !!} Present
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_pas', 'absent') !!} Absent
+                        @if ($ant_chamber->PASOS == "absent")
+                          {!! Form::radio('sle_anterior_chamber_od_pas', 'absent', true, ['disabled' => 'true']) !!} Absent
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_od_pas', 'absent', false, ['disabled' => 'true']) !!} Absent
+                        @endif
                       </div>
                     </div>
                   </div>
@@ -764,16 +963,32 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_kp', '1') !!} +1
+                        @if ($ant_chamber->ACOSKP == "1")
+                          {!! Form::radio('sle_anterior_chamber_os_kp', '1', true, ['disabled' => 'true']) !!} +1
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_kp', '1', false, ['disabled' => 'true']) !!} +1
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_kp', '2') !!} +2
+                        @if ($ant_chamber->ACOSKP == "2")
+                          {!! Form::radio('sle_anterior_chamber_os_kp', '2', true, ['disabled' => 'true']) !!} +2
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_kp', '2', false, ['disabled' => 'true']) !!} +2
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_kp', '3') !!} +3
+                        @if ($ant_chamber->ACOSKP == "3")
+                          {!! Form::radio('sle_anterior_chamber_os_kp', '3', true, ['disabled' => 'true']) !!} +3
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_kp', '3', false, ['disabled' => 'true']) !!} +3
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_kp', '4') !!} +4
+                        @if ($ant_chamber->ACOSKP == "4")
+                          {!! Form::radio('sle_anterior_chamber_os_kp', '4', true, ['disabled' => 'true']) !!} +4
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_kp', '4', false, ['disabled' => 'true']) !!} +4
+                        @endif
                       </div>
                     </div>
                   </div>
@@ -784,16 +999,32 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::checkbox('sle_anterior_chamber_os_shunt', '1') !!} Shunt
+                        @if ($ant_chamber->isShuntOS == 1)
+                          {!! Form::checkbox('sle_anterior_chamber_os_shunt', '1', true, ['disabled' => 'true']) !!} Shunt
+                        @else
+                          {!! Form::checkbox('sle_anterior_chamber_os_shunt', '1', false, ['disabled' => 'true']) !!} Shunt
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::checkbox('sle_anterior_chamber_os_scarring', '1') !!} Scarring
+                        @if ($ant_chamber->isScarringOS == 1)
+                          {!! Form::checkbox('sle_anterior_chamber_os_scarring', '1', true, ['disabled' => 'true']) !!} Scarring
+                        @else
+                          {!! Form::checkbox('sle_anterior_chamber_os_scarring', '1', false, ['disabled' => 'true']) !!} Scarring
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::checkbox('sle_anterior_chamber_os_trauma', '1') !!} Trauma
+                        @if ($ant_chamber->isTraumaOS == 1)
+                          {!! Form::checkbox('sle_anterior_chamber_os_trauma', '1', true, ['disabled' => 'true']) !!} Trauma
+                        @else
+                          {!! Form::checkbox('sle_anterior_chamber_os_trauma', '1', false, ['disabled' => 'true']) !!} Trauma
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::checkbox('sle_anterior_chamber_os_bleb', '1') !!} Bleb
+                        @if ($ant_chamber->isBlebOS == 1)
+                          {!! Form::checkbox('sle_anterior_chamber_os_bleb', '1', true, ['disabled' => 'true']) !!} Bleb
+                        @else
+                          {!! Form::checkbox('sle_anterior_chamber_os_bleb', '1', false, ['disabled' => 'true']) !!} Bleb
+                        @endif
                       </div>
                     </div>
                   </div>
@@ -804,23 +1035,47 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_bleb_type', 'vascular') !!} Vascular &nbsp;
+                        @if ($ant_chamber->isVascularOS == 1)
+                          {!! Form::radio('sle_anterior_chamber_os_bleb_type', 1, true, ['disabled' => 'true']) !!} Vascular &nbsp;
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_bleb_type', 1, false, ['disabled' => 'true']) !!} Vascular &nbsp;
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_bleb_type', 'avascular') !!} Avascular
+                        @if ($ant_chamber->isVascularOS == 0)
+                          {!! Form::radio('sle_anterior_chamber_os_bleb_type', 0, true, ['disabled' => 'true']) !!} Avascular
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_bleb_type', 0, false, ['disabled' => 'true']) !!} Avascular
+                        @endif
                       </div>
                       <br />
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_bleb_level', '1') !!} +1
+                        @if ($ant_chamber->BlebOS_Num == "1")
+                          {!! Form::radio('sle_anterior_chamber_os_bleb_level', '1', true, ['disabled' => 'true']) !!} +1
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_bleb_level', '1', false, ['disabled' => 'true']) !!} +1
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_bleb_level', '2') !!} +2
+                        @if ($ant_chamber->BlebOS_Num == "2")
+                          {!! Form::radio('sle_anterior_chamber_os_bleb_level', '2', true, ['disabled' => 'true']) !!} +2
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_bleb_level', '2', false, ['disabled' => 'true']) !!} +2
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_bleb_level', '3') !!} +3
+                        @if ($ant_chamber->BlebOS_Num == "3")
+                          {!! Form::radio('sle_anterior_chamber_os_bleb_level', '3', true, ['disabled' => 'true']) !!} +3
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_bleb_level', '3', false, ['disabled' => 'true']) !!} +3
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_bleb_level', '4') !!} +4
+                        @if ($ant_chamber->BlebOS_Num == "4")
+                          {!! Form::radio('sle_anterior_chamber_os_bleb_level', '4', true, ['disabled' => 'true']) !!} +4
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_bleb_level', '4', false, ['disabled' => 'true']) !!} +4
+                        @endif
                       </div>
                     </div>
                   </div>
@@ -831,10 +1086,18 @@
                     </div>
                     <div class="col-md-4 col-md-offset-2">
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_bleb_k_spindle', '1') !!} Yes
+                        @if ($ant_chamber->isKSpindleOS == 1)
+                          {!! Form::radio('sle_anterior_chamber_os_bleb_k_spindle', 1, true, ['disabled' => 'true']) !!} Yes
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_bleb_k_spindle', 1, false, ['disabled' => 'true']) !!} Yes
+                        @endif
                       </div>
                       <div class="row">
-                        {!! Form::radio('sle_anterior_chamber_os_bleb_k_spindle', '0') !!} No
+                        @if ($ant_chamber->isKSpindleOS == 0)
+                          {!! Form::radio('sle_anterior_chamber_os_bleb_k_spindle', 0, true, ['disabled' => 'true']) !!} No
+                        @else
+                          {!! Form::radio('sle_anterior_chamber_os_bleb_k_spindle', 0, false, ['disabled' => 'true']) !!} No
+                        @endif
                       </div>
                     </div>
                   </div>
@@ -854,9 +1117,21 @@
                     <span> OD </span>
                   </div>
                   <div class="row text-center">
-                    {!! Form::checkbox('sle_lens_od_stable', '1') !!} Stable &nbsp;
-                    {!! Form::checkbox('sle_lens_od_pseudohakia', '1') !!} Pseudohakia &nbsp;
-                    {!! Form::checkbox('sle_lens_od_pco', '1') !!} PCO
+                    @if ($lense->isStableLensOD == 1)
+                      {!! Form::checkbox('sle_lens_od_stable', '1', true, ['disabled' => 'true']) !!} Stable &nbsp;
+                    @else
+                      {!! Form::checkbox('sle_lens_od_stable', '1', false, ['disabled' => 'true']) !!} Stable &nbsp;
+                    @endif
+                    @if ($lense->isPseudophakia_OD == 1)
+                      {!! Form::checkbox('sle_lens_od_pseudohakia', '1', true, ['disabled' => 'true']) !!} Pseudohakia &nbsp;
+                    @else
+                      {!! Form::checkbox('sle_lens_od_pseudohakia', '1', false, ['disabled' => 'true']) !!} Pseudohakia &nbsp;
+                    @endif
+                    @if ($lense->isPCO_OD == 1)
+                      {!! Form::checkbox('sle_lens_od_pco', '1', true, ['disabled' => 'true']) !!} PCO &nbsp;
+                    @else
+                      {!! Form::checkbox('sle_lens_od_pco', '1', false, ['disabled' => 'true']) !!} PCO &nbsp;
+                    @endif
                   </div>
                   <br />
                   <div class="row">
@@ -865,17 +1140,12 @@
                     </div>
                     <div class="col-md-3">
                       {{ Form::select('sle_lens_od_ns_type', [
-                        'clear' => 'Clear',
-                        'trace' => 'Trace',
-                        '1' => '+1',
-                        '2' => '+2',
-                        '3' => '+3',
-                        '4' => '+4',
-                        'brunescent' => 'Brunescent'])
+                        $lense->NS_OD => $lense->NS_OD
+                      ], $lense->NS_OD, ['disabled' => 'true'])
                       }}
                     </div>
                     <div class="col-md-7">
-                      {!! Form::text('sle_lens_od_ns_notes', '', ['id' => 'sle_lens_od_ns_notes']) !!}
+                      {!! Form::text('sle_lens_od_ns_notes', $lense->NS_OD_Notes, ['id' => 'sle_lens_od_ns_notes', 'disabled' => 'true']) !!}
                     </div>
                   </div>
                   <div class="row">
@@ -884,16 +1154,12 @@
                     </div>
                     <div class="col-md-3">
                       {{ Form::select('sle_lens_od_cortical_type', [
-                        'clear' => 'Clear',
-                        'trace' => 'Trace',
-                        '1' => '+1',
-                        '2' => '+2',
-                        '3' => '+3',
-                        '4' => '+4'])
+                        $lense->Coritcal_OD => $lense->Coritcal_OD
+                      ], $lense->Coritcal_OD, ['disabled' => 'true'])
                       }}
                     </div>
                     <div class="col-md-7">
-                      {!! Form::text('sle_lens_od_cortical_notes', '', ['id' => 'sle_lens_od_cortical_notes']) !!}
+                      {!! Form::text('sle_lens_od_cortical_notes', $lense->Cortical_OD_Notes, ['id' => 'sle_lens_od_cortical_notes', 'disabled' => 'true']) !!}
                     </div>
                   </div>
                   <div class="row">
@@ -902,16 +1168,12 @@
                     </div>
                     <div class="col-md-3">
                       {{ Form::select('sle_lens_od_psc_type', [
-                        'clear' => 'Clear',
-                        'trace' => 'Trace',
-                        '1' => '+1',
-                        '2' => '+2',
-                        '3' => '+3',
-                        '4' => '+4'])
+                        $lense->PSC_OD => $lense->PSC_OD
+                      ], $lense->PSC_OD, ['disabled' => 'true'])
                       }}
                     </div>
                     <div class="col-md-7">
-                      {!! Form::text('sle_lens_od_psc_notes', '', ['id' => 'sle_lens_od_psc_notes']) !!}
+                      {!! Form::text('sle_lens_od_psc_notes', $lense->PSC_OD_Notes, ['id' => 'sle_lens_od_psc_notes', 'disabled' => 'true']) !!}
                     </div>
                   </div>
                 </div>
@@ -920,9 +1182,21 @@
                     <span> OS </span>
                   </div>
                   <div class="row text-center">
-                    {!! Form::checkbox('sle_lens_os_stable', '1') !!} Stable &nbsp;
-                    {!! Form::checkbox('sle_lens_os_pseudohakia', '1') !!} Pseudohakia &nbsp;
-                    {!! Form::checkbox('sle_lens_os_pco', '1') !!} PCO
+                    @if ($lense->isStableLensOS == 1)
+                      {!! Form::checkbox('sle_lens_os_stable', '1', true, ['disabled' => 'true']) !!} Stable &nbsp;
+                    @else
+                      {!! Form::checkbox('sle_lens_os_stable', '1', false, ['disabled' => 'true']) !!} Stable &nbsp;
+                    @endif
+                    @if ($lense->isPseudophakia_OS == 1)
+                      {!! Form::checkbox('sle_lens_os_pseudohakia', '1', true, ['disabled' => 'true']) !!} Pseudohakia &nbsp;
+                    @else
+                      {!! Form::checkbox('sle_lens_os_pseudohakia', '1', false, ['disabled' => 'true']) !!} Pseudohakia &nbsp;
+                    @endif
+                    @if ($lense->isPCO_OS == 1)
+                      {!! Form::checkbox('sle_lens_os_pco', '1', true, ['disabled' => 'true']) !!} PCO &nbsp;
+                    @else
+                      {!! Form::checkbox('sle_lens_os_pco', '1', false, ['disabled' => 'true']) !!} PCO &nbsp;
+                    @endif
                   </div>
                   <br />
                   <div class="row">
@@ -931,17 +1205,12 @@
                     </div>
                     <div class="col-md-3">
                       {{ Form::select('sle_lens_os_ns_type', [
-                        'clear' => 'Clear',
-                        'trace' => 'Trace',
-                        '1' => '+1',
-                        '2' => '+2',
-                        '3' => '+3',
-                        '4' => '+4',
-                        'brunescent' => 'Brunescent'])
+                        $lense->NS_OS => $lense->NS_OS
+                      ], $lense->NS_OS, ['disabled' => 'true'])
                       }}
                     </div>
                     <div class="col-md-7">
-                      {!! Form::text('sle_lens_os_ns_notes', '', ['id' => 'sle_lens_os_ns_notes']) !!}
+                      {!! Form::text('sle_lens_os_ns_notes', $lense->NS_OS_Notes, ['id' => 'sle_lens_os_ns_notes', 'disabled' => 'true']) !!}
                     </div>
                   </div>
                   <div class="row">
@@ -950,16 +1219,12 @@
                     </div>
                     <div class="col-md-3">
                       {{ Form::select('sle_lens_os_cortical_type', [
-                        'clear' => 'Clear',
-                        'trace' => 'Trace',
-                        '1' => '+1',
-                        '2' => '+2',
-                        '3' => '+3',
-                        '4' => '+4'])
+                        $lense->Coritcal_OS => $lense->Coritcal_OS
+                      ], $lense->Coritcal_OS, ['disabled' => 'true'])
                       }}
                     </div>
                     <div class="col-md-7">
-                      {!! Form::text('sle_lens_os_cortical_notes', '', ['id' => 'sle_lens_os_cortical_notes']) !!}
+                      {!! Form::text('sle_lens_os_cortical_notes', $lense->Cortical_OS_Notes, ['id' => 'sle_lens_os_cortical_notes', 'disabled' => 'true']) !!}
                     </div>
                   </div>
                   <div class="row">
@@ -968,16 +1233,12 @@
                     </div>
                     <div class="col-md-3">
                       {{ Form::select('sle_lens_os_psc_type', [
-                        'clear' => 'Clear',
-                        'trace' => 'Trace',
-                        '1' => '+1',
-                        '2' => '+2',
-                        '3' => '+3',
-                        '4' => '+4'])
+                        $lense->PSC_OS => $lense->PSC_OS
+                      ], $lense->PSC_OS, ['disabled' => 'true'])
                       }}
                     </div>
                     <div class="col-md-7">
-                      {!! Form::text('sle_lens_os_psc_notes', '', ['id' => 'sle_lens_os_psc_notes']) !!}
+                      {!! Form::text('sle_lens_os_psc_notes', $lense->PSC_OS_Notes, ['id' => 'sle_lens_os_psc_notes', 'disabled' => 'true']) !!}
                     </div>
                   </div>
                 </div>
@@ -1007,13 +1268,13 @@
                   OD
                 </div>
                 <div class="col-md-2">
-                  {!! Form::text('intra_od_value', '', ['id' => 'intra_od_value', 'class', 'size' => '20']) !!}
+                  {!! Form::text('intra_od_value', $iop->ODValue, ['id' => 'intra_od_value', 'class', 'size' => '20', 'disabled' => 'true']) !!}
                 </div>
                 <div class="col-md-2">
-                  {!! Form::text('intra_od_type', '', ['id' => 'intra_od_type', 'class', 'size' => '20']) !!}
+                  {!! Form::text('intra_od_type', $iop->ODType, ['id' => 'intra_od_type', 'class', 'size' => '20', 'disabled' => 'true']) !!}
                 </div>
                 <div class="col-md-5">
-                  {!! Form::text('intra_od_notes', '', ['id' => 'intra_od_notes', 'class', 'size' => '50']) !!}
+                  {!! Form::text('intra_od_notes', $iop->ODNotes, ['id' => 'intra_od_notes', 'class', 'size' => '50', 'disabled' => 'true']) !!}
                 </div>
               </div>
               <div class="row text-center">
@@ -1022,13 +1283,13 @@
                   OS
                 </div>
                 <div class="col-md-2">
-                  {!! Form::text('intra_os_value', '', ['id' => 'intra_os_value', 'class', 'size' => '20']) !!}
+                  {!! Form::text('intra_os_value',$iop->OSValue, ['id' => 'intra_os_value', 'class', 'size' => '20', 'disabled' => 'true']) !!}
                 </div>
                 <div class="col-md-2">
-                  {!! Form::text('intra_os_type', '', ['id' => 'intra_os_type', 'class', 'size' => '20']) !!}
+                  {!! Form::text('intra_os_type', $iop->OSType, ['id' => 'intra_os_type', 'class', 'size' => '20', 'disabled' => 'true']) !!}
                 </div>
                 <div class="col-md-5">
-                  {!! Form::text('intra_os_notes', '', ['id' => 'intra_os_notes', 'class', 'size' => '50']) !!}
+                  {!! Form::text('intra_os_notes', $iop->OSNotes, ['id' => 'intra_os_notes', 'class', 'size' => '50', 'disabled' => 'true']) !!}
                 </div>
               </div>
             </div>
@@ -1049,13 +1310,33 @@
                   History of frontal headaches?
                 </div>
                 <div class="col-md-2 text-center">
-                  {!! Form::radio('hx_front_headache', '1') !!} Yes &nbsp; &nbsp; &nbsp;
-                  {!! Form::radio('hx_front_headache', '0') !!} No &nbsp; &nbsp; &nbsp;
+                  @if ($gonio->isHxFHA == 1)
+                    {!! Form::radio('hx_front_headache', 1, true, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                  @else
+                    {!! Form::radio('hx_front_headache', 1, false, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                  @endif
+                  @if ($gonio->isHxFHA == 0)
+                    {!! Form::radio('hx_front_headache', 0, true, ['disabled' => 'true']) !!} No
+                  @else
+                    {!! Form::radio('hx_front_headache', 0, false, ['disabled' => 'true']) !!} No
+                  @endif
                 </div>
                 <div class="col-md-3 text-center">
-                  {!! Form::radio('hx_front_headache_side', 'right') !!} Right &nbsp; &nbsp; &nbsp;
-                  {!! Form::radio('hx_front_headache_side', 'left') !!} Left &nbsp; &nbsp; &nbsp;
-                  {!! Form::radio('hx_front_headache_side', 'both') !!} Both
+                  @if ($gonio->FHASide == "right")
+                    {!! Form::radio('hx_front_headache_side', 1, true, ['disabled' => 'true']) !!} Right &nbsp; &nbsp; &nbsp;
+                  @else
+                    {!! Form::radio('hx_front_headache_side', 1, false, ['disabled' => 'true']) !!} Right &nbsp; &nbsp; &nbsp;
+                  @endif
+                  @if ($gonio->FHASide == "left")
+                    {!! Form::radio('hx_front_headache_side', 0, true, ['disabled' => 'true']) !!} Left &nbsp; &nbsp; &nbsp;
+                  @else
+                    {!! Form::radio('hx_front_headache_side', 0, false, ['disabled' => 'true']) !!} Left &nbsp; &nbsp; &nbsp;
+                  @endif
+                  @if ($gonio->FHASide == "both")
+                    {!! Form::radio('hx_front_headache_side', 0, true, ['disabled' => 'true']) !!} Both
+                  @else
+                    {!! Form::radio('hx_front_headache_side', 0, false, ['disabled' => 'true']) !!} Both
+                  @endif
                 </div>
               </div>
               <br />
@@ -1068,7 +1349,11 @@
                 </div>
                 <div class="row">
                   <div class="col-md-2">
-                    {!! Form::checkbox('gonio_normal_od', '1') !!} Normal
+                    @if ($gonio->isODNormal == 1)
+                      {!! Form::checkbox('gonio_normal_od', '1', true, ['disabled' => 'true']) !!} Normal
+                    @else
+                      {!! Form::checkbox('gonio_normal_od', '0', false, ['disabled' => 'true']) !!} Normal
+                    @endif
                   </div>
                   <div class="col-md-4">
                     <div class="section-divider mt20 mb40">
@@ -1077,43 +1362,59 @@
                     <div class="row">
                       <div class="col-md-2 col-md-offset-2">
                         <div class="row">
-                          {!! Form::radio('gonio_noncompressed_od_abcd', 'a') !!} A
+                          @if ($gonio->odABCDNon == "a")
+                            {!! Form::radio('gonio_noncompressed_od_abcd', 'a', true, ['disabled' => 'true']) !!} A
+                          @else
+                            {!! Form::radio('gonio_noncompressed_od_abcd', 'a', false, ['disabled' => 'true']) !!} A
+                          @endif
                         </div>
                         <div class="row">
-                          {!! Form::radio('gonio_noncompressed_od_abcd', 'b') !!} B
-                        </div>
+                          @if ($gonio->odABCDNon == "b")
+                            {!! Form::radio('gonio_noncompressed_od_abcd', 'b', true, ['disabled' => 'true']) !!} B
+                          @else
+                            {!! Form::radio('gonio_noncompressed_od_abcd', 'b', false, ['disabled' => 'true']) !!} B
+                          @endif                        </div>
                         <div class="row">
-                          {!! Form::radio('gonio_noncompressed_od_abcd', 'c') !!} C
-                        </div>
+                          @if ($gonio->odABCDNon == "c")
+                            {!! Form::radio('gonio_noncompressed_od_abcd', 'c', true, ['disabled' => 'true']) !!} C
+                          @else
+                            {!! Form::radio('gonio_noncompressed_od_abcd', 'c', false, ['disabled' => 'true']) !!} C
+                          @endif                        </div>
                         <div class="row">
-                          {!! Form::radio('gonio_noncompressed_od_abcd', 'd') !!} D
+                          @if ($gonio->odABCDNon == "d")
+                            {!! Form::radio('gonio_noncompressed_od_abcd', 'd', true, ['disabled' => 'true']) !!} D
+                          @else
+                            {!! Form::radio('gonio_noncompressed_od_abcd', 'd', false, ['disabled' => 'true']) !!} D
+                          @endif
                         </div>
                       </div>
                       <div class="col-md-3 text-center">
                         {{ Form::select('gonio_od_cd_noncompressed', [
-                          '0' => '0',
-                          '5' => '5',
-                          '10' => '10',
-                          '15' => '15',
-                          '20' => '20',
-                          '25' => '25',
-                          '30' => '30',
-                          '35' => '35',
-                          '40' => '40',
-                          '45' => '45',
-                          '50' => '50'])
+                          $gonio->odDegreeNon => $gonio->odDegreeNon
+                        ], $gonio->odDegreeNon, ['disabled' => 'true'])
                         }}
                         &deg;
                       </div>
                       <div class="col-md-2 text-right">
                         <div class="row">
-                          {!! Form::radio('gonio_noncompressed_od_rsq', 'r') !!} R
+                          @if ($gonio->odRSQNon == "r")
+                            {!! Form::radio('gonio_noncompressed_od_rsq', 'r', true, ['disabled' => 'true']) !!} R
+                          @else
+                            {!! Form::radio('gonio_noncompressed_od_rsq', 'r', false, ['disabled' => 'true']) !!} R
+                          @endif
                         </div>
                         <div class="row">
-                          {!! Form::radio('gonio_noncompressed_od_rsq', 'r') !!} S
-                        </div>
+                          @if ($gonio->odRSQNon == "s")
+                            {!! Form::radio('gonio_noncompressed_od_rsq', 's', true, ['disabled' => 'true']) !!} S
+                          @else
+                            {!! Form::radio('gonio_noncompressed_od_rsq', 's', false, ['disabled' => 'true']) !!} S
+                          @endif                        </div>
                         <div class="row">
-                          {!! Form::radio('gonio_noncompressed_od_rsq', 'r') !!} Q
+                          @if ($gonio->odRSQNon == "q")
+                            {!! Form::radio('gonio_noncompressed_od_rsq', 'q', true, ['disabled' => 'true']) !!} Q
+                          @else
+                            {!! Form::radio('gonio_noncompressed_od_rsq', 'q', false, ['disabled' => 'true']) !!} Q
+                          @endif
                         </div>
                       </div>
                     </div>
@@ -1125,43 +1426,59 @@
                     <div class="row">
                       <div class="col-md-2 col-md-offset-2">
                         <div class="row">
-                          {!! Form::radio('gonio_compressed_od_abcd', 'a') !!} A
+                          @if ($gonio->odABCDComp == "a")
+                            {!! Form::radio('gonio_compressed_od_abcd', 'a', true, ['disabled' => 'true']) !!} A
+                          @else
+                            {!! Form::radio('gonio_compressed_od_abcd', 'a', false, ['disabled' => 'true']) !!} A
+                          @endif
                         </div>
                         <div class="row">
-                          {!! Form::radio('gonio_compressed_od_abcd', 'b') !!} B
-                        </div>
+                          @if ($gonio->odABCDComp == "b")
+                            {!! Form::radio('gonio_compressed_od_abcd', 'b', true, ['disabled' => 'true']) !!} B
+                          @else
+                            {!! Form::radio('gonio_compressed_od_abcd', 'b', false, ['disabled' => 'true']) !!} B
+                          @endif                        </div>
                         <div class="row">
-                          {!! Form::radio('gonio_compressed_od_abcd', 'c') !!} C
-                        </div>
+                          @if ($gonio->odABCDComp == "c")
+                            {!! Form::radio('gonio_compressed_od_abcd', 'c', true, ['disabled' => 'true']) !!} C
+                          @else
+                            {!! Form::radio('gonio_compressed_od_abcd', 'c', false, ['disabled' => 'true']) !!} C
+                          @endif                        </div>
                         <div class="row">
-                          {!! Form::radio('gonio_compressed_od_abcd', 'd') !!} D
+                          @if ($gonio->odABCDComp == "d")
+                            {!! Form::radio('gonio_compressed_od_abcd', 'd', true, ['disabled' => 'true']) !!} D
+                          @else
+                            {!! Form::radio('gonio_compressed_od_abcd', 'd', false, ['disabled' => 'true']) !!} D
+                          @endif
                         </div>
                       </div>
                       <div class="col-md-3 text-center">
                         {{ Form::select('gonio_od_cd_compressed', [
-                          '0' => '0',
-                          '5' => '5',
-                          '10' => '10',
-                          '15' => '15',
-                          '20' => '20',
-                          '25' => '25',
-                          '30' => '30',
-                          '35' => '35',
-                          '40' => '40',
-                          '45' => '45',
-                          '50' => '50'])
+                          $gonio->odDegreeComp => $gonio->odDegreeComp
+                        ], $gonio->odDegreeComp, ['disabled' => 'true'])
                         }}
                         &deg;
                       </div>
                       <div class="col-md-2 text-right">
                         <div class="row">
-                          {!! Form::radio('gonio_compressed_od_rsq', 'r') !!} R
+                          @if ($gonio->odRSQComp == "r")
+                            {!! Form::radio('gonio_compressed_od_rsq', 'r', true, ['disabled' => 'true']) !!} R
+                          @else
+                            {!! Form::radio('gonio_compressed_od_rsq', 'r', false, ['disabled' => 'true']) !!} R
+                          @endif
                         </div>
                         <div class="row">
-                          {!! Form::radio('gonio_compressed_od_rsq', 'r') !!} S
-                        </div>
+                          @if ($gonio->odRSQComp == "s")
+                            {!! Form::radio('gonio_compressed_od_rsq', 's', true, ['disabled' => 'true']) !!} S
+                          @else
+                            {!! Form::radio('gonio_compressed_od_rsq', 's', false, ['disabled' => 'true']) !!} S
+                          @endif                        </div>
                         <div class="row">
-                          {!! Form::radio('gonio_compressed_od_rsq', 'r') !!} Q
+                          @if ($gonio->odRSQComp == "q")
+                            {!! Form::radio('gonio_compressed_od_rsq', 'q', true, ['disabled' => 'true']) !!} Q
+                          @else
+                            {!! Form::radio('gonio_compressed_od_rsq', 'q', false, ['disabled' => 'true']) !!} Q
+                          @endif
                         </div>
                       </div>
                     </div>
@@ -1174,15 +1491,39 @@
                     </div>
                     <div class="row">
                       <div class="col-md-4 col-md-offset-1">
-                        {!! Form::radio('gonio_pigment_od', '1') !!} +1 &nbsp; &nbsp; &nbsp;
-                        {!! Form::radio('gonio_pigment_od', '2') !!} +2 &nbsp; &nbsp; &nbsp;
-                        {!! Form::radio('gonio_pigment_od', '3') !!} +3 &nbsp; &nbsp; &nbsp;
-                        {!! Form::radio('gonio_pigment_od', '4') !!} +4 &nbsp; &nbsp; &nbsp;
+                        @if ($gonio->odPigment == "1")
+                          {!! Form::radio('gonio_pigment_od', '1', true, ['disabled' => 'true']) !!} +1 &nbsp; &nbsp; &nbsp;
+                        @else
+                          {!! Form::radio('gonio_pigment_od', '1', false, ['disabled' => 'true']) !!} +1 &nbsp; &nbsp; &nbsp;
+                        @endif
+                        @if ($gonio->odPigment == "2")
+                          {!! Form::radio('gonio_pigment_od', '2', true, ['disabled' => 'true']) !!} +2 &nbsp; &nbsp; &nbsp;
+                        @else
+                          {!! Form::radio('gonio_pigment_od', '2', false, ['disabled' => 'true']) !!} +2 &nbsp; &nbsp; &nbsp;
+                        @endif
+                        @if ($gonio->odPigment == "3")
+                          {!! Form::radio('gonio_pigment_od', '3', true, ['disabled' => 'true']) !!} +3 &nbsp; &nbsp; &nbsp;
+                        @else
+                          {!! Form::radio('gonio_pigment_od', '3', false, ['disabled' => 'true']) !!} +3 &nbsp; &nbsp; &nbsp;
+                        @endif
+                        @if ($gonio->odPigment == "4")
+                          {!! Form::radio('gonio_pigment_od', '4', true, ['disabled' => 'true']) !!} +4 &nbsp; &nbsp; &nbsp;
+                        @else
+                          {!! Form::radio('gonio_pigment_od', '4', false, ['disabled' => 'true']) !!} +4 &nbsp; &nbsp; &nbsp;
+                        @endif
                       </div>
                       <div class="col-md-6 col-md-offset-1">
                         Anterior Pigment Line &nbsp; &nbsp; &nbsp;
-                        {!! Form::radio('gonio_anterior_pigment_line_od', '1') !!} Yes &nbsp; &nbsp; &nbsp;
-                        {!! Form::radio('gonio_anterior_pigment_line_od', '0') !!} No &nbsp; &nbsp; &nbsp;
+                        @if ($gonio->isODAntPigLine == 1)
+                          {!! Form::radio('gonio_anterior_pigment_line_od', '1', true, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                        @else
+                          {!! Form::radio('gonio_anterior_pigment_line_od', '1', false, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                        @endif
+                        @if ($gonio->isODAntPigLine == 0)
+                          {!! Form::radio('gonio_anterior_pigment_line_od', '0', true, ['disabled' => 'true']) !!} No &nbsp; &nbsp; &nbsp;
+                        @else
+                          {!! Form::radio('gonio_anterior_pigment_line_od', '0', false, ['disabled' => 'true']) !!} No &nbsp; &nbsp; &nbsp;
+                        @endif
                       </div>
                     </div>
                   </div>
@@ -1198,8 +1539,11 @@
                 </div>
                 <div class="row">
                   <div class="col-md-2">
-                    {!! Form::checkbox('gonio_normal_os', '1') !!} Normal
-                  </div>
+                    @if ($gonio->isOSNormal == 1)
+                      {!! Form::checkbox('gonio_normal_os', '1', true, ['disabled' => 'true']) !!} Normal
+                    @else
+                      {!! Form::checkbox('gonio_normal_os', '0', false, ['disabled' => 'true']) !!} Normal
+                    @endif                  </div>
                   <div class="col-md-4">
                     <div class="section-divider mt20 mb40">
                       <span> Noncompressed </span>
@@ -1207,43 +1551,59 @@
                     <div class="row">
                       <div class="col-md-2 col-md-offset-2">
                         <div class="row">
-                          {!! Form::radio('gonio_noncompressed_os_abcd', 'a') !!} A
+                          @if ($gonio->osABCDNon == "a")
+                            {!! Form::radio('gonio_noncompressed_os_abcd', 'a', true, ['disabled' => 'true']) !!} A
+                          @else
+                            {!! Form::radio('gonio_noncompressed_os_abcd', 'a', false, ['disabled' => 'true']) !!} A
+                          @endif
                         </div>
                         <div class="row">
-                          {!! Form::radio('gonio_noncompressed_os_abcd', 'b') !!} B
-                        </div>
+                          @if ($gonio->osABCDNon == "b")
+                            {!! Form::radio('gonio_noncompressed_os_abcd', 'b', true, ['disabled' => 'true']) !!} B
+                          @else
+                            {!! Form::radio('gonio_noncompressed_os_abcd', 'b', false, ['disabled' => 'true']) !!} B
+                          @endif                        </div>
                         <div class="row">
-                          {!! Form::radio('gonio_noncompressed_os_abcd', 'c') !!} C
-                        </div>
+                          @if ($gonio->osABCDNon == "c")
+                            {!! Form::radio('gonio_noncompressed_os_abcd', 'c', true, ['disabled' => 'true']) !!} C
+                          @else
+                            {!! Form::radio('gonio_noncompressed_os_abcd', 'c', false, ['disabled' => 'true']) !!} C
+                          @endif                        </div>
                         <div class="row">
-                          {!! Form::radio('gonio_noncompressed_os_abcd', 'd') !!} D
+                          @if ($gonio->osABCDNon == "d")
+                            {!! Form::radio('gonio_noncompressed_os_abcd', 'd', true, ['disabled' => 'true']) !!} D
+                          @else
+                            {!! Form::radio('gonio_noncompressed_os_abcd', 'd', false, ['disabled' => 'true']) !!} D
+                          @endif
                         </div>
                       </div>
                       <div class="col-md-3 text-center">
                         {{ Form::select('gonio_os_cd_noncompressed', [
-                          '0' => '0',
-                          '5' => '5',
-                          '10' => '10',
-                          '15' => '15',
-                          '20' => '20',
-                          '25' => '25',
-                          '30' => '30',
-                          '35' => '35',
-                          '40' => '40',
-                          '45' => '45',
-                          '50' => '50'])
+                          $gonio->osDegreeNon => $gonio->osDegreeNon
+                        ], $gonio->osDegreeNon, ['disabled' => 'true'])
                         }}
                         &deg;
                       </div>
                       <div class="col-md-2 text-right">
                         <div class="row">
-                          {!! Form::radio('gonio_noncompressed_os_rsq', 'r') !!} R
+                          @if ($gonio->osRSQNon == "r")
+                            {!! Form::radio('gonio_noncompressed_os_rsq', 'r', true, ['disabled' => 'true']) !!} R
+                          @else
+                            {!! Form::radio('gonio_noncompressed_os_rsq', 'r', false, ['disabled' => 'true']) !!} R
+                          @endif
                         </div>
                         <div class="row">
-                          {!! Form::radio('gonio_noncompressed_os_rsq', 'r') !!} S
-                        </div>
+                          @if ($gonio->osRSQNon == "s")
+                            {!! Form::radio('gonio_noncompressed_os_rsq', 's', true, ['disabled' => 'true']) !!} S
+                          @else
+                            {!! Form::radio('gonio_noncompressed_os_rsq', 's', false, ['disabled' => 'true']) !!} S
+                          @endif                        </div>
                         <div class="row">
-                          {!! Form::radio('gonio_noncompressed_os_rsq', 'r') !!} Q
+                          @if ($gonio->osRSQNon == "q")
+                            {!! Form::radio('gonio_noncompressed_os_rsq', 'q', true, ['disabled' => 'true']) !!} Q
+                          @else
+                            {!! Form::radio('gonio_noncompressed_os_rsq', 'q', false, ['disabled' => 'true']) !!} Q
+                          @endif
                         </div>
                       </div>
                     </div>
@@ -1255,43 +1615,59 @@
                     <div class="row">
                       <div class="col-md-2 col-md-offset-2">
                         <div class="row">
-                          {!! Form::radio('gonio_compressed_os_abcd', 'a') !!} A
+                          @if ($gonio->osABCDComp == "a")
+                            {!! Form::radio('gonio_compressed_os_abcd', 'a', true, ['disabled' => 'true']) !!} A
+                          @else
+                            {!! Form::radio('gonio_compressed_os_abcd', 'a', false, ['disabled' => 'true']) !!} A
+                          @endif
                         </div>
                         <div class="row">
-                          {!! Form::radio('gonio_compressed_os_abcd', 'b') !!} B
-                        </div>
+                          @if ($gonio->osABCDComp == "b")
+                            {!! Form::radio('gonio_compressed_os_abcd', 'b', true, ['disabled' => 'true']) !!} B
+                          @else
+                            {!! Form::radio('gonio_compressed_os_abcd', 'b', false, ['disabled' => 'true']) !!} B
+                          @endif                        </div>
                         <div class="row">
-                          {!! Form::radio('gonio_compressed_os_abcd', 'c') !!} C
-                        </div>
+                          @if ($gonio->osABCDComp == "c")
+                            {!! Form::radio('gonio_compressed_os_abcd', 'c', true, ['disabled' => 'true']) !!} C
+                          @else
+                            {!! Form::radio('gonio_compressed_os_abcd', 'c', false, ['disabled' => 'true']) !!} C
+                          @endif                        </div>
                         <div class="row">
-                          {!! Form::radio('gonio_compressed_os_abcd', 'd') !!} D
+                          @if ($gonio->osABCDComp == "d")
+                            {!! Form::radio('gonio_compressed_os_abcd', 'd', true, ['disabled' => 'true']) !!} D
+                          @else
+                            {!! Form::radio('gonio_compressed_os_abcd', 'd', false, ['disabled' => 'true']) !!} D
+                          @endif
                         </div>
                       </div>
                       <div class="col-md-3 text-center">
                         {{ Form::select('gonio_os_cd_compressed', [
-                          '0' => '0',
-                          '5' => '5',
-                          '10' => '10',
-                          '15' => '15',
-                          '20' => '20',
-                          '25' => '25',
-                          '30' => '30',
-                          '35' => '35',
-                          '40' => '40',
-                          '45' => '45',
-                          '50' => '50'])
+                          $gonio->osDegreeComp => $gonio->osDegreeComp
+                        ], $gonio->osDegreeComp, ['disabled' => 'true'])
                         }}
                         &deg;
                       </div>
                       <div class="col-md-2 text-right">
                         <div class="row">
-                          {!! Form::radio('gonio_compressed_os_rsq', 'r') !!} R
+                          @if ($gonio->osRSQComp == "r")
+                            {!! Form::radio('gonio_compressed_os_rsq', 'r', true, ['disabled' => 'true']) !!} R
+                          @else
+                            {!! Form::radio('gonio_compressed_os_rsq', 'r', false, ['disabled' => 'true']) !!} R
+                          @endif
                         </div>
                         <div class="row">
-                          {!! Form::radio('gonio_compressed_os_rsq', 'r') !!} S
-                        </div>
+                          @if ($gonio->osRSQComp == "s")
+                            {!! Form::radio('gonio_compressed_os_rsq', 's', true, ['disabled' => 'true']) !!} S
+                          @else
+                            {!! Form::radio('gonio_compressed_os_rsq', 's', false, ['disabled' => 'true']) !!} S
+                          @endif                        </div>
                         <div class="row">
-                          {!! Form::radio('gonio_compressed_os_rsq', 'r') !!} Q
+                          @if ($gonio->osRSQComp == "q")
+                            {!! Form::radio('gonio_compressed_os_rsq', 'q', true, ['disabled' => 'true']) !!} Q
+                          @else
+                            {!! Form::radio('gonio_compressed_os_rsq', 'q', false, ['disabled' => 'true']) !!} Q
+                          @endif
                         </div>
                       </div>
                     </div>
@@ -1303,15 +1679,39 @@
                       </div>
                       <div class="row">
                         <div class="col-md-4 col-md-offset-1">
-                          {!! Form::radio('gonio_pigment_os', '1') !!} +1 &nbsp; &nbsp; &nbsp;
-                          {!! Form::radio('gonio_pigment_os', '2') !!} +2 &nbsp; &nbsp; &nbsp;
-                          {!! Form::radio('gonio_pigment_os', '3') !!} +3 &nbsp; &nbsp; &nbsp;
-                          {!! Form::radio('gonio_pigment_os', '4') !!} +4 &nbsp; &nbsp; &nbsp;
+                          @if ($gonio->osPigment == "1")
+                            {!! Form::radio('gonio_pigment_os', '1', true, ['disabled' => 'true']) !!} +1 &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('gonio_pigment_os', '1', false, ['disabled' => 'true']) !!} +1 &nbsp; &nbsp; &nbsp;
+                          @endif
+                          @if ($gonio->osPigment == "2")
+                            {!! Form::radio('gonio_pigment_os', '2', true, ['disabled' => 'true']) !!} +2 &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('gonio_pigment_os', '2', false, ['disabled' => 'true']) !!} +2 &nbsp; &nbsp; &nbsp;
+                          @endif
+                          @if ($gonio->osPigment == "3")
+                            {!! Form::radio('gonio_pigment_os', '3', true, ['disabled' => 'true']) !!} +3 &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('gonio_pigment_os', '3', false, ['disabled' => 'true']) !!} +3 &nbsp; &nbsp; &nbsp;
+                          @endif
+                          @if ($gonio->osPigment == "4")
+                            {!! Form::radio('gonio_pigment_os', '4', true, ['disabled' => 'true']) !!} +4 &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('gonio_pigment_os', '4', false, ['disabled' => 'true']) !!} +4 &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                         <div class="col-md-6 col-md-offset-1">
                           Anterior Pigment Line &nbsp; &nbsp; &nbsp;
-                          {!! Form::radio('gonio_anterior_pigment_line_os', '1') !!} Yes &nbsp; &nbsp; &nbsp;
-                          {!! Form::radio('gonio_anterior_pigment_line_os', '0') !!} No &nbsp; &nbsp; &nbsp;
+                          @if ($gonio->isOSAntPigLine == 1)
+                            {!! Form::radio('gonio_anterior_pigment_line_os', '1', true, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('gonio_anterior_pigment_line_os', '1', false, ['disabled' => 'true']) !!} Yes &nbsp; &nbsp; &nbsp;
+                          @endif
+                          @if ($gonio->isOSAntPigLine == 0)
+                            {!! Form::radio('gonio_anterior_pigment_line_os', '0', true, ['disabled' => 'true']) !!} No &nbsp; &nbsp; &nbsp;
+                          @else
+                            {!! Form::radio('gonio_anterior_pigment_line_os', '0', false, ['disabled' => 'true']) !!} No &nbsp; &nbsp; &nbsp;
+                          @endif
                         </div>
                       </div>
                     </div>
@@ -1335,14 +1735,18 @@
                 <span> Fundus Exam </span>
               </div>
               <div class="row">
-                {!! Form::checkbox('fundus_dialated', '1') !!} Dialated?
+                @if ($fundus->isDialated == 1)
+                  {!! Form::checkbox('fundus_dialated', '1', true, ['disabled' => 'true']) !!} Dialated?
+                @else
+                  {!! Form::checkbox('fundus_dialated', '0', false, ['disabled' => 'true']) !!} Dialated?
+                @endif
               </div>
               <div class="row">
                 <div class="col-md-2">
                   Dialation notes:
                 </div>
                 <div class="col-md-10">
-                  {!! Form::text('fundus_dialation_notes', '', ['id' => 'fundus_dialation_notes']) !!}
+                  {!! Form::text('fundus_dialation_notes', $fundus->dialNotes, ['id' => 'fundus_dialation_notes', 'disabled' => 'true']) !!}
                 </div>
               </div>
               <div class="row">
@@ -1355,19 +1759,14 @@
                       <b>C/D</b>
                     </div>
                     <div class="col-md-10 text-center">
-                      {!! Form::checkbox('fundus_od_cd_abnormal', '1') !!} Abnormal
+                      @if ($fundus->isCDODAb == 1)
+                        {!! Form::checkbox('fundus_od_cd_abnormal', '1', true, ['disabled' => 'true']) !!} Abnormal
+                      @else
+                        {!! Form::checkbox('fundus_od_cd_abnormal', '0', false, ['disabled' => 'true']) !!} Abnormal
+                      @endif
                       {{ Form::select('fundus_od_cd_count', [
-                        '0.0' => '0.0',
-                        '0.1' => '0.1',
-                        '0.2' => '0.2',
-                        '0.3' => '0.3',
-                        '0.4' => '0.4',
-                        '0.5' => '0.5',
-                        '0.6' => '0.6',
-                        '0.7' => '0.7',
-                        '0.8' => '0.8',
-                        '0.9' => '0.9',
-                        '1.0' => '1.0'])
+                        $fundus->CDOD => $fundus->CDOD
+                      ], $fundus->CDOD, ['disabled' => 'true'])
                       }}
                     </div>
                   </div>
@@ -1384,7 +1783,11 @@
                       <b>Retina</b>
                     </div>
                     <div class="col-md-10 text-center">
-                      {!! Form::checkbox('fundus_od_retina_abnormal', '1') !!} Abnormal
+                      @if ($fundus->isRetinaODAb == 1)
+                        {!! Form::checkbox('fundus_od_retina_abnormal', '1', true, ['disabled' => 'true']) !!} Abnormal
+                      @else
+                        {!! Form::checkbox('fundus_od_retina_abnormal', '0', false, ['disabled' => 'true']) !!} Abnormal
+                      @endif
                     </div>
                   </div>
                   <div class="row">
@@ -1400,7 +1803,11 @@
                       <b>Macula</b>
                     </div>
                     <div class="col-md-10 text-center">
-                      {!! Form::checkbox('fundus_od_macula_abnormal', '1') !!} Abnormal
+                      @if ($fundus->isMaculaODAb == 1)
+                        {!! Form::checkbox('fundus_od_macula_abnormal', '1', true, ['disabled' => 'true']) !!} Abnormal
+                      @else
+                        {!! Form::checkbox('fundus_od_macula_abnormal', '0', false, ['disabled' => 'true']) !!} Abnormal
+                      @endif
                     </div>
                   </div>
                   <div class="row">
@@ -1418,19 +1825,14 @@
                   </div>
                   <div class="row">
                     <div class="col-md-10 col-md-offset-1 text-center">
-                      {!! Form::checkbox('fundus_os_cd_abnormal', '1') !!} Abnormal
+                      @if ($fundus->isCDOSAb == 1)
+                        {!! Form::checkbox('fundus_os_cd_abnormal', '1', true, ['disabled' => 'true']) !!} Abnormal
+                      @else
+                        {!! Form::checkbox('fundus_os_cd_abnormal', '0', false, ['disabled' => 'true']) !!} Abnormal
+                      @endif
                       {{ Form::select('fundus_os_cd_count', [
-                        '0.0' => '0.0',
-                        '0.1' => '0.1',
-                        '0.2' => '0.2',
-                        '0.3' => '0.3',
-                        '0.4' => '0.4',
-                        '0.5' => '0.5',
-                        '0.6' => '0.6',
-                        '0.7' => '0.7',
-                        '0.8' => '0.8',
-                        '0.9' => '0.9',
-                        '1.0' => '1.0'])
+                        $fundus->CDOS => $fundus->CDOS
+                      ], $fundus->CDOS, ['disabled' => 'true'])
                       }}
                     </div>
                   </div>
@@ -1441,7 +1843,11 @@
                   </div>
                   <div class="row">
                     <div class="col-md-10 col-md-offset-1 text-center">
-                      {!! Form::checkbox('fundus_os_retina_abnormal', '1') !!} Abnormal
+                      @if ($fundus->isRetinaOSAb == 1)
+                        {!! Form::checkbox('fundus_os_retina_abnormal', '1', true, ['disabled' => 'true']) !!} Abnormal
+                      @else
+                        {!! Form::checkbox('fundus_os_retina_abnormal', '0', false, ['disabled' => 'true']) !!} Abnormal
+                      @endif
                     </div>
                   </div>
                   <div class="row">
@@ -1451,7 +1857,11 @@
                   </div>
                   <div class="row">
                     <div class="col-md-10 col-md-offset-1 text-center">
-                      {!! Form::checkbox('fundus_os_macula_abnormal', '1') !!} Abnormal
+                      @if ($fundus->isMaculaOSAb == 1)
+                        {!! Form::checkbox('fundus_os_macula_abnormal', '1', true, ['disabled' => 'true']) !!} Abnormal
+                      @else
+                        {!! Form::checkbox('fundus_os_macula_abnormal', '0', false, ['disabled' => 'true']) !!} Abnormal
+                      @endif
                     </div>
                   </div>
                   <div class="row">
@@ -1474,7 +1884,7 @@
               <div class="section-divider mt20 mb40">
                 <span> Assessment </span>
               </div>
-              {!! Form::textarea('assessment', '', ['id' => 'assessment']) !!}
+              {!! Form::textarea('assessment', $visit->assessment, ['id' => 'assessment', 'disabled' => 'true']) !!}
             </div>
           </div>
         </div>
@@ -1488,16 +1898,17 @@
               <div class="section-divider mt20 mb40">
                 <span> Plan </span>
               </div>
-              {!! Form::textarea('plan', '', ['id' => 'plan']) !!}
+              {!! Form::textarea('plan', $visit->plan, ['id' => 'plan', 'disabled' => 'true']) !!}
             </div>
           </div>
         </div>
       </div>
 
       {{-- FORM: SUBMIT --}}
+      <br />
       <div class="row">
         <div class="col-md-12">
-          <button type="submit" class="btn btn-block btn-lg btn-primary"> Submit Visit </button>
+          <a href="{{URL::previous()}}">Go Back</a>
         </div>
       </div>
 

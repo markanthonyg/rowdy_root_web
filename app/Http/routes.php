@@ -68,6 +68,7 @@ Route::post('/new_visit', 'Dashboard\VisitsController@insertVisit');
 Route::get('/new_patient_visit/{pid}', 'Dashboard\VisitsController@addPatientVisit');
 Route::post('/new_patient_visit', 'Dashboard\VisitsController@insertPatientVisit');
 Route::get('/visit/{vid}', 'Dashboard\VisitsController@visitDetailView');
+Route::post('/visit', 'Dashboard\VisitsController@goBack');
 
 // EMAIL (SEND)
 Route::post('/', 'EMailController@send');

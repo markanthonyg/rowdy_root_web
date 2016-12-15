@@ -586,11 +586,10 @@ cataract removal</textarea>
 
       {{-- Patient profile tab --}}
       <div id="tab2" class="tab-pane">
-        <div class="row">
-          <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='/new_patient_visit/{{$patient->id}}'" name="new_physical_exam">New Visit</button>
-        </div>
+          <div class="col-md-12">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/new_patient_visit/{{$patient->id}}'" name="new_physical_exam" style="float: left;margin: 10px;"><span class="glyphicon glyphicon-plus-sign"></span> New Visit</button>
+          </div>
 
-        <br />
 
         @if (count($visits) == 0 )
           <br />
@@ -618,7 +617,7 @@ cataract removal</textarea>
                   </thead>
                   <tbody>
                     @foreach($visits as $visit)
-                      <tr class="clickable-visit-row" data-url="visit/{{ $visit->id }}">
+                      <tr class="clickable-visit-row" data-url="{{ url('visit/'.$visit->id) }}">
                         <td>{{ $visit->id }}</td>
                         <td>{{ date('m/d/Y', strtotime($visit->dateCreated)) }}</td>
                         <td>{{ $visit->chiefComplaint }}</td>
