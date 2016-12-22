@@ -465,8 +465,8 @@
 
 
 <!-- Update HX PROTOTYPE Modal -->
-<div class="modal fade" id="myHxModal" style="padding:0;">
-  <div class="modal-dialog" style="padding:0;">
+<div class="modal fade bs-example-modal-lg" id="myHxModal" style="padding:0;">
+  <div class="modal-dialog modal-lg" style="padding:0;">
     <div class="modal-content" style="padding:0;">
       <div class="modal-header" style="padding:0;">
         <div class="header panel-footer text-right">
@@ -486,19 +486,19 @@
                     <span id="hxTitle">Add Health History Details</span>
                   </div>
                   <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                   <!-- <div class="section-divider mt10 mb10"> -->
                     <div class="panel panel-primary">
                       <div class="panel-heading">Major Drug Allergies?</div>
                       <div class="panel-body">
                         <div class="checkbox-custom checkbox-primary">
-                          <input type="checkbox" id="nkdaCheckbox">
-                          <label for="nkdaCheckbox">NKDA</label>
+                          <input type="checkbox" name='nkdaCheckboxModal' id="nkdaCheckboxModal">
+                          <label for="nkdaCheckboxModal">NKDA</label>
                         </div>
                       </br>
                         <div class="checkbox-custom checkbox-primary">
-                          <input type="checkbox" id="drug_allergyCheckbox">
-                          <label for="drug_allergyCheckbox">Drug Allergies:</label>
+                          <input type="checkbox" name="drug_allergyCheckboxModal" id="drug_allergyCheckboxModal">
+                          <label for="drug_allergyCheckboxModal">Drug Allergies:</label>
                         </div>
                           </br>
                             <div class="panel">
@@ -518,79 +518,76 @@
                     </div>
                   <!-- </div> -->
                 </div>
-              </div>
-                    <div class="row">
-                      <div class="col-md-12">
+
+                      <div class="col-md-6">
                       <div class="panel panel-primary">
                         <div class="panel-heading">Past Medical History</div>
                         <div class="panel-body">
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="diabetesCheckbox">
-                            <label for="diabetesCheckbox">Diabetes</label>
+                            <input type="checkbox" name="diabetesCheckboxModal" id="diabetesCheckboxModal">
+                            <label for="diabetesCheckboxModal">Diabetes</label>
                           </div>
                         </br>
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="copdCheckbox">
-                            <label for="copdCheckbox">COPD</label>
+                            <input type="checkbox" name="copdCheckboxModal" id="copdCheckboxModal">
+                            <label for="copdCheckboxModal">COPD</label>
                           </div>
                         </br>
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="htnCheckbox">
-                            <label for="htnCheckbox">Hypertension (HTN)</label>
+                            <input type="checkbox" name="htnCheckboxModal" id="htnCheckboxModal">
+                            <label for="htnCheckboxModal">Hypertension (HTN)</label>
                           </div>
                         </br>
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="cadCheckbox">
-                            <label for="cadCheckbox">Coronary Artery Disease (CAD)</label>
+                            <input type="checkbox" name="cadCheckboxModal" id="cadCheckboxModal">
+                            <label for="cadCheckboxModal">Coronary Artery Disease (CAD)</label>
                           </div>
                         </br>
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="pvdCheckbox">
-                            <label for="pvdCheckbox">Peripheral Vascular Disease (PVD)</label>
+                            <input type="checkbox" name="pvdCheckboxModal" id="pvdCheckboxModal">
+                            <label for="pvdCheckboxModal">Peripheral Vascular Disease (PVD)</label>
                           </div>
                         </br>
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="chfCheckbox">
-                            <label for="chfCheckbox">Congestive Heart Failure (CHF)</label>
+                            <input type="checkbox" name="chfCheckboxModal" id="chfCheckboxModal">
+                            <label for="chfCheckboxModal">Congestive Heart Failure (CHF)</label>
                           </div>
                         </br>
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="hypoCheckbox">
-                            <label for="hypoCheckbox">Hypothyroidism</label>
+                            <input type="checkbox" name="hypoCheckboxModal" id="hypoCheckboxModal">
+                            <label for="hypoCheckboxModal">Hypothyroidism</label>
                           </div>
                         </div>
                       </div>
                   </div>
                 </div>
                     <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-6">
                       <div class="panel panel-primary">
                         <div class="panel-heading">Bleeding Tendency?</div>
                         <div class="panel-body">
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="aspirinCheckbox">
-                            <label for="aspirinCheckbox">Aspirin</label>
+                            <input type="checkbox" name="aspirinCheckboxModal" id="aspirinCheckboxModal">
+                            <label for="aspirinCheckboxModal">Aspirin</label>
                           </div>
                         </br>
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="plavixCheckbox">
-                            <label for="plavixCheckbox">Plavix</label>
+                            <input type="checkbox" name="plavixCheckboxModal" id="plavixCheckboxModal">
+                            <label for="plavixCheckboxModal">Plavix</label>
                           </div>
                         </br>
                           <div class="checkbox-custom checkbox-primary">
-                            <input type="checkbox" id="bleedingCheckbox">
-                            <label for="bleedingCheckbox">Blood Disorder?</label>
+                            <input type="checkbox" name="bleedingCheckboxModal" id="bleedingCheckboxModal">
+                            <label for="bleedingCheckboxModal">Blood Disorder?</label>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                    <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-6">
                       <div class="panel panel-primary">
                         <div class="panel-heading">Past Surgical History Notes:</div>
                         <div class="panel-body">
-                          <textarea class="form-control" id="textArea3" rows="8"></textarea>
+                          <textarea class="form-control" name="pastSurgHistoryModal" id="textArea3Modal" rows="8"></textarea>
                         </div>
                       </div>
                     </div>
@@ -619,7 +616,7 @@
   <strong>This patient has one or more known allergies.</strong>
 </div>
 <div class="col-md-12">
-  <div class="tab-block">
+  <div class="tab-block" scroll="false">
     <ul class="nav nav-tabs">
       <li class="active">
         <a href="#tab1" data-toggle="tab">Health History</a>
@@ -640,7 +637,7 @@
     <div class="tab-content p30" style="height: 730px;">
       <!-- TABSHERE-->
       <div id="tab1" class="tab-pane active">
-        @if ($health_history->count() == 0)
+        @if ($health_history == NULL)
           <div class="row">
             <div class="col-md-12">
               <h3><i>No health history found</i></h3>
@@ -652,16 +649,22 @@
 
         @else
         <div class="row">
+          <div class="col-md-12">
+            <button class="btn btn-default" id="hxEditButton" style="float: left;margin: 10px;"><i class="fa fa-edit fa-lg"></i><strong>  Edit</strong></button>
+            <button class="btn btn-success" id="hxSave" style="float: left;margin: 10px; display: none"><i class="fa fa-thumbs-up fa-lg"></i><strong>  Save</strong></button>
+          </div>
+        </div>
+        <div class="row">
           <div class="col-md-6">
             <div class="panel panel-primary">
               <div class="panel-heading">Major Drug Allergies?</div>
               <div class="panel-body">
                 <div class="checkbox-custom checkbox-primary">
-                  <input type="checkbox" checked="" disabled="" id="nkdaCheckbox">
+                  <input type="checkbox" id="nkdaCheckbox" disabled>
                   <label for="nkdaCheckbox">NKDA</label>
                 </div>
                     <div class="checkbox-custom checkbox-primary">
-                      <input type="checkbox" checked="" disabled="" id="drug_allergyCheckbox">
+                      <input type="checkbox" id="drug_allergyCheckbox" disabled>
                       <label for="drug_allergyCheckbox">Drug Allergies:</label>
                     </div>
                   </br>
@@ -687,31 +690,31 @@
               <div class="panel-heading">Past Medical History</div>
               <div class="panel-body">
                 <div class="checkbox-custom checkbox-primary">
-                  <input type="checkbox" checked="" disabled="" id="diabetesCheckbox">
+                  <input type="checkbox" id="diabetesCheckbox" disabled>
                   <label for="diabetesCheckbox">Diabetes</label>
                 </div>
                 <div class="checkbox-custom checkbox-primary">
-                  <input type="checkbox" id="copdCheckbox">
+                  <input type="checkbox" id="copdCheckbox" disabled>
                   <label for="copdCheckbox">COPD</label>
                 </div>
                 <div class="checkbox-custom checkbox-primary">
-                  <input type="checkbox" checked="" disabled="" id="htnCheckbox">
+                  <input type="checkbox" id="htnCheckbox" disabled>
                   <label for="htnCheckbox">Hypertension (HTN)</label>
                 </div>
                 <div class="checkbox-custom checkbox-primary">
-                  <input type="checkbox" id="cadCheckbox">
+                  <input type="checkbox" id="cadCheckbox" disabled>
                   <label for="cadCheckbox">Coronary Artery Disease (CAD)</label>
                 </div>
                 <div class="checkbox-custom checkbox-primary">
-                  <input type="checkbox" checked="" disabled="" id="pvdCheckbox">
+                  <input type="checkbox" id="pvdCheckbox" disabled>
                   <label for="pvdCheckbox">Peripheral Vascular Disease (PVD)</label>
                 </div>
                 <div class="checkbox-custom checkbox-primary">
-                  <input type="checkbox" id="chfCheckbox">
+                  <input type="checkbox" id="chfCheckbox" disabled>
                   <label for="chfCheckbox">Congestive Heart Failure (CHF)</label>
                 </div>
                 <div class="checkbox-custom checkbox-primary">
-                  <input type="checkbox" id="hypoCheckbox">
+                  <input type="checkbox" id="hypoCheckbox" disabled>
                   <label for="hypoCheckbox">Hypothyroidism</label>
                 </div>
               </div>
@@ -725,15 +728,15 @@
               <div class="panel-heading">Bleeding Tendency?</div>
               <div class="panel-body">
                 <div class="checkbox-custom checkbox-primary">
-                  <input type="checkbox" checked="" disabled="" id="aspirinCheckbox">
+                  <input type="checkbox" id="aspirinCheckbox" disabled>
                   <label for="aspirinCheckbox">Aspirin</label>
                 </div>
                 <div class="checkbox-custom checkbox-primary">
-                  <input type="checkbox" id="plavixCheckbox">
+                  <input type="checkbox" id="plavixCheckbox" disabled>
                   <label for="plavixCheckbox">Plavix</label>
                 </div>
                 <div class="checkbox-custom checkbox-primary">
-                  <input type="checkbox" id="bleedingCheckbox">
+                  <input type="checkbox" id="bleedingCheckbox" disabled>
                   <label for="bleedingCheckbox">Blood Disorder?</label>
                 </div>
               </div>
@@ -743,12 +746,12 @@
             <div class="panel panel-primary">
               <div class="panel-heading">Past Surgical History Notes:</div>
               <div class="panel-body">
-                <textarea class="form-control" id="textArea3" rows="8" disabled="">Eye surgery,
-cataract removal</textarea>
+                <textarea class="form-control" id="textArea3" rows="8" disabled>{{$health_history->psh}}</textarea>
               </div>
             </div>
           </div>
         </div>
+
       @endif
       </div>
 
@@ -1121,10 +1124,6 @@ cataract removal</textarea>
     //     //   $('#hinches').hide();
     //     // }
     //   )};
-
-    $('#hxModalButton').on('click',function() {
-      $("#myHxModal").modal("show");
-    })
 
     $('#addVitalBtn').on('click',function() {
 
@@ -1617,6 +1616,144 @@ $(document).ready(function () {
     })
 })
 </script>
+
+<script>
+$(document).ready(function() {
+  $('#hxModalButton').on('click',function() {
+    $("#myHxModal").modal("show");
+  });
+});
+</script>
+
+// HEALTH HISTORY SCRIPTS
+@if($health_history)
+<script>
+$(document).ready(function() {
+  var hx = {!! json_encode($health_history->toArray()) !!};
+
+  // CHECK OFF DRUG ALLERGY SECTION
+  var nkdaVal = hx.da;
+  if (nkdaVal.charAt(0) == "1")
+    $("#nkdaCheckbox").attr("checked", "true");
+  if (nkdaVal.charAt(1) == "1")
+    $("#drug_allergyCheckbox").attr("checked", "true");
+
+  // CHECK OFF PAST MEDICAL HISTORY SECTION
+  var pmhVal = hx.pmh;
+  if (pmhVal.charAt(0) == "1")
+    $("#diabetesCheckbox").attr("checked", "true");
+  if (pmhVal.charAt(1) == "1")
+    $("#copdCheckbox").attr("checked", "true");
+  if (pmhVal.charAt(2) == "1")
+    $("#htnCheckbox").attr("checked", "true");
+  if (pmhVal.charAt(3) == "1")
+    $("#cadCheckbox").attr("checked", "true");
+  if (pmhVal.charAt(4) == "1")
+    $("#pvdCheckbox").attr("checked", "true");
+  if (pmhVal.charAt(5) == "1")
+    $("#chfCheckbox").attr("checked", "true");
+  if (pmhVal.charAt(6) == "1")
+    $("#hypoCheckbox").attr("checked", "true");
+
+  var bleedVal = hx.bt;
+  if(bleedVal.charAt(0) == "1")
+    $("#aspirinCheckbox").attr("checked", "true");
+  if(bleedVal.charAt(1) == "1")
+    $("#plavixCheckbox").attr("checked", "true");
+  if(bleedVal.charAt(2) == "1")
+    $("#bleedingCheckbox").attr("checked", "true");
+
+
+});
+</script>
+@endif
+
+<script>
+$(document).ready(function() {
+  $('#hxModalButton').on('click',function() {
+    $("#myHxModal").modal("show");
+  });
+
+  $('#hxEditButton').on('click',function() {
+    document.getElementById("nkdaCheckbox").disabled = false;
+    document.getElementById("drug_allergyCheckbox").disabled = false;
+    document.getElementById("diabetesCheckbox").disabled = false;
+    document.getElementById("copdCheckbox").disabled = false;
+    document.getElementById("htnCheckbox").disabled = false;
+    document.getElementById("cadCheckbox").disabled = false;
+    document.getElementById("pvdCheckbox").disabled = false;
+    document.getElementById("chfCheckbox").disabled = false;
+    document.getElementById("hypoCheckbox").disabled = false;
+    document.getElementById("aspirinCheckbox").disabled = false;
+    document.getElementById("plavixCheckbox").disabled = false;
+    document.getElementById("bleedingCheckbox").disabled = false;
+    document.getElementById("textArea3").disabled = false;
+    $('#hxEditButton').hide();
+    $('#hxSave').show();
+  });
+
+  $('#hxSave').on('click', function() {
+
+   var patientA = {!! json_encode($patient->toArray()) !!};
+
+   $('#hxSave').hide();
+   document.getElementById("nkdaCheckbox").disabled = true;
+   document.getElementById("drug_allergyCheckbox").disabled = true;
+   document.getElementById("diabetesCheckbox").disabled = true;
+   document.getElementById("copdCheckbox").disabled = true;
+   document.getElementById("htnCheckbox").disabled = true;
+   document.getElementById("cadCheckbox").disabled = true;
+   document.getElementById("pvdCheckbox").disabled = true;
+   document.getElementById("chfCheckbox").disabled = true;
+   document.getElementById("hypoCheckbox").disabled = true;
+   document.getElementById("aspirinCheckbox").disabled = true;
+   document.getElementById("plavixCheckbox").disabled = true;
+   document.getElementById("bleedingCheckbox").disabled = true;
+   document.getElementById("textArea3").disabled = true;
+
+   var da = "";
+  da = document.getElementById("nkdaCheckbox").checked ? "1" : "0";
+   da += document.getElementById("drug_allergyCheckbox").checked ? "1" : "0";
+
+   var pmh = document.getElementById("diabetesCheckbox").checked ? "1" : "0";
+    pmh += document.getElementById("copdCheckbox").checked ? "1" : "0";
+    pmh += document.getElementById("htnCheckbox").checked ? "1" : "0";
+    pmh += document.getElementById("cadCheckbox").checked ? "1" : "0";
+    pmh += document.getElementById("pvdCheckbox").checked ? "1" : "0";
+    pmh += document.getElementById("chfCheckbox").checked ? "1" : "0";
+    pmh += document.getElementById("hypoCheckbox").checked ? "1" : "0";
+
+    var bt = document.getElementById("aspirinCheckbox").checked ? "1" : "0";
+    bt += document.getElementById("plavixCheckbox").checked ? "1" : "0";
+    bt += document.getElementById("bleedingCheckbox").checked ? "1" : "0";
+
+    var psh = document.getElementById("textArea3").value;
+
+    var data = patientA.id + ":" + da + ":" + pmh + ":" + bt + ":" + psh;
+
+    var dataString = 'values='+data;
+
+    $.ajax({
+      type: "POST",
+      url: "/editHealthHistory",
+      data: dataString,
+      cache: false,
+      success: function() {
+        $("#hxSave").show();
+      },
+      error: function() {
+        $("#hxEditButton").hide();
+      }
+    });
+
+   $("#hxEditButton").show();
+ });
+
+
+
+});
+</script>
+
 
 
 

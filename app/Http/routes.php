@@ -50,6 +50,9 @@ Route::post('/livesearchMeds', 'MiscController@livesearchMeds');
 Route::get('/patient/{id}', 'Dashboard\ProfileController@showPatientProfile');
 Route::post('/patient', 'Dashboard\PatientsController@updatePatient');
 
+// Edit Health history Routes
+Route::post('/editHealthHistory', 'Dashboard\HxController@editHx');
+
 // Vital Routes
 Route::post('/patient_profile/updateVital', 'Dashboard\VitalsController@updateVital');
 
