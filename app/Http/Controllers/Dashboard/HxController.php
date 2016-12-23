@@ -19,94 +19,47 @@ use Auth;
 
 class HxController extends Controller
 {
-  public function updateHealthHistory(Request $request) {
+  public function updateHealthHistory() {
     if ($_POST['action'] = 'NewHx') {
 
+      // this is the patient ID
       $hpid = Input::get('hpid');
 
-      $pc = "Nothing";
-
-      $nkda = $request->input('nkdaCheckbox', false);
-      if ($nkda) {
-        $da = "1";
-      } else {
-        $da = "0";
-      }
-
-      $drugallergy = $request->input('drug_allergyCheckbox', false);
-      if ($drugallergy) {
-        $da = $da . "1";
-      } else {
-        $da = $da . "0";
-      }
-
-      $diabetes = $request->input('diabetesCheckbox', false);
-      if ($diabetes) {
-        $pmh = "1";
-      } else {
-        $pmh = "0";
-      }
-
-      $copd = $request->input('copdCheckbox', false);
-      if ($copd) {
-        $pmh .= "1";
-      } else {
-        $pmh .= "0";
-      }
-
-      $htn = $request->input('htnCheckbox', false);
-      if ($htn) {
-        $pmh .= "1";
-      } else {
-        $pmh .= "0";
-      }
-
-      $cad = $request->input('cadCheckbox', false);
-      if ($cad) {
-        $pmh .= "1";
-      } else {
-        $pmh .= "0";
-      }
-
-      $pvd = $request->input('pvdCheckbox', false);
-      if ($pvd) {
-        $pmh .= "1";
-      } else {
-        $pmh .= "0";
-      }
-
-      $chf = $request->input('chfCheckbox', false);
-      if ($chf) {
-        $pmh .= "1";
-      } else {
-        $pmh .= "0";
-      }
-
-      $hypo = $request->input('hypoCheckbox', false);
-      if ($hypo) {
-        $pmh .= "1";
-      } else {
-        $pmh .= "0";
-      }
+      // this is present condition, currently we are not using this
+      $pc = "N/A";
 
 
-      $aspirin = $request->input('aspirinCheckbox', false);
-      $bt = ($aspirin ? "1" : "0");
+      // this is drug allergies
+      $da = (Input::get('nkdaCheckboxModal')) ? "1" : "0";
+      $da .= (Input::get('drug_allergyCheckboxModal')) ? "1" : "0";
 
-      $plavix = $request->input('plavixCheckbox', false);
-      $bt .= ($plavix ? "1" : "0
-      ");
-      $bleeding = $request->input('bleedingCheckbox', false);
-      $bt .= ($bleeding ? "1" : "0");
 
-      //$psh = Input::get('textArea3');
-      $psh = "No past surgical history";
+      // this is past medical history
+      $pmh = (Input::get('diabetesCheckboxModal')) ? "1" : "0";
+      $pmh .= (Input::get('copdCheckboxModal')) ? "1" : "0";
+      $pmh .= (Input::get('htnCheckboxModal')) ? "1" : "0";
+      $pmh .= (Input::get('cadCheckboxModal')) ? "1" : "0";
+      $pmh .= (Input::get('pvdCheckboxModal')) ? "1" : "0";
+      $pmh .= (Input::get('chfCheckboxModal')) ? "1" : "0";
+      $pmh .= Input::get('hypoCheckboxModal') ? "1" : "0";
 
-      $fh = "Nothing";
 
-      $law = "Nothing";
+      // this is bleeding tendencies
+      $bt = Input::get('aspirinCheckboxModal') ? "1" : "0";
+      $bt .= Input::get('plavixCheckboxModal') ? "1" : "0";
+      $bt .= Input::get('bleedingCheckboxModal') ? "1" : "0";
 
-      $pe = "Nothing";
+      // this is past surgical history
+      $psh = Input::get('pastSurgHistoryModal');
+
+      // this is family history, currently not using
+      $fh = "N/A";
+
+      // this is the legal statement, currently not using
+      $law = "N/A";
+
+      // this is physical exam, currently not using
+      $pe = "N/A";
 
 
       try {
@@ -130,6 +83,28 @@ class HxController extends Controller
     }
 
     return Redirect::back();
+
+  }
+
+  public function editHx() {
+
+    $vals = $_POST['values'];
+    $array = explode(":", $vals);
+
+    $pid = $array[0];
+    $da = $array[1];
+    $pmh = $array[2];
+    $bt = $array[3];
+    $psh = $array[4];
+
+    $record = HealthHistory::where('pid', $pid);
+
+    $record->da = $da;
+    $record->pmh = $pmh;
+    $record->bt = $bt;
+    $record->psh = $psh;
+
+    $record->save();
 
   }
 }
