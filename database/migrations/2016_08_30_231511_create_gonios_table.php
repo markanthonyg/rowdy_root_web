@@ -17,7 +17,7 @@ class CreateGoniosTable extends Migration {
 			$table->integer('id', true);
 			$table->integer('vid');
 			$table->integer('isHxFHA')->nullable()->default(0);
-			$table->binary('FHASide', 65535)->nullable();
+			$table->text('FHASide', 65535)->nullable();
 			$table->integer('isODNormal')->nullable()->default(0);
 			$table->text('odABCDNon', 65535)->nullable();
 			$table->text('odABCDComp', 65535)->nullable();

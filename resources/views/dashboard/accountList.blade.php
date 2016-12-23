@@ -21,16 +21,13 @@
 @endsection
 
 @section('breadcrumb')
-  <li class="crumb-active">
-    <a href="/patients">Patients</a>
-  </li>
   <li class="crumb-icon">
     <a href="/">
       <span class="glyphicon glyphicon-home"></span>
     </a>
   </li>
-  <li class="crumb-link">
-    <a href="/patients">Patients</a>
+  <li class="crumb-active">
+    <a href="/accountList">Users</a>
   </li>
 
 @endsection
@@ -57,7 +54,7 @@
         <div class="panel-body pn">
           <table class="table table-hover" id="datatable2" cellspacing="0" width="100%">
             <thead>
-              <tr>
+              <tr class="clickable-row" class="visible">
                   <th>id</th>
                   <th>Firt Name</th>
                   <th>Middle Name</th>
@@ -78,9 +75,6 @@
                     <td>{{$account->dob}}</td>
                     <td>{{$account->role}}</td>
                     <td>{{$account->email}}</td>
-
-                    <!--<td><a href="{{action('Dashboard\AccountController@deleteAccount')}}" class="delete_account btn btn-danger" data-id="{{ $account->id }}" name ="delete">
-                      <i class="fa fa-trash-o fa-lg"></i>  Delete</a></td>-->
                 </tr>
             @endforeach
             </tbody>
@@ -94,6 +88,11 @@
 <div class="modal fade" id="myModal" style="padding:0;">
   <div class="modal-dialog" style="padding:0;">
     <div class="modal-content" style="padding:0;">
+      <div class="modal-header" style="padding:0;">
+        <div class="header panel-footer text-right">
+          <a href="#" id="test" class="fa fa-times fa-2x" data-dismiss="modal"></a>
+        </div>
+      </div>
       <div class="modal-body" style="padding:0;">
         <div class="tray tray-center">
           <div class="form-group">
@@ -178,7 +177,6 @@
                     </div>
                   </div>
                   <div class="panel-footer text-right">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" style="margin-right: 5px;">Close</button>
                     <button type="submit" class="btn btn-primary" name="action" value="Update" style="margin-right: 5px;"> Save</button>
                     <button type="submit" class="btn btn-danger" name="action" value="Delete" id="Delete" style="margin-right: 5px;"> Delete</button>
                   </div>
@@ -222,7 +220,7 @@
 
 
   <script>
-    $(document).ready(function(){
+    jQuery(document).ready(function(){
       var date_input=$('input[name="dob"]');
       var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
       var options={
@@ -254,7 +252,7 @@
       $('#datatable2').dataTable({
         "aoColumnDefs": [{
           'bSortable': false,
-          'aTargets': [-1]
+          'aTargets': []
         }],
         "oLanguage": {
           "oPaginate": {
@@ -282,7 +280,7 @@
   </script>
 
   <script>
-  $(document).ready(function () {
+  jQuery(document).ready(function () {
     $('table tbody td').on('click',function(){
       $("#myModal").modal("show");
       $("#id").val($(this).closest('tr').children()[0].textContent);
@@ -318,7 +316,6 @@
     $.validator.methods.smartCaptcha = function(value, element, param) {
       return value == param;
     };
-
     $("#admin-form").validate({
 
       /* @validation states + elements
@@ -509,7 +506,6 @@
       }
 
     });
-
 
     // Cache several DOM elements
     var pageHeader = $('.content-header').find('b');

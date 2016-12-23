@@ -70,7 +70,8 @@ class RegistrationController extends Controller
           'year_dob' => 'required',
           'gender' => 'required',
           'clinic' => 'required',
-          'terms' => 'required'
+          'terms' => 'required',
+          'g-recaptcha-response' => 'required|recaptcha'
       ]);
 
       // If validation fails

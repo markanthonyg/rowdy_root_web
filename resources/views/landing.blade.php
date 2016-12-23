@@ -134,7 +134,7 @@
                     </span>
                     <div class="service-icon"> <img src="img/icons/user-manage2-lg.png" title="service icon"> </div>
                     <h4 class="service-heading">User Management</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">Control users access to all functions across the site. Three level management includes roles for System Administrators, Clinic Administrators, and Employees.</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 mb50">
                     <div class="service-icon"> <img src="img/icons/db2-lg.png" title="service icon"> </div>
@@ -143,7 +143,7 @@
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Database Backup</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">Always have a database to restore if there are to be any emergencies inside of a clinic.</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 mb50">
                     <div class="service-icon"> <img src="img/icons/patient2-lg.png" title="service icon"> </div>
@@ -152,7 +152,7 @@
                         <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Patient Recording</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">Record patient visits including patient demographics, patient vitals, patient visits, and documents concerning each patient.</p>
                 </div>
 
                 <div class="col-xs-6 col-sm-4 mb50">
@@ -162,7 +162,7 @@
                     </span>
                     <div class="service-icon"> <img src="img/icons/globe2-lg.png" title="service icon"> </div>
                     <h4 class="service-heading">World-Wide Access</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">Access the website and database from all parts of the world from any location with internet access.</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 mb50">
                     <div class="service-icon"> <img src="img/icons/log-lg.png" title="service icon"> </div>
@@ -171,7 +171,7 @@
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Log Visits</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">Record and store patient visits for future recollection. Our web application will keep every visit from every patient.</p>
                 </div>
                 <div class="col-xs-6 col-sm-4 mb50">
                     <div class="service-icon"> <img src="img/icons/email2-lg.png" title="service icon"> </div>
@@ -180,7 +180,7 @@
                         <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Contact Patients</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">Keep patient contact information on record.</p>
                 </div>
             </div>
         </div>
@@ -194,7 +194,7 @@
                 <div class="col-sm-12 col-md-6 text-center">
                     <h2 class="section-heading mt70">Record and Manage Patient Information</h2>
                     <h3 class="section-subheading text-muted mb30">Hassle-free patient management.</h3>
-                    <p class="text-muted mb50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    <p class="text-muted mb50">Record and manage all patient information which will be stored inside of a database for furture recollection. Our web application will let you store patient visits, vitals, procedures, demographics, and documents relating to each patient.</p>
 	                <a href="#services" class="page-scroll btn btn-xl mr30 btn-primary pv15">Learn More</a>
 	                <a href="#contact" class="page-scroll btn btn-xl btn-danger pv15">Contact Us</a>
 
@@ -218,7 +218,7 @@
                 <div class="col-sm-12 col-md-6 text-center">
                     <h2 class="section-heading mt70">Globally access information.</h2>
                     <h3 class="section-subheading text-muted mb30">Check on your patients from opposite ends of the globe.</h3>
-                    <p class="text-muted mb50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    <p class="text-muted mb50">Whether you're at home, at work, or across the world, access our web application and database as long as you have an active internet connection.</p>
 	                <a href="#services" class="page-scroll btn btn-xl mr30 btn-primary pv15">Learn More</a>
 	                <a href="#contact" class="page-scroll btn btn-xl btn-danger pv15">Contact Us</a>
 
@@ -371,7 +371,7 @@
                     <h2 class="section-heading">Questions or concerns? Contact our dev team!</h2>
                 </div>
             </div>
-			<form name="sentMessage" id="contactForm" class="mw800 center-block clearfix" novalidate>
+			{{-- <form name="sentMessage" id="contactForm" class="mw800 center-block clearfix" novalidate>
         	   <div class="form-group">
         	  	 <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
                  <p class="help-block text-danger"></p>
@@ -383,7 +383,18 @@
         	   <div class="form-group">
         	  	  <button type="submit" class="btn btn-xl btn-block btn-wire">Contact</button>
         	   </div>
-	        </form>
+	        </form> --}}
+          {!! Form::open(['action' => 'EMailController@send', 'id' => 'contactForm', 'class' => 'mw800 center-block clearfix']) !!}
+          <div class="form-group">
+            {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Your Name *', 'id' => 'name', 'required'] ) !!}
+          </div>
+          <div class="form-group">
+            {!! Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'Your EMail *', 'id' => 'email', 'required'] ) !!}
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-xl btn-block btn-wire">Contact</button>
+          </div>
+          {!! Form::close() !!}
 	        <p> Please allow 24-48 hours for a response. </p>
 
         </div>
@@ -430,7 +441,7 @@
 
     <!-- Contact Form JavaScript -->
     <script src="js/vendor/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    {{-- <script src="js/contact_me.js"></script> --}}
 
     <!-- Custom Theme JavaScript -->
     <script src="js/main.js"></script>

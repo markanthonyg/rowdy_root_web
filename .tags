@@ -23,40 +23,6 @@ error	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/Login
 Login.runLoginForms	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/Login.js	/^  var runLoginForms = function() {$/;"	function	line:11
 init	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/Login.js	/^    init: function() {$/;"	function	line:60
 Login	/Users/battlestation/Documents/rowdy_root_web/public/assets/js/login/Login.js	/^var Login = function() {$/;"	function	line:8
-name	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "name": "laravel\/laravel",$/;"	function	line:2
-description	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "description": "The Laravel Framework.",$/;"	function	line:3
-keywords	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "keywords": ["framework", "laravel"],$/;"	function	line:4
-license	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "license": "MIT",$/;"	function	line:5
-type	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "type": "project",$/;"	function	line:6
-require	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "require": {$/;"	function	line:7
-php	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "php": ">=5.5.9",$/;"	function	line:8
-laravel/framework	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "laravel\/framework": "5.2.*",$/;"	function	line:9
-laravelcollective/html	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "laravelcollective\/html": "~5.0"$/;"	function	line:10
-require-dev	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "require-dev": {$/;"	function	line:12
-fzaninotto/faker	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "fzaninotto\/faker": "~1.4",$/;"	function	line:13
-mockery/mockery	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "mockery\/mockery": "0.9.*",$/;"	function	line:14
-phpunit/phpunit	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "phpunit\/phpunit": "~4.0",$/;"	function	line:15
-symfony/css-selector	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "symfony\/css-selector": "2.8.*|3.0.*",$/;"	function	line:16
-symfony/dom-crawler	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "symfony\/dom-crawler": "2.8.*|3.0.*",$/;"	function	line:17
-xethron/migrations-generator	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "xethron\/migrations-generator": "dev-l5",$/;"	function	line:18
-way/generators	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "way\/generators": "dev-feature\/laravel-five-stable",$/;"	function	line:19
-ignasbernotas/laravel-model-generator	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "ignasbernotas\/laravel-model-generator": "^1"$/;"	function	line:20
-repositories	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "repositories": [$/;"	function	line:22
-type	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^            "type": "git",$/;"	function	line:24
-url	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^            "url": "https:\/\/github.com\/jamisonvalenta\/Laravel-4-Generators.git"$/;"	function	line:25
-autoload	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "autoload": {$/;"	function	line:28
-classmap	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "classmap": [$/;"	function	line:29
-psr-4	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "psr-4": {$/;"	function	line:32
-App\\	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^            "App\\\\": "app\/"$/;"	function	line:33
-autoload-dev	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "autoload-dev": {$/;"	function	line:36
-classmap	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "classmap": [$/;"	function	line:37
-scripts	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "scripts": {$/;"	function	line:41
-post-root-package-install	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-root-package-install": [$/;"	function	line:42
-post-create-project-cmd	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-create-project-cmd": [$/;"	function	line:45
-post-install-cmd	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-install-cmd": [$/;"	function	line:48
-post-update-cmd	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-update-cmd": [$/;"	function	line:52
-config	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "config": {$/;"	function	line:57
-preferred-install	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "preferred-install": "dist"$/;"	function	line:58
 Visit	/Users/battlestation/Documents/rowdy_root_web/app/Visit.php	/^class Visit extends Model$/;"	class	line:10
 table	/Users/battlestation/Documents/rowdy_root_web/app/Visit.php	/^    protected $table = 'visits';$/;"	variable	line:12
 table	/Users/battlestation/Documents/rowdy_root_web/app/Visit.php	/^    protected $table = 'visits';$/;"	variable	line:12
@@ -273,7 +239,6 @@ fillable	/Users/battlestation/Documents/rowdy_root_web/app/Allergy.php	/^    pro
 fillable	/Users/battlestation/Documents/rowdy_root_web/app/Allergy.php	/^    protected $fillable = [$/;"	variable	line:16
 guarded	/Users/battlestation/Documents/rowdy_root_web/app/Allergy.php	/^    protected $guarded = [];$/;"	variable	line:23
 guarded	/Users/battlestation/Documents/rowdy_root_web/app/Allergy.php	/^    protected $guarded = [];$/;"	variable	line:23
-aliases	/Users/battlestation/Documents/rowdy_root_web/config/app.php	/^    | This array of class aliases will be registered when this application$/;"	class	line:169
 CreateUsersTable	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_users_table.php	/^class CreateUsersTable extends Migration {$/;"	class	line:6
 up	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_users_table.php	/^	public function up()$/;"	function	line:13
 down	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_users_table.php	/^	public function down()$/;"	function	line:38
@@ -553,8 +518,6 @@ nprogress-active-loader	/Users/battlestation/Documents/rowdy_root_web/public/ass
 nprogress-active-spinner	/Users/battlestation/Documents/rowdy_root_web/public/assets/skin/default_skin/less/theme_settings.less	/^@nprogress-active-spinner: @brand-primary; \/\/ spinning indicator$/;"	function	line:427
 PatientsController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/PatientsController.php	/^class PatientsController extends Controller$/;"	class	line:14
 showPatients	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/PatientsController.php	/^  public function showPatients(){$/;"	function	line:17
-ProfileController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/ProfileController.php	/^class ProfileController extends Controller$/;"	class	line:15
-showPatientProfile	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/ProfileController.php	/^    public function showPatientProfile($id){$/;"	function	line:20
 MiscController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^class MiscController extends Controller$/;"	class	line:16
 lockScreen	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^    public function lockScreen(){$/;"	function	line:21
 user	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^      $user = Auth::User();$/;"	variable	line:23
@@ -567,16 +530,6 @@ final_id	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Misc
 bolded	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^          $bolded = '<strong>'.$_POST['search'].'<\/strong>';$/;"	variable	line:65
 final_id	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/MiscController.php	/^          $final_id = str_ireplace($_POST['search'], $bolded, $user->id);$/;"	variable	line:66
 .content	/Users/battlestation/Documents/rowdy_root_web/public/css/livesearch.css	/^.content{$/;"	function	line:1
-needed	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^         .sidebar-dark (default no class needed)$/;"	class	line:138
-onStart	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          onStart: function (opts) {},$/;"	jsfunction	line:300
-success	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^              success: function(html)$/;"	jsfunction	line:316
-clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target).closest('div');$/;"	variable	line:328
-clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target).closest('div');$/;"	variable	line:328
-with	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          \/\/ Filter out finding the span class with id of id$/;"	class	line:330
-id	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $id = $clicked.find('.id').html();$/;"	variable	line:331
-id	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $id = $clicked.find('.id').html();$/;"	variable	line:331
-clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:340
-clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:340
 .admin-form	/Users/battlestation/Documents/rowdy_root_web/public/assets/admin-tools/admin-forms/css/admin-forms.css	/^.admin-form,$/;"	function	line:4
 .admin-form *	/Users/battlestation/Documents/rowdy_root_web/public/assets/admin-tools/admin-forms/css/admin-forms.css	/^.admin-form * {$/;"	function	line:5
 .admin-form	/Users/battlestation/Documents/rowdy_root_web/public/assets/admin-tools/admin-forms/css/admin-forms.css	/^.admin-form {$/;"	function	line:10
@@ -1884,22 +1837,482 @@ to	/Users/battlestation/Documents/rowdy_root_web/public/assets/admin-tools/admin
 .admin-form.theme-dark .wizard .actions li a	/Users/battlestation/Documents/rowdy_root_web/public/assets/admin-tools/admin-forms/css/admin-forms.css	/^.admin-form.theme-dark .wizard .actions li a {$/;"	function	line:4218
 .admin-form.theme-dark .wizard .steps li.current a	/Users/battlestation/Documents/rowdy_root_web/public/assets/admin-tools/admin-forms/css/admin-forms.css	/^.admin-form.theme-dark .wizard .steps li.current a {$/;"	function	line:4221
 .form-label	/Users/battlestation/Documents/rowdy_root_web/public/assets/admin-tools/admin-forms/css/admin-forms-custom.css	/^.form-label {$/;"	function	line:1
-RegistrationController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^class RegistrationController extends Controller$/;"	class	line:19
-showRegister	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^    public function showRegister() {$/;"	function	line:22
-sql_clinics	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $sql_clinics = Clinic::all();$/;"	variable	line:24
-register	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^    public function register() {$/;"	function	line:52
-validation	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $validation = Validator::make(Input::all(), [$/;"	variable	line:55
-messages	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^          $messages = $validation->messages();$/;"	variable	line:72
-username	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $username = Input::get('username');$/;"	variable	line:81
-password	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $password = Input::get('password');$/;"	variable	line:82
-email	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $email = Input::get('email');$/;"	variable	line:83
-firstname	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $firstname = Input::get('firstname');$/;"	variable	line:84
-lastname	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $lastname = Input::get('lastname');$/;"	variable	line:85
-clinic	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $clinic = Input::get('clinic');$/;"	variable	line:86
-role	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $role = Input::get('role');$/;"	variable	line:87
 LoginController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^class LoginController extends Controller$/;"	class	line:16
 showLogin	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^    public function showLogin() {$/;"	function	line:20
 login	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^    public function login(){$/;"	function	line:32
 remember	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^        $remember = true;$/;"	variable	line:38
 remember	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^        $remember = false;$/;"	variable	line:40
 user	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/LoginController.php	/^        $user = Auth::user();$/;"	variable	line:45
+<<<<<<< HEAD
+=======
+>>>>>>> new_visit
+.vcenter	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.vcenter {$/;"	function	line:2
+.fundus_exam > .row	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.fundus_exam > .row {$/;"	function	line:7
+#chief_complaint	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#chief_complaint {$/;"	function	line:12
+#rx_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#rx_notes {$/;"	function	line:18
+#assessment	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#assessment {$/;"	function	line:24
+#plan	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#plan {$/;"	function	line:30
+#fundus_dialation_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#fundus_dialation_notes {$/;"	function	line:35
+#fundus_od_cd_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#fundus_od_cd_notes {$/;"	function	line:39
+#fundus_od_retina_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#fundus_od_retina_notes {$/;"	function	line:43
+#fundus_od_macula_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#fundus_od_macula_notes {$/;"	function	line:47
+#fundus_os_cd_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#fundus_os_cd_notes {$/;"	function	line:51
+#fundus_os_retina_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#fundus_os_retina_notes {$/;"	function	line:55
+#fundus_os_macula_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#fundus_os_macula_notes {$/;"	function	line:59
+#sle_lens_od_ns_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#sle_lens_od_ns_notes {$/;"	function	line:63
+#sle_lens_od_psc_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#sle_lens_od_psc_notes {$/;"	function	line:67
+#sle_lens_od_cortical_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#sle_lens_od_cortical_notes {$/;"	function	line:71
+#sle_lens_os_ns_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#sle_lens_os_ns_notes {$/;"	function	line:75
+#sle_lens_os_cortical_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#sle_lens_os_cortical_notes {$/;"	function	line:79
+#sle_lens_os_psc_notes	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^#sle_lens_os_psc_notes {$/;"	function	line:83
+.admin-form .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .my-section-divider span {$/;"	function	line:87
+.admin-form .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .my-section-divider span {$/;"	function	line:95
+.admin-form .my-section-divider	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .my-section-divider {$/;"	function	line:105
+.admin-form .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .my-section-divider span {$/;"	function	line:113
+.admin-form.panel .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form.panel .my-section-divider span,$/;"	function	line:123
+.admin-form .panel .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .panel .my-section-divider span,$/;"	function	line:124
+.admin-form.tab-content .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form.tab-content .my-section-divider span,$/;"	function	line:125
+.admin-form .tab-content .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .tab-content .my-section-divider span {$/;"	function	line:126
+.admin-form.bg-light .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form.bg-light .my-section-divider span,$/;"	function	line:129
+.admin-form .bg-light .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .bg-light .my-section-divider span {$/;"	function	line:130
+.admin-form.bg-light.light .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form.bg-light.light .my-section-divider span,$/;"	function	line:133
+.admin-form .bg-light.light .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .bg-light.light .my-section-divider span {$/;"	function	line:134
+.admin-form.bg-light.dark .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form.bg-light.dark .my-section-divider span,$/;"	function	line:137
+.admin-form .bg-light.dark .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .bg-light.dark .my-section-divider span {$/;"	function	line:138
+.admin-form.well .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form.well .my-section-divider span,$/;"	function	line:141
+.admin-form .well .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form .well .my-section-divider span {$/;"	function	line:142
+.admin-form.theme-primary .my-section-divider span	/Users/battlestation/Documents/rowdy_root_web/public/css/new_visit.css	/^.admin-form.theme-primary .my-section-divider span {$/;"	function	line:146
+FixGonioTableFHASide	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_12_14_080553_fix_gonio_table_FHASide.php	/^class FixGonioTableFHASide extends Migration$/;"	class	line:6
+up	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_12_14_080553_fix_gonio_table_FHASide.php	/^    public function up()$/;"	function	line:13
+down	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_12_14_080553_fix_gonio_table_FHASide.php	/^    public function down()$/;"	function	line:28
+CreateGoniosTable	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_gonios_table.php	/^class CreateGoniosTable extends Migration {$/;"	class	line:6
+up	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_gonios_table.php	/^	public function up()$/;"	function	line:13
+down	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_gonios_table.php	/^	public function down()$/;"	function	line:48
+aliases	/Users/battlestation/Documents/rowdy_root_web/config/app.php	/^    | This array of class aliases will be registered when this application$/;"	class	line:170
+RegistrationController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^class RegistrationController extends Controller$/;"	class	line:19
+showRegister	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^    public function showRegister() {$/;"	function	line:22
+sql_clinics	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $sql_clinics = array();$/;"	variable	line:24
+clinics	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $clinics = array();$/;"	variable	line:25
+sql_clinics	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $sql_clinics = Clinic::all();$/;"	variable	line:28
+register	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^    public function register() {$/;"	function	line:58
+validation	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $validation = Validator::make(Input::all(), [$/;"	variable	line:61
+messages	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^          $messages = $validation->messages();$/;"	variable	line:79
+username	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $username = Input::get('username');$/;"	variable	line:88
+password	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $password = Input::get('password');$/;"	variable	line:89
+email	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $email = Input::get('email');$/;"	variable	line:90
+firstname	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $firstname = Input::get('firstname');$/;"	variable	line:91
+lastname	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $lastname = Input::get('lastname');$/;"	variable	line:92
+clinic	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $clinic = Input::get('clinic');$/;"	variable	line:93
+role	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Auth/RegistrationController.php	/^      $role = Input::get('role');$/;"	variable	line:94
+APIController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/API/APIController.php	/^class APIController extends Controller$/;"	class	line:13
+allPatients	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/API/APIController.php	/^    public function allPatients(){$/;"	function	line:16
+allUsers	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/API/APIController.php	/^    public function allUsers(){$/;"	function	line:21
+submitError	/Users/battlestation/Documents/rowdy_root_web/public/js/contact_me.js	/^        submitError: function($form, event, errors) {$/;"	function	line:5
+submitSuccess	/Users/battlestation/Documents/rowdy_root_web/public/js/contact_me.js	/^        submitSuccess: function($form, event) {$/;"	function	line:8
+success	/Users/battlestation/Documents/rowdy_root_web/public/js/contact_me.js	/^                success: function() {$/;"	function	line:26
+error	/Users/battlestation/Documents/rowdy_root_web/public/js/contact_me.js	/^                error: function() {$/;"	function	line:39
+filter	/Users/battlestation/Documents/rowdy_root_web/public/js/contact_me.js	/^        filter: function() {$/;"	function	line:51
+name	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "name": "laravel\/laravel",$/;"	function	line:2
+description	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "description": "The Laravel Framework.",$/;"	function	line:3
+keywords	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "keywords": ["framework", "laravel"],$/;"	function	line:4
+license	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "license": "MIT",$/;"	function	line:5
+type	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "type": "project",$/;"	function	line:6
+require	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "require": {$/;"	function	line:7
+php	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "php": ">=5.5.9",$/;"	function	line:8
+laravel/framework	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "laravel\/framework": "5.2.*",$/;"	function	line:9
+laravelcollective/html	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "laravelcollective\/html": "~5.0",$/;"	function	line:10
+google/recaptcha	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "google\/recaptcha": "~1.1",$/;"	function	line:11
+greggilbert/recaptcha	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "greggilbert\/recaptcha": "dev-master",$/;"	function	line:12
+guzzlehttp/guzzle	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "guzzlehttp\/guzzle": "~5.3|~6.0"$/;"	function	line:13
+require-dev	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "require-dev": {$/;"	function	line:15
+fzaninotto/faker	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "fzaninotto\/faker": "~1.4",$/;"	function	line:16
+mockery/mockery	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "mockery\/mockery": "0.9.*",$/;"	function	line:17
+phpunit/phpunit	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "phpunit\/phpunit": "~4.0",$/;"	function	line:18
+symfony/css-selector	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "symfony\/css-selector": "2.8.*|3.0.*",$/;"	function	line:19
+symfony/dom-crawler	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "symfony\/dom-crawler": "2.8.*|3.0.*",$/;"	function	line:20
+xethron/migrations-generator	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "xethron\/migrations-generator": "dev-l5",$/;"	function	line:21
+way/generators	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "way\/generators": "dev-feature\/laravel-five-stable",$/;"	function	line:22
+ignasbernotas/laravel-model-generator	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "ignasbernotas\/laravel-model-generator": "^1"$/;"	function	line:23
+repositories	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "repositories": [$/;"	function	line:25
+type	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^            "type": "git",$/;"	function	line:27
+url	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^            "url": "https:\/\/github.com\/jamisonvalenta\/Laravel-4-Generators.git"$/;"	function	line:28
+autoload	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "autoload": {$/;"	function	line:31
+classmap	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "classmap": [$/;"	function	line:32
+psr-4	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "psr-4": {$/;"	function	line:35
+App\\	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^            "App\\\\": "app\/"$/;"	function	line:36
+autoload-dev	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "autoload-dev": {$/;"	function	line:39
+classmap	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "classmap": [$/;"	function	line:40
+scripts	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "scripts": {$/;"	function	line:44
+post-root-package-install	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-root-package-install": [$/;"	function	line:45
+post-create-project-cmd	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-create-project-cmd": [$/;"	function	line:48
+post-install-cmd	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-install-cmd": [$/;"	function	line:51
+post-update-cmd	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "post-update-cmd": [$/;"	function	line:55
+config	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^    "config": {$/;"	function	line:60
+preferred-install	/Users/battlestation/Documents/rowdy_root_web/composer.json	/^        "preferred-install": "dist"$/;"	function	line:61
+as	/Users/battlestation/Documents/rowdy_root_web/config/mail.php	/^    | Laravel supports both SMTP and PHP's "mail" function as drivers for the$/;"	function	line:10
+EMailController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/EMailController.php	/^class EMailController extends Controller$/;"	class	line:13
+send	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/EMailController.php	/^    public function send(){$/;"	function	line:16
+name	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/EMailController.php	/^      $name = Input::get('name');$/;"	variable	line:17
+email	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/EMailController.php	/^      $email = Input::get('email');$/;"	variable	line:18
+required	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patients.blade.php	/^          required: function(element) {$/;"	jsfunction	line:436
+highlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patients.blade.php	/^      highlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:529
+unhighlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patients.blade.php	/^      unhighlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:532
+errorPlacement	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patients.blade.php	/^      errorPlacement: function(error, element) {$/;"	jsfunction	line:535
+CreateVisitsTable	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_visits_table.php	/^class CreateVisitsTable extends Migration {$/;"	class	line:6
+up	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_visits_table.php	/^	public function up()$/;"	function	line:13
+down	/Users/battlestation/Documents/rowdy_root_web/database/migrations/2016_08_30_231511_create_visits_table.php	/^	public function down()$/;"	function	line:32
+tr.clickable-row	/Users/battlestation/Documents/rowdy_root_web/public/css/clickable_row.css	/^tr.clickable-row {$/;"	function	line:1
+tr.clickable-visit-row	/Users/battlestation/Documents/rowdy_root_web/public/css/clickable_row.css	/^tr.clickable-visit-row {$/;"	function	line:5
+needed	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^         .sidebar-dark (default no class needed)$/;"	class	line:141
+onStart	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          onStart: function (opts) {},$/;"	jsfunction	line:303
+success	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^              success: function(html)$/;"	jsfunction	line:319
+success	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^              success: function(html)$/;"	jsfunction	line:341
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target).closest('div');$/;"	variable	line:353
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target).closest('div');$/;"	variable	line:353
+with	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          \/\/ Filter out finding the span class with id of id$/;"	class	line:355
+id	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $id = $clicked.find('.id').html();$/;"	variable	line:356
+id	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $id = $clicked.find('.id').html();$/;"	variable	line:356
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:365
+clicked	/Users/battlestation/Documents/rowdy_root_web/resources/views/layouts/dashboard/master.blade.php	/^          var $clicked = $(e.target);$/;"	variable	line:365
+VisitsController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^class VisitsController extends Controller$/;"	class	line:28
+visitDetailView	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^    public function visitDetailView($vid){$/;"	function	line:32
+showVisits	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^    public function showVisits(){$/;"	function	line:59
+addVisit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^    public function addVisit() {$/;"	function	line:76
+patients	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $patients = array();$/;"	variable	line:83
+sql_patients	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $sql_patients = Patient::all()->sortBy('last_name');$/;"	variable	line:84
+insertVisit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^    public function insertVisit() {$/;"	function	line:99
+new_patient	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^        $new_patient = Patient::create([$/;"	variable	line:114
+patient_id	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^        $patient_id = $new_patient->id;$/;"	variable	line:117
+firstname	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^        $firstname = Input::get('demo_firstname');$/;"	variable	line:119
+lastname	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^        $lastname = Input::get('demo_lastname');$/;"	variable	line:120
+new_patient	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^        $new_patient = Patient::create([$/;"	variable	line:123
+patient_id	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^        $patient_id = $new_patient->id;$/;"	variable	line:128
+patient_id	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^        $patient_id = (int)Input::get('patient');$/;"	variable	line:131
+chief_complaint	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $chief_complaint = Input::get('chief_complaint');$/;"	variable	line:134
+assessment	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $assessment = Input::get('assessment');$/;"	variable	line:135
+plan	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $plan = Input::get('plan');$/;"	variable	line:136
+dvodsc	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $dvodsc = Input::get('dv_right');$/;"	variable	line:139
+dvossc	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $dvossc = Input::get('dv_left');$/;"	variable	line:140
+dvodcc	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $dvodcc = Input::get('dv_glasses_right');$/;"	variable	line:141
+dvoscc	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $dvoscc = Input::get('dv_glasses_left');$/;"	variable	line:142
+rx_od_sphere	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_od_sphere = Input::get('rx_od_sphere');$/;"	variable	line:145
+rx_od_cylinder	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_od_cylinder = Input::get('rx_od_cylinder');$/;"	variable	line:146
+rx_od_axis	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_od_axis = Input::get('rx_od_axis');$/;"	variable	line:147
+rx_od_add	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_od_add = Input::get('rx_od_add');$/;"	variable	line:148
+rx_os_sphere	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_os_sphere = Input::get('rx_os_sphere');$/;"	variable	line:149
+rx_os_cylinder	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_os_cylinder = Input::get('rx_os_cylinder');$/;"	variable	line:150
+rx_os_axis	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_os_axis = Input::get('rx_os_axis');$/;"	variable	line:151
+rx_os_add	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_os_add = Input::get('rx_os_add');$/;"	variable	line:152
+rx_notes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_notes = Input::get('rx_notes');$/;"	variable	line:153
+isManifest	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^        $isManifest = 1;$/;"	variable	line:157
+isManifest	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^        $isManifest = 0;$/;"	variable	line:159
+refrac_od_sc_sphere	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_od_sc_sphere = Input::get('refraction_sc_od_sphere');$/;"	variable	line:161
+refrac_od_sc_cylinder	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_od_sc_cylinder = Input::get('refraction_sc_od_cylinder');$/;"	variable	line:162
+refrac_od_sc_axis	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_od_sc_axis = Input::get('refraction_sc_od_axis');$/;"	variable	line:163
+refrac_od_cc_sphere	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_od_cc_sphere = Input::get('refraction_cc_od_cylinder');$/;"	variable	line:164
+refrac_od_cc_cylinder	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_od_cc_cylinder = Input::get('refraction_cc_od_cylinder');$/;"	variable	line:165
+refrac_od_cc_axis	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_od_cc_axis = Input::get('refraction_cc_od_axis');$/;"	variable	line:166
+refrac_os_sc_sphere	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_os_sc_sphere = Input::get('refraction_sc_od_sphere');$/;"	variable	line:168
+refrac_os_sc_cylinder	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_os_sc_cylinder = Input::get('refraction_sc_os_cylinder');$/;"	variable	line:169
+refrac_os_sc_axis	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_os_sc_axis = Input::get('refraction_sc_os_axis');$/;"	variable	line:170
+refrac_os_cc_sphere	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_os_cc_sphere = Input::get('refraction_cc_os_sphere');$/;"	variable	line:171
+refrac_os_cc_cylinder	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_os_cc_cylinder = Input::get('refraction_cc_os_cylinder');$/;"	variable	line:172
+refrac_os_cc_axis	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_os_cc_axis = Input::get('refraction_cc_os_axis');$/;"	variable	line:173
+isBothPupilsNormal	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isBothPupilsNormal = Input::get('sle_pupil_both_normal');$/;"	variable	line:177
+bothPupilsShape	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $bothPupilsShape = Input::get('sle_pupil_both_shape');$/;"	variable	line:178
+bothPupilsDiameter	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $bothPupilsDiameter = Input::get('sle_pupil_both_diameter');$/;"	variable	line:179
+bothPupilsRapd	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $bothPupilsRapd = Input::get('sle_pupil_both_rapd');$/;"	variable	line:180
+bothPupilsSynechia	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $bothPupilsSynechia = Input::get('sle_pupil_both_synechia');$/;"	variable	line:181
+isRightPupilNormal	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isRightPupilNormal = Input::get('sle_pupil_right_normal');$/;"	variable	line:183
+rightPupilShape	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rightPupilShape = Input::get('sle_pupil_right_shape');$/;"	variable	line:184
+rightPupilDiameter	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rightPupilDiameter = Input::get('sle_pupil_right_diameter');$/;"	variable	line:185
+rightPupilRapd	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rightPupilRapd = Input::get('sle_pupil_right_rapd');$/;"	variable	line:186
+rightPupilSynechia	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rightPupilSynechia = Input::get('sle_pupil_right_synechia');$/;"	variable	line:187
+isLeftPupilNormal	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isLeftPupilNormal = Input::get('sle_pupil_left_normal');$/;"	variable	line:189
+leftPupilShape	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $leftPupilShape = Input::get('sle_pupil_left_shape');$/;"	variable	line:190
+leftPupilDiameter	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $leftPupilDiameter = Input::get('sle_pupil_left_diameter');$/;"	variable	line:191
+leftPupilRapd	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $leftPupilRapd = Input::get('sle_pupil_left_rapd');$/;"	variable	line:192
+leftPupilSynechia	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $leftPupilSynechia = Input::get('sle_pupil_left_synechia');$/;"	variable	line:193
+isACODNormal	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isACODNormal = Input::get('sle_anterior_chamber_od_normal');$/;"	variable	line:195
+isACOSNormal	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isACOSNormal = Input::get('sle_anterior_chamber_os_normal');$/;"	variable	line:196
+ACDepthOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ACDepthOD = Input::get('sle_anterior_chamber_od_depth');$/;"	variable	line:197
+ACDepthOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ACDepthOS = Input::get('sle_anterior_chamber_os_depth');$/;"	variable	line:198
+ACAngleOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ACAngleOD = Input::get('sle_anterior_chamber_od_angle');$/;"	variable	line:199
+ACAngleOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ACAngleOS = Input::get('sle_anterior_chamber_os_angle');$/;"	variable	line:200
+PASOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $PASOD = Input::get('sle_anterior_chamber_od_pas');$/;"	variable	line:201
+PASOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $PASOS = Input::get('sle_anterior_chamber_os_pas');$/;"	variable	line:202
+ACODKP	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ACODKP = Input::get('sle_anterior_chamber_od_kp');$/;"	variable	line:203
+ACOSKP	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ACOSKP = Input::get('sle_anterior_chamber_os_kp');$/;"	variable	line:204
+isShuntOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isShuntOD = Input::get('sle_anterior_chamber_od_shunt');$/;"	variable	line:205
+isScarringOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isScarringOD = Input::get('sle_anterior_chamber_od_scarring');$/;"	variable	line:206
+isTraumaOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isTraumaOD = Input::get('sle_anterior_chamber_od_trauma');$/;"	variable	line:207
+isBlebOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isBlebOD = Input::get('sle_anterior_chamber_od_bleb');$/;"	variable	line:208
+isShuntOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isShuntOS = Input::get('sle_anterior_chamber_os_shunt');$/;"	variable	line:209
+isScarringOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isScarringOS = Input::get('sle_anterior_chamber_os_scarring');$/;"	variable	line:210
+isTraumaOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isTraumaOS = Input::get('sle_anterior_chamber_os_trauma');$/;"	variable	line:211
+isBlebOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isBlebOS = Input::get('sle_anterior_chamber_os_bleb');$/;"	variable	line:212
+isVascularOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isVascularOD = Input::get('sle_anterior_chamber_od_bleb_type');$/;"	variable	line:213
+BlebOD_Num	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $BlebOD_Num = Input::get('sle_anterior_chamber_od_bleb_level');$/;"	variable	line:214
+isVascularOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isVascularOS = Input::get('sle_anterior_chamber_os_bleb_type');$/;"	variable	line:215
+BlebOS_Num	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $BlebOS_Num = Input::get('sle_anterior_chamber_os_bleb_level');$/;"	variable	line:216
+isKSpindleOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isKSpindleOD = Input::get('sle_anterior_chamber_od_bleb_k_spindle');$/;"	variable	line:217
+isKSpindleOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isKSpindleOS = Input::get('sle_anterior_chamber_os_bleb_k_spindle');$/;"	variable	line:218
+NS_OD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $NS_OD = Input::get('sle_lens_od_ns_type');$/;"	variable	line:221
+NS_OD_Notes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $NS_OD_Notes = Input::get('sle_lens_od_ns_notes');$/;"	variable	line:222
+NS_OS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $NS_OS = Input::get('sle_lens_os_ns_type');$/;"	variable	line:223
+NS_OS_Notes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $NS_OS_Notes = Input::get('sle_lens_os_ns_notes');$/;"	variable	line:224
+isStableLensOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isStableLensOD = Input::get('sle_lens_od_stable');$/;"	variable	line:225
+isStableLensOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isStableLensOS = Input::get('sle_lens_os_stable');$/;"	variable	line:226
+isPseudophakia_OD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isPseudophakia_OD = Input::get('sle_lens_od_pseudohakia');$/;"	variable	line:227
+isPseudophakia_OS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isPseudophakia_OS = Input::get('sle_lens_os_pseudohakia');$/;"	variable	line:228
+isPCO_OD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isPCO_OD = Input::get('sle_lens_od_pco');$/;"	variable	line:229
+isPCO_OS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isPCO_OS = Input::get('sle_lens_os_pco');$/;"	variable	line:230
+Cortical_OD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $Cortical_OD = Input::get('sle_lens_od_cortical_type');$/;"	variable	line:231
+Cortical_OD_Notes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $Cortical_OD_Notes = Input::get('sle_lens_od_cortical_notes');$/;"	variable	line:232
+Cortical_OS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $Cortical_OS = Input::get('sle_lens_os_cortical_type');$/;"	variable	line:233
+Cortical_OS_Notes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $Cortical_OS_Notes = Input::get('sle_lens_os_cortical_notes');$/;"	variable	line:234
+PSC_OD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $PSC_OD = Input::get('sle_lens_od_psc_type');$/;"	variable	line:235
+PSC_OD_Notes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $PSC_OD_Notes = Input::get('sle_lens_od_psc_notes');$/;"	variable	line:236
+PSC_OS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $PSC_OS = Input::get('sle_lens_os_psc_type');$/;"	variable	line:237
+PSC_OS_Notes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $PSC_OS_Notes = Input::get('sle_lens_os_psc_notes');$/;"	variable	line:238
+ODValue	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ODValue = Input::get('intra_od_value');$/;"	variable	line:241
+ODType	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ODType = Input::get('intra_od_type');$/;"	variable	line:242
+ODNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ODNotes = Input::get('intra_od_notes');$/;"	variable	line:243
+OSValue	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $OSValue = Input::get('intra_os_value');$/;"	variable	line:244
+OSType	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $OSType = Input::get('intra_os_type');$/;"	variable	line:245
+OSNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $OSNotes = Input::get('intra_os_notes');$/;"	variable	line:246
+isHxFHA	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isHxFHA = Input::get('hx_front_headache');$/;"	variable	line:249
+FHASide	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $FHASide = Input::get('hx_front_headache_side');$/;"	variable	line:250
+isODNormal	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isODNormal = Input::get('gonio_normal_od');$/;"	variable	line:251
+odABCDNon	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $odABCDNon = Input::get('gonio_noncompressed_od_abcd');$/;"	variable	line:252
+odABCDComp	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $odABCDComp = Input::get('gonio_compressed_od_abcd');$/;"	variable	line:253
+odDegreeNon	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $odDegreeNon = Input::get('gonio_od_cd_noncompressed');$/;"	variable	line:254
+odDegreeComp	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $odDegreeComp = Input::get('gonio_od_cd_compressed');$/;"	variable	line:255
+odRSQNon	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $odRSQNon = Input::get('gonio_noncompressed_od_rsq');$/;"	variable	line:256
+odRSQComp	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $odRSQComp = Input::get('gonio_compressed_od_rsq');$/;"	variable	line:257
+odPigment	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $odPigment = Input::get('gonio_pigment_od');$/;"	variable	line:258
+isODAntPigLine	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isODAntPigLine = Input::get('gonio_anterior_pigment_line_od');$/;"	variable	line:259
+isOSNormal	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isOSNormal = Input::get('gonio_normal_os');$/;"	variable	line:260
+osABCDNon	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $osABCDNon = Input::get('gonio_noncompressed_os_abcd');$/;"	variable	line:261
+osABCDComp	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $osABCDComp = Input::get('gonio_compressed_os_abcd');$/;"	variable	line:262
+osDegreeNon	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $osDegreeNon = Input::get('gonio_os_cd_noncompressed');$/;"	variable	line:263
+osDegreeComp	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $osDegreeComp = Input::get('gonio_os_cd_compressed');$/;"	variable	line:264
+osRSQNon	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $osRSQNon = Input::get('gonio_noncompressed_os_rsq');$/;"	variable	line:265
+osRSQComp	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $osRSQComp = Input::get('gonio_compressed_os_rsq');$/;"	variable	line:266
+osPigment	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $osPigment = Input::get('gonio_pigment_os');$/;"	variable	line:267
+isOSAntPigLine	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isOSAntPigLine = Input::get('gonio_anterior_pigment_line_os');$/;"	variable	line:268
+isDialated	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isDialated = Input::get('fundus_dialated');$/;"	variable	line:271
+dialNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $dialNotes = Input::get('fundus_dialation_notes');$/;"	variable	line:272
+isCDODAb	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isCDODAb = Input::get('fundus_od_cd_abnormal');$/;"	variable	line:273
+CDOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $CDOD = Input::get('fundus_od_cd_count');$/;"	variable	line:274
+CDODNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $CDODNotes = Input::get('fundus_od_cd_notes');$/;"	variable	line:275
+isCDOSAb	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isCDOSAb = Input::get('fundus_os_cd_abnormal');$/;"	variable	line:276
+CDOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $CDOS = Input::get('fundus_os_cd_count');$/;"	variable	line:277
+CDOSNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $CDOSNotes = Input::get('fundus_os_cd_notes');$/;"	variable	line:278
+isRetinaODAb	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isRetinaODAb = Input::get('fundus_od_retina_abnormal');$/;"	variable	line:279
+RetinaODNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $RetinaODNotes = Input::get('fundus_od_retina_notes');$/;"	variable	line:280
+isRetinaOSAb	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isRetinaOSAb = Input::get('fundus_os_retina_abnormal');$/;"	variable	line:281
+RetinaOSNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $RetinaOSNotes = Input::get('fundus_os_retina_notes');$/;"	variable	line:282
+isMaculaODAb	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isMaculaODAb = Input::get('fundus_od_macula_abnormal');$/;"	variable	line:283
+MaculaODNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $MaculaODNotes = Input::get('fundus_od_macula_notes');$/;"	variable	line:284
+isMaculaOSAb	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isMaculaOSAb = Input::get('fundus_os_macula_abnormal');$/;"	variable	line:285
+MaculaOSNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $MaculaOSNotes = Input::get('fundus_os_macula_notes');$/;"	variable	line:286
+new_visit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_visit = Visit::create([$/;"	variable	line:294
+new_distance_vision	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_distance_vision = DistanceVision::create([$/;"	variable	line:301
+new_glasses_rx	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_glasses_rx = GlassesRx::create([$/;"	variable	line:309
+new_refraction	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_refraction = Refraction::create([$/;"	variable	line:322
+new_pupil	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_pupil = Pupil::create([$/;"	variable	line:339
+new_anterior_chamber	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_anterior_chamber = AnteriorChamber::create([$/;"	variable	line:358
+new_lense	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_lense = Lense::create([$/;"	variable	line:386
+new_iop	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_iop = Iop::create([$/;"	variable	line:408
+new_gonio	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_gonio = Gonio::create([$/;"	variable	line:418
+new_fundus_exam	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_fundus_exam = FundusExam::create([$/;"	variable	line:442
+addPatientVisit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^    public function addPatientVisit($pid){$/;"	function	line:466
+patients	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $patients = array();$/;"	variable	line:475
+sql_patients	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $sql_patients = Patient::all()->sortBy('last_name');$/;"	variable	line:476
+insertPatientVisit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^    public function insertPatientVisit() {$/;"	function	line:490
+patient_id	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $patient_id = (int)Input::get('patient');$/;"	variable	line:504
+chief_complaint	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $chief_complaint = Input::get('chief_complaint');$/;"	variable	line:506
+assessment	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $assessment = Input::get('assessment');$/;"	variable	line:507
+plan	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $plan = Input::get('plan');$/;"	variable	line:508
+dvodsc	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $dvodsc = Input::get('dv_right');$/;"	variable	line:511
+dvossc	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $dvossc = Input::get('dv_left');$/;"	variable	line:512
+dvodcc	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $dvodcc = Input::get('dv_glasses_right');$/;"	variable	line:513
+dvoscc	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $dvoscc = Input::get('dv_glasses_left');$/;"	variable	line:514
+rx_od_sphere	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_od_sphere = Input::get('rx_od_sphere');$/;"	variable	line:517
+rx_od_cylinder	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_od_cylinder = Input::get('rx_od_cylinder');$/;"	variable	line:518
+rx_od_axis	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_od_axis = Input::get('rx_od_axis');$/;"	variable	line:519
+rx_od_add	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_od_add = Input::get('rx_od_add');$/;"	variable	line:520
+rx_os_sphere	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_os_sphere = Input::get('rx_os_sphere');$/;"	variable	line:521
+rx_os_cylinder	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_os_cylinder = Input::get('rx_os_cylinder');$/;"	variable	line:522
+rx_os_axis	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_os_axis = Input::get('rx_os_axis');$/;"	variable	line:523
+rx_os_add	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_os_add = Input::get('rx_os_add');$/;"	variable	line:524
+rx_notes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rx_notes = Input::get('rx_notes');$/;"	variable	line:525
+isManifest	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^        $isManifest = 1;$/;"	variable	line:529
+isManifest	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^        $isManifest = 0;$/;"	variable	line:531
+refrac_od_sc_sphere	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_od_sc_sphere = Input::get('refraction_sc_od_sphere');$/;"	variable	line:533
+refrac_od_sc_cylinder	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_od_sc_cylinder = Input::get('refraction_sc_od_cylinder');$/;"	variable	line:534
+refrac_od_sc_axis	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_od_sc_axis = Input::get('refraction_sc_od_axis');$/;"	variable	line:535
+refrac_od_cc_sphere	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_od_cc_sphere = Input::get('refraction_cc_od_cylinder');$/;"	variable	line:536
+refrac_od_cc_cylinder	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_od_cc_cylinder = Input::get('refraction_cc_od_cylinder');$/;"	variable	line:537
+refrac_od_cc_axis	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_od_cc_axis = Input::get('refraction_cc_od_axis');$/;"	variable	line:538
+refrac_os_sc_sphere	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_os_sc_sphere = Input::get('refraction_sc_od_sphere');$/;"	variable	line:540
+refrac_os_sc_cylinder	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_os_sc_cylinder = Input::get('refraction_sc_os_cylinder');$/;"	variable	line:541
+refrac_os_sc_axis	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_os_sc_axis = Input::get('refraction_sc_os_axis');$/;"	variable	line:542
+refrac_os_cc_sphere	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_os_cc_sphere = Input::get('refraction_cc_os_sphere');$/;"	variable	line:543
+refrac_os_cc_cylinder	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_os_cc_cylinder = Input::get('refraction_cc_os_cylinder');$/;"	variable	line:544
+refrac_os_cc_axis	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $refrac_os_cc_axis = Input::get('refraction_cc_os_axis');$/;"	variable	line:545
+isBothPupilsNormal	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isBothPupilsNormal = Input::get('sle_pupil_both_normal');$/;"	variable	line:549
+bothPupilsShape	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $bothPupilsShape = Input::get('sle_pupil_both_shape');$/;"	variable	line:550
+bothPupilsDiameter	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $bothPupilsDiameter = Input::get('sle_pupil_both_diameter');$/;"	variable	line:551
+bothPupilsRapd	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $bothPupilsRapd = Input::get('sle_pupil_both_rapd');$/;"	variable	line:552
+bothPupilsSynechia	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $bothPupilsSynechia = Input::get('sle_pupil_both_synechia');$/;"	variable	line:553
+isRightPupilNormal	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isRightPupilNormal = Input::get('sle_pupil_right_normal');$/;"	variable	line:555
+rightPupilShape	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rightPupilShape = Input::get('sle_pupil_right_shape');$/;"	variable	line:556
+rightPupilDiameter	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rightPupilDiameter = Input::get('sle_pupil_right_diameter');$/;"	variable	line:557
+rightPupilRapd	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rightPupilRapd = Input::get('sle_pupil_right_rapd');$/;"	variable	line:558
+rightPupilSynechia	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $rightPupilSynechia = Input::get('sle_pupil_right_synechia');$/;"	variable	line:559
+isLeftPupilNormal	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isLeftPupilNormal = Input::get('sle_pupil_left_normal');$/;"	variable	line:561
+leftPupilShape	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $leftPupilShape = Input::get('sle_pupil_left_shape');$/;"	variable	line:562
+leftPupilDiameter	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $leftPupilDiameter = Input::get('sle_pupil_left_diameter');$/;"	variable	line:563
+leftPupilRapd	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $leftPupilRapd = Input::get('sle_pupil_left_rapd');$/;"	variable	line:564
+leftPupilSynechia	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $leftPupilSynechia = Input::get('sle_pupil_left_synechia');$/;"	variable	line:565
+isACODNormal	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isACODNormal = Input::get('sle_anterior_chamber_od_normal');$/;"	variable	line:567
+isACOSNormal	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isACOSNormal = Input::get('sle_anterior_chamber_os_normal');$/;"	variable	line:568
+ACDepthOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ACDepthOD = Input::get('sle_anterior_chamber_od_depth');$/;"	variable	line:569
+ACDepthOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ACDepthOS = Input::get('sle_anterior_chamber_os_depth');$/;"	variable	line:570
+ACAngleOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ACAngleOD = Input::get('sle_anterior_chamber_od_angle');$/;"	variable	line:571
+ACAngleOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ACAngleOS = Input::get('sle_anterior_chamber_os_angle');$/;"	variable	line:572
+PASOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $PASOD = Input::get('sle_anterior_chamber_od_pas');$/;"	variable	line:573
+PASOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $PASOS = Input::get('sle_anterior_chamber_os_pas');$/;"	variable	line:574
+ACODKP	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ACODKP = Input::get('sle_anterior_chamber_od_kp');$/;"	variable	line:575
+ACOSKP	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ACOSKP = Input::get('sle_anterior_chamber_os_kp');$/;"	variable	line:576
+isShuntOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isShuntOD = Input::get('sle_anterior_chamber_od_shunt');$/;"	variable	line:577
+isScarringOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isScarringOD = Input::get('sle_anterior_chamber_od_scarring');$/;"	variable	line:578
+isTraumaOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isTraumaOD = Input::get('sle_anterior_chamber_od_trauma');$/;"	variable	line:579
+isBlebOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isBlebOD = Input::get('sle_anterior_chamber_od_bleb');$/;"	variable	line:580
+isShuntOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isShuntOS = Input::get('sle_anterior_chamber_os_shunt');$/;"	variable	line:581
+isScarringOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isScarringOS = Input::get('sle_anterior_chamber_os_scarring');$/;"	variable	line:582
+isTraumaOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isTraumaOS = Input::get('sle_anterior_chamber_os_trauma');$/;"	variable	line:583
+isBlebOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isBlebOS = Input::get('sle_anterior_chamber_os_bleb');$/;"	variable	line:584
+isVascularOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isVascularOD = Input::get('sle_anterior_chamber_od_bleb_type');$/;"	variable	line:585
+BlebOD_Num	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $BlebOD_Num = Input::get('sle_anterior_chamber_od_bleb_level');$/;"	variable	line:586
+isVascularOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isVascularOS = Input::get('sle_anterior_chamber_os_bleb_type');$/;"	variable	line:587
+BlebOS_Num	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $BlebOS_Num = Input::get('sle_anterior_chamber_os_bleb_level');$/;"	variable	line:588
+isKSpindleOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isKSpindleOD = Input::get('sle_anterior_chamber_od_bleb_k_spindle');$/;"	variable	line:589
+isKSpindleOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isKSpindleOS = Input::get('sle_anterior_chamber_os_bleb_k_spindle');$/;"	variable	line:590
+NS_OD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $NS_OD = Input::get('sle_lens_od_ns_type');$/;"	variable	line:593
+NS_OD_Notes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $NS_OD_Notes = Input::get('sle_lens_od_ns_notes');$/;"	variable	line:594
+NS_OS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $NS_OS = Input::get('sle_lens_os_ns_type');$/;"	variable	line:595
+NS_OS_Notes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $NS_OS_Notes = Input::get('sle_lens_os_ns_notes');$/;"	variable	line:596
+isStableLensOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isStableLensOD = Input::get('sle_lens_od_stable');$/;"	variable	line:597
+isStableLensOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isStableLensOS = Input::get('sle_lens_os_stable');$/;"	variable	line:598
+isPseudophakia_OD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isPseudophakia_OD = Input::get('sle_lens_od_pseudohakia');$/;"	variable	line:599
+isPseudophakia_OS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isPseudophakia_OS = Input::get('sle_lens_os_pseudohakia');$/;"	variable	line:600
+isPCO_OD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isPCO_OD = Input::get('sle_lens_od_pco');$/;"	variable	line:601
+isPCO_OS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isPCO_OS = Input::get('sle_lens_os_pco');$/;"	variable	line:602
+Cortical_OD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $Cortical_OD = Input::get('sle_lens_od_cortical_type');$/;"	variable	line:603
+Cortical_OD_Notes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $Cortical_OD_Notes = Input::get('sle_lens_od_cortical_notes');$/;"	variable	line:604
+Cortical_OS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $Cortical_OS = Input::get('sle_lens_os_cortical_type');$/;"	variable	line:605
+Cortical_OS_Notes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $Cortical_OS_Notes = Input::get('sle_lens_os_cortical_notes');$/;"	variable	line:606
+PSC_OD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $PSC_OD = Input::get('sle_lens_od_psc_type');$/;"	variable	line:607
+PSC_OD_Notes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $PSC_OD_Notes = Input::get('sle_lens_od_psc_notes');$/;"	variable	line:608
+PSC_OS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $PSC_OS = Input::get('sle_lens_os_psc_type');$/;"	variable	line:609
+PSC_OS_Notes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $PSC_OS_Notes = Input::get('sle_lens_os_psc_notes');$/;"	variable	line:610
+ODValue	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ODValue = Input::get('intra_od_value');$/;"	variable	line:613
+ODType	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ODType = Input::get('intra_od_type');$/;"	variable	line:614
+ODNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $ODNotes = Input::get('intra_od_notes');$/;"	variable	line:615
+OSValue	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $OSValue = Input::get('intra_os_value');$/;"	variable	line:616
+OSType	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $OSType = Input::get('intra_os_type');$/;"	variable	line:617
+OSNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $OSNotes = Input::get('intra_os_notes');$/;"	variable	line:618
+isHxFHA	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isHxFHA = Input::get('hx_front_headache');$/;"	variable	line:621
+FHASide	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $FHASide = Input::get('hx_front_headache_side');$/;"	variable	line:622
+isODNormal	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isODNormal = Input::get('gonio_normal_od');$/;"	variable	line:623
+odABCDNon	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $odABCDNon = Input::get('gonio_noncompressed_od_abcd');$/;"	variable	line:624
+odABCDComp	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $odABCDComp = Input::get('gonio_compressed_od_abcd');$/;"	variable	line:625
+odDegreeNon	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $odDegreeNon = Input::get('gonio_od_cd_noncompressed');$/;"	variable	line:626
+odDegreeComp	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $odDegreeComp = Input::get('gonio_od_cd_compressed');$/;"	variable	line:627
+odRSQNon	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $odRSQNon = Input::get('gonio_noncompressed_od_rsq');$/;"	variable	line:628
+odRSQComp	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $odRSQComp = Input::get('gonio_compressed_od_rsq');$/;"	variable	line:629
+odPigment	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $odPigment = Input::get('gonio_pigment_od');$/;"	variable	line:630
+isODAntPigLine	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isODAntPigLine = Input::get('gonio_anterior_pigment_line_od');$/;"	variable	line:631
+isOSNormal	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isOSNormal = Input::get('gonio_normal_os');$/;"	variable	line:632
+osABCDNon	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $osABCDNon = Input::get('gonio_noncompressed_os_abcd');$/;"	variable	line:633
+osABCDComp	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $osABCDComp = Input::get('gonio_compressed_os_abcd');$/;"	variable	line:634
+osDegreeNon	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $osDegreeNon = Input::get('gonio_os_cd_noncompressed');$/;"	variable	line:635
+osDegreeComp	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $osDegreeComp = Input::get('gonio_os_cd_compressed');$/;"	variable	line:636
+osRSQNon	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $osRSQNon = Input::get('gonio_noncompressed_os_rsq');$/;"	variable	line:637
+osRSQComp	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $osRSQComp = Input::get('gonio_compressed_os_rsq');$/;"	variable	line:638
+osPigment	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $osPigment = Input::get('gonio_pigment_os');$/;"	variable	line:639
+isOSAntPigLine	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isOSAntPigLine = Input::get('gonio_anterior_pigment_line_os');$/;"	variable	line:640
+isDialated	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isDialated = Input::get('fundus_dialated');$/;"	variable	line:643
+dialNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $dialNotes = Input::get('fundus_dialation_notes');$/;"	variable	line:644
+isCDODAb	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isCDODAb = Input::get('fundus_od_cd_abnormal');$/;"	variable	line:645
+CDOD	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $CDOD = Input::get('fundus_od_cd_count');$/;"	variable	line:646
+CDODNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $CDODNotes = Input::get('fundus_od_cd_notes');$/;"	variable	line:647
+isCDOSAb	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isCDOSAb = Input::get('fundus_os_cd_abnormal');$/;"	variable	line:648
+CDOS	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $CDOS = Input::get('fundus_os_cd_count');$/;"	variable	line:649
+CDOSNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $CDOSNotes = Input::get('fundus_os_cd_notes');$/;"	variable	line:650
+isRetinaODAb	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isRetinaODAb = Input::get('fundus_od_retina_abnormal');$/;"	variable	line:651
+RetinaODNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $RetinaODNotes = Input::get('fundus_od_retina_notes');$/;"	variable	line:652
+isRetinaOSAb	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isRetinaOSAb = Input::get('fundus_os_retina_abnormal');$/;"	variable	line:653
+RetinaOSNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $RetinaOSNotes = Input::get('fundus_os_retina_notes');$/;"	variable	line:654
+isMaculaODAb	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isMaculaODAb = Input::get('fundus_od_macula_abnormal');$/;"	variable	line:655
+MaculaODNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $MaculaODNotes = Input::get('fundus_od_macula_notes');$/;"	variable	line:656
+isMaculaOSAb	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $isMaculaOSAb = Input::get('fundus_os_macula_abnormal');$/;"	variable	line:657
+MaculaOSNotes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $MaculaOSNotes = Input::get('fundus_os_macula_notes');$/;"	variable	line:658
+new_visit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_visit = Visit::create([$/;"	variable	line:666
+new_distance_vision	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_distance_vision = DistanceVision::create([$/;"	variable	line:673
+new_glasses_rx	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_glasses_rx = GlassesRx::create([$/;"	variable	line:681
+new_refraction	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_refraction = Refraction::create([$/;"	variable	line:694
+new_pupil	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_pupil = Pupil::create([$/;"	variable	line:711
+new_anterior_chamber	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_anterior_chamber = AnteriorChamber::create([$/;"	variable	line:730
+new_lense	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_lense = Lense::create([$/;"	variable	line:758
+new_iop	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_iop = Iop::create([$/;"	variable	line:780
+new_gonio	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_gonio = Gonio::create([$/;"	variable	line:790
+new_fundus_exam	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VisitsController.php	/^      $new_fundus_exam = FundusExam::create([$/;"	variable	line:814
+VitalsController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^class VitalsController extends Controller$/;"	class	line:21
+updateVital	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^  public function updateVital() {$/;"	function	line:24
+vid	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $vid = Input::get('vid');$/;"	variable	line:30
+vital	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^  		$vital = Vital::find($vid);$/;"	variable	line:31
+id	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $id = Input::get('vid');$/;"	variable	line:55
+vital	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $vital = Vital::find($id);$/;"	variable	line:56
+validation	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      \/\/ $validation = Validator::make(Input::all(), [$/;"	variable	line:65
+messages	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      \/\/     $messages = "Clinic name already taken";$/;"	variable	line:71
+pid	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $pid = Input::get('vpid');$/;"	variable	line:78
+bps	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $bps = Input::get('bps');$/;"	variable	line:79
+bpd	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $bpd = Input::get('bpd');$/;"	variable	line:80
+bpunit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $bpunit = Input::get('bpunit');$/;"	variable	line:81
+fasting	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $fasting = Input::get('fasting');$/;"	variable	line:82
+bg	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $bg = Input::get('bg');$/;"	variable	line:83
+bgUnit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $bgUnit = Input::get('bgUnit');$/;"	variable	line:84
+o2sat	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $o2sat = Input::get('o2sat');$/;"	variable	line:85
+hb	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $hb = Input::get('hb');$/;"	variable	line:86
+hfeet	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $hfeet = Input::get('hfeet');$/;"	variable	line:87
+hinches	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $hinches = Input::get('hinches');$/;"	variable	line:88
+hcm	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $hcm = Input::get('hcm');$/;"	variable	line:89
+hunit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $hunit = Input::get('hunit');$/;"	variable	line:90
+weight	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $weight = Input::get('weight');$/;"	variable	line:91
+wunit	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $wunit = Input::get('wunit');$/;"	variable	line:92
+notes	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/VitalsController.php	/^      $notes = Input::get('notes');$/;"	variable	line:93
+SurgicalProceduresController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/SurgicalProceduresController.php	/^class SurgicalProceduresController extends Controller$/;"	class	line:15
+addProcedure	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/SurgicalProceduresController.php	/^  public function addProcedure(){$/;"	function	line:18
+pid	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/SurgicalProceduresController.php	/^    $pid = Input::get('pid');$/;"	variable	line:28
+title	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/SurgicalProceduresController.php	/^    $title = Input::get('templateSelect');$/;"	variable	line:29
+body	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/SurgicalProceduresController.php	/^    $body = Input::get('surgicalTemplate');$/;"	variable	line:30
+surgery	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/SurgicalProceduresController.php	/^        $surgery = Surgery::create([$/;"	variable	line:33
+required	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/visits.blade.php	/^          required: function(element) {$/;"	jsfunction	line:275
+highlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/visits.blade.php	/^      highlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:368
+unhighlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/visits.blade.php	/^      unhighlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:371
+errorPlacement	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/visits.blade.php	/^      errorPlacement: function(error, element) {$/;"	jsfunction	line:374
+ProfileController	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/ProfileController.php	/^class ProfileController extends Controller$/;"	class	line:20
+showPatientProfile	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/ProfileController.php	/^    public function showPatientProfile($id){$/;"	function	line:25
+visits	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/ProfileController.php	/^      $visits = array();$/;"	variable	line:57
+result	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/ProfileController.php	/^      \/\/ $result = DB::table('vitals')->where('id', '222');$/;"	variable	line:60
+result	/Users/battlestation/Documents/rowdy_root_web/app/Http/Controllers/Dashboard/ProfileController.php	/^      \/\/ $result = DB::table('vitals');$/;"	variable	line:61
+getVitalIndex	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^  function getVitalIndex(i) {$/;"	function	line:1052
+required	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^          required: function(element) {$/;"	jsfunction	line:1304
+highlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^      highlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:1397
+unhighlight	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^      unhighlight: function(element, errorClass, validClass) {$/;"	jsfunction	line:1400
+errorPlacement	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^      errorPlacement: function(error, element) {$/;"	jsfunction	line:1403
+showCSTemplates	/Users/battlestation/Documents/rowdy_root_web/resources/views/dashboard/patient_profile.blade.php	/^    function showCSTemplates(sel){$/;"	function	line:1509

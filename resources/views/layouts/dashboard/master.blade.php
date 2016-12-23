@@ -81,8 +81,9 @@
         <a class="navbar-brand" href="/">
           <b>EMRS</b> Online
         </a>
-        <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
+        <!--<span id="toggle_sidemenu_l" class="ad ad-lines"></span>-->
       </div>
+      <!--
       <ul class="nav navbar-nav navbar-left">
         <li class="dropdown menu-merge hidden-xs">
           <ul class="dropdown-menu" role="menu">
@@ -98,11 +99,13 @@
             <span class="ad ad-screen-full fs18"></span>
           </a>
         </li>
-      </ul>
+    </ul>-->
       <form class="navbar-form navbar-left navbar-search alt" role="search">
-        <div class="form-group">
+        <div class="form-group col-md-12">
           {{-- Search bar w/ results div (coming from jquery) --}}
-          <input type="text" class="search form-control" id="searchid" placeholder="Search Patient...">
+          <input type="text" class="search form-control col-md-12" id="searchid" placeholder="Search Patient...">
+          <br />
+          <br />
           <div id="result"></div>
         </div>
       </form>
@@ -176,46 +179,25 @@
           <li>
             <a href="/">
               <span class="fa fa-home"></span>
-              <span class="sidebar-title">Home</span>
+              <span class="sidebar-title" onmouseover="this.style.color='#dddddd'" onmouseout="this.style.color='#ffffff'">Home</span>
             </a>
           </li>
-          <li class="sidebar-label pt20">Patient</li>
           <li>
             <a href="/patients">
               <span class="fa fa-street-view"></span>
-              <span class="sidebar-title">View Patients</span>
+              <span class="sidebar-title" onmouseover="this.style.color='#dddddd'" onmouseout="this.style.color='#ffffff'">Patients</span>
             </a>
           </li>
           <li>
-            <a href="/new_patient">
-              <span class="fa fa-plus"></span>
-              <span class="sidebar-title">New Patient</span>
-            </a>
-          </li>
-          <li class="sidebar-label pt20">Clinic</li>
-          <li>
-            <a href="/clinics">
-              <span class="fa fa-hospital-o"></span>
-              <span class="sidebar-title">View Clinics</span>
-            </a>
-          </li>
-          <li>
-            <a href="/new_clinic">
-              <span class="fa fa-plus"></span>
-              <span class="sidebar-title">New Clinic</span>
-            </a>
-          </li>
-          <li class="sidebar-label pt20">Visit</li>
-          <li>
-            <a href="#">
+            <a href="/visits">
               <span class="fa fa-stethoscope"></span>
-              <span class="sidebar-title">View Visits</span>
+              <span class="sidebar-title" onmouseover="this.style.color='#dddddd'" onmouseout="this.style.color='#ffffff'">View Visits</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="/new_visit">
               <span class="fa fa-plus"></span>
-              <span class="sidebar-title">New Visit</span>
+              <span class="sidebar-title" onmouseover="this.style.color='#dddddd'" onmouseout="this.style.color='#ffffff'">New Visit</span>
             </a>
           </li>
           @if($user->role == "sys_admin")
@@ -223,14 +205,20 @@
             <li>
               <a href="/accountRequestList">
                 <span class="fa fa-user-plus"></span>
-                <span class="sidebar-title">Account Request</span>
-                <span class="badge badge-danger">{{$num_unapproved_users}}</span>
+                <span class="sidebar-title" onmouseover="this.style.color='#dddddd'" onmouseout="this.style.color='#ffffff'">Account Request</span>
+                <span class="badge badge-danger" style="color:#dbd9d9; margin-left: 30px;">{{$num_unapproved_users}}</span>
               </a>
             </li>
             <li>
               <a href="/accountList">
                 <span class="fa fa-users"></span>
-                <span class="sidebar-title">Users</span>
+                <span class="sidebar-title" onmouseover="this.style.color='#dddddd'" onmouseout="this.style.color='#ffffff'">Users</span>
+              </a>
+            </li>
+            <li>
+              <a href="/clinics">
+                <span class="fa fa-hospital-o"></span>
+                <span class="sidebar-title" onmouseover="this.style.color='#dddddd'" onmouseout="this.style.color='#ffffff'">Clinics</span>
               </a>
             </li>
           @endif
@@ -316,7 +304,7 @@
       });
 
       // Live search bar keyup
-      $('.search').keyup(function() {
+      $('#searchid').keyup(function() {
         var searchid = $(this).val();
         if($('#searchid').val() == ''){
           jQuery('#result').fadeOut();
@@ -331,6 +319,28 @@
               success: function(html)
               {
                 $("#result").html(html).show();
+              }
+            });
+        }
+        return false;
+      });
+
+      // Live search for drugs on keyup
+      $('#drug_search').keyup(function() {
+        var searchid = $(this).val();
+        if($('#drug_search').val() == ''){
+          jQuery('#drug_result').fadeOut();
+        }
+        var dataString = 'search='+searchid;
+        if(searchid != '') {
+            $.ajax({
+              type: "POST",
+              url: "/livesearchMeds",
+              data: dataString,
+              cache: false,
+              success: function(html)
+              {
+                $("#drug_result").html(html).show();
               }
             });
         }

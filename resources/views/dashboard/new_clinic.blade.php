@@ -57,7 +57,7 @@
                 <span> Add a Clinic </span>
               </div>
               <div class="section row">
-                <div class="col-md-4">
+                <div class="col-md-8">
                   <label for="clinicName" class="field prepend-icon">
                     {!! Form::text('clinicName', '', ['placeholder' => 'Name of clinic', 'class' => 'gui-input', 'name' => 'clinicName', 'id' => 'clinicName']) !!}
                     <label for="clinicName" class="field-icon">
@@ -65,9 +65,9 @@
                     </label>
                   </label>
                 </div>
-              </div>
-              <div class="panel-footer text-right">
-                <button type="submit" class="button btn-primary"> Add Clinic </button>
+                <div class="col-md-4">
+                  <button type="submit" class="button btn-primary" style="float: right;"> Add Clinic </button>
+                </div>
               </div>
             </div>
           </div>
