@@ -33,7 +33,7 @@ Route::post('/clinic', 'Dashboard\ClinicController@updateClinic');
 // Login Routes
 Route::get('/login', 'Auth\LoginController@showLogin');
 Route::post('/login', 'Auth\LoginController@login');
-//Route::post('/login', 'Auth\LoginController@tmpRedirect');
+Route::post('/login', 'Auth\LoginController@tmpRedirect');
 
 // Registration Routes
 Route::get('/register', 'Auth\RegistrationController@showRegister');
