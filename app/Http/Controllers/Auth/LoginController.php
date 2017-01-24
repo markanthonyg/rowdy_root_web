@@ -28,6 +28,10 @@ class LoginController extends Controller
       return view('pages_login');
     }
 
+    public function tmpRedirect() {
+      return Redirect::back();
+    }
+
     //  Login user
     public function login(){
       // Make sure crsf token is valid
