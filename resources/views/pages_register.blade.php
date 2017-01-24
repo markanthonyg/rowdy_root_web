@@ -24,7 +24,7 @@
 
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="assets/img/favicon.ico">
+  <link rel="shortcut icon" href="assets/img/emrs.ico">
 
   {{-- Google recap --}}
   <script src='https://www.google.com/recaptcha/api.js'></script>

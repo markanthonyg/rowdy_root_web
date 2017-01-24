@@ -24,7 +24,7 @@
   {{ Html::style('assets/admin-tools/admin-forms/css/admin-forms.min.css') }}
 
   <!-- Favicon -->
-  {{ Html::style('assets/img/favicon.ico') }}
+  {{ Html::style('assets/img/emrs.ico') }}
 
   <!-- CSS For live search -->
   {{ Html::style('css/livesearch.css') }}
