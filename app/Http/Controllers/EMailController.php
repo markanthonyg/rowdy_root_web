@@ -14,6 +14,7 @@ class EMailController extends Controller
 {
     // Send email to jacobdaily737@gmail.com to notify of question or concern
     public function send(){
+      /*
       $name = Input::get('name');
       $email = Input::get('email');
 
@@ -21,6 +22,7 @@ class EMailController extends Controller
           $message->from(Input::get('email'));
           $message->to('jacobdaily737@gmail.com', 'RRW')->subject('Question or concern from RRW');
       });
+      */
 
       return Redirect::to('/');
     }
