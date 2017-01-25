@@ -59,7 +59,7 @@
               <div class="login-links">
                 <a href="/login" class="active" title="Sign In">Sign In</a>
                 <span class="text-white"> | </span>
-                <a href="/register" class="" title="Register">Register</a>
+                <a href="#" class="" title="Register">Register</a>
               </div>
 
             </div>
@@ -70,7 +70,7 @@
 
             <!-- end .form-header section -->
             {{-- <form method="POST" action="/login" id="loginform"> --}}
-            {!! Form::open(['action' => 'Auth\LoginController@login', 'id' => 'loginform']) !!}
+            {!! Form::open(['action' => 'Auth\LoginController@tmpRedirect', 'id' => 'loginform']) !!}
               <div class="panel-body bg-light p30">
                 {{-- Show login error message --}}
                 @if(Session::has('registration_success'))
